@@ -22,6 +22,32 @@
     <None Remove="Sprites\AchievementHeavenSpoogle.png" />
     <None Remove="Sprites\AchievementHeavenVandander.png" />
     <None Remove="Sprites\AchievementHeavenVat.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementComedyBoler.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementComedyBoojum.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenAelie.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenAlvinar.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenExambry.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenFarah.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenFelix.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenHills.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenMalebolge.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenRodney.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenSalad.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenSpoogle.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenVandander.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenVat.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanAelie.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanAlvinar.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanExambry.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanFarah.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanFelix.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanHills.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanMalebolge.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanRodney.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanSalad.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanSpoogle.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanVandander.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanVat.png" />
     <None Remove="Sprites\AchievementOsmanAelie.png" />
     <None Remove="Sprites\AchievementOsmanAlvinar.png" />
     <None Remove="Sprites\AchievementOsmanExambry.png" />
@@ -54,7 +80,9 @@
     <None Remove="Sprites\AlvinarOverworld.png" />
     <None Remove="Sprites\AlvinarPrepare.png" />
     <None Remove="Sprites\BolerDisruption.png" />
+    <None Remove="Sprites\BoojumBilliard.png" />
     <None Remove="Sprites\DeadBoler.png" />
+    <None Remove="Sprites\DeadBoojum.png" />
     <None Remove="Sprites\DeadFlatback.png" />
     <None Remove="Sprites\DeadInequity.png" />
     <None Remove="Sprites\DeadKekingdom.png" />
@@ -101,6 +129,8 @@
     <None Remove="Sprites\FelixOverworld.png" />
     <None Remove="Sprites\FelixPendulum.png" />
     <None Remove="Sprites\FelixSlap.png" />
+    <None Remove="Sprites\GiantMudballBack.png" />
+    <None Remove="Sprites\GiantMudballFront.png" />
     <None Remove="Sprites\GommaBack.png" />
     <None Remove="Sprites\GommaForest.png" />
     <None Remove="Sprites\GommaFront.png" />
@@ -349,6 +379,7 @@
     <None Remove="Sprites\ItemKaglasFinger.png" />
     <None Remove="Sprites\ItemLacerationStupendous.png" />
     <None Remove="Sprites\ItemNumberMagnet.png" />
+    <None Remove="Sprites\ItemNumberMagnetLocked.png" />
     <None Remove="Sprites\ItemRunForth.png" />
     <None Remove="Sprites\ItemSoulParticulates.png" />
     <None Remove="Sprites\MalebolgeAccelerate.png" />
@@ -367,7 +398,14 @@
     <None Remove="Sprites\MorriganMud.png" />
     <None Remove="Sprites\MorriganOverworld.png" />
     <None Remove="Sprites\MorriganPearls.png" />
+    <None Remove="Sprites\MudballBack.png" />
+    <None Remove="Sprites\MudballDry.png" />
+    <None Remove="Sprites\MudballFront.png" />
+    <None Remove="Sprites\MudballLocked.png" />
+    <None Remove="Sprites\MudballMenu.png" />
+    <None Remove="Sprites\MudballOverworld.png" />
     <None Remove="Sprites\NosestoneGrinding.png" />
+    <None Remove="Sprites\OverworldBoojum.png" />
     <None Remove="Sprites\PassiveAltAttacks.png" />
     <None Remove="Sprites\PassiveChaos.png" />
     <None Remove="Sprites\PassiveInvincible.png" />
@@ -420,6 +458,7 @@
     <None Remove="Sprites\ShopRetinolLocked.png" />
     <None Remove="Sprites\ShopSauerkraut.png" />
     <None Remove="Sprites\ShopSparklingFork.png" />
+    <None Remove="Sprites\ShopSparklingForkLocked.png" />
     <None Remove="Sprites\SpoogleAblate.png" />
     <None Remove="Sprites\SpoogleBack.png" />
     <None Remove="Sprites\SpoogleConcatenate.png" />
@@ -429,6 +468,7 @@
     <None Remove="Sprites\SpoogleOverworld.png" />
     <None Remove="Sprites\SpoogleVomit.png" />
     <None Remove="Sprites\TimelineBoler.png" />
+    <None Remove="Sprites\TimelineBoojum.png" />
     <None Remove="Sprites\TimelineFlatback.png" />
     <None Remove="Sprites\TimelineInequity.png" />
     <None Remove="Sprites\TimelineKekingdom.png" />
@@ -541,30 +581,32 @@
   <ItemGroup>
     <EmbeddedResource Include="AssetBundles\hif_assetbundle" />
     <EmbeddedResource Include="AssetBundles\hif_assetbundle.meta" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenAelie.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenAlvinar.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenExambry.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenFarah.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenFelix.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenHills.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenMalebolge.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenRodney.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenSalad.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenSpoogle.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenVandander.png" />
-    <EmbeddedResource Include="Sprites\AchievementHeavenVat.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanAelie.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanAlvinar.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanExambry.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanFarah.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanFelix.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanHills.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanMalebolge.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanRodney.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanSalad.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanSpoogle.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanVandander.png" />
-    <EmbeddedResource Include="Sprites\AchievementOsmanVat.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyBoler.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyBoojum.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenAelie.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenAlvinar.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenExambry.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenFarah.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenFelix.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenHills.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenMalebolge.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenRodney.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenSalad.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenSpoogle.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenVandander.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenVat.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanAelie.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanAlvinar.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanExambry.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanFarah.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanFelix.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanHills.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanMalebolge.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanRodney.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanSalad.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanSpoogle.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanVandander.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanVat.png" />
     <EmbeddedResource Include="Sprites\AelieBack.png" />
     <EmbeddedResource Include="Sprites\AelieDesiccate.png" />
     <EmbeddedResource Include="Sprites\AelieFront.png" />
@@ -585,13 +627,17 @@
     <EmbeddedResource Include="Sprites\AlvinarOverworld.png" />
     <EmbeddedResource Include="Sprites\AlvinarPrepare.png" />
     <EmbeddedResource Include="Sprites\BolerDisruption.png" />
+    <EmbeddedResource Include="Sprites\BoojumBilliard.png" />
     <EmbeddedResource Include="Sprites\DeadBoler.png" />
+    <EmbeddedResource Include="Sprites\DeadBoojum.png" />
     <EmbeddedResource Include="Sprites\DeadFlatback.png" />
     <EmbeddedResource Include="Sprites\DeadInequity.png" />
     <EmbeddedResource Include="Sprites\DeadKekingdom.png" />
     <EmbeddedResource Include="Sprites\DeadLegion.png" />
     <EmbeddedResource Include="Sprites\DeadMoone.png" />
     <EmbeddedResource Include="Sprites\DeadStickingHomunculus.png" />
+    <EmbeddedResource Include="Sprites\GiantMudballBack.png" />
+    <EmbeddedResource Include="Sprites\GiantMudballFront.png" />
     <EmbeddedResource Include="Sprites\HoftstoldtFaces\HoftstoldtFront1.png" />
     <EmbeddedResource Include="Sprites\HoftstoldtFaces\HoftstoldtFront10.png" />
     <EmbeddedResource Include="Sprites\HoftstoldtFaces\HoftstoldtFront100.png" />
@@ -811,6 +857,7 @@
     <EmbeddedResource Include="Sprites\HoftstoldtLocked.png" />
     <EmbeddedResource Include="Sprites\HoftstoldtMenu.png" />
     <EmbeddedResource Include="Sprites\HoftstoldtOverworld.png" />
+    <EmbeddedResource Include="Sprites\ItemNumberMagnetLocked.png" />
     <EmbeddedResource Include="Sprites\MorriganBack.png" />
     <EmbeddedResource Include="Sprites\MorriganFront.png" />
     <EmbeddedResource Include="Sprites\MorriganGlass.png" />
@@ -819,7 +866,15 @@
     <EmbeddedResource Include="Sprites\MorriganMud.png" />
     <EmbeddedResource Include="Sprites\MorriganOverworld.png" />
     <EmbeddedResource Include="Sprites\MorriganPearls.png" />
+    <EmbeddedResource Include="Sprites\MudballBack.png" />
+    <EmbeddedResource Include="Sprites\MudballDry.png" />
+    <EmbeddedResource Include="Sprites\MudballFront.png" />
+    <EmbeddedResource Include="Sprites\MudballLocked.png" />
+    <EmbeddedResource Include="Sprites\MudballMenu.png" />
+    <EmbeddedResource Include="Sprites\MudballOverworld.png" />
+    <EmbeddedResource Include="Sprites\OverworldBoojum.png" />
     <EmbeddedResource Include="Sprites\PassiveTwoFacedRY.png" />
+    <EmbeddedResource Include="Sprites\ShopSparklingForkLocked.png" />
     <EmbeddedResource Include="Sprites\TimelineBoler.png" />
     <EmbeddedResource Include="Sprites\DeadManeater.png" />
     <EmbeddedResource Include="Sprites\DeadMesmerizingNosestone.png" />
@@ -957,6 +1012,7 @@
     <EmbeddedResource Include="Sprites\SpoogleMenu.png" />
     <EmbeddedResource Include="Sprites\SpoogleOverworld.png" />
     <EmbeddedResource Include="Sprites\SpoogleVomit.png" />
+    <EmbeddedResource Include="Sprites\TimelineBoojum.png" />
     <EmbeddedResource Include="Sprites\TimelineFlatback.png" />
     <EmbeddedResource Include="Sprites\TimelineInequity.png" />
     <EmbeddedResource Include="Sprites\TimelineKekingdom.png" />
@@ -1112,10 +1168,6 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.UI.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Wearable Modifiers\" />
   </ItemGroup>
 
 </Project>

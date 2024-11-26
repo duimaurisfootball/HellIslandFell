@@ -40,7 +40,7 @@ namespace Hell_Island_Fell.Custom_Passives
         {
             public override int Modify(int value)
             {
-                return value > 0 && attackedUnit != null && value >= limit ? value : 0;
+                return value > 0 && attackedUnit != null && value > limit ? value : 0;
             }
         }
     }

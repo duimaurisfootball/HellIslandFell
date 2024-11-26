@@ -15,7 +15,7 @@ namespace Hell_Island_Fell.Enemies
         {
             Enemy maneater = new Enemy("Maneater", "Maneater_EN")
             {
-                Health = 85,
+                Health = 65,
                 HealthColor = Pigments.Red,
                 Size = 2,
                 CombatSprite = ResourceLoader.LoadSprite("TimelineManeater", new Vector2(0.5f, 0f), 32),
@@ -212,7 +212,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability diamondDancer = new Ability("Diamond Dancer", "DiamondDancer_A")
             {
-                Description = "If this enemy is Anchored, un-anchor it.\nOtherwise, Anchor this enemy and apply 40 Shield to this enemy's positions.",
+                Description = "If this enemy is Anchored, un-anchor it.\nOtherwise, Anchor this enemy and apply 20 Shield to this enemy's positions.",
                 Cost = [Pigments.BlueRed, Pigments.Red],
                 Visuals = Visuals.StompRight,
                 AnimationTarget = CenterTarget,
@@ -221,7 +221,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(AnchoredCheck, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(AnchoredRemove, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(AnchoredAdd, 1, Targeting.Slot_SelfSlot, HasNot),
-                    Effects.GenerateEffect(ShieldApply, 40, Targeting.Slot_SelfAll, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(ShieldApply, 30, Targeting.Slot_SelfAll, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Fast,

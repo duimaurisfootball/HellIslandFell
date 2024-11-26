@@ -20,15 +20,12 @@ namespace Hell_Island_Fell.Items
             Clone._maximizeHealth = true;
             Clone._extraModifiers = [];
 
-            PercentageEffectCondition DestructionChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            DestructionChance.percentage = 83;
-
-            PerformEffect_Item element83 = new PerformEffect_Item("Element83_ID", null, false)
+            DoublePerformEffect_Item element83 = new DoublePerformEffect_Item("Element83_ID", null, false)
             {
                 Item_ID = "Element83_TW",
                 Name = "Element 83",
                 Flavour = "\"Thousands of islets, like a continent shattered across the sea...\"",
-                Description = "Summon a permanent clone of this party member on combat end. 83% chance to be consumed upon use.",
+                Description = "Summon a permanent clone of this party member on combat end. 83% chance to be consumed upon use. 17% chance to be consumed on turn start.",
                 IsShopItem = false,
                 ShopPrice = 83,
                 DoesPopUpInfo = true,
@@ -38,7 +35,12 @@ namespace Hell_Island_Fell.Items
                 Effects =
                 [
                     Effects.GenerateEffect(Clone, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot, DestructionChance),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(83)),
+                ],
+                SecondaryDoesPopUpInfo = false,
+                SecondaryEffects =
+                [
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(17)),
                 ],
             };
 

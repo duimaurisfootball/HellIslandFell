@@ -102,7 +102,7 @@ namespace Hell_Island_Fell.Custom_Effects
                 }
             }
 
-            return false;
+            return exitAmount > 0;
         }
     }
 }

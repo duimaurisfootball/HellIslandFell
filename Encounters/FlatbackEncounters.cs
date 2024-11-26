@@ -101,7 +101,7 @@ namespace Hell_Island_Fell.Encounters
                     ], null);
             }
             flatbackHard.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Flatback_Hard_EnemyBundle", 25, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Hard);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Flatback_Hard_EnemyBundle", 30, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Hard);
         }
     }
 }

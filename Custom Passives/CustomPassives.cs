@@ -337,6 +337,28 @@ namespace Hell_Island_Fell.Custom_Passives
                 ];
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            SwapToOneSideEffect MoveLeft = ScriptableObject.CreateInstance<SwapToOneSideEffect>();
+            MoveLeft._swapRight = false;
+
+            RemoveFieldEffectEffect RemoveConstricted = ScriptableObject.CreateInstance<RemoveFieldEffectEffect>();
+            RemoveConstricted._Field = StatusField.Constricted;
+
+            PerformEffectPassiveAbility billiard = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
+            billiard.m_PassiveID = "Billiard";
+            billiard.passiveIcon = ResourceLoader.LoadSprite("BoojumBilliard");
+            billiard._characterDescription = "Upon recieving direct damage, remove Constricted from this party member's position and move to the left.";
+            billiard._enemyDescription = "Upon recieving direct damage, remove Constricted from this enemy's position and move to the left.";
+            billiard._triggerOn =
+                [
+                    TriggerCalls.OnDirectDamaged,
+                ];
+            billiard.effects =
+                [
+                    Effects.GenerateEffect(RemoveConstricted, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(MoveLeft, 1, Targeting.Slot_SelfSlot),
+                ];
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             Passives.AddCustomPassiveToPool("Impunity_PA", "Impunity", impunity);
             Passives.AddCustomPassiveToPool("Metallurgy_PA", "Metallurgy", metallurgy);
             Passives.AddCustomPassiveToPool("Sacrilege_PA", "Sacrilege", sacrilege);
@@ -351,6 +373,7 @@ namespace Hell_Island_Fell.Custom_Passives
             Passives.AddCustomPassiveToPool("HConstruct_PA", "Construct", HConstruct);
             Passives.AddCustomPassiveToPool("TwoFacedRY_PA", "Two Faced", TwoFacedRedYellow);
             Passives.AddCustomPassiveToPool("DecayKekingdom_PA", "Decay", DecayKekingdom);
+            Passives.AddCustomPassiveToPool("Billiard_PA", "Billiard", billiard);
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             GlossaryPassives ImpunityInfo = new GlossaryPassives("Impunity", "The yellow pigment generator now generates gray pigment instead.", ResourceLoader.LoadSprite("FarahImpunity"));
             GlossaryPassives MetallurgyInfo = new GlossaryPassives("Metallurgy", "This party member/enemy scales based on how much money you have at the start of combat.", ResourceLoader.LoadSprite("SaladMetallurgy"));
@@ -366,6 +389,7 @@ namespace Hell_Island_Fell.Custom_Passives
             GlossaryPassives InvincibleInfo = new GlossaryPassives("Invincible", "Prevent all incoming damage that is less than or equal to this party member/enemy's level of Invincible.", ResourceLoader.LoadSprite("PassiveInvincible"));
             GlossaryPassives ThornyInfo = new GlossaryPassives("Thorny", "If the wrong pigment is used while performing an ability apply 1 Scar to this party member.", ResourceLoader.LoadSprite("PinecThorny"));
             GlossaryPassives DisruptionInfo = new GlossaryPassives("Disruption", "Randomize and reduce all party member ability costs.", ResourceLoader.LoadSprite("BolerDisruption"));
+            GlossaryPassives BilliardInfo = new GlossaryPassives("Billiard", "Upon recieving direct damage, remove Constricted from this party member/enemy's position and move to the left.", ResourceLoader.LoadSprite("BoojumBilliard"));
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             LoadedDBsHandler.GlossaryDB.AddNewPassive(ImpunityInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(MetallurgyInfo);
@@ -381,6 +405,7 @@ namespace Hell_Island_Fell.Custom_Passives
             LoadedDBsHandler.GlossaryDB.AddNewPassive(InvincibleInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(ThornyInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(DisruptionInfo);
+            LoadedDBsHandler.GlossaryDB.AddNewPassive(BilliardInfo);
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             UnitStoreData_ModIntSO wartiness = ScriptableObject.CreateInstance<UnitStoreData_ModIntSO>();
             wartiness.m_Text = "Warts: +{0}";
@@ -520,11 +545,9 @@ namespace Hell_Island_Fell.Custom_Passives
                 return consistentFleetingGenerated;
             });
         }
-
-
         private static TValue GetOrCreatePassive<TKey, TValue>(IDictionary<TKey, TValue> readFrom, TKey key, Func<TKey, TValue> create)
         {
-            if (readFrom.TryGetValue(key, out var value))
+            if (readFrom.TryGetValue(key, out TValue value))
             {
                 return value;
             }

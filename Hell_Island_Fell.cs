@@ -1,18 +1,18 @@
-﻿using System;
-using BepInEx;
-using BrutalAPI;
-using UnityEngine;
+﻿global using BrutalAPI;
+global using UnityEngine;
+global using System;
+global using BepInEx;
+global using Hell_Island_Fell.Fools;
+global using Hell_Island_Fell.Status_Effects;
+global using Hell_Island_Fell.Damage_Types;
+global using Hell_Island_Fell.Custom_Passives;
+global using Hell_Island_Fell.Items;
+global using Hell_Island_Fell.Achievements;
+global using Hell_Island_Fell.Enemies;
+global using Hell_Island_Fell.Abilities;
+global using Hell_Island_Fell.Encounters;
+global using BepInEx.Bootstrap;
 using HarmonyLib;
-using Hell_Island_Fell.Fools;
-using Hell_Island_Fell.Status_Effects;
-using Hell_Island_Fell.Damage_Types;
-using Hell_Island_Fell.Custom_Passives;
-using Hell_Island_Fell.Items;
-using Hell_Island_Fell.Achievements;
-using Hell_Island_Fell.Enemies;
-using Hell_Island_Fell.Abilities;
-using Hell_Island_Fell.Encounters;
-using BepInEx.Bootstrap;
 
 namespace Hell_Island_Fell
 {
@@ -100,6 +100,9 @@ namespace Hell_Island_Fell
             InfernalStone.Add();
             //StabbingHomunculus.Add();
 
+            NumberMagnet.Add();
+            SparklingFork.Add();
+
             //Add Characters
             Vandander.Add();
             Spoogle.Add();
@@ -120,10 +123,11 @@ namespace Hell_Island_Fell
             //Stareyed.Add();
             //Chim.Add();
             Exambry.Add();
-            //Morrigan.Add();
+            Morrigan.Add();
             //Nick.Add();
             //Maellard.Add();
             HolesOfVandander.Add();
+            Mudball.Add();
 
             //Add Enemies
             SweatingNosestone.Add();
@@ -133,7 +137,7 @@ namespace Hell_Island_Fell
             UninspiredNosestone.Add();
             Maneater.Add();
             Inequity.Add();
-            //Boojum.Add();
+            Boojum.Add();
             StickingHomunculus.Add();
             Boler.Add();
             Moone.Add();
@@ -157,6 +161,7 @@ namespace Hell_Island_Fell
             UninspiredEncounters.Add();
             ManeaterEncounters.Add();
             StickingHomunculusEncounters.Add();
+            BoojumEncounter.Add();
             BolerEncounters.Add();
             MooneEncounters.Add();
             FlatbackEncounters.Add();

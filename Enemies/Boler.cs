@@ -27,7 +27,7 @@ namespace Hell_Island_Fell.Enemies
 
             Enemy boler = new Enemy("Boler", "Boler_EN")
             {
-                Health = 50,
+                Health = 40,
                 HealthColor = Pigments.Purple,
                 Size = 1,
                 CombatSprite = ResourceLoader.LoadSprite("TimelineBoler", new Vector2(0.5f, 0f), 32),

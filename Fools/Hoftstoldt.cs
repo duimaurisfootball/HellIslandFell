@@ -290,7 +290,7 @@ namespace Hell_Island_Fell.Fools
                 Description = "Heal all allies to the Left and Right of a party member with Construct 2 health.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtSoul"),
                 Cost = [Pigments.Blue, Pigments.Yellow],
-                Visuals = Visuals.Connection,
+                Visuals = Visuals.Equal,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
@@ -307,7 +307,7 @@ namespace Hell_Island_Fell.Fools
                 Description = "Heal all allies to the Left and Right of a party member with Construct 3 health.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtSoul"),
                 Cost = [Pigments.Blue, Pigments.Yellow],
-                Visuals = Visuals.Connection,
+                Visuals = Visuals.Equal,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
@@ -324,7 +324,7 @@ namespace Hell_Island_Fell.Fools
                 Description = "Heal all allies to the Left and Right of a party member with Construct 4 health.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtSoul"),
                 Cost = [Pigments.Blue, Pigments.Yellow],
-                Visuals = Visuals.Connection,
+                Visuals = Visuals.Equal,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
@@ -341,7 +341,7 @@ namespace Hell_Island_Fell.Fools
                 Description = "Heal all allies to the Left and Right of a party member with Construct 5 health.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtSoul"),
                 Cost = [Pigments.Blue, Pigments.Yellow],
-                Visuals = Visuals.Connection,
+                Visuals = Visuals.Equal,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [

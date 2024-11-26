@@ -101,14 +101,14 @@ namespace Hell_Island_Fell.Fools
             //bellow
             Ability bellow0 = new Ability("Clay Bellow", "Bellow_1_A")
             {
-                Description = "Deal 1 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
+                Description = "Deal 2 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
                 Cost = [Pigments.Yellow, Pigments.Red],
                 Visuals = Visuals.Bellow,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(IndirectDamage, 1, Targeting.Slot_FrontAndSides),
+                    Effects.GenerateEffect(IndirectDamage, 2, Targeting.Slot_FrontAndSides),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot),
                 ]
@@ -118,24 +118,6 @@ namespace Hell_Island_Fell.Fools
             bellow0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             Ability bellow1 = new Ability("Painted Bellow", "Bellow_2_A")
-            {
-                Description = "Deal 3 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
-                AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
-                Cost = [Pigments.Yellow, Pigments.Red],
-                Visuals = Visuals.Bellow,
-                AnimationTarget = Targeting.Slot_SelfSlot,
-                Effects =
-                [
-                    Effects.GenerateEffect(IndirectDamage, 3, Targeting.Slot_FrontAndSides),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 3, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot),
-                ]
-            };
-            bellow1.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            bellow1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            bellow1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
-
-            Ability bellow2 = new Ability("Ancient Bellow", "Bellow_3_A")
             {
                 Description = "Deal 4 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
@@ -149,11 +131,11 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot),
                 ]
             };
-            bellow2.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            bellow2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            bellow2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
+            bellow1.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Damage_3_6)]);
+            bellow1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
+            bellow1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability bellow3 = new Ability("Cursed Bellow", "Bellow_4_A")
+            Ability bellow2 = new Ability("Ancient Bellow", "Bellow_3_A")
             {
                 Description = "Deal 5 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
@@ -163,6 +145,24 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(IndirectDamage, 5, Targeting.Slot_FrontAndSides),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 3, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot),
+                ]
+            };
+            bellow2.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Damage_3_6)]);
+            bellow2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
+            bellow2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
+
+            Ability bellow3 = new Ability("Cursed Bellow", "Bellow_4_A")
+            {
+                Description = "Deal 6 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
+                AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
+                Cost = [Pigments.Yellow, Pigments.Red],
+                Visuals = Visuals.Bellow,
+                AnimationTarget = Targeting.Slot_SelfSlot,
+                Effects =
+                [
+                    Effects.GenerateEffect(IndirectDamage, 6, Targeting.Slot_FrontAndSides),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot),
                 ]
@@ -191,14 +191,14 @@ namespace Hell_Island_Fell.Fools
 
             Ability shatter1 = new Ability("A Loud Shatter", "AShatter_2_A")
             {
-                Description = "Deal 2-12 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
+                Description = "Deal 3-12 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsShatter"),
                 Cost = [Pigments.Yellow, Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Crush,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HillsShatterEffect>(), 12, Targeting.Slot_Front),
                 ]
             };
@@ -207,14 +207,14 @@ namespace Hell_Island_Fell.Fools
 
             Ability shatter2 = new Ability("A Resounding Shatter", "AShatter_3_A")
             {
-                Description = "Deal 3-14 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
+                Description = "Deal 5-14 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsShatter"),
                 Cost = [Pigments.Yellow, Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Crush,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 3, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 5, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HillsShatterEffect>(), 14, Targeting.Slot_Front),
                 ]
             };
@@ -223,14 +223,14 @@ namespace Hell_Island_Fell.Fools
             
             Ability shatter3 = new Ability("A Thunderous Shatter", "AShatter_4_A")
             {
-                Description = "Deal 4-16 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
+                Description = "Deal 7-16 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsShatter"),
                 Cost = [Pigments.Yellow, Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Crush,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 4, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 7, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HillsShatterEffect>(), 16, Targeting.Slot_Front),
                 ]
             };

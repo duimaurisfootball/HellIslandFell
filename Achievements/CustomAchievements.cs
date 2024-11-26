@@ -157,12 +157,50 @@ namespace Hell_Island_Fell.Achievements
             UnlockDivineExambry.AddUnlockData("Exambry_CH", Unlocks.GenerateUnlockData("HIF_Exambry_Divine_Unlock", "HIF_Exambry_Divine_ACH", "", "", ["InfernalStone_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Exambry_Divine_ACH", "InfernalStone_TW");
 
-
             //Doula Unlocks
 
             //March Unlocks
 
             //Bemagel Unlocks
+
+            //Comedy Unlocks
+
+            ModdedAchievements AchievementBolerDefeat = new ModdedAchievements("Signals through the Noise", "Disrupt a Boler.", ResourceLoader.LoadSprite("AchievementComedyBoler", null, 32, null), "HIF_Boler_Comedy_ACH");
+            AchievementBolerDefeat.AddNewAchievementToInGameCategory((AchievementCategoryIDs)8);
+            UnlockableModData BolerDefeatAchievement = new UnlockableModData("Boler_EN")
+            {
+                hasModdedAchievementUnlock = true,
+                moddedAchievementID = "HIF_Boler_Comedy_ACH",
+                hasItemUnlock = true,
+                items = ["NumberMagnet_SW"]
+            };
+            EnemyDeathUnlockCheck BolerDeath = ScriptableObject.CreateInstance<EnemyDeathUnlockCheck>();
+            BolerDeath.usesSimpleDeathData = true;
+            BolerDeath.enemyID = "Boler_EN";
+            BolerDeath.simpleDeathData = BolerDefeatAchievement;
+            BolerDeath.specialDeathData = [];
+            Unlocks.AddUnlock_EnemyDeath(BolerDeath);
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Boler_Comedy_ACH", "NumberMagnet_SW");
+
+            ModdedAchievements AchievementBoojumDefeat = new ModdedAchievements("Softly and Suddenly Vanished Away", "Hunt a Boojum.", ResourceLoader.LoadSprite("AchievementComedyBoojum", null, 32, null), "HIF_Boojum_Comedy_ACH");
+            AchievementBoojumDefeat.AddNewAchievementToInGameCategory((AchievementCategoryIDs)8);
+            UnlockableModData BoojumDefeatAchievement = new UnlockableModData("Boojum_EN")
+            {
+                hasModdedAchievementUnlock = true,
+                moddedAchievementID = "HIF_Boojum_Comedy_ACH",
+                hasItemUnlock = true,
+                items = ["SparklingFork_SW"]
+            };
+            EnemyDeathUnlockCheck BoojumDeath = ScriptableObject.CreateInstance<EnemyDeathUnlockCheck>();
+            BoojumDeath.usesSimpleDeathData = true;
+            BoojumDeath.enemyID = "Boojum_EN";
+            BoojumDeath.simpleDeathData = BoojumDefeatAchievement;
+            BoojumDeath.specialDeathData = [];
+            Unlocks.AddUnlock_EnemyDeath(BoojumDeath);
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Boojum_Comedy_ACH", "SparklingFork_SW");
+
+            //Tragedy Unlocks
+
         }
     }
 }

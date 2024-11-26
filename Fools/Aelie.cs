@@ -69,7 +69,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Consume all stored blue pigment.\nHeal All party members and enemies with yellow health an equivalent amount.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieDesiccate"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowPurple, Pigments.YellowPurple],
                 Visuals = Visuals.Exsanguinate,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -86,7 +86,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Consume all stored blue pigment.\nHeal All party members and enemies with yellow health an equivalent amount + 1.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieDesiccate"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowPurple, Pigments.YellowPurple],
                 Visuals = Visuals.Exsanguinate,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -103,7 +103,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Consume all stored blue pigment.\nHeal All party members and enemies with yellow health an equivalent amount + 2.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieDesiccate"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowPurple, Pigments.YellowPurple],
                 Visuals = Visuals.Exsanguinate,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -120,7 +120,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Consume all stored blue pigment.\nHeal All party members and enemies with yellow health an equivalent amount + 3.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieDesiccate"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowPurple, Pigments.YellowPurple],
                 Visuals = Visuals.Exsanguinate,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -139,7 +139,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Apply 3 Ruptured to the Opposing enemy.\nChange the Left ally's health color to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSinging"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowBlue, Pigments.YellowBlue],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -155,7 +155,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Apply 5 Ruptured to the Opposing enemy.\nChange the Left ally's health color to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSinging"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowBlue, Pigments.YellowBlue],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -171,7 +171,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Apply 6 Ruptured to the Left and Opposing enemies.\nChange the Left ally's health color to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSinging"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowBlue, Pigments.YellowBlue],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -185,14 +185,14 @@ namespace Hell_Island_Fell.Fools
 
             Ability singing3 = new Ability("Singing Sun", "Singing_4_A")
             {
-                Description = "Apply 7 Ruptured to the Left, Right, and Opposing enemies.\nChange the Left ally's health color to yellow.",
+                Description = "Apply 6 Ruptured to the Left, Right, and Opposing enemies.\nChange the Left ally's health color to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSinging"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowBlue, Pigments.YellowBlue],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(RuptureApply, 7, Targeting.Slot_FrontAndSides),
+                    Effects.GenerateEffect(RuptureApply, 6, Targeting.Slot_FrontAndSides),
                     Effects.GenerateEffect(YellowHealth, 1, Targeting.Slot_AllyLeft),
                 ]
             };
@@ -205,7 +205,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Deal 5 indirect damage to the Opposing enemy.\nRandomly move the Left, Right, and Opposing enemies.\nDeal 5 indirect damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSands"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowRed, Pigments.YellowRed],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
@@ -223,7 +223,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Deal 7 indirect damage to the Opposing enemy.\nRandomly move the Left, Right, and Opposing enemies.\nDeal 7 indirect damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSands"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowRed, Pigments.YellowRed],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
@@ -241,7 +241,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Deal 9 indirect damage to the Opposing enemy.\nRandomly move the Left, Right, and Opposing enemies.\nDeal 9 indirect damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSands"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowRed, Pigments.YellowRed],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
@@ -259,7 +259,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Deal 11 indirect damage to the Opposing enemy.\nRandomly move the Left, Right, and Opposing enemies.\nDeal 11 indirect damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSands"),
-                Cost = [Pigments.Yellow, Pigments.Yellow],
+                Cost = [Pigments.YellowRed, Pigments.YellowRed],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =

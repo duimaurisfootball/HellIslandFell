@@ -35,10 +35,6 @@ namespace Hell_Island_Fell.Enemies
             CenterTarget.slotPointerDirections = [0];
             CenterTarget.allSelfSlots = false;
 
-            SpawnEnemyAnywhereEffect Scatter = ScriptableObject.CreateInstance<SpawnEnemyAnywhereEffect>();
-            Scatter.enemy = LoadedAssetsHandler.GetEnemy("ScatteringHomunculus_EN");
-            Scatter._spawnTypeID = CombatType_GameIDs.Spawn_Basic.ToString();
-
             StatusEffect_Apply_Effect FrailApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             FrailApply._Status = StatusField.Frail;
 

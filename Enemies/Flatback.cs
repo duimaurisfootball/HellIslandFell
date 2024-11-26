@@ -60,7 +60,7 @@ namespace Hell_Island_Fell.Enemies
                 AnimationTarget = Targeting.GenerateBigUnitSlotTarget([0]),
                 Effects =
                 [
-                    Effects.GenerateEffect(RuptureApply, 2, Targeting.GenerateBigUnitSlotTarget([0])),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 4, Targeting.GenerateBigUnitSlotTarget([0])),
                     Effects.GenerateEffect(SwapRight, 1, Targeting.GenerateBigUnitSlotTarget([0])),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
@@ -77,7 +77,7 @@ namespace Hell_Island_Fell.Enemies
                 AnimationTarget = Targeting.GenerateBigUnitSlotTarget([2]),
                 Effects =
                 [
-                    Effects.GenerateEffect(RuptureApply, 2, Targeting.GenerateBigUnitSlotTarget([2])),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 4, Targeting.GenerateBigUnitSlotTarget([2])),
                     Effects.GenerateEffect(SwapLeft, 1, Targeting.GenerateBigUnitSlotTarget([2])),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),

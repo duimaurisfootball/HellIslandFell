@@ -22,7 +22,7 @@ namespace Hell_Island_Fell.Fools
                 DialogueSound = LoadedAssetsHandler.GetCharacter("Clive_CH").dxSound,
             };
             pinec.GenerateMenuCharacter(ResourceLoader.LoadSprite("PinecMenu"), ResourceLoader.LoadSprite("PinecLocked"));
-            pinec.AddPassives([CustomPassives.InvincibilityGenerator(8), Passives.GetCustomPassive("Thorny_PA")]);
+            pinec.AddPassives([CustomPassives.InvincibilityGenerator(9), Passives.GetCustomPassive("Thorny_PA")]);
             pinec.SetMenuCharacterAsFullDPS();
 
             StatusEffect_Apply_Effect ScarsApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
@@ -145,32 +145,32 @@ namespace Hell_Island_Fell.Fools
 
             Ability spikes1 = new Ability("Iron Spikes", "Spikes_2_A")
             {
-                Description = "Deal 12 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 1 Scar and 2 Oil Slicked to this party member.",
+                Description = "Deal 13 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 1 Scar and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.Purple, Pigments.Red],
                 Visuals = Visuals.Thorns,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(SpikesDamage, 12, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
+                    Effects.GenerateEffect(SpikesDamage, 13, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
                     Effects.GenerateEffect(ScarsApply, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(OilApply, 2, Targeting.Slot_SelfSlot),
                 ]
             };
-            spikes1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_16_20)]);
+            spikes1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
             spikes1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Scars)]);
             spikes1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_OilSlicked)]);
 
             Ability spikes2 = new Ability("Razor Sharp Spikes", "Spikes_3_A")
             {
-                Description = "Deal 15 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 2 Scars and 2 Oil Slicked to this party member.",
+                Description = "Deal 16 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 2 Scars and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Thorns,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(SpikesDamage, 15, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
+                    Effects.GenerateEffect(SpikesDamage, 16, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
                     Effects.GenerateEffect(ScarsApply, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(OilApply, 2, Targeting.Slot_SelfSlot),
                 ]
@@ -181,14 +181,14 @@ namespace Hell_Island_Fell.Fools
 
             Ability spikes3 = new Ability("Head Full of Spikes", "Spikes_4_A")
             {
-                Description = "Deal 19 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 2 Scars and 2 Oil Slicked to this party member.",
+                Description = "Deal 20 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 2 Scars and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Thorns,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(SpikesDamage, 19, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
+                    Effects.GenerateEffect(SpikesDamage, 20, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
                     Effects.GenerateEffect(ScarsApply, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(OilApply, 2, Targeting.Slot_SelfSlot),
                 ]

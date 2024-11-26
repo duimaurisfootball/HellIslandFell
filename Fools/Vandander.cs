@@ -39,14 +39,13 @@ namespace Hell_Island_Fell.Fools
                 DeathSound = LoadedAssetsHandler.GetEnemy("TaintedYolk_EN").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetEnemy("TaMaGoa_EN").damageSound,
                 ExtraSprites = HoleSprites,
-                IgnoredAbilitiesForDPSBuilds = [],
-                IgnoredAbilitiesForSupportBuilds = [0],
                 UnitTypes =
                 [
                     UnitType_GameIDs.Fish.ToString(),
                 ],
             };
             vandander.GenerateMenuCharacter(ResourceLoader.LoadSprite("VandanderMenu"), ResourceLoader.LoadSprite("VandanderLocked"));
+            vandander.SetMenuCharacterAsFullSupport();
             vandander.AddPassives([Passives.Delicate, Passives.Enfeebled]);
 
             CheckTargetMissingHealthEffect HalfCheck = ScriptableObject.CreateInstance<CheckTargetMissingHealthEffect>();
