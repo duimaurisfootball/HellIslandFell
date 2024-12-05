@@ -21,11 +21,11 @@ namespace Hell_Island_Fell.Custom_Effects
 
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
-            int ball = entryVariable;
             exitAmount = 0;
             bool flag = false;
             foreach (TargetSlotInfo targetSlotInfo in targets)
             {
+                int ball = entryVariable;
                 for (int i = 0; i < _cycles; i++)
                 {
                     ball += (int)Math.Ceiling(Math.Log(UnityEngine.Random.value) / Math.Log(_repeatChance / 100.0));
