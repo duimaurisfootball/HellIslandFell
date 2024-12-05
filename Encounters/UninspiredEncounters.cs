@@ -66,6 +66,14 @@ namespace Hell_Island_Fell.Encounters
                         "SterileBud_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                uninspiredMedium.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
             uninspiredMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_UninspiredNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -101,7 +109,6 @@ namespace Hell_Island_Fell.Encounters
                 ], null);
             uninspiredHard.CreateNewEnemyEncounterData(
                 [
-                    "UninspiredNosestone_EN",
                     "UninspiredNosestone_EN",
                     "UninspiredNosestone_EN",
                     "Maneater_EN",
@@ -169,21 +176,42 @@ namespace Hell_Island_Fell.Encounters
                         "Unterling_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                uninspiredHard.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "UninspiredNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                uninspiredHard.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                uninspiredHard.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "ChoirBoy_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
             uninspiredHard.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_UninspiredNosestone_Hard_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Hard);
 
-            EnemyEncounter_API fiveNosestones = new EnemyEncounter_API(0, "H_Zone03_FiveNosestones_Hard_EnemyBundle", "UninspiredNosestone_Sign")
+            EnemyEncounter_API fiveNosestones = new EnemyEncounter_API((EncounterType)1, "H_Zone03_FiveNosestones_Hard_EnemyBundle", "UninspiredNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
                 RoarEvent = "event:/Characters/Enemies/Mung/CHR_ENM_Mung_Roar",
             };
             fiveNosestones.CreateNewEnemyEncounterData(
                 [
-                    "UninspiredNosestone_EN",
                     "SweatingNosestone_EN",
                     "ProlificNosestone_EN",
                     "ScatterbrainedNosestone_EN",
                     "MesmerizingNosestone_EN",
+                    "UninspiredNosestone_EN",
                 ], null);
             fiveNosestones.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_FiveNosestones_Hard_EnemyBundle", 1, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Hard);

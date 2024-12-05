@@ -13,6 +13,7 @@ global using Hell_Island_Fell.Abilities;
 global using Hell_Island_Fell.Encounters;
 global using BepInEx.Bootstrap;
 using HarmonyLib;
+using Hell_Island_Fell.Field_Effects;
 
 namespace Hell_Island_Fell
 {
@@ -26,6 +27,7 @@ namespace Hell_Island_Fell
         {
             public static bool Colophons = false;
             public static bool EnemyPack = false;
+            public static bool EggKeeper = false;
             public static void Check()
             {
                 foreach (var plugin in Chainloader.PluginInfos)
@@ -34,6 +36,7 @@ namespace Hell_Island_Fell
 
                     if (metadata.GUID == "Tairbaz.ColophonConundrum") { Colophons = true; }
                     if (metadata.GUID == "TairbazPeep.EnemyPack") { EnemyPack = true; }
+                    if (metadata.GUID == "minichibis.eggkeeper") { EggKeeper = true; }
                 }
             }
         }
@@ -50,7 +53,7 @@ namespace Hell_Island_Fell
             DisappearingDamage.Add();
 
             //Add Field Effects
-
+            //Fields.Add();
 
             //Add Status Effects
             Statuses.Add();
@@ -73,33 +76,55 @@ namespace Hell_Island_Fell
             FormidableDinners.Add();
             CurlingFinger.Add();
 
-            //Unlock Items
+            //Osman Unlocks
             SymbolOfPeace.Add();
-            ThousandFish.Add();
             BismuthSubsalicylate.Add();
-            IridescentCrystal.Add();
             DoversPowder.Add();
-            SyrupOfIpecac.Add();
             Element83.Add();
-            Hyperfixation.Add();
             AccursedRibcage.Add();
-            CursedLeg.Add();
             SickleCells.Add();
-            FesterFlesh.Add();
             CarversTools.Add();
-            MalebolgesSeveredHead.Add();
             BowlingBall.Add();
+            CheesePlate.Add();
+            //FresnelLens.Add();
+            ParchedScroll.Add();
+            //ComplexComplexion.Add();
+            HoxJar.Add();
+            //NightOil.Add();
+            //StabbingHomunculus.Add();
+            //Nemesis.Add();
+            //GreenGlass.Add();
+            FetidTooth.Add();
+            //BlackPearl.Add();
+
+            //Heaven 
+            ThousandFish.Add();
+            IridescentCrystal.Add();
+            SyrupOfIpecac.Add();
+            Hyperfixation.Add();
+            CursedLeg.Add();
+            FesterFlesh.Add();
+            MalebolgesSeveredHead.Add();
             TollBell.Add();
             BavarianPretzel.Add();
-            CheesePlate.Add();
-            ParchedScroll.Add();
+            //TheKraken.Add();
             LiquidDust.Add();
-            HoxJar.Add();
+            //GiantWeed.Add();
             InfiniteMirror.Add();
-            FetidTooth.Add();
+            //AlchemicalConstant.Add();
+            //Ripcord.Add();
+            //MagicAccelerator.Add();
+            //TheDeal.Add();
             InfernalStone.Add();
-            //StabbingHomunculus.Add();
+            //DivineGlass.Add();
 
+            //Doula Unlocks
+
+            //March Unlocks
+
+            //Bemagel Unlocks
+
+            //Other Unlocks
             NumberMagnet.Add();
             SparklingFork.Add();
 
@@ -152,6 +177,7 @@ namespace Hell_Island_Fell
             //Keklung.Add();
 
             //Add Encounters
+            CustomFarShoreEncounters.Add();
             CustomOrpheumEncounters.Add();
             CustomGardenEncounters.Add();
             SweatingEncounters.Add();
@@ -159,6 +185,7 @@ namespace Hell_Island_Fell
             ProlificEncounters.Add();
             ScatterbrainedEncounters.Add();
             UninspiredEncounters.Add();
+            InequityEncounters.Add();
             ManeaterEncounters.Add();
             StickingHomunculusEncounters.Add();
             BoojumEncounter.Add();

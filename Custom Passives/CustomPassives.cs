@@ -229,8 +229,8 @@ namespace Hell_Island_Fell.Custom_Passives
             PerformEffectPassiveAbility grinding = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
             grinding.m_PassiveID = "Grinding";
             grinding.passiveIcon = ResourceLoader.LoadSprite("NosestoneGrinding");
-            grinding._characterDescription = "Upon dying, add 1 cost of this enemy's health color to every party member ability.";
-            grinding._enemyDescription = "Upon dying, add 1 cost of this party member's health color to every party member ability.";
+            grinding._characterDescription = "Upon dying, add 1 cost of this enemy's health color to every party member ability.\nWill not add to \"Slap\".";
+            grinding._enemyDescription = "Upon dying, add 1 cost of this party member's health color to every party member ability.\nWill not add to \"Slap\".";
             grinding.effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<AddCostByHealthColorEffect>(), 1, Targeting.AllUnits),

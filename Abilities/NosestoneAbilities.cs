@@ -22,6 +22,9 @@ namespace Hell_Island_Fell.Abilities
             PercentageEffectCondition AddChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
             AddChance.percentage = 50;
 
+            AddCostByHealthColorEffect NosingAdd = ScriptableObject.CreateInstance<AddCostByHealthColorEffect>();
+            NosingAdd.AddOverSix = false;
+
             PreviousEffectCondition Fail = ScriptableObject.CreateInstance<PreviousEffectCondition>();
             Fail.wasSuccessful = false;
 
@@ -30,15 +33,15 @@ namespace Hell_Island_Fell.Abilities
 
             Ability nosing = new Ability("Nosing", "Nosing_A")
             {
-                Description = "Add 1 cost of this enemy's health color to the Opposing and Left or Right party member's abilities.",
+                Description = "Add 1 cost of this enemy's health color to the Opposing and Left or Right party member's abilities.\nWill not add to \"Slap\", and will not add to costs greater than or equal to 6.",
                 Cost = [Pigments.SplitPigment(Pigments.Red, Pigments.Blue, Pigments.Yellow, Pigments.Purple)],
                 Visuals = Visuals.StompRight,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, AddChance),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<AddCostByHealthColorEffect>(), 1, Targeting.GenerateSlotTarget([-1, 0], false, false), Fail),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<AddCostByHealthColorEffect>(), 1, Targeting.GenerateSlotTarget([0, 1], false, false), Succeed),
+                    Effects.GenerateEffect(NosingAdd, 1, Targeting.GenerateSlotTarget([-1, 0], false, false), Fail),
+                    Effects.GenerateEffect(NosingAdd, 1, Targeting.GenerateSlotTarget([0, 1], false, false), Succeed),
                 ],
                 Rarity = CustomAbilityRarity.Weight(5, true),
                 Priority = Priority.Slow,

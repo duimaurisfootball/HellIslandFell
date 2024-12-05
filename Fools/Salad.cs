@@ -77,8 +77,8 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(MetalCheck, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(OneThird, 1, Targeting.Slot_Front),
+                    Effects.GenerateEffect(MetalCheck, 1),
+                    Effects.GenerateEffect(OneThird, 1),
                     Effects.GenerateEffect(ExitDamage, 1, Targeting.Slot_Front),
                 ],
                 UnitStoreData = metallurgy,
@@ -96,11 +96,11 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(MetalCheck, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(OneQuarter, 1, Targeting.Slot_Front),
+                    Effects.GenerateEffect(MetalCheck, 1),
+                    Effects.GenerateEffect(OneQuarter, 1),
                     Effects.GenerateEffect(ExitDamage, 1, Targeting.Slot_OpponentSides),
-                    Effects.GenerateEffect(MetalCheck, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(OneThird, 1, Targeting.Slot_Front),
+                    Effects.GenerateEffect(MetalCheck, 1),
+                    Effects.GenerateEffect(OneThird, 1),
                     Effects.GenerateEffect(ShieldApply, 1, Targeting.Slot_SelfSlot),
                 ],
                 UnitStoreData = metallurgy,
@@ -119,11 +119,11 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(MetalCheck, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(OneFifth, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(PreviousHeal, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(MetalCheck, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(OneTenth, 1, Targeting.Slot_Front),
+                    Effects.GenerateEffect(MetalCheck, 1),
+                    Effects.GenerateEffect(OneFifth, 1),
+                    Effects.GenerateEffect(PreviousHeal, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(MetalCheck, 1),
+                    Effects.GenerateEffect(OneTenth, 1),
                     Effects.GenerateEffect(ConstrictedApply, 1, Targeting.Slot_SelfSlot),
                 ],
                 UnitStoreData = metallurgy,

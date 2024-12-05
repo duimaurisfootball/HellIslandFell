@@ -6,6 +6,9 @@ namespace Hell_Island_Fell.Custom_Effects
 {
     public class AddCostByHealthColorEffect : EffectSO
     {
+        public bool AddOverSix = true;
+
+        public bool IgnoreSlap = true;
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
             exitAmount = 0;
@@ -16,15 +19,18 @@ namespace Hell_Island_Fell.Custom_Effects
                 {
                     foreach (var ab in cc.CombatAbilities)
                     {
-                        var origLength = ab.cost.Length;
-                        var origCost = ab.cost;
-                        ab.cost = new ManaColorSO[origLength + entryVariable];
-                        for (int i = 0; i < origLength + entryVariable; i++)
+                        if ((ab.cost.Length < 6 || AddOverSix) && !(IgnoreSlap && ab.ability._abilityName == "Slap"))
                         {
-                            ab.cost[i] = caster.HealthColor;
-                            if (i < origLength)
+                            var origLength = ab.cost.Length;
+                            var origCost = ab.cost;
+                            ab.cost = new ManaColorSO[origLength + entryVariable];
+                            for (int i = 0; i < origLength + entryVariable; i++)
                             {
-                                ab.cost[i] = origCost[i];
+                                ab.cost[i] = caster.HealthColor;
+                                if (i < origLength)
+                                {
+                                    ab.cost[i] = origCost[i];
+                                }
                             }
                         }
                     }

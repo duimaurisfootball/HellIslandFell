@@ -467,6 +467,7 @@
     <None Remove="Sprites\SpoogleMenu.png" />
     <None Remove="Sprites\SpoogleOverworld.png" />
     <None Remove="Sprites\SpoogleVomit.png" />
+    <None Remove="Sprites\Thunderstorm.png" />
     <None Remove="Sprites\TimelineBoler.png" />
     <None Remove="Sprites\TimelineBoojum.png" />
     <None Remove="Sprites\TimelineFlatback.png" />
@@ -489,6 +490,8 @@
     <None Remove="Sprites\TreasureVanishingJar.png" />
     <None Remove="Sprites\TreaureUngroundedElectrode.png" />
     <None Remove="Sprites\UnboundDamageIntent.png" />
+    <None Remove="Sprites\UnlockDoulaHoftstoldt.png" />
+    <None Remove="Sprites\UnlockDoulaVandander.png" />
     <None Remove="Sprites\UnlockHeavenAelie.png" />
     <None Remove="Sprites\UnlockHeavenAelieLocked.png" />
     <None Remove="Sprites\UnlockHeavenAlvinar.png" />
@@ -875,6 +878,7 @@
     <EmbeddedResource Include="Sprites\OverworldBoojum.png" />
     <EmbeddedResource Include="Sprites\PassiveTwoFacedRY.png" />
     <EmbeddedResource Include="Sprites\ShopSparklingForkLocked.png" />
+    <EmbeddedResource Include="Sprites\Thunderstorm.png" />
     <EmbeddedResource Include="Sprites\TimelineBoler.png" />
     <EmbeddedResource Include="Sprites\DeadManeater.png" />
     <EmbeddedResource Include="Sprites\DeadMesmerizingNosestone.png" />
@@ -1028,6 +1032,8 @@
     <EmbeddedResource Include="Sprites\TreasureFormidableDinners.png" />
     <EmbeddedResource Include="Sprites\TreasureGroanbroad.png" />
     <EmbeddedResource Include="Sprites\TreasureShardOfHills.png" />
+    <EmbeddedResource Include="Sprites\UnlockDoulaHoftstoldt.png" />
+    <EmbeddedResource Include="Sprites\UnlockDoulaVandander.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanHoftstoldt.png" />
     <EmbeddedResource Include="Sprites\TreasureUngroundedElectrode.png" />
     <EmbeddedResource Include="Sprites\TreasureVanishingJar.png" />

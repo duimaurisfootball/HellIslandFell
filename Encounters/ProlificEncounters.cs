@@ -26,7 +26,6 @@ namespace Hell_Island_Fell.Encounters
                     "ProlificNosestone_EN",
                     "ShiveringHomunculus_EN",
                     "ShiveringHomunculus_EN",
-                    "ShiveringHomunculus_EN",
                     "SkinningHomunculus_EN",
                 ], null);
             prolificMedium.CreateNewEnemyEncounterData(
@@ -109,6 +108,44 @@ namespace Hell_Island_Fell.Encounters
                         "ProlificNosestone_EN",
                         "StickingHomunculus_EN",
                         "ScreamingHomunculus_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "NextOfKin_EN",
+                        "NextOfKin_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ShiveringHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Inequity_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Unterling_EN",
+                        "EggKeeper_EN",
                     ], null);
             }
             prolificMedium.AddEncounterToDataBases();
@@ -236,6 +273,93 @@ namespace Hell_Island_Fell.Encounters
                         "ProlificNosestone_EN",
                         "ProlificNosestone_EN",
                         "ImpenetrableAngler_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "SkinningHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "StickingHomunculus_EN",
+                        "SkinningHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Inequity_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ImpenetrableAngler_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ScreamingHomunculus_EN",
+                        "SkinningHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ScreamingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ScreamingHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Unterling_EN",
+                        "Unterling_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Unterling_EN",
+                        "SterileBud_EN",
+                        "EggKeeper_EN",
                     ], null);
             }
             prolificHard.AddEncounterToDataBases();

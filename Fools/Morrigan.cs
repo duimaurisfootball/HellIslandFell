@@ -256,10 +256,10 @@ namespace Hell_Island_Fell.Fools
             pearls3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             pearls3.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            morrigan.AddLevelData(5, new Ability[] { mud0, glass0, pearls0 });
-            morrigan.AddLevelData(5, new Ability[] { mud1, glass1, pearls1 });
-            morrigan.AddLevelData(5, new Ability[] { mud2, glass2, pearls2 });
-            morrigan.AddLevelData(5, new Ability[] { mud3, glass3, pearls3 });
+            morrigan.AddLevelData(20, new Ability[] { mud0, glass0, pearls0 });
+            morrigan.AddLevelData(20, new Ability[] { mud1, glass1, pearls1 });
+            morrigan.AddLevelData(20, new Ability[] { mud2, glass2, pearls2 });
+            morrigan.AddLevelData(20, new Ability[] { mud3, glass3, pearls3 });
 
             //morrigan.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Morrigan_Witness_ACH");
             //morrigan.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Morrigan_Divine_ACH");

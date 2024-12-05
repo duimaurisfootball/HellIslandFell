@@ -8,7 +8,7 @@ namespace Hell_Island_Fell.Encounters
     {
         public static void Add()
         {
-            List<RandomEnemyGroup> mungEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> mungEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -18,9 +18,9 @@ namespace Hell_Island_Fell.Encounters
                 "VanishingHands_EN",
             ]),
             };
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = mungEasy;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = mungEasy;
 
-            List<RandomEnemyGroup> mudLungEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> mudLungEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MudLung_Easy_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -37,9 +37,9 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = mudLungEasy;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MudLung_Easy_EnemyBundle"))._enemyBundles = mudLungEasy;
 
-            List<RandomEnemyGroup> munglingEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> munglingEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MunglingMudLung_Easy_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -56,9 +56,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = munglingEasy;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MunglingMudLung_Easy_EnemyBundle"))._enemyBundles = munglingEasy;
 
-            List<RandomEnemyGroup> redJumbleEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> redJumbleEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Zone01_JumbleGuts_Clotted_Easy_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -69,9 +69,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = redJumbleEasy;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Zone01_JumbleGuts_Clotted_Easy_EnemyBundle"))._enemyBundles = redJumbleEasy;
 
-            List<RandomEnemyGroup> yellowJumbleEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> yellowJumbleEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Zone01_JumbleGuts_Waning_Easy_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -82,9 +82,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = yellowJumbleEasy;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Zone01_JumbleGuts_Waning_Easy_EnemyBundle"))._enemyBundles = yellowJumbleEasy;
 
-            List<RandomEnemyGroup> kekoEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> kekoEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Keko_Easy_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -101,9 +101,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = kekoEasy;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Keko_Easy_EnemyBundle"))._enemyBundles = kekoEasy;
 
-            List<RandomEnemyGroup> goaMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> goaMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_FlaMingGoa_Medium_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -118,9 +118,9 @@ namespace Hell_Island_Fell.Encounters
                         "Mung_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = goaMedium;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_FlaMingGoa_Medium_EnemyBundle"))._enemyBundles = goaMedium;
 
-            List<RandomEnemyGroup> redJumbleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> redJumbleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Clotted_Medium_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -138,9 +138,9 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = redJumbleMedium;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Clotted_Medium_EnemyBundle"))._enemyBundles = redJumbleMedium;
 
-            List<RandomEnemyGroup> yellowJumbleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> yellowJumbleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Waning_Medium_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -158,9 +158,9 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = yellowJumbleMedium;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Waning_Medium_EnemyBundle"))._enemyBundles = yellowJumbleMedium;
 
-            List<RandomEnemyGroup> mudLungMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> mudLungMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MudLung_Medium_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -178,9 +178,9 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = mudLungMedium;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MudLung_Medium_EnemyBundle"))._enemyBundles = mudLungMedium;
 
-            List<RandomEnemyGroup> blueSpoggleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> blueSpoggleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Ruminating_Medium_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -191,9 +191,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = blueSpoggleMedium;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Ruminating_Medium_EnemyBundle"))._enemyBundles = blueSpoggleMedium;
 
-            List<RandomEnemyGroup> yellowSpoggleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> yellowSpoggleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Spitfire_Medium_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -204,9 +204,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = yellowSpoggleMedium;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Spitfire_Medium_EnemyBundle"))._enemyBundles = yellowSpoggleMedium;
 
-            List<RandomEnemyGroup> kekoMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> kekoMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Keko_Medium_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -226,9 +226,9 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = kekoMedium;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Keko_Medium_EnemyBundle"))._enemyBundles = kekoMedium;
 
-            List<RandomEnemyGroup> munglingMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> munglingMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MunglingMudLung_Medium_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -246,9 +246,9 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = munglingMedium;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MunglingMudLung_Medium_EnemyBundle"))._enemyBundles = munglingMedium;
 
-            List<RandomEnemyGroup> goaHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> goaHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_FlaMingGoa_Hard_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -272,9 +272,9 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = goaHard;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_FlaMingGoa_Hard_EnemyBundle"))._enemyBundles = goaHard;
 
-            List<RandomEnemyGroup> flarbHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> flarbHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Flarb_Hard_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -297,9 +297,9 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = flarbHard;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Flarb_Hard_EnemyBundle"))._enemyBundles = flarbHard;
 
-            List<RandomEnemyGroup> voboolaHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> voboolaHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Voboola_Hard_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -316,9 +316,9 @@ namespace Hell_Island_Fell.Encounters
                         "LipBug_EN",
                     ]));
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = voboolaHard;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Voboola_Hard_EnemyBundle"))._enemyBundles = voboolaHard;
 
-            List<RandomEnemyGroup> kekastleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> kekastleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Kekastle_Hard_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -329,9 +329,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = kekastleHard;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Kekastle_Hard_EnemyBundle"))._enemyBundles = kekastleHard;
 
-            List<RandomEnemyGroup> purpleJumbleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> purpleJumbleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Flummoxing_Hard_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -343,9 +343,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = purpleJumbleHard;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Flummoxing_Hard_EnemyBundle"))._enemyBundles = purpleJumbleHard;
 
-            List<RandomEnemyGroup> blueJumbleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> blueJumbleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Hollowing_Hard_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -357,9 +357,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = blueJumbleHard;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Hollowing_Hard_EnemyBundle"))._enemyBundles = blueJumbleHard;
 
-            List<RandomEnemyGroup> purpleSpoggleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> purpleSpoggleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Resonant_Hard_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -370,9 +370,9 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = purpleSpoggleHard;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Resonant_Hard_EnemyBundle"))._enemyBundles = purpleSpoggleHard;
 
-            List<RandomEnemyGroup> redSpoggleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles)
+            List<RandomEnemyGroup> redSpoggleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Writhing_Hard_EnemyBundle"))._enemyBundles)
             {
                 new(
             [
@@ -383,7 +383,7 @@ namespace Hell_Island_Fell.Encounters
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
             }
-            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Mung_Easy_EnemyBundle"))._enemyBundles = redSpoggleHard;
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Writhing_Hard_EnemyBundle"))._enemyBundles = redSpoggleHard;
         }
     }
 }

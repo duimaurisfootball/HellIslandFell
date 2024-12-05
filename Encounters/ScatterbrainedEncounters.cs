@@ -63,6 +63,14 @@ namespace Hell_Island_Fell.Encounters
                         "ScreamingHomunculus_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                scatterbrainedMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
             scatterbrainedMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_ScatterbrainedNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -74,6 +82,12 @@ namespace Hell_Island_Fell.Encounters
             scatterbrainedHard.CreateNewEnemyEncounterData(
                 [
                     "ScatterbrainedNosestone_EN",
+                    "ScatterbrainedNosestone_EN",
+                    "InHerImage_EN",
+                    "InHerImage_EN",
+                ], null);
+            scatterbrainedHard.CreateNewEnemyEncounterData(
+                [
                     "ScatterbrainedNosestone_EN",
                     "InHerImage_EN",
                     "InHerImage_EN",
@@ -91,7 +105,6 @@ namespace Hell_Island_Fell.Encounters
                     "ProlificNosestone_EN",
                     "InHerImage_EN",
                     "InHerImage_EN",
-                    "InHerImage_EN",
                 ], null);
             scatterbrainedHard.CreateNewEnemyEncounterData(
                 [
@@ -99,13 +112,11 @@ namespace Hell_Island_Fell.Encounters
                     "MesmerizingNosestone_EN",
                     "InHerImage_EN",
                     "InHerImage_EN",
-                    "InHerImage_EN",
                 ], null);
             scatterbrainedHard.CreateNewEnemyEncounterData(
                 [
                     "ScatterbrainedNosestone_EN",
                     "Inequity_EN",
-                    "InHerImage_EN",
                     "InHerImage_EN",
                     "InHerImage_EN",
                 ], null);
@@ -117,13 +128,11 @@ namespace Hell_Island_Fell.Encounters
                         "SterileBud_EN",
                         "InHerImage_EN",
                         "InHerImage_EN",
-                        "InHerImage_EN",
                     ], null);
                 scatterbrainedHard.CreateNewEnemyEncounterData(
                     [
                         "ScatterbrainedNosestone_EN",
                         "TitteringPeon_EN",
-                        "InHerImage_EN",
                         "InHerImage_EN",
                         "InHerImage_EN",
                     ], null);
@@ -133,7 +142,16 @@ namespace Hell_Island_Fell.Encounters
                         "Unterling_EN",
                         "InHerImage_EN",
                         "InHerImage_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                scatterbrainedHard.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
                         "InHerImage_EN",
+                        "InHerImage_EN",
+                        "EggKeeper_EN",
                     ], null);
             }
             scatterbrainedHard.AddEncounterToDataBases();

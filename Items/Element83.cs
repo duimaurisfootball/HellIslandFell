@@ -38,6 +38,10 @@ namespace Hell_Island_Fell.Items
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(83)),
                 ],
                 SecondaryDoesPopUpInfo = false,
+                SecondaryTriggerOn =
+                [
+                    TriggerCalls.OnTurnStart,
+                ],
                 SecondaryEffects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(17)),

@@ -22,7 +22,7 @@ namespace Hell_Island_Fell.Items
                 Flavour = "\"Pairs great with beer cheese.\"",
                 Description = "This party member now has Connoisseur as a passive.",
                 IsShopItem = true,
-                ShopPrice = 10,
+                ShopPrice = 9,
                 DoesPopUpInfo = false,
                 StartsLocked = true,
                 Icon = ResourceLoader.LoadSprite("UnlockHeavenAlvinar"),

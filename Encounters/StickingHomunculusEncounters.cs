@@ -59,6 +59,20 @@ namespace Hell_Island_Fell.Encounters
                     "StickingHomunculus_EN",
                     "SweatingNosestone_EN",
                 ], null);
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ChoirBoy_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
             StickingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_StickingHomunculus_Medium_EnemyBundle", 8, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
             EnemyEncounter_API StickingHard = new EnemyEncounter_API(0, "H_Zone03_StickingHomunculus_Hard_EnemyBundle", "StickingHomunculus_Sign")
@@ -190,6 +204,73 @@ namespace Hell_Island_Fell.Encounters
                         "StickingHomunculus_EN",
                         "Unterling_EN",
                         "Unterling_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "SkinningHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "SweatingNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ProlificNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "Inequity_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ChoirBoy_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ScreamingHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "SterileBud_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "Unterling_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "ScreamingHomunculus_EN",
+                        "EggKeeper_EN",
                     ], null);
             }
             StickingHard.AddEncounterToDataBases();

@@ -1,4 +1,5 @@
 ﻿using BrutalAPI;
+using Hell_Island_Fell.Custom_Stuff;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,12 +15,12 @@ namespace Hell_Island_Fell.Status_Effects
         {
             holder.m_ObjectData = caller;
 
-            CombatManager.Instance.AddObserver(holder.OnEventTriggered_01, TriggerCalls.OnTurnFinished.ToString(), caller);
+            CombatManager.Instance.AddObserver(holder.OnEventTriggered_01, TurnEndAfterItemsTriggerPatch.OnTurnFinishedAfterItems, caller);
         }
 
         public override void OnTriggerDettached(StatusEffect_Holder holder, IStatusEffector caller)
         {
-            CombatManager.Instance.RemoveObserver(holder.OnEventTriggered_01, TriggerCalls.OnTurnFinished.ToString(), caller);
+            CombatManager.Instance.RemoveObserver(holder.OnEventTriggered_01, TurnEndAfterItemsTriggerPatch.OnTurnFinishedAfterItems, caller);
         }
 
         public override void OnEventCall_01(StatusEffect_Holder holder, object sender, object args)

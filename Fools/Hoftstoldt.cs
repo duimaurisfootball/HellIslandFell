@@ -252,7 +252,7 @@ namespace Hell_Island_Fell.Fools
             hoftstoldt.AddPassives([Passives.Unstable, Passives.GetCustomPassive("HConstruct_PA")]);
             hoftstoldt.SetMenuCharacterAsFullSupport();
 
-            int FaceOn = 216;
+            int FaceOn = FaceSprites._frontSprite.Length;
 
             RandomizeCasterExtraSpritesEffect FaceOff = ScriptableObject.CreateInstance<RandomizeCasterExtraSpritesEffect>();
             FaceOff._ExtraSpriteID = "HoftstoldtSpritesSpecial";

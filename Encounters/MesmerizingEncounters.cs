@@ -69,6 +69,14 @@ namespace Hell_Island_Fell.Encounters
                         "TitteringPeon_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                mesmerizingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
             mesmerizingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_MesmerizingNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -83,7 +91,6 @@ namespace Hell_Island_Fell.Encounters
                     "MesmerizingNosestone_EN",
                     "InHisImage_EN",
                     "InHisImage_EN",
-                    "InHisImage_EN",
                 ], null);
             mesmerizingHard.CreateNewEnemyEncounterData(
                 [
@@ -96,20 +103,17 @@ namespace Hell_Island_Fell.Encounters
                     "MesmerizingNosestone_EN",
                     "SweatingNosestone_EN",
                     "GigglingMinister_EN",
-                    "GigglingMinister_EN",
                 ], null);
             mesmerizingHard.CreateNewEnemyEncounterData(
                 [
                     "MesmerizingNosestone_EN",
                     "ProlificNosestone_EN",
                     "GigglingMinister_EN",
-                    "GigglingMinister_EN",
                 ], null);
             mesmerizingHard.CreateNewEnemyEncounterData(
                 [
                     "MesmerizingNosestone_EN",
                     "ScatterbrainedNosestone_EN",
-                    "GigglingMinister_EN",
                     "GigglingMinister_EN",
                 ], null);
             mesmerizingHard.CreateNewEnemyEncounterData(
@@ -122,7 +126,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "MesmerizingNosestone_EN",
                     "Inequity_EN",
-                    "GigglingMinister_EN",
                     "GigglingMinister_EN",
                 ], null);
             mesmerizingHard.CreateNewEnemyEncounterData(
@@ -157,6 +160,43 @@ namespace Hell_Island_Fell.Encounters
                         "MesmerizingNosestone_EN",
                         "TitteringPeon_EN",
                         "Inequity_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "GigglingMinister_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "InHisImage_EN",
+                        "InHisImage_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "StickingHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "Inequity_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "TitteringPeon_EN",
+                        "EggKeeper_EN",
                     ], null);
             }
             mesmerizingHard.AddEncounterToDataBases();

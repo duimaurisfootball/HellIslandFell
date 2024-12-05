@@ -65,6 +65,14 @@ namespace Hell_Island_Fell.Encounters
                     "NextOfKin_EN",
                     "NextOfKin_EN",
                 ], null);
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                sweatingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
             sweatingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_SweatingNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -172,6 +180,62 @@ namespace Hell_Island_Fell.Encounters
                         "SweatingNosestone_EN",
                         "Unterling_EN",
                         "Unterling_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "StickingHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "SkinningHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "ChoirBoy_EN",
+                        "ChoirBoy_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "SweatingNosestone_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "ScreamingHomunculus_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "Unterling_EN",
+                        "EggKeeper_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "SweatingNosestone_EN",
+                        "Unterling_EN",
+                        "EggKeeper_EN",
                     ], null);
             }
             sweatingHard.AddEncounterToDataBases();

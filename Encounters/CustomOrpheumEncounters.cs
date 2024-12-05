@@ -24,12 +24,6 @@ namespace Hell_Island_Fell.Encounters
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
-                musicManEasy.Add(new(
-                    [
-                        "MusicMan_EN",
-                        "Moone_EN",
-                        "Chapman_EN",
-                    ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_MusicMan_Easy_EnemyBundle"))._enemyBundles = musicManEasy;
 
@@ -131,19 +125,6 @@ namespace Hell_Island_Fell.Encounters
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
-                musicManMedium.Add(new(
-                    [
-                        "MusicMan_EN",
-                        "Moone_EN",
-                        "Chapman_EN",
-                    ]));
-                musicManMedium.Add(new(
-                    [
-                        "MusicMan_EN",
-                        "MusicMan_EN",
-                        "Moone_EN",
-                        "Chapman_EN",
-                    ]));
                 musicManMedium.Add(new(
                     [
                         "MusicMan_EN",
@@ -423,6 +404,7 @@ namespace Hell_Island_Fell.Encounters
                 "ManicMan_EN",
                 "ManicMan_EN",
                 "ManicMan_EN",
+                "ManicMan_EN",
             ]),
             };
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_InnerChild_Hard_EnemyBundle"))._enemyBundles = innerChildHard;
@@ -495,7 +477,7 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Conductor_EN",
                         "Moone_EN",
-                        "Moone_EN",
+                        "Chapman_EN",
                         "Chapman_EN",
                     ]));
                 conductorHard.Add(new(

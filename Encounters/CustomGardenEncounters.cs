@@ -935,27 +935,6 @@ namespace Hell_Island_Fell.Encounters
             ]),
                 new(
             [
-                "MesmerizingNosestone_EN",
-                "ProlificNosestone_EN",
-                "GigglingMinister_EN",
-                "GigglingMinister_EN",
-            ]),
-                new(
-            [
-                "MesmerizingNosestone_EN",
-                "ScatterbrainedNosestone_EN",
-                "GigglingMinister_EN",
-                "GigglingMinister_EN",
-            ]),
-                new(
-            [
-                "MesmerizingNosestone_EN",
-                "GigglingMinister_EN",
-                "GigglingMinister_EN",
-                "GigglingMinister_EN",
-            ]),
-                new(
-            [
                 "SweatingNosestone_EN",
                 "GigglingMinister_EN",
                 "GigglingMinister_EN",
@@ -977,13 +956,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "SweatingNosestone_EN",
-                "GigglingMinister_EN",
-                "GigglingMinister_EN",
-            ]),
-                new(
-            [
-                "SweatingNosestone_EN",
-                "GigglingMinister_EN",
                 "GigglingMinister_EN",
                 "GigglingMinister_EN",
             ]),
@@ -1029,7 +1001,6 @@ namespace Hell_Island_Fell.Encounters
             [
                 "GigglingMinister_EN",
                 "Inequity_EN",
-                "ProlificNosestone_EN",
                 "ProlificNosestone_EN",
             ]),
                 new(

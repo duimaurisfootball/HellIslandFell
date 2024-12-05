@@ -1335,12 +1335,6 @@ namespace Hell_Island_Fell.Encounters
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MaladjustedMedium"))._enemyBundles = maladjustedMedium;
 
-                List<RandomEnemyGroup> anglerHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("AnglerHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("AnglerHard"))._enemyBundles = anglerHard;
-
                 List<RandomEnemyGroup> chapbullHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChapbullHard"))._enemyBundles)
                 {
 
@@ -1389,12 +1383,6 @@ namespace Hell_Island_Fell.Encounters
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GreyJumbleMedium"))._enemyBundles = greyJumbleMedium;
 
-                List<RandomEnemyGroup> metatronHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MetatronHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MetatronHard"))._enemyBundles = metatronHard;
-
                 List<RandomEnemyGroup> neoplasmHeapMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapMedium"))._enemyBundles)
                 {
 
@@ -1437,24 +1425,6 @@ namespace Hell_Island_Fell.Encounters
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("OpisthotonusHard"))._enemyBundles = opisthotonusHard;
 
-                List<RandomEnemyGroup> peonEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PeonEasy"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PeonEasy"))._enemyBundles = peonEasy;
-
-                List<RandomEnemyGroup> psychopompHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompHard"))._enemyBundles = psychopompHard;
-
-                List<RandomEnemyGroup> psychopompMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompMedium"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompMedium"))._enemyBundles = psychopompMedium;
-
                 List<RandomEnemyGroup> revoltingHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("RevoltingHard"))._enemyBundles)
                 {
 
@@ -1473,18 +1443,6 @@ namespace Hell_Island_Fell.Encounters
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MountainHard"))._enemyBundles = mountainHard;
 
-                List<RandomEnemyGroup> sterileBudMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SterileBudMedium"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SterileBudMedium"))._enemyBundles = sterileBudMedium;
-
-                List<RandomEnemyGroup> sterileBudHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SterileBudHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SterileBudHard"))._enemyBundles = sterileBudHard;
-
                 List<RandomEnemyGroup> unflarbHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("UnflarbHard"))._enemyBundles)
                 {
 
@@ -1496,6 +1454,146 @@ namespace Hell_Island_Fell.Encounters
 
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ZygoteHard"))._enemyBundles = zygoteHard;
+            }
+            if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                List<RandomEnemyGroup> anglerHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("AnglerHard"))._enemyBundles)
+                {
+                    new(
+                [
+                    "ImpenetrableAngler_EN",
+                    "StickingHomunculus_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "ImpenetrableAngler_EN",
+                    "ProlificNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "ImpenetrableAngler_EN",
+                    "SweatingNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "ImpenetrableAngler_EN",
+                    "Inequity_EN",
+                    "EggKeeper_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("AnglerHard"))._enemyBundles = anglerHard;
+
+                List<RandomEnemyGroup> metatronHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MetatronHard"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Metatron_EN",
+                    "SweatingNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "Metatron_EN",
+                    "UninspiredNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "Metatron_EN",
+                    "ProlificNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MetatronHard"))._enemyBundles = metatronHard;
+
+                List<RandomEnemyGroup> peonEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PeonEasy"))._enemyBundles)
+                {
+
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PeonEasy"))._enemyBundles = peonEasy;
+
+                List<RandomEnemyGroup> psychopompHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompHard"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Psychopomp_EN",
+                    "ProlificNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "Psychopomp_EN",
+                    "UninspiredNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "Psychopomp_EN",
+                    "SweatingNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "Psychopomp_EN",
+                    "MesmerizingNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "Psychopomp_EN",
+                    "StickingHomunculus_EN",
+                    "EggKeeper_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompHard"))._enemyBundles = psychopompHard;
+
+                List<RandomEnemyGroup> psychopompMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompMedium"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Psychopomp_EN",
+                    "Inequity_EN",
+                    "EggKeeper_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompMedium"))._enemyBundles = psychopompMedium;
+
+                List<RandomEnemyGroup> sterileBudMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SterileBudMedium"))._enemyBundles)
+                {
+                    new(
+                [
+                    "SterileBud_EN",
+                    "Inequity_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "SterileBud_EN",
+                    "StickingHomunculus_EN",
+                    "EggKeeper_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SterileBudMedium"))._enemyBundles = sterileBudMedium;
+
+                List<RandomEnemyGroup> sterileBudHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SterileBudHard"))._enemyBundles)
+                {
+                    new(
+                [
+                    "SterileBud_EN",
+                    "ProlificNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                    new(
+                [
+                    "SterileBud_EN",
+                    "ScatterbrainedNosestone_EN",
+                    "EggKeeper_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SterileBudHard"))._enemyBundles = sterileBudHard;
             }
         }
     }

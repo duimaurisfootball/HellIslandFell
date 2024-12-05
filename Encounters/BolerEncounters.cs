@@ -155,8 +155,8 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "MusicMan_EN",
                     "MusicMan_EN",
-                    "MusicMan_EN",
-                    "MusicMan_EN",
+                    "ManicMan_EN",
+                    "ManicMan_EN",
                 ], null);
             BolerHard.CreateNewEnemyEncounterData(
                 [
@@ -170,7 +170,15 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Boler_EN",
                     "MusicMan_EN",
-                    "MusicMan_EN",
+                    "ManicMan_EN",
+                    "ManicMan_EN",
+                    "ManicMan_EN",
+                ], null);
+            BolerHard.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "ManicMan_EN",
+                    "ManicMan_EN",
                     "ManicMan_EN",
                     "ManicMan_EN",
                 ], null);

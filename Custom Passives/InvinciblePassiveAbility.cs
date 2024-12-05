@@ -36,7 +36,7 @@ namespace Hell_Island_Fell.Custom_Passives
         {
         }
 
-        public class InvincibleIntValueModifier(IUnit attackedUnit, int limit) : IntValueModifier(105)
+        public class InvincibleIntValueModifier(IUnit attackedUnit, int limit) : IntValueModifier(100)
         {
             public override int Modify(int value)
             {

@@ -13,7 +13,7 @@ namespace Hell_Island_Fell.Encounters
             Portals.AddPortalSign("Maneater_Sign", ResourceLoader.LoadSprite("TimelineManeater", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
             EnemyEncounter_API ManeaterEasy = new EnemyEncounter_API(0, "H_Zone03_Maneater_Easy_EnemyBundle", "Maneater_Sign")
             {
-                MusicEvent = "event:/Music/Mx_GigglingMinister",
+                MusicEvent = "event:/MarbledPearls",
                 RoarEvent = "event:/Characters/Enemies/Flarb/CHR_ENM_Flarb_Roar",
             };
             ManeaterEasy.CreateNewEnemyEncounterData(
@@ -81,7 +81,7 @@ namespace Hell_Island_Fell.Encounters
 
             EnemyEncounter_API ManeaterMedium = new EnemyEncounter_API(0, "H_Zone03_Maneater_Medium_EnemyBundle", "Maneater_Sign")
             {
-                MusicEvent = "event:/Music/Mx_GigglingMinister",
+                MusicEvent = "event:/MarbledPearls",
                 RoarEvent = "event:/Characters/Enemies/Flarb/CHR_ENM_Flarb_Roar",
             };
             ManeaterMedium.CreateNewEnemyEncounterData(
@@ -219,12 +219,20 @@ namespace Hell_Island_Fell.Encounters
                         "UninspiredNosestone_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                ManeaterMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                    ], null);
+            }
             ManeaterMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_Maneater_Medium_EnemyBundle", 4, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
             EnemyEncounter_API ManeaterHard = new EnemyEncounter_API(0, "H_Zone03_Maneater_Hard_EnemyBundle", "Maneater_Sign")
             {
-                MusicEvent = "event:/Music/Mx_GigglingMinister",
+                MusicEvent = "event:/MarbledPearls",
                 RoarEvent = "event:/Characters/Enemies/Flarb/CHR_ENM_Flarb_Roar",
             };
             ManeaterHard.CreateNewEnemyEncounterData(
@@ -340,6 +348,42 @@ namespace Hell_Island_Fell.Encounters
                         "SterileBud_EN",
                         "SterileBud_EN",
                         "SweatingNosestone_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                        "NextOfKin_EN",
+                    ], null);
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                        "ChoirBoy_EN",
+                    ], null);
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                        "SkinningHomunculus_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.EggKeeper)
+            {
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                        "SterileBud_EN",
+                    ], null);
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "EggKeeper_EN",
+                        "Unterling_EN",
                     ], null);
             }
             ManeaterHard.AddEncounterToDataBases();
