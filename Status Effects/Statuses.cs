@@ -50,7 +50,7 @@ namespace Hell_Island_Fell.Status_Effects
             {
                 StatusEffectInfoSO SaltedInfo = ScriptableObject.CreateInstance<StatusEffectInfoSO>();
                 SaltedInfo._statusName = "Salted";
-                SaltedInfo._description = "Increase all other status effects on this party member/enemy by 2 on turn end.\n3 Salted is lost at the end of each turn.";
+                SaltedInfo._description = "Increase all other status effects on this party member/enemy by 2 on turn end.\n1 Salted is lost at the end of each turn.";
                 SaltedInfo.icon = ResourceLoader.LoadSprite("Salted");
 
                 LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Frail_ID", out StatusEffect_SO frail);

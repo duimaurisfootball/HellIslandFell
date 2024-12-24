@@ -27,7 +27,7 @@ namespace Hell_Island_Fell.Enemies
 
             Enemy boler = new Enemy("Boler", "Boler_EN")
             {
-                Health = 40,
+                Health = 50,
                 HealthColor = Pigments.Purple,
                 Size = 1,
                 CombatSprite = ResourceLoader.LoadSprite("TimelineBoler", new Vector2(0.5f, 0f), 32),
@@ -41,7 +41,7 @@ namespace Hell_Island_Fell.Enemies
                 ],
                 CombatExitEffects =
                 [
-                    Effects.GenerateEffect(CheapLoot, 3, Targeting.Slot_Front),
+                    Effects.GenerateEffect(CheapLoot, 2, Targeting.Slot_Front),
                     Effects.GenerateEffect(ExpensiveLoot, 1, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ChaosLootReplaceEffect>(), 10, Targeting.Slot_Front, ChangeChance),
                 ],

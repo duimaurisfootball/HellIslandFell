@@ -12,7 +12,7 @@ namespace Hell_Island_Fell.Enemies
         {
             Enemy boojum = new Enemy("Boojum", "Boojum_EN")
             {
-                Health = 177,
+                Health = 157,
                 HealthColor = Pigments.Red,
                 Size = 1,
                 CombatSprite = ResourceLoader.LoadSprite("TimelineBoojum", new Vector2(0.5f, 0f), 32),
@@ -86,7 +86,7 @@ namespace Hell_Island_Fell.Enemies
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<BoojumDamageEffect>(), 3)
                 ],
-                Rarity = CustomAbilityRarity.Weight(5, true),
+                Rarity = CustomAbilityRarity.Weight(4, true),
                 Priority = Priority.Fast,
             };
             butcher.AddIntentsToTarget(Targeting.GenerateSlotTarget([0, 1, 2, 3, 4], false), [nameof(IntentType_GameIDs.Damage_3_6)]);
@@ -96,15 +96,16 @@ namespace Hell_Island_Fell.Enemies
 
             Ability broker = new Ability("Broker", "Broker_A")
             {
-                Description = "Destroy the Opposing party member's item and deal almost no damage to all party members to the Right of this enemy.\nIf successful, stop this attack.\nRemove all Constricted from this position and move to the Right.\nIf the previous effect was successful, repeat this attack.",
+                Description = "Destroy the Opposing party member's item and deal almost no damage to all party members to the Right of this enemy.\nIf an item was destroyed, stop this attack.\nRemove all Constricted from this position and move to the Right.\nIf the previous effect was successful, repeat this attack.\nWhen this attack ends, fully heal the Opposing party member.",
                 Cost = [Pigments.Purple, Pigments.Green, Pigments.Grey],
                 Visuals = Visuals.Conductor,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<BoojumItemStealEffect>(), 2)
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<BoojumItemStealEffect>(), 2),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<FullHealEffect>(), 1, Targeting.Slot_Front),
                 ],
-                Rarity = CustomAbilityRarity.Weight(2, true),
+                Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Fast,
             };
             broker.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Misc)]);
@@ -112,6 +113,7 @@ namespace Hell_Island_Fell.Enemies
             broker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Swap_Right)]);
             broker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Rem_Field_Constricted)]);
             broker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
+            broker.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Heal_11_20)]);
 
             Ability banker = new Ability("Banker", "Banker_A")
             {
@@ -121,7 +123,7 @@ namespace Hell_Island_Fell.Enemies
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<BoojumCurrencyEffect>(), 1)
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<BoojumCurrencyEffect>(), 1),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Fast,
@@ -141,7 +143,7 @@ namespace Hell_Island_Fell.Enemies
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<BoojumFurthestLeftEffect>(), 1),
                 ],
-                Rarity = CustomAbilityRarity.Weight(3, true),
+                Rarity = CustomAbilityRarity.Weight(2, true),
                 Priority = Priority.Fast,
             };
             beaver.AddIntentsToTarget(Targeting.GenerateSlotTarget([-4, -3, -2, -1, 0], true), [nameof(IntentType_GameIDs.Swap_Left)]);

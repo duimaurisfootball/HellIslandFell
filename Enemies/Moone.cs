@@ -79,7 +79,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability hellsClaxon = new Ability("Hell's Claxon", "HellsClaxon_A")
             {
-                Description = "Deal almost no indirect damage to the Left and Right allies.\nAttract another Moone.",
+                Description = "Deal almost no indirect damage to the Left and Right party members.\nAttract another Moone.",
                 Cost = [Pigments.Yellow],
                 Visuals = Visuals.Scream,
                 AnimationTarget = Targeting.Slot_Front,

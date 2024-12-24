@@ -42,7 +42,7 @@ namespace Hell_Island_Fell.Field_Effects
 
         public override void OnEventCall_02(FieldEffect_Holder holder, object sender, object args)
         {
-            if (args is DamageReceivedValueChangeException context && !context.damageTypeID.Equals(CombatType_GameIDs.Dmg_DivineProtection.ToString()) && context.directDamage)
+            if (args is DamageReceivedValueChangeException context && context.directDamage)
             {
                 context.AddModifier(new StormValueModifierReceived(holder.m_ContentMain));
             }

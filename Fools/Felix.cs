@@ -250,15 +250,15 @@ namespace Hell_Island_Fell.Fools
 
             Ability pendulum1 = new Ability("Foucalt Pendulum", "Pendulum_2_A")
             {
-                Description = "Deal 8-9 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
+                Description = "Deal 9-10 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixPendulum"),
                 Cost = [Pigments.Red, Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Intrusion,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 8, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(pendulumDamage, 9, Targeting.Slot_Front),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 9, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(pendulumDamage, 10, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgDownChange, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
@@ -271,15 +271,15 @@ namespace Hell_Island_Fell.Fools
 
             Ability pendulum2 = new Ability("Damped Pendulum", "Pendulum_3_A")
             {
-                Description = "Deal 11-12 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
+                Description = "Deal 12-13 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixPendulum"),
                 Cost = [Pigments.Red, Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Intrusion,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 11, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(pendulumDamage, 12, Targeting.Slot_Front),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 12, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(pendulumDamage, 13, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgDownChange, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
@@ -292,15 +292,15 @@ namespace Hell_Island_Fell.Fools
 
             Ability pendulum3 = new Ability("Double Pendulum", "Pendulum_4_A")
             {
-                Description = "Deal 13-14 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
+                Description = "Deal 15-16 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixPendulum"),
                 Cost = [Pigments.Red, Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Intrusion,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 13, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(pendulumDamage, 14, Targeting.Slot_Front),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 15, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(pendulumDamage, 16, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgDownChange, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
@@ -308,7 +308,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
                 ]
             };
-            pendulum3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
+            pendulum3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_16_20)]);
             pendulum3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
             //butterfly

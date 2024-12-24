@@ -54,7 +54,7 @@ namespace Hell_Island_Fell.Fools
             //chain
             Ability chain0 = new Ability("Chain Lash", "Chain_1_A")
             {
-                Description = "Deal 6 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 1 Scar and 2 Ruptured to this party member.",
+                Description = "Deal 6 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 25% dropoff.\nApply 1 Scar and 2 Ruptured to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecChain"),
                 Cost = [Pigments.Purple, Pigments.Red],
                 Visuals = Visuals.Slash,
@@ -72,7 +72,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability chain1 = new Ability("Chain Swing", "Chain_2_A")
             {
-                Description = "Deal 8 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 1 Scar and 2 Ruptured to this party member.",
+                Description = "Deal 8 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 25% dropoff.\nApply 1 Scar and 2 Ruptured to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecChain"),
                 Cost = [Pigments.Purple, Pigments.Red],
                 Visuals = Visuals.Slash,
@@ -90,7 +90,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability chain2 = new Ability("Chain Knives", "Chain_3_A")
             {
-                Description = "Deal 10 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 2 Scars and 2 Ruptured to this party member.",
+                Description = "Deal 10 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 25% dropoff.\nApply 2 Scars and 2 Ruptured to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecChain"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Slash,
@@ -108,7 +108,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability chain3 = new Ability("Chain Ring", "Chain_4_A")
             {
-                Description = "Deal 12 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 2 Scars and 2 Ruptured to this party member.",
+                Description = "Deal 12 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 25% dropoff.\nApply 2 Scars and 2 Ruptured to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecChain"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Slash,
@@ -127,7 +127,7 @@ namespace Hell_Island_Fell.Fools
             //spikes
             Ability spikes0 = new Ability("Tough Spikes", "Spikes_1_A")
             {
-                Description = "Deal 8 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 1 Scar and 2 Oil Slicked to this party member.",
+                Description = "Deal 8 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 75% dropoff.\nApply 1 Scar and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.Purple, Pigments.Red],
                 Visuals = Visuals.Thorns,
@@ -145,7 +145,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability spikes1 = new Ability("Iron Spikes", "Spikes_2_A")
             {
-                Description = "Deal 13 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 1 Scar and 2 Oil Slicked to this party member.",
+                Description = "Deal 13 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 75% dropoff.\nApply 1 Scar and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.Purple, Pigments.Red],
                 Visuals = Visuals.Thorns,
@@ -163,7 +163,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability spikes2 = new Ability("Razor Sharp Spikes", "Spikes_3_A")
             {
-                Description = "Deal 16 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 2 Scars and 2 Oil Slicked to this party member.",
+                Description = "Deal 16 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 75% dropoff.\nApply 2 Scars and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Thorns,
@@ -181,7 +181,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability spikes3 = new Ability("Head Full of Spikes", "Spikes_4_A")
             {
-                Description = "Deal 20 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right.\nApply 2 Scars and 2 Oil Slicked to this party member.",
+                Description = "Deal 20 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 75% dropoff.\nApply 2 Scars and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Thorns,
@@ -202,7 +202,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Remove 0-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
-                Cost = [Pigments.Purple, Pigments.Purple, Pigments.Purple],
+                Cost = [Pigments.Blue, Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -219,7 +219,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Remove 0-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
-                Cost = [Pigments.Purple, Pigments.Purple],
+                Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -236,7 +236,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Remove 1-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
-                Cost = [Pigments.Purple, Pigments.Purple],
+                Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -253,7 +253,7 @@ namespace Hell_Island_Fell.Fools
             {
                 Description = "Remove 1-3 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
-                Cost = [Pigments.Purple, Pigments.Purple],
+                Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =

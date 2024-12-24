@@ -22,10 +22,10 @@ namespace Hell_Island_Fell.Field_Effects
                 ThunderstormInfo._removed_SE_Event = baseinfo._removed_SE_Event;
                 ThunderstormInfo._updated_SE_Event = baseinfo._updated_SE_Event;
 
-                GameObject ThunderstormEnemy = Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("");
+                GameObject ThunderstormEnemy = Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ThunderstormAssetBundle/ThunderstormEnemy.prefab");
                 ThunderstormInfo.m_EnemyLayoutTemplate = ThunderstormEnemy.GetComponent<EnemyFieldEffectLayout>();
 
-                GameObject ThunderstormCharacters = Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("");
+                GameObject ThunderstormCharacters = Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ThunderstormAssetBundle/ThunderstormCharacter.prefab");
                 ThunderstormInfo.m_CharacterLayoutTemplate = ThunderstormCharacters.GetComponent<CharacterFieldEffectLayout>();
 
                 Thunderstorm thunderstorm = ScriptableObject.CreateInstance<Thunderstorm>();

@@ -39,6 +39,7 @@ namespace Hell_Island_Fell.Custom_Passives
             }
 
             ex.AddModifier(new DisappearingIntValueModifier(unit, Disappearing));
+            ex.ShouldIgnoreUI = true;
         }
 
         public class DisappearingIntValueModifier(IUnit attackedUnit, StatusEffect_SO disappearingStatus) : IntValueModifier(101)

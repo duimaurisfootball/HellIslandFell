@@ -71,17 +71,41 @@ namespace Hell_Island_Fell.Achievements
             UnlockWitnessAelie.AddUnlockData("Aelie_CH", Unlocks.GenerateUnlockData("HIF_Aelie_Witness_Unlock", "HIF_Aelie_Witness_ACH", "", "", ["ParchedScroll_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Aelie_Witness_ACH", "ParchedScroll_TW");
 
+            ModdedAchievements AchievementWitnessGomma = new ModdedAchievements("Complex Complexion", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanGomma", null, 32, null), "HIF_Gomma_Witness_ACH");
+            AchievementWitnessGomma.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessGomma = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessGomma.AddUnlockData("Gomma_CH", Unlocks.GenerateUnlockData("HIF_Gomma_Witness_Unlock", "HIF_Gomma_Witness_ACH", "", "", ["ComplexComplexion_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Gomma_Witness_ACH", "ComplexComplexion_TW");
+
             ModdedAchievements AchievementWitnessHills = new ModdedAchievements("Hox Jar", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanHills", null, 32, null), "HIF_Hills_Witness_ACH");
             AchievementWitnessHills.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
             FinalBossCharUnlockCheck UnlockWitnessHills = Unlocks.GetUnlock_OsmanFinalBoss();
             UnlockWitnessHills.AddUnlockData("Hills_CH", Unlocks.GenerateUnlockData("HIF_Hills_Witness_Unlock", "HIF_Hills_Witness_ACH", "", "", ["HoxJar_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Hills_Witness_ACH", "HoxJar_TW");
 
+            ModdedAchievements AchievementWitnessHoftstoldt = new ModdedAchievements("Stabbing Homunculus", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanHoftstoldt", null, 32, null), "HIF_Hoftstoldt_Witness_ACH");
+            AchievementWitnessHoftstoldt.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessHoftstoldt = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessHoftstoldt.AddUnlockData("Hoftstoldt_CH", Unlocks.GenerateUnlockData("HIF_Hoftstoldt_Witness_Unlock", "HIF_Hoftstoldt_Witness_ACH", "", "", ["StabbingHomunculus_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Hoftstoldt_Witness_ACH", "StabbingHomunculus_TW");
+
+            ModdedAchievements AchievementWitnessPinec = new ModdedAchievements("Nemesis", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanPinec", null, 32, null), "HIF_Pinec_Witness_ACH");
+            AchievementWitnessPinec.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessPinec = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessPinec.AddUnlockData("Pinec_CH", Unlocks.GenerateUnlockData("HIF_Pinec_Witness_Unlock", "HIF_Pinec_Witness_ACH", "", "", ["Nemesis_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Pinec_Witness_ACH", "Nemesis_TW");
+
             ModdedAchievements AchievementWitnessExambry = new ModdedAchievements("Fetid Tooth", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanExambry", null, 32, null), "HIF_Exambry_Witness_ACH");
             AchievementWitnessExambry.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
             FinalBossCharUnlockCheck UnlockWitnessExambry = Unlocks.GetUnlock_OsmanFinalBoss();
             UnlockWitnessExambry.AddUnlockData("Exambry_CH", Unlocks.GenerateUnlockData("HIF_Exambry_Witness_Unlock", "HIF_Exambry_Witness_ACH", "", "", ["FetidTooth_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Exambry_Witness_ACH", "FetidTooth_TW");
+
+            ModdedAchievements AchievementWitnessMorrigan = new ModdedAchievements("Black Pearl", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanMorrigan", null, 32, null), "HIF_Morrigan_Witness_ACH");
+            AchievementWitnessMorrigan.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessMorrigan = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessMorrigan.AddUnlockData("Morrigan_CH", Unlocks.GenerateUnlockData("HIF_Morrigan_Witness_Unlock", "HIF_Morrigan_Witness_ACH", "", "", ["BlackPearl_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Morrigan_Witness_ACH", "Black Pearl_TW");
 
 
             //Heaven Unlocks
@@ -144,6 +168,13 @@ namespace Hell_Island_Fell.Achievements
             FinalBossCharUnlockCheck UnlockDivineAelie = Unlocks.GetUnlock_HeavenFinalBoss();
             UnlockDivineAelie.AddUnlockData("Aelie_CH", Unlocks.GenerateUnlockData("HIF_Aelie_Divine_Unlock", "HIF_Aelie_Divine_ACH", "", "", ["LiquidDust_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Aelie_Divine_ACH", "LiquidDust_TW");
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Alvinar_Divine_ACH", "BavarianPretzel_SW");
+
+            ModdedAchievements AchievementDivineGomma = new ModdedAchievements("Ancient Wine", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenGomma", null, 32, null), "HIF_Gomma_Divine_ACH");
+            AchievementDivineGomma.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineGomma = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineGomma.AddUnlockData("Gomma_CH", Unlocks.GenerateUnlockData("HIF_Gomma_Divine_Unlock", "HIF_Gomma_Divine_ACH", "", "", ["AncientWine_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Gomma_Divine_ACH", "AncientWine_TW");
 
             ModdedAchievements AchievementDivineHills = new ModdedAchievements("Infinite Mirror", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenHills", null, 32, null), "HIF_Hills_Divine_ACH");
             AchievementDivineHills.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
@@ -151,11 +182,29 @@ namespace Hell_Island_Fell.Achievements
             UnlockDivineHills.AddUnlockData("Hills_CH", Unlocks.GenerateUnlockData("HIF_Hills_Divine_Unlock", "HIF_Hills_Divine_ACH", "", "", ["InfiniteMirror_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Hills_Divine_ACH", "InfiniteMirror_TW");
 
+            ModdedAchievements AchievementDivineHoftstoldt = new ModdedAchievements("Ripcord", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenHoftstoldt", null, 32, null), "HIF_Hoftstoldt_Divine_ACH");
+            AchievementDivineHoftstoldt.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineHoftstoldt = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineHoftstoldt.AddUnlockData("Hoftstoldt_CH", Unlocks.GenerateUnlockData("HIF_Hoftstoldt_Divine_Unlock", "HIF_Hoftstoldt_Divine_ACH", "", "", ["Ripcord_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Hoftstoldt_Divine_ACH", "Ripcord_SW");
+
+            ModdedAchievements AchievementDivinePinec = new ModdedAchievements("Magic Accelerator", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenPinec", null, 32, null), "HIF_Pinec_Divine_ACH");
+            AchievementDivinePinec.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivinePinec = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivinePinec.AddUnlockData("Pinec_CH", Unlocks.GenerateUnlockData("HIF_Pinec_Divine_Unlock", "HIF_Pinec_Divine_ACH", "", "", ["MagicAccelerator_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Pinec_Divine_ACH", "MagicAccelerator_TW");
+
             ModdedAchievements AchievementDivineExambry = new ModdedAchievements("Infenal Stone", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenExambry", null, 32, null), "HIF_Exambry_Divine_ACH");
             AchievementDivineExambry.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
             FinalBossCharUnlockCheck UnlockDivineExambry = Unlocks.GetUnlock_HeavenFinalBoss();
             UnlockDivineExambry.AddUnlockData("Exambry_CH", Unlocks.GenerateUnlockData("HIF_Exambry_Divine_Unlock", "HIF_Exambry_Divine_ACH", "", "", ["InfernalStone_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Exambry_Divine_ACH", "InfernalStone_TW");
+
+            ModdedAchievements AchievementDivineMorrigan = new ModdedAchievements("Trinitite", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenMorrigan", null, 32, null), "HIF_Morrigan_Divine_ACH");
+            AchievementDivineMorrigan.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineMorrigan = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineMorrigan.AddUnlockData("Morrigan_CH", Unlocks.GenerateUnlockData("HIF_Morrigan_Divine_Unlock", "HIF_Morrigan_Divine_ACH", "", "", ["Trinitite_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Morrigan_Divine_ACH", "Trinitite_TW");
 
             //Doula Unlocks
 

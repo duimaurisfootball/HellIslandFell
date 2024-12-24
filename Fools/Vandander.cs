@@ -69,6 +69,9 @@ namespace Hell_Island_Fell.Fools
             HealEffect HealMax = ScriptableObject.CreateInstance<HealEffect>();
             HealMax.entryAsPercentage = true;
 
+            RemoveStatusEffectEffect CursedRemove = ScriptableObject.CreateInstance<RemoveStatusEffectEffect>();
+            CursedRemove._status = StatusField.Cursed;
+
             PercentageEffectCondition Chance0 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
             Chance0.percentage = 50;
 
@@ -94,7 +97,7 @@ namespace Hell_Island_Fell.Fools
             vow0.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Misc)]);
             vow0.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
 
-            Ability vow1 = new Ability("Vicvariously Vow", "Vow_2_A")
+            Ability vow1 = new Ability("Vicariously Vow", "Vow_2_A")
             {
                 Description = "Apply 2 Linked to the Opposing enemy.\nApply 12 Disappearing to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 12 Disappearing to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVow"),
@@ -136,7 +139,7 @@ namespace Hell_Island_Fell.Fools
             vow2.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Misc)]);
             vow2.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
 
-            Ability vow3 = new Ability("Vicariously Vow", "Vow_4_A")
+            Ability vow3 = new Ability("Viciously Vow", "Vow_4_A")
             {
                 Description = "Apply 2 Linked to the Opposing enemy.\nApply 16 Disappearing to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 16 Disappearing to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVow"),
@@ -304,9 +307,9 @@ namespace Hell_Island_Fell.Fools
 
             Ability vandala3 = new Ability("Vandala Effect, Visibly", "Vandala_4_A")
             {
-                Description = "Randomize this party member's and the Right ally's health.\nAttempt to resurrect a party member in the Right ally position.\nHeal this party member and the Right ally 1/2 their individual max health.",
+                Description = "Randomize this party member's and the Right ally's health.\nAttempt to resurrect a party member in the Right ally position.\nHeal this party member and the Right ally 1/2 their individual max health.\nRemove Cursed from the Right ally.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVandalaEffect"),
-                Cost = [Pigments.Blue, Pigments.PurpleBlue],
+                Cost = [Pigments.Purple, Pigments.Blue],
                 Visuals = Visuals.Miracle,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -314,6 +317,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RandomizeHealthEffect>(), 1, Targeting.Slot_SelfAndRight),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ResurrectEffect>(), 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(HealMax, 50, Targeting.Slot_SelfAndRight),
+                    Effects.GenerateEffect(CursedRemove, 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
                 ]
@@ -321,6 +325,7 @@ namespace Hell_Island_Fell.Fools
             vandala3.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
             vandala3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Resurrect)]);
             vandala3.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_11_20)]);
+            vandala3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Rem_Status_Cursed)]);
 
             vandander.AddLevelData(15, new Ability[] { vow0, vent0, vandala0 });
             vandander.AddLevelData(19, new Ability[] { vow1, vent1, vandala1 });

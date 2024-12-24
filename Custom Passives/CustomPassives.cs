@@ -115,8 +115,8 @@ namespace Hell_Island_Fell.Custom_Passives
             CheckCasterHealthColorEffect CheckBlue = ScriptableObject.CreateInstance<CheckCasterHealthColorEffect>();
             CheckBlue._color = Pigments.Blue;
 
-            CheckCasterHealthColorEffect CheckGrey = ScriptableObject.CreateInstance<CheckCasterHealthColorEffect>();
-            CheckGrey._color = Pigments.Grey;
+            CheckCasterNotHealthColorsEffect CheckGrey = ScriptableObject.CreateInstance<CheckCasterNotHealthColorsEffect>();
+            CheckGrey._colors = [Pigments.Red, Pigments.Blue, Pigments.Yellow, Pigments.Purple];
 
             PerformDoubleEffectPassiveAbility humorous = ScriptableObject.CreateInstance<PerformDoubleEffectPassiveAbility>();
             humorous.m_PassiveID = "Humorous";

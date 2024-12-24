@@ -260,13 +260,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "ImpenetrableAngler_EN",
-                    "MesmerizingNosestone_EN",
-                    "SweatingNosestone_EN",
-                ]),
-                    new(
-                [
-                    "ImpenetrableAngler_EN",
-                    "UninspiredNosestone_EN",
+                    "ScatterbrainedNosestone_EN",
                     "SweatingNosestone_EN",
                 ]),
                     new(
@@ -296,6 +290,12 @@ namespace Hell_Island_Fell.Encounters
                     "StickingHomunculus_EN",
                     "StickingHomunculus_EN",
                     "NextOfKin_EN",
+                ]),
+                    new(
+                [
+                    "GigglingMinister_EN",
+                    "ProlificNosestone_EN",
+                    "ImpenetrableAngler_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("AnglerHard"))._enemyBundles = anglerHard;
@@ -1029,7 +1029,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Psychopomp_EN",
-                    "MesmerizingNosestone_EN",
                     "MesmerizingNosestone_EN",
                 ]),
                     new(

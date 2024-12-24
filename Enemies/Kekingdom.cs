@@ -85,6 +85,7 @@ namespace Hell_Island_Fell.Enemies
                 Priority = Priority.Normal,
             };
             direDistension.AddIntentsToTarget(CenterTarget, [nameof(IntentType_GameIDs.Other_Spawn)]);
+            direDistension.AddIntentsToTarget(CenterTarget, [nameof(IntentType_GameIDs.Other_Spawn)]);
             direDistension.AddIntentsToTarget(CenterTarget, [nameof(IntentType_GameIDs.Status_Frail)]);
 
             Ability macabrePuppet = new Ability("Macabre Puppet", "MacabrePuppet_A")

@@ -17,9 +17,11 @@ using Hell_Island_Fell.Field_Effects;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.3.1")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.4.2")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("AnimatedGlitch.GlitchsFreaks", BepInDependency.DependencyFlags.SoftDependency)]
     public class Hell_Island_Fell : BaseUnityPlugin
     {
         public static AssetBundle assetBundle;
@@ -28,6 +30,7 @@ namespace Hell_Island_Fell
             public static bool Colophons = false;
             public static bool EnemyPack = false;
             public static bool EggKeeper = false;
+            public static bool GlitchFreaks = false;
             public static void Check()
             {
                 foreach (var plugin in Chainloader.PluginInfos)
@@ -37,6 +40,7 @@ namespace Hell_Island_Fell
                     if (metadata.GUID == "Tairbaz.ColophonConundrum") { Colophons = true; }
                     if (metadata.GUID == "TairbazPeep.EnemyPack") { EnemyPack = true; }
                     if (metadata.GUID == "minichibis.eggkeeper") { EggKeeper = true; }
+                    if (metadata.GUID == "AnimatedGlitch.GlitchsFreaks") { GlitchFreaks = true; }
                 }
             }
         }
@@ -53,7 +57,7 @@ namespace Hell_Island_Fell
             DisappearingDamage.Add();
 
             //Add Field Effects
-            //Fields.Add();
+            Fields.Add();
 
             //Add Status Effects
             Statuses.Add();
@@ -65,6 +69,7 @@ namespace Hell_Island_Fell
             LoadedAssetsHandler.GetCharacter("Rags_CH").unitTypes.Add("FemaleID");
             LoadedAssetsHandler.GetCharacter("Bimini_CH").unitTypes.Add("FemaleID");
             CrossMod.Check();
+            DivineGlass.Add();
 
             //Add Passives
             CustomPassives.Add();
@@ -88,14 +93,14 @@ namespace Hell_Island_Fell
             CheesePlate.Add();
             //FresnelLens.Add();
             ParchedScroll.Add();
-            //ComplexComplexion.Add();
+            ComplexComplexion.Add();
             HoxJar.Add();
             //NightOil.Add();
-            //StabbingHomunculus.Add();
-            //Nemesis.Add();
+            StabbingHomunculus.Add();
+            Nemesis.Add();
             //GreenGlass.Add();
             FetidTooth.Add();
-            //BlackPearl.Add();
+            BlackPearl.Add();
 
             //Heaven 
             ThousandFish.Add();
@@ -109,18 +114,56 @@ namespace Hell_Island_Fell
             BavarianPretzel.Add();
             //TheKraken.Add();
             LiquidDust.Add();
-            //GiantWeed.Add();
+            AncientWine.Add();
             InfiniteMirror.Add();
             //AlchemicalConstant.Add();
-            //Ripcord.Add();
-            //MagicAccelerator.Add();
+            Ripcord.Add();
+            MagicAccelerator.Add();
             //TheDeal.Add();
             InfernalStone.Add();
-            //DivineGlass.Add();
+            Trinitite.Add();
 
             //Doula Unlocks
+            //CatastropheStick.Add();
+            //Airhorn.Add();
+            //MosaLina.Add();
+            //OrbOfFreedom.Add();
+            //TheDrawOfPower.Add();
+            //ShockingMachine.Add();
+            //FriendlyFace.Add();
+            //ElusiveTrinket.Add();
+            //AngryBox.Add();
+            //IceFlies.Add();
+            //BubbleShield.Add();
+            //CursedDoll.Add();
+            //BrokenAltimeter.Add();
+            //DeadSeatedHead.Add();
+            //AFlower.Add();
+            //TerrifyingMortarRounds.Add();
+            //LabyrinthDevice.Add();
+            //PlatinumDisc.Add();
+            //ReactorCell.Add();
 
             //March Unlocks
+            //PhlegmSuckingWorm.Add();
+            //VomitBrick.Add();
+            //IdeaOfRot.Add();
+            //Deflation.Add();
+            //DeathHex.Add();
+            //CancerCancer.Add();
+            //PhoenixForest.Add();
+            //301.Add();
+            //ThingsFinder.Add();
+            //ShipOfTheseus.Add();
+            //Erosion.Add();
+            //FingernailOfGlory.Add();
+            //TheEntireMoon.Add();
+            //
+            //PeoplePower.Add();
+            //RealizationOfMortality.Add();
+            //Sundial.Add();
+            //PatternMass.Add();
+            //CrackedDirt.Add();
 
             //Bemagel Unlocks
 
@@ -143,14 +186,14 @@ namespace Hell_Island_Fell
             Gomma.Add();
             Hills.Add();
             //Maecenas.Add();
+            //Chim.Add();
             Hoftstoldt.Add();
             Pinec.Add();
             //Stareyed.Add();
-            //Chim.Add();
             Exambry.Add();
             Morrigan.Add();
             //Nick.Add();
-            //Maellard.Add();
+            //Eras.Add();
             HolesOfVandander.Add();
             Mudball.Add();
 

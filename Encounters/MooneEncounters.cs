@@ -88,7 +88,6 @@ namespace Hell_Island_Fell.Encounters
                 MooneEasy.CreateNewEnemyEncounterData(
                     [
                         "Moone_EN",
-                        "Moone_EN",
                         "VanishingHands_EN",
                     ], null);
             }
@@ -162,7 +161,6 @@ namespace Hell_Island_Fell.Encounters
                 ], null);
             MooneMedium.CreateNewEnemyEncounterData(
                 [
-                    "Moone_EN",
                     "Moone_EN",
                     "Moone_EN",
                     "VanishingHands_EN",

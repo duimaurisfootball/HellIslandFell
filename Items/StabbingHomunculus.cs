@@ -20,7 +20,7 @@ namespace Hell_Island_Fell.Items
 
             PerformEffect_Item stabbingHomunculus = new PerformEffect_Item("StabbingHomunculus_ID", null, false)
             {
-                Item_ID = "StabbingHomunculus_SW",
+                Item_ID = "StabbingHomunculus_TW",
                 Name = "Stabbing Homunculus",
                 Flavour = "\"Ouch!\"",
                 Description = "This party member now has red health. Spawn as many Scattering Homunculi as possible on combat start.",
@@ -40,7 +40,7 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(stabbingHomunculus.Item);
+            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(stabbingHomunculus.Item, new ItemModdedUnlockInfo("StabbingHomunculus_TW", ResourceLoader.LoadSprite("UnlockOsmanHoftstoldtLocked", null, 32, null), "HIF_Hoftstoldt_Witness_ACH"));
         }
     }
 }

@@ -107,7 +107,13 @@ namespace Hell_Island_Fell.Encounters
             {
                 new(
             [
-                "FlaMingGoa_EN",
+                "FlaMinGoa_EN",
+                "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "Mung_EN",
+                "FlaMinGoa_EN",
                 "VanishingHands_EN",
             ]),
             };
@@ -115,7 +121,9 @@ namespace Hell_Island_Fell.Encounters
             {
                 goaMedium.Add(new(
                     [
-                        "Mung_EN",
+                        "LipBug_EN",
+                        "FlaMinGoa_EN",
+                        "VanishingHands_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_FlaMingGoa_Medium_EnemyBundle"))._enemyBundles = goaMedium;
@@ -252,13 +260,13 @@ namespace Hell_Island_Fell.Encounters
             {
                 new(
             [
-                "FlaMingGoa_EN",
+                "FlaMinGoa_EN",
                 "MudLung_EN",
                 "VanishingHands_EN",
             ]),
                 new(
             [
-                "FlaMingGoa_EN",
+                "FlaMinGoa_EN",
                 "Wringle_EN",
                 "VanishingHands_EN",
             ]),
@@ -267,7 +275,7 @@ namespace Hell_Island_Fell.Encounters
             {
                 goaHard.Add(new(
                     [
-                        "FlaMingGoa_EN",
+                        "FlaMinGoa_EN",
                         "LipBug_EN",
                         "VanishingHands_EN",
                     ]));
@@ -339,6 +347,12 @@ namespace Hell_Island_Fell.Encounters
                 "Mung_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "JumbleGuts_Flummoxing_EN",
+                "FlaMinGoa_EN",
+                "VanishingHands_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -351,6 +365,12 @@ namespace Hell_Island_Fell.Encounters
             [
                 "JumbleGuts_Hollowing_EN",
                 "Mung_EN",
+                "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "JumbleGuts_Hollowing_EN",
+                "FlaMinGoa_EN",
                 "VanishingHands_EN",
             ]),
             };

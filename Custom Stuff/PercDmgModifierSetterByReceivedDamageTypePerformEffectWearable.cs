@@ -50,6 +50,10 @@ namespace Hell_Island_Fell.Items
 
             public override int Modify(int value)
             {
+                if (value <= 0)
+                {
+                    return value;
+                }
                 float f = percentage * value / 100f;
                 int num = Mathf.Max(1, Mathf.CeilToInt(f));
                 if (!doesIncrease)

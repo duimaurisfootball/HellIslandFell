@@ -78,7 +78,7 @@ namespace Hell_Island_Fell.Encounters
                     ], null);
             }
             mesmerizingMedium.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_MesmerizingNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_MesmerizingNosestone_Medium_EnemyBundle", 2, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
             EnemyEncounter_API mesmerizingHard = new EnemyEncounter_API(0, "H_Zone03_MesmerizingNosestone_Hard_EnemyBundle", "MesmerizingNosestone_Sign")
             {
@@ -200,7 +200,7 @@ namespace Hell_Island_Fell.Encounters
                     ], null);
             }
             mesmerizingHard.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_MesmerizingNosestone_Hard_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Hard);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_MesmerizingNosestone_Hard_EnemyBundle", 2, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Hard);
 
         }
     }

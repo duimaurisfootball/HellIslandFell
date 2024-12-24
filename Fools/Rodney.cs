@@ -21,7 +21,7 @@ namespace Hell_Island_Fell.Fools
             //evil poke
             Ability poke = new Ability("Evil Poke", "EvilPoke_A")
             {
-                Description = "Deal 1 damage to the opposing enemy.\nInflict cursed to the opposing enemy.",
+                Description = "Deal 1 damage to the opposing enemy.\nInflict Cursed to the opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyPoke"),
                 Cost = [Pigments.Yellow],
                 Visuals = Visuals.Slap,

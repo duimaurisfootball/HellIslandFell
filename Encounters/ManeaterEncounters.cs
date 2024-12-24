@@ -250,6 +250,12 @@ namespace Hell_Island_Fell.Encounters
             ManeaterHard.CreateNewEnemyEncounterData(
                 [
                     "Maneater_EN",
+                    "Maneater_EN",
+                    "StickingHomunculus_EN",
+                ], null);
+            ManeaterHard.CreateNewEnemyEncounterData(
+                [
+                    "Maneater_EN",
                     "GigglingMinister_EN",
                     "GigglingMinister_EN",
                 ], null);
@@ -281,26 +287,7 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Maneater_EN",
                     "Inequity_EN",
-                    "MesmerizingNosestone_EN",
-                ], null);
-            ManeaterHard.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "Inequity_EN",
-                    "GigglingMinister_EN",
-                ], null);
-            ManeaterHard.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "Inequity_EN",
                     "SkinningHomunculus_EN",
-                ], null);
-            ManeaterHard.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "Inequity_EN",
-                    "InHisImage_EN",
-                    "InHerImage_EN",
                 ], null);
             ManeaterHard.CreateNewEnemyEncounterData(
                 [

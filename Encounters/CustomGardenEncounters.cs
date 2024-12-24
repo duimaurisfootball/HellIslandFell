@@ -533,7 +533,7 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "InHisImage_EN",
                         "InHisImage_EN",
-                        "ProlificNosestone_EN",
+                        "UninspiredNosestone_EN",
                         "Unterling_EN",
                     ]));
                 hisImageMedium.Add(new(
@@ -741,11 +741,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "GigglingMinister_EN",
-                "MesmerizingNosestone_EN"
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
                 "Maneater_EN"
             ]),
                 new(
@@ -792,18 +787,6 @@ namespace Hell_Island_Fell.Encounters
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
-                gigglingMinisterMedium.Add(new(
-                    [
-                        "GigglingMinister_EN",
-                        "MesmerizingNosestone_EN",
-                        "TitteringPeon_EN",
-                    ]));
-                gigglingMinisterMedium.Add(new(
-                    [
-                        "GigglingMinister_EN",
-                        "MesmerizingNosestone_EN",
-                        "Unterling_EN",
-                    ]));
                 gigglingMinisterMedium.Add(new(
                     [
                         "GigglingMinister_EN",
@@ -884,8 +867,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "MesmerizingNosestone_EN",
-                "SkinningHomunculus_EN",
-                "SkinningHomunculus_EN",
                 "SkinningHomunculus_EN",
             ]),
                 new(
@@ -1049,13 +1030,11 @@ namespace Hell_Island_Fell.Encounters
                         "SkinningHomunculus_EN",
                         "MesmerizingNosestone_EN",
                         "TitteringPeon_EN",
-                        "TitteringPeon_EN",
                     ]));
                 skinningHomunculusHard.Add(new(
                     [
                         "SkinningHomunculus_EN",
                         "MesmerizingNosestone_EN",
-                        "SterileBud_EN",
                         "SterileBud_EN",
                     ]));
             }
@@ -1129,7 +1108,6 @@ namespace Hell_Island_Fell.Encounters
                 "SweatingNosestone_EN",
                 "GigglingMinister_EN",
                 "GigglingMinister_EN",
-                "GigglingMinister_EN",
             ]),
                 new(
             [
@@ -1141,12 +1119,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "ScatterbrainedNosestone_EN",
-                "GigglingMinister_EN",
-                "GigglingMinister_EN",
-            ]),
-                new(
-            [
-                "SweatingNosestone_EN",
                 "GigglingMinister_EN",
                 "GigglingMinister_EN",
             ]),
@@ -1246,15 +1218,13 @@ namespace Hell_Island_Fell.Encounters
                 gigglingMinisterHard.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "GigglingMinister_EN",
                         "MesmerizingNosestone_EN",
                         "ScreamingHomunculus_EN",
                     ]));
                 gigglingMinisterHard.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "GigglingMinister_EN",
-                        "MesmerizingNosestone_EN",
+                        "SweatingNosestone_EN",
                         "ImpenetrableAngler_EN",
                     ]));
                 gigglingMinisterHard.Add(new(
@@ -1304,13 +1274,11 @@ namespace Hell_Island_Fell.Encounters
                 gigglingMinisterHard.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "GigglingMinister_EN",
                         "MesmerizingNosestone_EN",
                         "EggKeeper_EN",
                     ]));
                 gigglingMinisterHard.Add(new(
                     [
-                        "GigglingMinister_EN",
                         "GigglingMinister_EN",
                         "SweatingNosestone_EN",
                         "EggKeeper_EN",
@@ -1324,7 +1292,6 @@ namespace Hell_Island_Fell.Encounters
                     ]));
                 gigglingMinisterHard.Add(new(
                     [
-                        "GigglingMinister_EN",
                         "GigglingMinister_EN",
                         "Inequity_EN",
                         "EggKeeper_EN",

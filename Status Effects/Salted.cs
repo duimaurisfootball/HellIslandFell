@@ -42,7 +42,7 @@ namespace Hell_Island_Fell.Status_Effects
             holder.m_ContentMain -= 3;
             if(!TryRemoveStatusEffect(holder, effector) && contentMain != holder.m_ContentMain)
             {
-                effector.StatusEffectValuesChanged(_StatusID, holder.m_ContentMain, true);
+                effector.StatusEffectValuesChanged(_StatusID, holder.m_ContentMain - 2, true);
             }
         }
     }

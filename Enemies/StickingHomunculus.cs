@@ -68,7 +68,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability bitterMiasma = new Ability("Bitter Miasma", "BitterMiasma_A")
             {
-                Description = "Deal a Painful amount of damage to this enemy.\nIf this enemy's health color is red, apply 10 Shield to all enemy positions.\nIf this enemy's health color is yellow, deal a Little indirect damage to all party members.",
+                Description = "Deal a Painful amount of damage to this enemy.\nIf this enemy's health color is red, apply 5 Shield to all enemy positions.\nIf this enemy's health color is yellow, deal a Little indirect damage to all party members.",
                 Cost = [Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Melt,
                 AnimationTarget = Targeting.Slot_SelfSlot,
@@ -76,7 +76,7 @@ namespace Hell_Island_Fell.Enemies
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(RedCheck, 1),
-                    Effects.GenerateEffect(ShieldApply, 10, Targeting.Unit_AllAllySlots, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(ShieldApply, 5, Targeting.Unit_AllAllySlots, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(IndirectDamage, 2, Targeting.Unit_AllOpponents, Fail),
                 ],
                 Rarity = CustomAbilityRarity.Weight(7, true),

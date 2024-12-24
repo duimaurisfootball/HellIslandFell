@@ -1,4 +1,5 @@
 ﻿using BrutalAPI;
+using Hell_Island_Fell.Custom_Effects;
 using Hell_Island_Fell.Custom_Passives;
 using Hell_Island_Fell.Custom_Stuff;
 using System;
@@ -14,7 +15,7 @@ namespace Hell_Island_Fell.Enemies
         {
             Enemy vanishingHands = new Enemy("Vanishing Hands", "VanishingHands_EN")
             {
-                Health = 30,
+                Health = 40,
                 HealthColor = Pigments.Red,
                 Size = 1,
                 CombatSprite = ResourceLoader.LoadSprite("TimelineLegion", new Vector2(0.5f, 0f), 32),
@@ -28,7 +29,7 @@ namespace Hell_Island_Fell.Enemies
                 ],
             };
             vanishingHands.PrepareEnemyPrefab("Assets/LegionAssetBundle/Legion.prefab", Hell_Island_Fell.assetBundle, null);
-            vanishingHands.AddPassives([CustomPassives.InvincibilityGenerator(15), Passives.Withering, Passives.AbominationGenerator(2)]);
+            vanishingHands.AddPassives([CustomPassives.InvincibilityGenerator(10), Passives.Constricting, Passives.Withering, Passives.AbominationGenerator(2)]);
 
             LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Disappearing_ID", out StatusEffect_SO Disappearing);
             StatusEffect_Apply_Effect DisappearingApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
@@ -36,12 +37,13 @@ namespace Hell_Island_Fell.Enemies
 
             Ability drag = new Ability("Drag", "Drag_A")
             {
-                Description = "Apply 1 Disappearing to all party members.",
+                Description = "\"What a nightmare...\"\nApply 1 Disappearing to all party members.",
                 Cost = [Pigments.RedPurple],
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
                     Effects.GenerateEffect(DisappearingApply, 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<CasterSideWitheringEffect>()),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.ExtremelySlow,
