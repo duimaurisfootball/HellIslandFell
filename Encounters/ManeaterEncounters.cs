@@ -76,6 +76,19 @@ namespace Hell_Island_Fell.Encounters
                         "ScreamingHomunculus_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                ManeaterEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "MarbleMaw_EN",
+                    ], null);
+                ManeaterEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "FrowningChancellor_EN",
+                    ], null);
+            }
             ManeaterEasy.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_Maneater_Easy_EnemyBundle", 5, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -227,6 +240,38 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                ManeaterMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "FrowningChancellor_EN",
+                        "NextOfKin_EN",
+                    ], null);
+                ManeaterMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Vagabond_EN",
+                    ], null);
+                ManeaterMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "FrowningChancellor_EN",
+                        "SweatingNosestone_EN",
+                    ], null);
+                ManeaterMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "FrowningChancellor_EN",
+                        "ProlificNosestone_EN",
+                    ], null);
+                ManeaterMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "FrowningChancellor_EN",
+                        "StickingHomunculus_EN",
+                    ], null);
+            }
             ManeaterMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_Maneater_Medium_EnemyBundle", 4, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -371,6 +416,27 @@ namespace Hell_Island_Fell.Encounters
                         "Maneater_EN",
                         "EggKeeper_EN",
                         "Unterling_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Maneater_EN",
+                        "FrowningChancellor_EN",
+                    ], null);
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Maneater_EN",
+                        "MarbleMaw_EN",
+                    ], null);
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Maneater_EN",
+                        "Vagabond_EN",
                     ], null);
             }
             ManeaterHard.AddEncounterToDataBases();

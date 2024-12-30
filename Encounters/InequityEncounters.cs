@@ -74,6 +74,16 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ]);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                inequityEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Inequity_EN",
+                        "Inequity_EN",
+                        "Inequity_EN",
+                        "MarbleMaw_EN",
+                    ]);
+            }
             inequityEasy.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_Inequity_Easy_EnemyBundle", 5, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Easy);
         }

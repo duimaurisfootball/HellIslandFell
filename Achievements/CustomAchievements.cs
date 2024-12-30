@@ -83,6 +83,12 @@ namespace Hell_Island_Fell.Achievements
             UnlockWitnessHills.AddUnlockData("Hills_CH", Unlocks.GenerateUnlockData("HIF_Hills_Witness_Unlock", "HIF_Hills_Witness_ACH", "", "", ["HoxJar_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Hills_Witness_ACH", "HoxJar_TW");
 
+            ModdedAchievements AchievementWitnessMaecenas = new ModdedAchievements("Night Oil", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanMaecenas", null, 32, null), "HIF_Maecenas_Witness_ACH");
+            AchievementWitnessMaecenas.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessMaecenas = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessMaecenas.AddUnlockData("Maecenas_CH", Unlocks.GenerateUnlockData("HIF_Maecenas_Witness_Unlock", "HIF_Maecenas_Witness_ACH", "", "", ["NightOil_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Maecenas_Witness_ACH", "NightOil_SW");
+
             ModdedAchievements AchievementWitnessHoftstoldt = new ModdedAchievements("Stabbing Homunculus", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanHoftstoldt", null, 32, null), "HIF_Hoftstoldt_Witness_ACH");
             AchievementWitnessHoftstoldt.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
             FinalBossCharUnlockCheck UnlockWitnessHoftstoldt = Unlocks.GetUnlock_OsmanFinalBoss();
@@ -181,6 +187,12 @@ namespace Hell_Island_Fell.Achievements
             FinalBossCharUnlockCheck UnlockDivineHills = Unlocks.GetUnlock_HeavenFinalBoss();
             UnlockDivineHills.AddUnlockData("Hills_CH", Unlocks.GenerateUnlockData("HIF_Hills_Divine_Unlock", "HIF_Hills_Divine_ACH", "", "", ["InfiniteMirror_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Hills_Divine_ACH", "InfiniteMirror_TW");
+
+            ModdedAchievements AchievementDivineMaecenas = new ModdedAchievements("Alchemical Constant", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenMaecenas", null, 32, null), "HIF_Maecenas_Divine_ACH");
+            AchievementDivineMaecenas.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineMaecenas = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineMaecenas.AddUnlockData("Maecenas_CH", Unlocks.GenerateUnlockData("HIF_Maecenas_Divine_Unlock", "HIF_Maecenas_Divine_ACH", "", "", ["AlchemicalConstant_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Maecenas_Divine_ACH", "AlchemicalConstant_TW");
 
             ModdedAchievements AchievementDivineHoftstoldt = new ModdedAchievements("Ripcord", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenHoftstoldt", null, 32, null), "HIF_Hoftstoldt_Divine_ACH");
             AchievementDivineHoftstoldt.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);

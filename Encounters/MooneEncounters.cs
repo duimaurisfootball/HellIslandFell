@@ -88,6 +88,28 @@ namespace Hell_Island_Fell.Encounters
                 MooneEasy.CreateNewEnemyEncounterData(
                     [
                         "Moone_EN",
+                        "NakedGizo_EN",
+                        "VanishingHands_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                MooneEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Footshroom_EN",
+                        "VanishingHands_EN",
+                    ], null);
+                MooneEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "BackupDancer_EN",
+                        "VanishingHands_EN",
+                    ], null);
+                MooneEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "PrimitiveGizo_EN",
                         "VanishingHands_EN",
                     ], null);
             }
@@ -200,6 +222,58 @@ namespace Hell_Island_Fell.Encounters
                         "Seraphim_EN",
                         "Neoplasm_EN",
                         "Neoplasm_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Jansuli_EN",
+                        "Jansuli_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "BackupDancer_EN",
+                        "MusicMan_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "PrimitiveGizo_EN",
+                        "PrimitiveGizo_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Footshroom_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Moone_EN",
+                        "PrimitiveGizo_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Jansuli_EN",
                     ], null);
             }
             MooneMedium.AddEncounterToDataBases();

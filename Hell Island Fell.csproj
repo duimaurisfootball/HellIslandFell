@@ -32,6 +32,7 @@
     <None Remove="Sprites\AchievementIcons\AchievementHeavenGomma.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenHills.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenHoftstoldt.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenMaecenas.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenMalebolge.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenMorrigan.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenPinec.png" />
@@ -48,6 +49,7 @@
     <None Remove="Sprites\AchievementIcons\AchievementOsmanGomma.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanHills.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanHoftstoldt.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanMaecenas.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanMalebolge.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanMorrigan.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanPinec.png" />
@@ -114,6 +116,8 @@
     <None Remove="Sprites\ExambryMenu.png" />
     <None Remove="Sprites\ExambryOverworld.png" />
     <None Remove="Sprites\ExambryResolution.png" />
+    <None Remove="Sprites\ExtraBloodyNemesis.png" />
+    <None Remove="Sprites\ExtraMyNemesis.png" />
     <None Remove="Sprites\FarahBack.png" />
     <None Remove="Sprites\FarahBilge.png" />
     <None Remove="Sprites\FarahFilm.png" />
@@ -395,9 +399,12 @@
     <None Remove="Sprites\ItemSpinDial.png" />
     <None Remove="Sprites\MaecenasBack.png" />
     <None Remove="Sprites\MaecenasFront.png" />
+    <None Remove="Sprites\MaecenasHail.png" />
+    <None Remove="Sprites\MaecenasLightningStrike.png" />
     <None Remove="Sprites\MaecenasLocked.png" />
     <None Remove="Sprites\MaecenasMenu.png" />
     <None Remove="Sprites\MaecenasOverworld.png" />
+    <None Remove="Sprites\MaecenasRain.png" />
     <None Remove="Sprites\MalebolgeAccelerate.png" />
     <None Remove="Sprites\MalebolgeBack.png" />
     <None Remove="Sprites\MalebolgeCombust.png" />
@@ -425,6 +432,7 @@
     <None Remove="Sprites\PassiveAltAttacks.png" />
     <None Remove="Sprites\PassiveChaos.png" />
     <None Remove="Sprites\PassiveInvincible.png" />
+    <None Remove="Sprites\PassiveNemesis.png" />
     <None Remove="Sprites\PassiveTwoFacedRY.png" />
     <None Remove="Sprites\PassiveWarts.png" />
     <None Remove="Sprites\PinecBack.png" />
@@ -525,6 +533,8 @@
     <None Remove="Sprites\UnlockHeavenHillsLocked.png" />
     <None Remove="Sprites\UnlockHeavenHoftstoldt.png" />
     <None Remove="Sprites\UnlockHeavenHoftstoldtLocked.png" />
+    <None Remove="Sprites\UnlockHeavenMaecenas.png" />
+    <None Remove="Sprites\UnlockHeavenMaecenasLocked.png" />
     <None Remove="Sprites\UnlockHeavenMalebolge.png" />
     <None Remove="Sprites\UnlockHeavenMalebolgeLocked.png" />
     <None Remove="Sprites\UnlockHeavenMorrigan.png" />
@@ -557,6 +567,8 @@
     <None Remove="Sprites\UnlockOsmanHillsLocked.png" />
     <None Remove="Sprites\UnlockOsmanHoftstoldt.png" />
     <None Remove="Sprites\UnlockOsmanHoftstoldtLocked.png" />
+    <None Remove="Sprites\UnlockOsmanMaecenas.png" />
+    <None Remove="Sprites\UnlockOsmanMaecenasLocked.png" />
     <None Remove="Sprites\UnlockOsmanMalebolge.png" />
     <None Remove="Sprites\UnlockOsmanMalebolgeLocked.png" />
     <None Remove="Sprites\UnlockOsmanMorrigan.png" />
@@ -626,6 +638,7 @@
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenGomma.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenHills.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenHoftstoldt.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenMaecenas.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenMalebolge.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenMorrigan.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenPinec.png" />
@@ -642,6 +655,7 @@
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanGomma.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanHills.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanHoftstoldt.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanMaecenas.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanMalebolge.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanMorrigan.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanPinec.png" />
@@ -680,6 +694,8 @@
     <EmbeddedResource Include="Sprites\DeadLegion.png" />
     <EmbeddedResource Include="Sprites\DeadMoone.png" />
     <EmbeddedResource Include="Sprites\DeadStickingHomunculus.png" />
+    <EmbeddedResource Include="Sprites\ExtraBloodyNemesis.png" />
+    <EmbeddedResource Include="Sprites\ExtraMyNemesis.png" />
     <EmbeddedResource Include="Sprites\GiantMudballBack.png" />
     <EmbeddedResource Include="Sprites\GiantMudballFront.png" />
     <EmbeddedResource Include="Sprites\HoftstoldtFaces\HoftstoldtFront1.png" />
@@ -906,9 +922,12 @@
     <EmbeddedResource Include="Sprites\ItemSpinDial.png" />
     <EmbeddedResource Include="Sprites\MaecenasBack.png" />
     <EmbeddedResource Include="Sprites\MaecenasFront.png" />
+    <EmbeddedResource Include="Sprites\MaecenasHail.png" />
+    <EmbeddedResource Include="Sprites\MaecenasLightningStrike.png" />
     <EmbeddedResource Include="Sprites\MaecenasLocked.png" />
     <EmbeddedResource Include="Sprites\MaecenasMenu.png" />
     <EmbeddedResource Include="Sprites\MaecenasOverworld.png" />
+    <EmbeddedResource Include="Sprites\MaecenasRain.png" />
     <EmbeddedResource Include="Sprites\MorriganBack.png" />
     <EmbeddedResource Include="Sprites\MorriganFront.png" />
     <EmbeddedResource Include="Sprites\MorriganGlass.png" />
@@ -924,6 +943,7 @@
     <EmbeddedResource Include="Sprites\MudballMenu.png" />
     <EmbeddedResource Include="Sprites\MudballOverworld.png" />
     <EmbeddedResource Include="Sprites\OverworldBoojum.png" />
+    <EmbeddedResource Include="Sprites\PassiveNemesis.png" />
     <EmbeddedResource Include="Sprites\PassiveTwoFacedRY.png" />
     <EmbeddedResource Include="Sprites\ShopSparklingForkLocked.png" />
     <EmbeddedResource Include="Sprites\Thunderstorm.png" />
@@ -1087,6 +1107,8 @@
     <EmbeddedResource Include="Sprites\UnlockHeavenGommaLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenHoftstoldt.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenHoftstoldtLocked.png" />
+    <EmbeddedResource Include="Sprites\UnlockHeavenMaecenas.png" />
+    <EmbeddedResource Include="Sprites\UnlockHeavenMaecenasLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenMorrigan.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenMorriganLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenPinec.png" />
@@ -1133,6 +1155,8 @@
     <EmbeddedResource Include="Sprites\UnlockOsmanHills.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanHillsLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanHoftstoldtLocked.png" />
+    <EmbeddedResource Include="Sprites\UnlockOsmanMaecenas.png" />
+    <EmbeddedResource Include="Sprites\UnlockOsmanMaecenasLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanMalebolge.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanMalebolgeLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanMorrigan.png" />

@@ -77,6 +77,14 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                mesmerizingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "FrowningChancellor_EN",
+                    ], null);
+            }
             mesmerizingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_MesmerizingNosestone_Medium_EnemyBundle", 2, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -197,6 +205,28 @@ namespace Hell_Island_Fell.Encounters
                         "MesmerizingNosestone_EN",
                         "TitteringPeon_EN",
                         "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "MarbleMaw_EN",
+                        "SkinningHomunculus_EN",
+                    ], null);
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "FrowningChancellor_EN",
+                        "InHisImage_EN",
+                        "InHisImage_EN",
+                    ], null);
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "Vagabond_EN",
+                        "Maneater_EN",
                     ], null);
             }
             mesmerizingHard.AddEncounterToDataBases();

@@ -73,6 +73,14 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                sweatingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "Vagabond_EN",
+                    ], null);
+            }
             sweatingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_SweatingNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -236,6 +244,28 @@ namespace Hell_Island_Fell.Encounters
                         "SweatingNosestone_EN",
                         "Unterling_EN",
                         "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "SweatingNosestone_EN",
+                        "MarbleMaw_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "ChoirBoy_EN",
+                        "ChoirBoy_EN",
+                        "FrowningChancellor_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "SweatingNosestone_EN",
+                        "Vagabond_EN",
                     ], null);
             }
             sweatingHard.AddEncounterToDataBases();

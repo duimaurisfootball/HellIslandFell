@@ -127,6 +127,93 @@ namespace Hell_Island_Fell.Encounters
                         "Neoplasm_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Footshroom_EN",
+                        "ManicMan_EN",
+                        "ManicMan_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Footshroom_EN",
+                        "VanishingHands_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Footshroom_EN",
+                        "Moone_EN",
+                        "Moone_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Footshroom_EN",
+                        "SilverSuckle_EN",
+                        "SilverSuckle_EN",
+                        "SilverSuckle_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BipedalFrostbite_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Jansuli_EN",
+                        "Jansuli_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "MusicMan_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Gizard_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "BackupDancer_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "PrimitiveGizo_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "PrimitiveGizo_EN",
+                        "SingingStone_EN",
+                        "SingingStone_EN",
+                        "SingingStone_EN",
+                    ], null);
+            }
             BolerMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Medium_EnemyBundle", 6, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Medium);
 
@@ -337,6 +424,158 @@ namespace Hell_Island_Fell.Encounters
                         "Revola_EN",
                     ], null);
             }
+            if(Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Footshroom_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Footshroom_EN",
+                        "Gizard_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Gizard_EN",
+                        "Moone_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Gizard_EN",
+                        "VanishingHands_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Jansuli_EN",
+                        "Jansuli_EN",
+                        "Jansuli_EN",
+                        "Jansuli_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Jansuli_EN",
+                        "Jansuli_EN",
+                        "VanishingHands_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BipedalFrostbite_EN",
+                        "BipedalFrostbite_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "MusicMan_EN",
+                        "MusicMan_EN",
+                        "MusicMan_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "MusicMan_EN",
+                        "MusicMan_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "BackupDancer_EN",
+                        "MusicMan_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "BackupDancer_EN",
+                        "BackupDancer_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "BackupDancer_EN",
+                        "ManicMan_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "ManicMan_EN",
+                        "ManicMan_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "ManicMan_EN",
+                        "ManicMan_EN",
+                        "ManicMan_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "Scrungie_EN",
+                        "Scrungie_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Footshroom_EN",
+                        "Scrungie_EN",
+                        "Scrungie_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "PrimitiveGizo_EN",
+                        "PrimitiveGizo_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Gizard_EN",
+                        "Revola_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Footshroom_EN",
+                        "Revola_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "Revola_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                        "Revola_EN",
+                    ], null);
+            }
             BolerHard.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Hard_EnemyBundle", 10, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
 
@@ -413,6 +652,35 @@ namespace Hell_Island_Fell.Encounters
                         "Boler_EN",
                         "Boler_EN",
                         "RevoltingRevola_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Chapbull_EN",
+                        "Chapman_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Gizard_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Footshroom_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Jansuli_EN",
+                        "Jansuli_EN",
                     ], null);
             }
             Boler2.AddEncounterToDataBases();

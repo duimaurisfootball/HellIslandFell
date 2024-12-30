@@ -41,7 +41,7 @@ namespace Hell_Island_Fell.Items
                 Item_ID = "MalebolgesSeveredHead_TW",
                 Name = "Malebolge's Severed Head",
                 Flavour = "\"You'll be asleep soon enough.\"",
-                Description = "Deal 1 fire damage to All enemies on turn end. 50% chance to increase this damage by 1.",
+                Description = "Deal 1 fire damage to All enemies on turn end. 50% chance to increase this damage by 1.\n\nThis item is affected by damage modifiers like Focus or Spotlight.",
                 IsShopItem = false,
                 ShopPrice = 5,
                 DoesPopUpInfo = true,

@@ -31,10 +31,6 @@ namespace Hell_Island_Fell.Fools
             StatusEffect_Apply_Effect FrailApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             FrailApply._Status = StatusField.Frail;
 
-            LoadedDBsHandler.StatusFieldDB.TryGetFieldEffect("Thunderstorm_ID", out FieldEffect_SO Thunderstorm);
-            FieldEffect_Apply_Effect ThunderstormApply = ScriptableObject.CreateInstance<FieldEffect_Apply_Effect>();
-            ThunderstormApply._Field = Thunderstorm;
-
             Ability vandalize = new Ability("Vandalize", "Vandalize_A")
             {
                 Description = "Apply 2 Linked and 1 Frail to the Opposing enemy.\nHeal the Left ally 2 health.",

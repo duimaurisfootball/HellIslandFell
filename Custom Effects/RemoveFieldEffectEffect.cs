@@ -14,13 +14,13 @@ namespace Hell_Island_Fell.Custom_Effects
             {
                 if (targets[i].HasUnit)
                 {
-                    if (targets[i].Unit.IsUnitCharacter && stats.combatSlots.CharacterSlots[targets[i].SlotID].TryRemoveFieldEffect(_Field.ToString()) != 0)
+                    if (targets[i].Unit.IsUnitCharacter)
                     {
-                        exitAmount++;
+                        exitAmount += stats.combatSlots.CharacterSlots[targets[i].SlotID].TryRemoveFieldEffect(_Field._FieldID.ToString());
                     }
-                    if (!targets[i].Unit.IsUnitCharacter && stats.combatSlots.EnemySlots[targets[i].SlotID].TryRemoveFieldEffect(_Field.ToString()) != 0)
+                    if (!targets[i].Unit.IsUnitCharacter)
                     {
-                        exitAmount++;
+                        exitAmount += stats.combatSlots.EnemySlots[targets[i].SlotID].TryRemoveFieldEffect(_Field._FieldID.ToString());
                     }
                 }
             }

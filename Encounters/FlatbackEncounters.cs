@@ -100,6 +100,48 @@ namespace Hell_Island_Fell.Encounters
                         "Unflarb_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.Colophons)
+            {
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "ColophonComposed_EN",
+                    ], null);
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "ColophonDefeated_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "Flakkid_EN",
+                    ], null);
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "Enno_EN",
+                    ], null);
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "Enno_EN",
+                        "Enno_EN",
+                    ], null);
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "DryBait_EN",
+                    ], null);
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "NotAn_EN",
+                    ], null);
+            }
             flatbackHard.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Flatback_Hard_EnemyBundle", 30, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Hard);
         }

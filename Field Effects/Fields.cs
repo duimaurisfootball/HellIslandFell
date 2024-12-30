@@ -13,7 +13,7 @@ namespace Hell_Island_Fell.Field_Effects
                 SlotStatusEffectInfoSO ThunderstormInfo = ScriptableObject.CreateInstance<SlotStatusEffectInfoSO>();
                 ThunderstormInfo.icon = ResourceLoader.LoadSprite("Thunderstorm");
                 ThunderstormInfo._fieldName = "Thunderstorm";
-                ThunderstormInfo._description = "Damage dealt and received will be increased by 1 for each Thunderstorm.\nOnly one slot can have the Thunderstorm at a time.\nDying in the Thunderstorm will transfer the Thunderstorm to whatever killed them.";
+                ThunderstormInfo._description = "Damage dealt and received will be increased by 1 for each Thunderstorm.\nDying in the Thunderstorm will transfer the Thunderstorm to whatever killed them.\nIf Thunderstorm is created in a new position, all of it will move to that position.";
 
                 LoadedDBsHandler.StatusFieldDB.TryGetFieldEffect("OnFire_ID", out FieldEffect_SO fire);
                 SlotStatusEffectInfoSO baseinfo = fire.EffectInfo;

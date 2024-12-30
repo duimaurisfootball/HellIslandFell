@@ -197,14 +197,12 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Scrungie_EN",
-                "SingingStone_EN",
+                "Scrungie_EN",
                 "VanishingHands_EN",
             ]),
                 new(
             [
                 "Scrungie_EN",
-                "Scrungie_EN",
-                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
             };

@@ -197,6 +197,23 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ], null);
             }
+            if(Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                uninspiredHard.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "UninspiredNosestone_EN",
+                        "UninspiredNosestone_EN",
+                        "Vagabond_EN",
+                    ], null);
+                uninspiredHard.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "UninspiredNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "GodsChalice_EN",
+                    ], null);
+            }
             uninspiredHard.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_UninspiredNosestone_Hard_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Hard);
 

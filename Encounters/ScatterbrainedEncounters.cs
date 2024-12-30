@@ -71,6 +71,21 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                scatterbrainedMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
+                        "MarbleMaw_EN",
+                    ], null);
+                scatterbrainedMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
+                        "FrowningChancellor_EN",
+                    ], null);
+            }
             scatterbrainedMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_ScatterbrainedNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -152,6 +167,30 @@ namespace Hell_Island_Fell.Encounters
                         "InHerImage_EN",
                         "InHerImage_EN",
                         "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                scatterbrainedHard.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "MarbleMaw_EN",
+                    ], null);
+                scatterbrainedHard.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "Vagabond_EN",
+                    ], null);
+                scatterbrainedHard.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "FrowningChancellor_EN",
                     ], null);
             }
             scatterbrainedHard.AddEncounterToDataBases();

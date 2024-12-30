@@ -33,6 +33,11 @@ namespace Hell_Island_Fell.Encounters
             kekingdomHard.CreateNewEnemyEncounterData(
                 [
                     "Kekingdom_EN",
+                    "JumbleGuts_Clotted_EN",
+                ], null);
+            kekingdomHard.CreateNewEnemyEncounterData(
+                [
+                    "Kekingdom_EN",
                     "Flarb_EN",
                 ], null);
             kekingdomHard.CreateNewEnemyEncounterData(
@@ -40,17 +45,43 @@ namespace Hell_Island_Fell.Encounters
                     "Kekingdom_EN",
                     "Voboola_EN",
                 ], null);
-            kekingdomHard.CreateNewEnemyEncounterData(
-                [
-                    "Kekingdom_EN",
-                    "VanishingHands_EN",
-                ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
                 kekingdomHard.CreateNewEnemyEncounterData(
                     [
                         "Kekingdom_EN",
                         "Unflarb_EN",
+                    ], null);
+            }
+            if(Hell_Island_Fell.CrossMod.Colophons)
+            {
+                kekingdomHard.CreateNewEnemyEncounterData(
+                    [
+                        "Kekingdom_EN",
+                        "ColophonComposed_EN",
+                    ], null);
+                kekingdomHard.CreateNewEnemyEncounterData(
+                    [
+                        "Kekingdom_EN",
+                        "ColophonDefeated_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                kekingdomHard.CreateNewEnemyEncounterData(
+                    [
+                        "Kekingdom_EN",
+                        "NotAn_EN",
+                    ], null);
+                kekingdomHard.CreateNewEnemyEncounterData(
+                    [
+                        "Kekingdom_EN",
+                        "Flakkid_EN",
+                    ], null);
+                kekingdomHard.CreateNewEnemyEncounterData(
+                    [
+                        "Kekingdom_EN",
+                        "Enno_EN",
                     ], null);
             }
             kekingdomHard.AddEncounterToDataBases();

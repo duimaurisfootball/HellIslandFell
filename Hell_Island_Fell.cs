@@ -17,7 +17,7 @@ using Hell_Island_Fell.Field_Effects;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.4.2")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.4.5")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]
@@ -95,7 +95,7 @@ namespace Hell_Island_Fell
             ParchedScroll.Add();
             ComplexComplexion.Add();
             HoxJar.Add();
-            //NightOil.Add();
+            NightOil.Add();
             StabbingHomunculus.Add();
             Nemesis.Add();
             //GreenGlass.Add();
@@ -116,7 +116,7 @@ namespace Hell_Island_Fell
             LiquidDust.Add();
             AncientWine.Add();
             InfiniteMirror.Add();
-            //AlchemicalConstant.Add();
+            AlchemicalConstant.Add();
             Ripcord.Add();
             MagicAccelerator.Add();
             //TheDeal.Add();
@@ -185,7 +185,7 @@ namespace Hell_Island_Fell
             Aelie.Add();
             Gomma.Add();
             Hills.Add();
-            //Maecenas.Add();
+            Maecenas.Add();
             //Chim.Add();
             Hoftstoldt.Add();
             Pinec.Add();

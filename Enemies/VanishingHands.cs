@@ -15,7 +15,7 @@ namespace Hell_Island_Fell.Enemies
         {
             Enemy vanishingHands = new Enemy("Vanishing Hands", "VanishingHands_EN")
             {
-                Health = 40,
+                Health = 30,
                 HealthColor = Pigments.Red,
                 Size = 1,
                 CombatSprite = ResourceLoader.LoadSprite("TimelineLegion", new Vector2(0.5f, 0f), 32),
@@ -35,6 +35,9 @@ namespace Hell_Island_Fell.Enemies
             StatusEffect_Apply_Effect DisappearingApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             DisappearingApply._Status = Disappearing;
 
+            PercentageEffectCondition Chance0 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
+            Chance0.percentage = 25;
+
             Ability drag = new Ability("Drag", "Drag_A")
             {
                 Description = "\"What a nightmare...\"\nApply 1 Disappearing to all party members.",
@@ -43,7 +46,7 @@ namespace Hell_Island_Fell.Enemies
                 Effects =
                 [
                     Effects.GenerateEffect(DisappearingApply, 1, Targeting.Unit_AllOpponents),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<CasterSideWitheringEffect>()),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<CasterSideWitheringEffect>(), 1, null, Chance0),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.ExtremelySlow,

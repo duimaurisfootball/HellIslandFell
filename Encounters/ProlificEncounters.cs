@@ -148,6 +148,14 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "MarbleMaw_EN",
+                    ], null);
+            }
             prolificMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_ProlificNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -360,6 +368,44 @@ namespace Hell_Island_Fell.Encounters
                         "Unterling_EN",
                         "SterileBud_EN",
                         "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Vagabond_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "Vagabond_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "FrowningChancellor_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Maneater_EN",
+                        "Vagabond_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "StickingHomunculus_EN",
+                        "Vagabond_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "SkinningHomunculus_EN",
+                        "Vagabond_EN",
                     ], null);
             }
             prolificHard.AddEncounterToDataBases();

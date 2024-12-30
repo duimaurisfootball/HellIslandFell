@@ -73,6 +73,21 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "MarbleMaw_EN",
+                    ], null);
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "Vagabond_EN",
+                    ], null);
+            }
             StickingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_StickingHomunculus_Medium_EnemyBundle", 8, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
             EnemyEncounter_API StickingHard = new EnemyEncounter_API(0, "H_Zone03_StickingHomunculus_Hard_EnemyBundle", "StickingHomunculus_Sign")
@@ -271,6 +286,44 @@ namespace Hell_Island_Fell.Encounters
                         "ShiveringHomunculus_EN",
                         "ScreamingHomunculus_EN",
                         "EggKeeper_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "FrowningChancellor_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "Vagabond_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "MarbleMaw_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "SweatingNosestone_EN",
+                        "Vagabond_EN",
+                    ], null);
+                StickingHard.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "MesmerizingNosestone_EN",
+                        "Vagabond_EN",
                     ], null);
             }
             StickingHard.AddEncounterToDataBases();
