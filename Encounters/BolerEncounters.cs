@@ -26,6 +26,12 @@ namespace Hell_Island_Fell.Encounters
             BolerMedium.CreateNewEnemyEncounterData(
                 [
                     "Boler_EN",
+                    "Moone_EN",
+                    "MusicMan_EN",
+                ], null);
+            BolerMedium.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
                     "MusicMan_EN",
                     "MusicMan_EN",
                     "SingingStone_EN",
@@ -42,6 +48,19 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "MusicMan_EN",
                     "SilverSuckle_EN",
+                ], null);
+            BolerMedium.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Moone_EN",
+                    "Moone_EN",
+                ], null);
+            BolerMedium.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Moone_EN",
+                    "Moone_EN",
+                    "SingingStone_EN",
                 ], null);
             BolerMedium.CreateNewEnemyEncounterData(
                 [
@@ -205,14 +224,6 @@ namespace Hell_Island_Fell.Encounters
                         "Boler_EN",
                         "PrimitiveGizo_EN",
                     ], null);
-                BolerMedium.CreateNewEnemyEncounterData(
-                    [
-                        "Boler_EN",
-                        "PrimitiveGizo_EN",
-                        "SingingStone_EN",
-                        "SingingStone_EN",
-                        "SingingStone_EN",
-                    ], null);
             }
             BolerMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Medium_EnemyBundle", 6, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Medium);
@@ -233,9 +244,23 @@ namespace Hell_Island_Fell.Encounters
             BolerHard.CreateNewEnemyEncounterData(
                 [
                     "Boler_EN",
+                    "ManicMan_EN",
+                    "ManicMan_EN",
+                    "Moone_EN",
+                ], null);
+            BolerHard.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
                     "MusicMan_EN",
                     "MusicMan_EN",
                     "MusicMan_EN",
+                ], null);
+            BolerHard.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "MusicMan_EN",
+                    "MusicMan_EN",
+                    "Moone_EN",
                 ], null);
             BolerHard.CreateNewEnemyEncounterData(
                 [
@@ -280,6 +305,12 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Boler_EN",
                     "Conductor_EN",
+                    "Moone_EN",
+                ], null);
+            BolerHard.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Conductor_EN",
                     "MusicMan_EN",
                 ], null);
             BolerHard.CreateNewEnemyEncounterData(
@@ -317,6 +348,12 @@ namespace Hell_Island_Fell.Encounters
                     "Revola_EN",
                     "SilverSuckle_EN",
                     "SilverSuckle_EN",
+                ], null);
+            BolerHard.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Revola_EN",
+                    "Moone_EN",
                 ], null);
             BolerHard.CreateNewEnemyEncounterData(
                 [
@@ -457,7 +494,7 @@ namespace Hell_Island_Fell.Encounters
                         "Jansuli_EN",
                         "Jansuli_EN",
                         "Jansuli_EN",
-                        "Jansuli_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
@@ -540,6 +577,27 @@ namespace Hell_Island_Fell.Encounters
                 BolerHard.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
+                        "BackupDancer_EN",
+                        "BackupDancer_EN",
+                        "Moone_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "MusicMan_EN",
+                        "Moone_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "ManicMan_EN",
+                        "Moone_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
                         "Footshroom_EN",
                         "Scrungie_EN",
                         "Scrungie_EN",
@@ -548,7 +606,9 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Boler_EN",
                         "PrimitiveGizo_EN",
-                        "PrimitiveGizo_EN",
+                        "SingingStone_EN",
+                        "SingingStone_EN",
+                        "SingingStone_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
@@ -588,6 +648,12 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Boler_EN",
                     "Boler_EN",
+                    "Boler_EN",
+                ], null);
+            Boler2.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Boler_EN",
                     "ManicMan_EN",
                     "ManicMan_EN",
                 ], null);
@@ -610,7 +676,6 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "Boler_EN",
                     "Conductor_EN",
-                    "SilverSuckle_EN",
                 ], null);
             Boler2.CreateNewEnemyEncounterData(
                 [
@@ -632,6 +697,12 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "Boler_EN",
                     "WrigglingSacrifice_EN",
+                ], null);
+            Boler2.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Boler_EN",
+                    "Moone_EN",
                 ], null);
             Boler2.CreateNewEnemyEncounterData(
                 [
@@ -660,6 +731,20 @@ namespace Hell_Island_Fell.Encounters
                         "Chapbull_EN",
                         "Chapman_EN",
                     ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Gizo_EN",
+                        "NakedGizo_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Seraphim_EN",
+                        "Seraphim_EN",
+                    ], null);
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
@@ -681,6 +766,34 @@ namespace Hell_Island_Fell.Encounters
                         "Boler_EN",
                         "Jansuli_EN",
                         "Jansuli_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "BackupDancer_EN",
+                        "BackupDancer_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "BipedalFrostbite_EN",
+                        "BipedalFrostbite_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "PrimitiveGizo_EN",
                     ], null);
             }
             Boler2.AddEncounterToDataBases();

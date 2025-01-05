@@ -89,6 +89,12 @@ namespace Hell_Island_Fell.Achievements
             UnlockWitnessMaecenas.AddUnlockData("Maecenas_CH", Unlocks.GenerateUnlockData("HIF_Maecenas_Witness_Unlock", "HIF_Maecenas_Witness_ACH", "", "", ["NightOil_SW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Maecenas_Witness_ACH", "NightOil_SW");
 
+            ModdedAchievements AchievementWitnessChim = new ModdedAchievements("Braille Typewriter", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanChim", null, 32, null), "HIF_Chim_Witness_ACH");
+            AchievementWitnessChim.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessChim = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessChim.AddUnlockData("Chim_CH", Unlocks.GenerateUnlockData("HIF_Chim_Witness_Unlock", "HIF_Chim_Witness_ACH", "", "", ["BrailleTypewriter_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Chim_Witness_ACH", "BrailleTypewriter_SW");
+
             ModdedAchievements AchievementWitnessHoftstoldt = new ModdedAchievements("Stabbing Homunculus", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanHoftstoldt", null, 32, null), "HIF_Hoftstoldt_Witness_ACH");
             AchievementWitnessHoftstoldt.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
             FinalBossCharUnlockCheck UnlockWitnessHoftstoldt = Unlocks.GetUnlock_OsmanFinalBoss();
@@ -193,6 +199,12 @@ namespace Hell_Island_Fell.Achievements
             FinalBossCharUnlockCheck UnlockDivineMaecenas = Unlocks.GetUnlock_HeavenFinalBoss();
             UnlockDivineMaecenas.AddUnlockData("Maecenas_CH", Unlocks.GenerateUnlockData("HIF_Maecenas_Divine_Unlock", "HIF_Maecenas_Divine_ACH", "", "", ["AlchemicalConstant_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Maecenas_Divine_ACH", "AlchemicalConstant_TW");
+
+            ModdedAchievements AchievementDivineChim = new ModdedAchievements("Antique Cash Register", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenChim", null, 32, null), "HIF_Chim_Divine_ACH");
+            AchievementDivineChim.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineChim = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineChim.AddUnlockData("Chim_CH", Unlocks.GenerateUnlockData("HIF_Chim_Divine_Unlock", "HIF_Chim_Divine_ACH", "", "", ["AntiqueCashRegister_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Chim_Divine_ACH", "AntiqueCashRegister_SW");
 
             ModdedAchievements AchievementDivineHoftstoldt = new ModdedAchievements("Ripcord", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenHoftstoldt", null, 32, null), "HIF_Hoftstoldt_Divine_ACH");
             AchievementDivineHoftstoldt.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);

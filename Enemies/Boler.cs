@@ -19,11 +19,18 @@ namespace Hell_Island_Fell.Enemies
             CheapLoot._costsLess = true;
 
             ExtraShopLootByCostEffect ExpensiveLoot = ScriptableObject.CreateInstance<ExtraShopLootByCostEffect>();
-            ExpensiveLoot._cost = 8;
+            ExpensiveLoot._cost = 7;
             ExpensiveLoot._costsLess = false;
 
             PercentageEffectCondition ChangeChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
             ChangeChance.percentage = 17;
+
+            PercentageEffectCondition RichChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
+            RichChance.percentage = 50;
+
+            PreviousEffectCondition Fail = ScriptableObject.CreateInstance<PreviousEffectCondition>();
+            Fail.wasSuccessful = false;
+            Fail.previousAmount = 2;
 
             Enemy boler = new Enemy("Boler", "Boler_EN")
             {
@@ -41,13 +48,14 @@ namespace Hell_Island_Fell.Enemies
                 ],
                 CombatExitEffects =
                 [
-                    Effects.GenerateEffect(CheapLoot, 2, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ExpensiveLoot, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ChaosLootReplaceEffect>(), 10, Targeting.Slot_Front, ChangeChance),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, RichChance),
+                    Effects.GenerateEffect(CheapLoot, 3, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(ExpensiveLoot, 1, Targeting.Slot_Front, Fail),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ChaosLootReplaceEffect>(), 5, Targeting.Slot_Front, ChangeChance),
                 ],
             };
             boler.PrepareEnemyPrefab("Assets/BolerAssetBundle/Boler.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/BolerAssetBundle/BolerGibs.prefab").GetComponent<ParticleSystem>());
-            boler.AddPassives([Passives.MultiAttack3, Passives.Masochism1, Passives.GetCustomPassive("Disruption_PA")]);
+            boler.AddPassives([Passives.EssenceUntethered, Passives.MultiAttack3, Passives.Masochism1, Passives.GetCustomPassive("Disruption_PA")]);
 
             StatusEffect_Apply_Effect CursedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             CursedApply._Status = StatusField.Cursed;
@@ -83,7 +91,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(RandomSet, 1, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<SwapToSidesEffect>(), 1, Targeting.Slot_SelfSlot),
                 ],
-                Rarity = CustomAbilityRarity.Weight(3, true),
+                Rarity = CustomAbilityRarity.Weight(4, true),
                 Priority = Priority.Fast,
             };
             stellarGlare.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Cursed)]);
@@ -92,14 +100,14 @@ namespace Hell_Island_Fell.Enemies
 
             Ability nocturnalCrawl = new Ability("Nocturnal Crawl", "NocturnalCrawl_A")
             {
-                Description = "Produce 1 yellow pigment.\nApply 2 Disappearing to the Opposing party member.\nMove this enemy to the Left.\nRandomize the Right enemy's health color.",
+                Description = "Produce 1 yellow pigment.\nApply 4 Disappearing to the Opposing party member.\nMove this enemy to the Left.\nRandomize the Right enemy's health color.",
                 Cost = [Pigments.Red, Pigments.Blue],
                 Visuals = Visuals.StompLeft,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
                     Effects.GenerateEffect(YellowSpit, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(DisappearingApply, 2, Targeting.Slot_Front),
+                    Effects.GenerateEffect(DisappearingApply, 4, Targeting.Slot_Front),
                     Effects.GenerateEffect(SwapLeft, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(RandomHealth, 1, Targeting.Slot_AllyRight),
                 ],
@@ -113,14 +121,14 @@ namespace Hell_Island_Fell.Enemies
 
             Ability diurnalCreep = new Ability("Diurnal Creep", "DiurnalCreep_A")
             {
-                Description = "Produce 1 yellow pigment.\nApply 2 Disappearing to the Opposing party member.\nMove this enemy to the Right.\nRandomize the Left enemy's health color.",
+                Description = "Produce 1 yellow pigment.\nApply 4 Disappearing to the Opposing party member.\nMove this enemy to the Right.\nRandomize the Left enemy's health color.",
                 Cost = [Pigments.Red, Pigments.Blue],
                 Visuals = Visuals.StompRight,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
                     Effects.GenerateEffect(YellowSpit, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(DisappearingApply, 2, Targeting.Slot_Front),
+                    Effects.GenerateEffect(DisappearingApply, 4, Targeting.Slot_Front),
                     Effects.GenerateEffect(SwapRight, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(RandomHealth, 1, Targeting.Slot_AllyLeft),
                 ],

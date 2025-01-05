@@ -11,7 +11,7 @@ namespace Hell_Island_Fell.Encounters
             Portals.AddPortalSign("Inequity_Sign", ResourceLoader.LoadSprite("TimelineInequity", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
             EnemyEncounter_API inequityEasy = new EnemyEncounter_API(0, "H_Zone03_Inequity_Easy_EnemyBundle", "Inequity_Sign")
             {
-                MusicEvent = "event:/Music/DLC_01/Mx_ChoirBoy_106",
+                MusicEvent = "event:/AnothersGriefAtTheHangmansHandWasOurRelief",
                 RoarEvent = "event:/Characters/Enemies/DLC_01/ChoirBoy/CHR_ENM_ChoirBoy_Roar",
             };
             inequityEasy.CreateNewEnemyEncounterData(
@@ -78,7 +78,6 @@ namespace Hell_Island_Fell.Encounters
             {
                 inequityEasy.CreateNewEnemyEncounterData(
                     [
-                        "Inequity_EN",
                         "Inequity_EN",
                         "Inequity_EN",
                         "MarbleMaw_EN",

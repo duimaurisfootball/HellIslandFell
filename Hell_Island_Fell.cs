@@ -17,7 +17,7 @@ using Hell_Island_Fell.Field_Effects;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.4.5")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.4.7")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]
@@ -96,11 +96,14 @@ namespace Hell_Island_Fell
             ComplexComplexion.Add();
             HoxJar.Add();
             NightOil.Add();
+            BrailleTypewriter.Add();
             StabbingHomunculus.Add();
             Nemesis.Add();
             //GreenGlass.Add();
             FetidTooth.Add();
             BlackPearl.Add();
+            //
+            //
 
             //Heaven 
             ThousandFish.Add();
@@ -117,11 +120,14 @@ namespace Hell_Island_Fell
             AncientWine.Add();
             InfiniteMirror.Add();
             AlchemicalConstant.Add();
+            AntiqueCashRegister.Add();
             Ripcord.Add();
             MagicAccelerator.Add();
             //TheDeal.Add();
             InfernalStone.Add();
             Trinitite.Add();
+            //
+            //
 
             //Doula Unlocks
             //CatastropheStick.Add();
@@ -138,11 +144,14 @@ namespace Hell_Island_Fell
             //CursedDoll.Add();
             //BrokenAltimeter.Add();
             //DeadSeatedHead.Add();
+            //RedBook.Add();
             //AFlower.Add();
             //TerrifyingMortarRounds.Add();
             //LabyrinthDevice.Add();
             //PlatinumDisc.Add();
             //ReactorCell.Add();
+            //AlienChunk.Add();
+            //FissureTelescope.Add();
 
             //March Unlocks
             //PhlegmSuckingWorm.Add();
@@ -164,6 +173,8 @@ namespace Hell_Island_Fell
             //Sundial.Add();
             //PatternMass.Add();
             //CrackedDirt.Add();
+            //
+            //
 
             //Bemagel Unlocks
 
@@ -186,7 +197,7 @@ namespace Hell_Island_Fell
             Gomma.Add();
             Hills.Add();
             Maecenas.Add();
-            //Chim.Add();
+            Chim.Add();
             Hoftstoldt.Add();
             Pinec.Add();
             //Stareyed.Add();

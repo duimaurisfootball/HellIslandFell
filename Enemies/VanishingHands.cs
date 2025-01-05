@@ -48,7 +48,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(DisappearingApply, 1, Targeting.Unit_AllOpponents),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<CasterSideWitheringEffect>(), 1, null, Chance0),
                 ],
-                Rarity = CustomAbilityRarity.Weight(1, true),
+                Rarity = CustomAbilityRarity.Weight(1000, true),
                 Priority = Priority.ExtremelySlow,
             };
             drag.AddIntentsToTarget(Targeting.Unit_AllOpponents, ["Status_Disappearing"]);

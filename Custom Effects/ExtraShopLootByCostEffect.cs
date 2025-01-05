@@ -30,16 +30,11 @@ namespace Hell_Island_Fell.Custom_Effects
             {
                 if (!processed.Contains(i.itemName.ToLowerInvariant()))
                 {
-                    if (i.LoadedItem.shopPrice < cost && costsLess)
+                    if (i.LoadedItem.shopPrice != cost && ((i.LoadedItem.shopPrice < cost) == costsLess))
                     {
                         processed.Add(i.itemName.ToLowerInvariant());
+                        yield return i.itemName;
                     }
-                    if (i.LoadedItem.shopPrice > cost && !costsLess)
-                    {
-                        processed.Add(i.itemName.ToLowerInvariant());
-                    }
-
-                    yield return i.itemName;
                 }
             }
         }

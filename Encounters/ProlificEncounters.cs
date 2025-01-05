@@ -31,13 +31,6 @@ namespace Hell_Island_Fell.Encounters
             prolificMedium.CreateNewEnemyEncounterData(
                 [
                     "ProlificNosestone_EN",
-                    "ShiveringHomunculus_EN",
-                    "ShiveringHomunculus_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            prolificMedium.CreateNewEnemyEncounterData(
-                [
-                    "ProlificNosestone_EN",
                     "ChoirBoy_EN",
                     "ChoirBoy_EN",
                 ], null);
@@ -181,15 +174,6 @@ namespace Hell_Island_Fell.Encounters
                     "ProlificNosestone_EN",
                     "ProlificNosestone_EN",
                     "ShiveringHomunculus_EN",
-                    "SkinningHomunculus_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            prolificHard.CreateNewEnemyEncounterData(
-                [
-                    "ProlificNosestone_EN",
-                    "ProlificNosestone_EN",
-                    "ShiveringHomunculus_EN",
-                    "SkinningHomunculus_EN",
                     "SkinningHomunculus_EN",
                 ], null);
             prolificHard.CreateNewEnemyEncounterData(

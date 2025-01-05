@@ -1548,7 +1548,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Jansuli_EN",
-                    "VanishingHands",
+                    "VanishingHands_EN",
                 ]),
                     new(
                 [
@@ -1567,7 +1567,7 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Jansuli_EN",
                     "SilverSuckle_EN",
-                    "VanishingHands",
+                    "VanishingHands_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliMed"))._enemyBundles = jansuliMedium;
@@ -1579,7 +1579,7 @@ namespace Hell_Island_Fell.Encounters
                     "Jansuli_EN",
                     "Jansuli_EN",
                     "Jansuli_EN",
-                    "VanishingHands",
+                    "VanishingHands_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliHard"))._enemyBundles = jansuliHard;
@@ -1599,7 +1599,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "PrimitiveGizo_Calm_EN",
-                    "VanishingHands",
+                    "VanishingHands_EN",
                 ]),
                     new(
                 [
@@ -1631,7 +1631,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Gizard_EN",
-                    "VanishingHands",
+                    "VanishingHands_EN",
                 ]),
                     new(
                 [
@@ -1653,7 +1653,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Footshroom_EN",
-                    "VanishingHands",
+                    "VanishingHands_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FootshroomMed"))._enemyBundles = footshroomMed;
@@ -1664,24 +1664,19 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Footshroom_EN",
                     "ManicMan_EN",
-                    "VanishingHands",
+                    "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "Footshroom_EN",
                     "JumbleGuts_Waning_EN",
-                    "VanishingHands",
+                    "VanishingHands_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FootshroomHard"))._enemyBundles = footshroomHard;
 
                 List<RandomEnemyGroup> incubatorHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("IncubatorHard"))._enemyBundles)
                 {
-                    new(
-                [
-                    "ExternalIncubator_EN",
-                    "VanishingHands",
-                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("IncubatorHard"))._enemyBundles = incubatorHard;
 
@@ -2121,128 +2116,7 @@ namespace Hell_Island_Fell.Encounters
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MaladjustedMedium"))._enemyBundles = maladjustedMedium;
-
-                List<RandomEnemyGroup> chapbullHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChapbullHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChapbullHard"))._enemyBundles = chapbullHard;
-
-                List<RandomEnemyGroup> chapmanMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChapmanMedium"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChapmanMedium"))._enemyBundles = chapmanMedium;
-
-                List<RandomEnemyGroup> cherubimHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("CherubimHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("CherubimHard"))._enemyBundles = cherubimHard;
-
-                List<RandomEnemyGroup> drySimianMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianMedium"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianMedium"))._enemyBundles = drySimianMedium;
-
-                List<RandomEnemyGroup> drySimianHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianHard"))._enemyBundles = drySimianHard;
-
-                List<RandomEnemyGroup> gizoMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoMedium"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoMedium"))._enemyBundles = gizoMedium;
-
-                List<RandomEnemyGroup> gizoHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoHard"))._enemyBundles = gizoHard;
-
-                List<RandomEnemyGroup> greyJumbleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GreyJumbleMedium"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GreyJumbleMedium"))._enemyBundles = greyJumbleMedium;
-
-                List<RandomEnemyGroup> neoplasmHeapMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapMedium"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapMedium"))._enemyBundles = neoplasmHeapMedium;
-
-                List<RandomEnemyGroup> neoplasmHeapHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapHard"))._enemyBundles = neoplasmHeapHard;
-
-                List<RandomEnemyGroup> neoplasmLakeHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("LakeHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("LakeHard"))._enemyBundles = neoplasmLakeHard;
-
-                List<RandomEnemyGroup> nephilimMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("NephilimMedium"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("NephilimMedium"))._enemyBundles = nephilimMedium;
-
-                List<RandomEnemyGroup> nephilimHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("NephilimHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("NephilimHard"))._enemyBundles = nephilimHard;
-
-                List<RandomEnemyGroup> ophanimHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("OphanimHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("OphanimHard"))._enemyBundles = ophanimHard;
-
-                List<RandomEnemyGroup> opisthotonusHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("OpisthotonusHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("OpisthotonusHard"))._enemyBundles = opisthotonusHard;
-
-                List<RandomEnemyGroup> revoltingHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("RevoltingHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("RevoltingHard"))._enemyBundles = revoltingHard;
-
-                List<RandomEnemyGroup> seraphimHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SeraphimHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SeraphimHard"))._enemyBundles = seraphimHard;
-
-                List<RandomEnemyGroup> mountainHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MountainHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MountainHard"))._enemyBundles = mountainHard;
-
-                List<RandomEnemyGroup> unflarbHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("UnflarbHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("UnflarbHard"))._enemyBundles = unflarbHard;
-
-                List<RandomEnemyGroup> zygoteHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ZygoteHard"))._enemyBundles)
-                {
-
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ZygoteHard"))._enemyBundles = zygoteHard;
             }
-
             if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.EggKeeper)
             {
                 List<RandomEnemyGroup> anglerHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("AnglerHard"))._enemyBundles)
@@ -2408,7 +2282,7 @@ namespace Hell_Island_Fell.Encounters
                 List<RandomEnemyGroup> baitHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitHard"))._enemyBundles)
                 {
                 };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("baitHard"))._enemyBundles = baitHard;
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitHard"))._enemyBundles = baitHard;
 
                 List<RandomEnemyGroup> ennoEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("EnnoEasy"))._enemyBundles)
                 {

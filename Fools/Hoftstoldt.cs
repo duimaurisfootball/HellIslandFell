@@ -232,6 +232,16 @@ namespace Hell_Island_Fell.Fools
                     ResourceLoader.LoadSprite("HoftstoldtFront214", new Vector2(0.5f, 0f), 32),
                     ResourceLoader.LoadSprite("HoftstoldtFront215", new Vector2(0.5f, 0f), 32),
                     ResourceLoader.LoadSprite("HoftstoldtFront216", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront217", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront218", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront219", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront220", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront221", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront222", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront223", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront224", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront225", new Vector2(0.5f, 0f), 32),
+                    ResourceLoader.LoadSprite("HoftstoldtFront226", new Vector2(0.5f, 0f), 32),
                 ];
             FaceSprites._backSprite = ResourceLoader.LoadSprite("HoftstoldtBack", new Vector2(0.5f, 0f), 32);
 

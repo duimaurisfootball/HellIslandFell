@@ -40,6 +40,30 @@ namespace Hell_Island_Fell.Encounters
                     "SingingStone_EN",
                     "SingingStone_EN",
                 ], null);
+            MooneEasy.CreateNewEnemyEncounterData(
+                [
+                    "Moone_EN",
+                    "Moone_EN",
+                    "JumbleGuts_Waning_EN",
+                ], null);
+            MooneEasy.CreateNewEnemyEncounterData(
+                [
+                    "Moone_EN",
+                    "Moone_EN",
+                    "JumbleGuts_Clotted_EN",
+                ], null);
+            MooneEasy.CreateNewEnemyEncounterData(
+                [
+                    "Moone_EN",
+                    "Moone_EN",
+                    "Spoggle_Ruminating_EN",
+                ], null);
+            MooneEasy.CreateNewEnemyEncounterData(
+                [
+                    "Moone_EN",
+                    "Moone_EN",
+                    "Spoggle_Spitfire_EN",
+                ], null);
             if (Hell_Island_Fell.CrossMod.Colophons)
             {
                 MooneEasy.CreateNewEnemyEncounterData(
@@ -172,6 +196,11 @@ namespace Hell_Island_Fell.Encounters
                     "Moone_EN",
                     "Moone_EN",
                     "Spoggle_Resonant_EN",
+                ], null);
+            MooneMedium.CreateNewEnemyEncounterData(
+                [
+                    "Moone_EN",
+                    "Moone_EN",
                     "Spoggle_Writhing_EN",
                 ], null);
             MooneMedium.CreateNewEnemyEncounterData(
@@ -224,6 +253,42 @@ namespace Hell_Island_Fell.Encounters
                         "Neoplasm_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.Colophons)
+            {
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Moone_EN",
+                        "ColophonComposed_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Moone_EN",
+                        "ColophonDefeated_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "ColophonDefeated_EN",
+                        "ColophonComposed_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "ColophonMaladjusted_EN",
+                    ], null);
+                MooneMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Moone_EN",
+                        "Moone_EN",
+                        "ColophonDelighted_EN",
+                    ], null);
+            }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
                 MooneMedium.CreateNewEnemyEncounterData(
@@ -251,19 +316,11 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Moone_EN",
                         "Moone_EN",
-                        "PrimitiveGizo_EN",
-                        "PrimitiveGizo_EN",
-                    ], null);
-                MooneMedium.CreateNewEnemyEncounterData(
-                    [
-                        "Moone_EN",
-                        "Moone_EN",
                         "Moone_EN",
                         "Footshroom_EN",
                     ], null);
                 MooneMedium.CreateNewEnemyEncounterData(
                     [
-                        "Moone_EN",
                         "Moone_EN",
                         "Moone_EN",
                         "PrimitiveGizo_EN",

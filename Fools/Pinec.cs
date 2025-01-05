@@ -90,7 +90,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability chain2 = new Ability("Chain Knives", "Chain_3_A")
             {
-                Description = "Deal 10 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 25% dropoff.\nApply 2 Scars and 2 Ruptured to this party member.",
+                Description = "Deal 10 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 25% dropoff.\nApply 1 Scars and 2 Ruptured to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecChain"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Slash,
@@ -98,7 +98,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(ChainDamage, 10, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
-                    Effects.GenerateEffect(ScarsApply, 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScarsApply, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(RupturedApply, 2, Targeting.Slot_SelfSlot),
                 ]
             };
@@ -108,7 +108,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability chain3 = new Ability("Chain Ring", "Chain_4_A")
             {
-                Description = "Deal 12 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 25% dropoff.\nApply 2 Scars and 2 Ruptured to this party member.",
+                Description = "Deal 12 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 25% dropoff.\nApply 1 Scars and 2 Ruptured to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecChain"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Slash,
@@ -116,7 +116,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(ChainDamage, 12, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
-                    Effects.GenerateEffect(ScarsApply, 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScarsApply, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(RupturedApply, 2, Targeting.Slot_SelfSlot),
                 ]
             };
@@ -163,7 +163,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability spikes2 = new Ability("Razor Sharp Spikes", "Spikes_3_A")
             {
-                Description = "Deal 16 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 75% dropoff.\nApply 2 Scars and 2 Oil Slicked to this party member.",
+                Description = "Deal 16 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 75% dropoff.\nApply 1 Scars and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Thorns,
@@ -171,7 +171,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(SpikesDamage, 16, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
-                    Effects.GenerateEffect(ScarsApply, 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScarsApply, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(OilApply, 2, Targeting.Slot_SelfSlot),
                 ]
             };
@@ -181,7 +181,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability spikes3 = new Ability("Head Full of Spikes", "Spikes_4_A")
             {
-                Description = "Deal 20 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 75% dropoff.\nApply 2 Scars and 2 Oil Slicked to this party member.",
+                Description = "Deal 20 damage to the Opposing enemy.\nThis damage spreads indirectly to the Left and Right with a 75% dropoff.\nApply 1 Scars and 2 Oil Slicked to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecSpikes"),
                 Cost = [Pigments.PurpleBlue, Pigments.Red],
                 Visuals = Visuals.Thorns,
@@ -189,7 +189,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(SpikesDamage, 20, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4])),
-                    Effects.GenerateEffect(ScarsApply, 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScarsApply, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(OilApply, 2, Targeting.Slot_SelfSlot),
                 ]
             };
@@ -200,14 +200,14 @@ namespace Hell_Island_Fell.Fools
             //meat
             Ability meat0 = new Ability("Rotten Meat", "Meat_1_A")
             {
-                Description = "Remove 0-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
+                Description = "Remove 1-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
                 Cost = [Pigments.Blue, Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 0, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScarsRemove, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_SelfSlot),
                 ]
@@ -216,23 +216,6 @@ namespace Hell_Island_Fell.Fools
             meat0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
             Ability meat1 = new Ability("Raw Meat", "Meat_2_A")
-            {
-                Description = "Remove 0-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
-                AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
-                Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.Absolve,
-                AnimationTarget = Targeting.Slot_SelfSlot,
-                Effects =
-                [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 0, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScarsRemove, 2, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_SelfSlot),
-                ]
-            };
-            meat1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Rem_Status_Scars)]);
-            meat1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
-
-            Ability meat2 = new Ability("Fresh Meat", "Meat_3_A")
             {
                 Description = "Remove 1-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
@@ -246,10 +229,10 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_SelfSlot),
                 ]
             };
-            meat2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Rem_Status_Scars)]);
-            meat2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
+            meat1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Rem_Status_Scars)]);
+            meat1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
-            Ability meat3 = new Ability("Pristine Meat", "Meat_4_A")
+            Ability meat2 = new Ability("Fresh Meat", "Meat_3_A")
             {
                 Description = "Remove 1-3 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
@@ -260,6 +243,23 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScarsRemove, 3, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_SelfSlot),
+                ]
+            };
+            meat2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Rem_Status_Scars)]);
+            meat2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
+
+            Ability meat3 = new Ability("Pristine Meat", "Meat_4_A")
+            {
+                Description = "Remove 1-4 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
+                AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
+                Cost = [Pigments.Blue, Pigments.Blue],
+                Visuals = Visuals.Absolve,
+                AnimationTarget = Targeting.Slot_SelfSlot,
+                Effects =
+                [
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScarsRemove, 4, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_SelfSlot),
                 ]
             };

@@ -782,7 +782,7 @@ namespace Hell_Island_Fell.Encounters
             [
                 "GigglingMinister_EN",
                 "StickingHomunculus_EN",
-                "UninpsiredNosestone_EN",
+                "UninspiredNosestone_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
