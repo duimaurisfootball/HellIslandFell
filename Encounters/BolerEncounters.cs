@@ -493,13 +493,10 @@ namespace Hell_Island_Fell.Encounters
                         "Boler_EN",
                         "Jansuli_EN",
                         "Jansuli_EN",
-                        "Jansuli_EN",
-                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
-                        "Jansuli_EN",
                         "Jansuli_EN",
                         "VanishingHands_EN",
                     ], null);

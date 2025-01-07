@@ -33,6 +33,7 @@ namespace Hell_Island_Fell.Fools
 
             PreviousEffectCondition Fail = ScriptableObject.CreateInstance<PreviousEffectCondition>();
             Fail.wasSuccessful = false;
+            Fail.previousAmount = 2;
 
             HealEffect PrevHeal = ScriptableObject.CreateInstance<HealEffect>();
             PrevHeal.usePreviousExitValue = true;
@@ -262,7 +263,8 @@ namespace Hell_Island_Fell.Fools
             maecenas.AddLevelData(22, new Ability[] { rain2, lightningStrike2, hail2 });
             maecenas.AddLevelData(24, new Ability[] { rain3, lightningStrike3, hail3 });
 
-
+            maecenas.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Maecenas_Witness_ACH");
+            maecenas.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Maecenas_Divine_ACH");
             maecenas.AddCharacter(true, false);
         }
     }

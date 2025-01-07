@@ -453,7 +453,7 @@ namespace Hell_Island_Fell.Custom_Passives
                 wartsGenerated.effects =
                 [
                     Effects.GenerateEffect(WartsCheck, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ShieldApply, amount, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ShieldApply, amount, Targeting.Slot_SelfAll),
                 ];
                 wartsGenerated.conditions =
                 [

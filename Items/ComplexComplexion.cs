@@ -18,7 +18,7 @@ namespace Hell_Island_Fell.Items
             PerformEffect_Item complexComplexion = new PerformEffect_Item("ComplexComplexion_ID", null, false)
             {
                 Item_ID = "ComplexComplexion_TW",
-                Name = "Stabbing Homunculus",
+                Name = "Complex Complexion",
                 Flavour = "\"No part of you wants to be smooth.\"",
                 Description = "Upon taking direct damage, deal 5 indirect damage to the Opposing enemy, apply 4 Shield to this party member's position, and heal the Left and Right allies 4 health.",
                 IsShopItem = false,

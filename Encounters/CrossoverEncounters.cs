@@ -1578,7 +1578,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Jansuli_EN",
                     "Jansuli_EN",
-                    "Jansuli_EN",
                     "VanishingHands_EN",
                 ]),
                 };
