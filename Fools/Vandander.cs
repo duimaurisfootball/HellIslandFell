@@ -35,9 +35,9 @@ namespace Hell_Island_Fell.Fools
                 FrontSprite = ResourceLoader.LoadSprite("VandanderFrontBasic", new Vector2(0.5f, 0f), 32),
                 BackSprite = ResourceLoader.LoadSprite("VandanderBackBasic", new Vector2(0.5f, 0f), 32),
                 OverworldSprite = ResourceLoader.LoadSprite("VandanderOverworld", new Vector2(0.5f, 0f), 32),
-                DamageSound = LoadedAssetsHandler.GetEnemy("TaMaGoa_EN").deathSound,
-                DeathSound = LoadedAssetsHandler.GetEnemy("TaintedYolk_EN").deathSound,
-                DialogueSound = LoadedAssetsHandler.GetEnemy("TaMaGoa_EN").damageSound,
+                DamageSound = "event:/VandanderDamage",
+                DeathSound = "event:/VandanderDeath",
+                DialogueSound = "event:/VandanderDx",
                 ExtraSprites = HoleSprites,
                 UnitTypes =
                 [
@@ -72,9 +72,6 @@ namespace Hell_Island_Fell.Fools
             RemoveStatusEffectEffect CursedRemove = ScriptableObject.CreateInstance<RemoveStatusEffectEffect>();
             CursedRemove._status = StatusField.Cursed;
 
-            PercentageEffectCondition Chance0 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            Chance0.percentage = 50;
-
             //vow
             Ability vow0 = new Ability("Vaguely Vow", "Vow_1_A")
             {
@@ -90,7 +87,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(HalfCheck, 50, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(DisappearingApply1, 8, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vow0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Linked)]);
@@ -111,7 +108,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(HalfCheck, 50, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(DisappearingApply1, 12, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vow1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Linked)]);
@@ -132,7 +129,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(HalfCheck, 50, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(DisappearingApply1, 14, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vow2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Linked)]);
@@ -153,7 +150,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(HalfCheck, 50, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(DisappearingApply1, 16, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vow3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Linked)]);
@@ -175,7 +172,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(HalfCheck, 50, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vent0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
@@ -195,7 +192,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vent1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
@@ -216,7 +213,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vent2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
@@ -237,7 +234,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FrailApply, 1, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vent3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
@@ -258,7 +255,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ResurrectEffect>(), 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(HealMax, 25, Targeting.Slot_SelfAndRight),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vandala0.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
@@ -278,7 +275,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ResurrectEffect>(), 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(HealMax, 33, Targeting.Slot_SelfAndRight),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vandala1.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
@@ -298,7 +295,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ResurrectEffect>(), 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(HealMax, 50, Targeting.Slot_SelfAndRight),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vandala2.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
@@ -319,7 +316,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(HealMax, 50, Targeting.Slot_SelfAndRight),
                     Effects.GenerateEffect(CursedRemove, 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             vandala3.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);

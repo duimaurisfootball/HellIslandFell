@@ -78,22 +78,18 @@ namespace Hell_Island_Fell.Custom_Passives
             StatusEffect_Apply_Effect CursedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             CursedApply._Status = StatusField.Cursed;
 
-            Connection_PerformEffectPassiveAbility sacrilege = ScriptableObject.CreateInstance<Connection_PerformEffectPassiveAbility>();
+            PerformEffectPassiveAbility sacrilege = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
             sacrilege.m_PassiveID = "Sacrilege";
             sacrilege.passiveIcon = ResourceLoader.LoadSprite("RodneySacrilege");
             sacrilege._characterDescription = "This party member is Cursed.";
             sacrilege._enemyDescription = "This enemy is Cursed.";
-            sacrilege.connectionEffects =
+            sacrilege.effects =
                 [
                     Effects.GenerateEffect(CursedApply, 1, Targeting.Slot_SelfSlot),
                 ];
-            sacrilege.disconnectionEffects =
-                [
-
-                ];
             sacrilege._triggerOn =
                 [
-
+                    TriggerCalls.OnCombatStart,
                 ];
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -136,23 +132,23 @@ namespace Hell_Island_Fell.Custom_Passives
                 [
                     Effects.GenerateEffect(ResetSprite, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(CheckYellow, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
                     Effects.GenerateEffect(CheckPurple, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
                     Effects.GenerateEffect(CheckBlue, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
                     Effects.GenerateEffect(CheckGrey, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
 
                 ];
             humorous._secondTriggerOn =
@@ -358,7 +354,41 @@ namespace Hell_Island_Fell.Custom_Passives
                     Effects.GenerateEffect(MoveLeft, 1, Targeting.Slot_SelfSlot),
                 ];
 
+
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            LoadedDBsHandler.StatusFieldDB.TryGetFieldEffect("ShadowHands_ID", out FieldEffect_SO ShadowHands);
+            FieldEffect_Apply_Effect ShadowHandsApply = ScriptableObject.CreateInstance<FieldEffect_Apply_Effect>();
+            ShadowHandsApply._Field = ShadowHands;
+
+            PerformEffectPassiveAbility mirage = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
+            mirage.m_PassiveID = "Mirage";
+            mirage.passiveIcon = ResourceLoader.LoadSprite("StareyedMirage");
+            mirage._characterDescription = "This party member will apply 1 Shadow Hands to their current position at the beginning of each turn.";
+            mirage._enemyDescription = "This enemy will apply 1 Shadow Hands to their current position at the beginning of each turn.";
+            mirage._triggerOn =
+                [
+                    TriggerCalls.OnTurnStart,
+                ];
+            mirage.effects =
+                [
+                    Effects.GenerateEffect(ShadowHandsApply, 1, Targeting.Slot_SelfSlot),
+                ];
+
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            TargetedStatusEffectPassive conviction = ScriptableObject.CreateInstance<TargetedStatusEffectPassive>();
+            conviction.m_PassiveID = "Conviction";
+            conviction.passiveIcon = ResourceLoader.LoadSprite("NabaConviction");
+            conviction._characterDescription = "The Left and Right allies are Divinely Protected.";
+            conviction._enemyDescription = "The Left and Right allies are Divinely Protected.";
+            conviction._triggerOn = [];
+            conviction.conditions = [];
+            conviction.doesPassiveTriggerInformationPanel = false;
+            conviction.targeting = Targeting.Slot_AllySides;
+            conviction.status = StatusField.DivineProtection;
+            conviction.affectedUnitsStoredValue = UnitStoreData.CreateAndAddCustom_Basic_UnitStoreDataToPool("DivineProtectingProtectedUnits_USD");
+
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             Passives.AddCustomPassiveToPool("Impunity_PA", "Impunity", impunity);
             Passives.AddCustomPassiveToPool("Metallurgy_PA", "Metallurgy", metallurgy);
             Passives.AddCustomPassiveToPool("Sacrilege_PA", "Sacrilege", sacrilege);
@@ -374,6 +404,8 @@ namespace Hell_Island_Fell.Custom_Passives
             Passives.AddCustomPassiveToPool("TwoFacedRY_PA", "Two Faced", TwoFacedRedYellow);
             Passives.AddCustomPassiveToPool("DecayKekingdom_PA", "Decay", DecayKekingdom);
             Passives.AddCustomPassiveToPool("Billiard_PA", "Billiard", billiard);
+            Passives.AddCustomPassiveToPool("Mirage_PA", "Mirage", mirage);
+            Passives.AddCustomPassiveToPool("Conviction_PA", "Conviction", conviction);
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             GlossaryPassives ImpunityInfo = new GlossaryPassives("Impunity", "The yellow pigment generator now generates gray pigment instead.", ResourceLoader.LoadSprite("FarahImpunity"));
             GlossaryPassives MetallurgyInfo = new GlossaryPassives("Metallurgy", "This party member/enemy scales based on how much money you have at the start of combat.", ResourceLoader.LoadSprite("SaladMetallurgy"));
@@ -390,6 +422,8 @@ namespace Hell_Island_Fell.Custom_Passives
             GlossaryPassives ThornyInfo = new GlossaryPassives("Thorny", "If the wrong pigment is used while performing an ability apply 1 Scar to this party member.", ResourceLoader.LoadSprite("PinecThorny"));
             GlossaryPassives DisruptionInfo = new GlossaryPassives("Disruption", "Randomize and reduce all party member ability costs.", ResourceLoader.LoadSprite("BolerDisruption"));
             GlossaryPassives BilliardInfo = new GlossaryPassives("Billiard", "Upon recieving direct damage, remove Constricted from this party member/enemy's position and move to the left.", ResourceLoader.LoadSprite("BoojumBilliard"));
+            GlossaryPassives MirageInfo = new GlossaryPassives("Mirage", "This party member will apply 1 Shadow Hands to their current position at the beginning of each turn.", ResourceLoader.LoadSprite("StareyedMirage"));
+            GlossaryPassives ConvictionInfo = new GlossaryPassives("Conviction", "The Left and Right allies are Divinely Protected.", ResourceLoader.LoadSprite("NabaConviction"));
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             LoadedDBsHandler.GlossaryDB.AddNewPassive(ImpunityInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(MetallurgyInfo);
@@ -406,6 +440,8 @@ namespace Hell_Island_Fell.Custom_Passives
             LoadedDBsHandler.GlossaryDB.AddNewPassive(ThornyInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(DisruptionInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(BilliardInfo);
+            LoadedDBsHandler.GlossaryDB.AddNewPassive(MirageInfo);
+            LoadedDBsHandler.GlossaryDB.AddNewPassive(ConvictionInfo);
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             UnitStoreData_ModIntSO wartiness = ScriptableObject.CreateInstance<UnitStoreData_ModIntSO>();
             wartiness.m_Text = "Warts: +{0}";
@@ -429,6 +465,9 @@ namespace Hell_Island_Fell.Custom_Passives
         private static readonly Dictionary<int, BasePassiveAbilitySO> GeneratedInvincibility = [];
 
         private static readonly Dictionary<int, BasePassiveAbilitySO> GeneratedConsistentFleeting = [];
+
+        private static readonly Dictionary<int, BasePassiveAbilitySO> GeneratedRetortion = [];
+
         public static BasePassiveAbilitySO WartsGenerator(int amount)
         {
             return GetOrCreatePassive(GeneratedWarts, amount, delegate (int x)
@@ -541,10 +580,31 @@ namespace Hell_Island_Fell.Custom_Passives
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<FleeTargetEffect>(), 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(FleetingPopup, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(FleeFirst, 1),
-                ]; 
+                ];
                 return consistentFleetingGenerated;
             });
         }
+        public static BasePassiveAbilitySO RetortionGenerator(int amount)
+        {
+            return GetOrCreatePassive(GeneratedRetortion, amount, delegate (int x)
+            {
+                RetortionPassiveAbility retortionGenerated = ScriptableObject.CreateInstance<RetortionPassiveAbility>();
+                retortionGenerated.name = $"Retortion_{x}_PA";
+                retortionGenerated.m_PassiveID = "Retortion";
+                retortionGenerated._passiveName = $"Retortion ({x})";
+                retortionGenerated._characterDescription = "This passive is not meant for party members.";
+                retortionGenerated._enemyDescription = $"Upon receiving {x} or more direct damage, add 1 of this enemy's actions to the timeline.";
+                retortionGenerated.passiveIcon = ResourceLoader.LoadSprite("PassiveRetortion");
+                retortionGenerated._triggerOn = [TriggerCalls.OnDirectDamaged];
+                IntegerReferenceOverEqualValueEffectorCondition integerReferenceOverEqualValueEffectorCondition = ScriptableObject.CreateInstance<IntegerReferenceOverEqualValueEffectorCondition>();
+                integerReferenceOverEqualValueEffectorCondition.compareValue = x;
+                retortionGenerated.conditions = [integerReferenceOverEqualValueEffectorCondition, Passives.Overexert2.conditions[1]];
+                retortionGenerated.doesPassiveTriggerInformationPanel = true;
+                retortionGenerated.specialStoredData = null;
+                return retortionGenerated;
+            });
+        }
+
         private static TValue GetOrCreatePassive<TKey, TValue>(IDictionary<TKey, TValue> readFrom, TKey key, Func<TKey, TValue> create)
         {
             if (readFrom.TryGetValue(key, out TValue value))

@@ -65,6 +65,12 @@ namespace Hell_Island_Fell.Achievements
             UnlockWitnessAlvinar.AddUnlockData("Alvinar_CH", Unlocks.GenerateUnlockData("HIF_Alvinar_Witness_Unlock", "HIF_Alvinar_Witness_ACH", "", "", ["CheesePlate_SW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Alvinar_Witness_ACH", "CheesePlate_SW");
 
+            ModdedAchievements AchievementWitnessNaba = new ModdedAchievements("Fresnel Lens", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanNaba", null, 32, null), "HIF_Naba_Witness_ACH");
+            AchievementWitnessNaba.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessNaba = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessNaba.AddUnlockData("Naba_CH", Unlocks.GenerateUnlockData("HIF_Naba_Witness_Unlock", "HIF_Naba_Witness_ACH", "", "", ["FresnelLens_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Naba_Witness_ACH", "FresnelLens_SW");
+
             ModdedAchievements AchievementWitnessAelie = new ModdedAchievements("Parched Scroll", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanAelie", null, 32, null), "HIF_Aelie_Witness_ACH");
             AchievementWitnessAelie.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
             FinalBossCharUnlockCheck UnlockWitnessAelie = Unlocks.GetUnlock_OsmanFinalBoss();
@@ -112,6 +118,12 @@ namespace Hell_Island_Fell.Achievements
             FinalBossCharUnlockCheck UnlockWitnessExambry = Unlocks.GetUnlock_OsmanFinalBoss();
             UnlockWitnessExambry.AddUnlockData("Exambry_CH", Unlocks.GenerateUnlockData("HIF_Exambry_Witness_Unlock", "HIF_Exambry_Witness_ACH", "", "", ["FetidTooth_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Exambry_Witness_ACH", "FetidTooth_TW");
+
+            ModdedAchievements AchievementWitnessStareyed = new ModdedAchievements("Green Glass", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanStareyed", null, 32, null), "HIF_Stareyed_Witness_ACH");
+            AchievementWitnessStareyed.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessStareyed = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessStareyed.AddUnlockData("Stareyed_CH", Unlocks.GenerateUnlockData("HIF_Stareyed_Witness_Unlock", "HIF_Stareyed_Witness_ACH", "", "", ["GreenGlass_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Stareyed_Witness_ACH", "GreenGlass_SW");
 
             ModdedAchievements AchievementWitnessMorrigan = new ModdedAchievements("Black Pearl", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanMorrigan", null, 32, null), "HIF_Morrigan_Witness_ACH");
             AchievementWitnessMorrigan.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
@@ -175,6 +187,12 @@ namespace Hell_Island_Fell.Achievements
             UnlockDivineAlvinar.AddUnlockData("Alvinar_CH", Unlocks.GenerateUnlockData("HIF_Alvinar_Divine_Unlock", "HIF_Alvinar_Divine_ACH", "", "", ["BavarianPretzel_SW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Alvinar_Divine_ACH", "BavarianPretzel_SW");
 
+            ModdedAchievements AchievementDivineNaba = new ModdedAchievements("Kraken", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenNaba", null, 32, null), "HIF_Naba_Divine_ACH");
+            AchievementDivineNaba.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineNaba = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineNaba.AddUnlockData("Naba_CH", Unlocks.GenerateUnlockData("HIF_Naba_Divine_Unlock", "HIF_Naba_Divine_ACH", "", "", ["Kraken_FW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Naba_Divine_ACH", "Kraken_FW");
+
             ModdedAchievements AchievementDivineAelie = new ModdedAchievements("Liquid Dust", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenAelie", null, 32, null), "HIF_Aelie_Divine_ACH");
             AchievementDivineAelie.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
             FinalBossCharUnlockCheck UnlockDivineAelie = Unlocks.GetUnlock_HeavenFinalBoss();
@@ -224,6 +242,12 @@ namespace Hell_Island_Fell.Achievements
             UnlockDivineExambry.AddUnlockData("Exambry_CH", Unlocks.GenerateUnlockData("HIF_Exambry_Divine_Unlock", "HIF_Exambry_Divine_ACH", "", "", ["InfernalStone_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Exambry_Divine_ACH", "InfernalStone_TW");
 
+            ModdedAchievements AchievementDivineStareyed = new ModdedAchievements("The Deal", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenStareyed", null, 32, null), "HIF_Stareyed_Divine_ACH");
+            AchievementDivineStareyed.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineStareyed = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineStareyed.AddUnlockData("Stareyed_CH", Unlocks.GenerateUnlockData("HIF_Stareyed_Divine_Unlock", "HIF_Stareyed_Divine_ACH", "", "", ["TheDeal_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Stareyed_Divine_ACH", "TheDeal_SW");
+
             ModdedAchievements AchievementDivineMorrigan = new ModdedAchievements("Trinitite", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenMorrigan", null, 32, null), "HIF_Morrigan_Divine_ACH");
             AchievementDivineMorrigan.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
             FinalBossCharUnlockCheck UnlockDivineMorrigan = Unlocks.GetUnlock_HeavenFinalBoss();
@@ -271,6 +295,23 @@ namespace Hell_Island_Fell.Achievements
             BoojumDeath.specialDeathData = [];
             Unlocks.AddUnlock_EnemyDeath(BoojumDeath);
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Boojum_Comedy_ACH", "SparklingFork_SW");
+
+            ModdedAchievements AchievementVusDefeat = new ModdedAchievements("The Predicate Demon", "Pluck a Vus.", ResourceLoader.LoadSprite("AchievementComedyVus", null, 32, null), "HIF_Vus_Comedy_ACH");
+            AchievementVusDefeat.AddNewAchievementToInGameCategory((AchievementCategoryIDs)8);
+            UnlockableModData VusDefeatAchievement = new UnlockableModData("Vus_EN")
+            {
+                hasModdedAchievementUnlock = true,
+                moddedAchievementID = "HIF_Vus_Comedy_ACH",
+                hasItemUnlock = true,
+                items = ["FractionAbacus_SW"]
+            };
+            EnemyDeathUnlockCheck VusDeath = ScriptableObject.CreateInstance<EnemyDeathUnlockCheck>();
+            VusDeath.usesSimpleDeathData = true;
+            VusDeath.enemyID = "Vus_EN";
+            VusDeath.simpleDeathData = VusDefeatAchievement;
+            VusDeath.specialDeathData = [];
+            Unlocks.AddUnlock_EnemyDeath(VusDeath);
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Vus_Comedy_ACH", "FractionAbacus_SW");
 
             //Tragedy Unlocks
 

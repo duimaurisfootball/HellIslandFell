@@ -10,14 +10,17 @@ namespace Hell_Island_Fell.Items
         public static void Add()
         {
             ExtraPassiveAbility_Wearable_SMS toHeaven = ScriptableObject.CreateInstance<ExtraPassiveAbility_Wearable_SMS>();
-            toHeaven._extraPassiveAbility = CustomPassives.InvincibilityGenerator(5);
+            toHeaven._extraPassiveAbility = CustomPassives.InvincibilityGenerator(6);
+
+            ExtraPassiveAbility_Wearable_SMS fromHell = ScriptableObject.CreateInstance<ExtraPassiveAbility_Wearable_SMS>();
+            fromHell._extraPassiveAbility = Passives.GetCustomPassive("Thorny_PA");
 
             PerformEffect_Item magicAccelerator = new PerformEffect_Item("MagicAccelerator_ID", null)
             {
                 Item_ID = "MagicAccelerator_TW",
                 Name = "Magic Accelerator",
                 Flavour = "\"We dragged god out of heaven to shake his hand.\"",
-                Description = "This party member now has Invincible (5) as a passive.",
+                Description = "This party member now has Invincible (6) and Thorny as passives.",
                 IsShopItem = false,
                 ShopPrice = 7,
                 DoesPopUpInfo = false,
@@ -30,7 +33,8 @@ namespace Hell_Island_Fell.Items
                 ],
                 EquippedModifiers =
                 [
-                    toHeaven
+                    toHeaven,
+                    fromHell,
                 ],
             };
 

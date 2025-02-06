@@ -8,6 +8,8 @@ namespace Hell_Island_Fell.Custom_Effects
     public class RerollNumberPigmentEffect : EffectSO
     {
         public ManaColorSO _mana;
+
+        public bool _fullRerollReturnsSuccess = false;
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
             exitAmount = 0;
@@ -36,7 +38,7 @@ namespace Hell_Island_Fell.Custom_Effects
             {
                 CombatManager.Instance.AddUIAction(new ModifyManaSlotsUIAction(stats.MainManaBar.ID, [.. slotsToTransform], [.. pigments]));
             }
-            return exitAmount > 0;
+            return _fullRerollReturnsSuccess ? exitAmount == entryVariable : exitAmount > 0;
         }
     }
 }

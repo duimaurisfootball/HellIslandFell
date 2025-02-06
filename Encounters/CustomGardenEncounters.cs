@@ -236,6 +236,15 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                gigglingMinisterEasy.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "StickingHomunculus_EN",
+                        "Vagabond_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Easy_EnemyBundle"))._enemyBundles = gigglingMinisterEasy;
 
             List<RandomEnemyGroup> choirBoyEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_ChoirBoy_Easy_EnemyBundle"))._enemyBundles)
@@ -268,7 +277,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Inequity_EN",
-                "ChoirBoy_EN",
                 "ChoirBoy_EN",
             ]),
             };
@@ -306,6 +314,15 @@ namespace Hell_Island_Fell.Encounters
                         "ChoirBoy_EN",
                         "Inequity_EN",
                         "EggKeeper_EN",
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                choirBoyEasy.Add(new(
+                    [
+                        "ChoirBoy_EN",
+                        "Inequity_EN",
+                        "FrowningChancellor_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_ChoirBoy_Easy_EnemyBundle"))._enemyBundles = choirBoyEasy;
@@ -395,6 +412,21 @@ namespace Hell_Island_Fell.Encounters
                         "SkinningHomunculus_EN",
                         "Maneater_EN",
                         "EggKeeper_EN"
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                skinningHomunculusMedium.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "Maneater_EN",
+                        "Vagabond_EN"
+                    ]));
+                skinningHomunculusMedium.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "Maneater_EN",
+                        "FrowningChancellor_EN"
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_SkinningHomunculus_Medium_EnemyBundle"))._enemyBundles = skinningHomunculusMedium;
@@ -625,6 +657,30 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                hisImageMedium.Add(new(
+                    [
+                        "InHisImage_EN",
+                        "InHerImage_EN",
+                        "StickingHomunculus_EN",
+                        "Vagabond_EN",
+                    ]));
+                hisImageMedium.Add(new(
+                    [
+                        "InHisImage_EN",
+                        "InHerImage_EN",
+                        "ProlificNosestone_EN",
+                        "Vagabond_EN",
+                    ]));
+                hisImageMedium.Add(new(
+                    [
+                        "InHisImage_EN",
+                        "InHerImage_EN",
+                        "Maneater_EN",
+                        "Vagabond_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHisImage_Medium_EnemyBundle"))._enemyBundles = hisImageMedium;
 
             List<RandomEnemyGroup> herImageMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHerImage_Medium_EnemyBundle"))._enemyBundles)
@@ -734,6 +790,30 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                herImageMedium.Add(new(
+                    [
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "ScatterbrainedNosestone_EN",
+                        "Vagabond_EN",
+                    ]));
+                herImageMedium.Add(new(
+                    [
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "ScatterbrainedNosestone_EN",
+                        "FrowningChancellor_EN",
+                    ]));
+                herImageMedium.Add(new(
+                    [
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "Maneater_EN",
+                        "FrowningChancellor_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHerImage_Medium_EnemyBundle"))._enemyBundles = herImageMedium;
 
             List<RandomEnemyGroup> gigglingMinisterMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Medium_EnemyBundle"))._enemyBundles)
@@ -827,6 +907,16 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                gigglingMinisterMedium.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "Inequity_EN",
+                        "Vagabond_EN",
+                        "NextOfKin_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Medium_EnemyBundle"))._enemyBundles = gigglingMinisterMedium;
 
             List<RandomEnemyGroup> skinningHomunculusHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_SkinningHomunculus_Hard_EnemyBundle"))._enemyBundles)
@@ -850,13 +940,6 @@ namespace Hell_Island_Fell.Encounters
                 "ProlificNosestone_EN",
                 "SkinningHomunculus_EN",
                 "ShiveringHomunculus_EN",
-            ]),
-                new(
-            [
-                "ProlificNosestone_EN",
-                "SkinningHomunculus_EN",
-                "SkinningHomunculus_EN",
-                "SkinningHomunculus_EN",
             ]),
                 new(
             [
@@ -994,13 +1077,6 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "SkinningHomunculus_EN",
                         "ProlificNosestone_EN",
-                        "ScreamingHomunculus_EN",
-                        "ShiveringHomunculus_EN",
-                    ]));
-                skinningHomunculusHard.Add(new(
-                    [
-                        "SkinningHomunculus_EN",
-                        "ProlificNosestone_EN",
                         "Unterling_EN",
                         "Unterling_EN",
                     ]));
@@ -1022,13 +1098,6 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "SkinningHomunculus_EN",
                         "MesmerizingNosestone_EN",
-                        "Unterling_EN",
-                        "Unterling_EN",
-                    ]));
-                skinningHomunculusHard.Add(new(
-                    [
-                        "SkinningHomunculus_EN",
-                        "MesmerizingNosestone_EN",
                         "TitteringPeon_EN",
                     ]));
                 skinningHomunculusHard.Add(new(
@@ -1040,13 +1109,6 @@ namespace Hell_Island_Fell.Encounters
             }
             if (Hell_Island_Fell.CrossMod.EggKeeper)
             {
-                skinningHomunculusHard.Add(new(
-                    [
-                        "SkinningHomunculus_EN",
-                        "SkinningHomunculus_EN",
-                        "ProlificNosestone_EN",
-                        "EggKeeper_EN",
-                    ]));
                 skinningHomunculusHard.Add(new(
                     [
                         "SkinningHomunculus_EN",
@@ -1091,6 +1153,28 @@ namespace Hell_Island_Fell.Encounters
                         "ScreamingHomunculus_EN",
                         "ProlificNosestone_EN",
                         "EggKeeper_EN",
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                skinningHomunculusHard.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "Vagabond_EN",
+                    ]));
+                skinningHomunculusHard.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "ProlificNosestone_EN",
+                        "MarbleMaw_EN",
+                    ]));
+                skinningHomunculusHard.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "SkinningHomunculus_EN",
+                        "Inequity_EN",
+                        "FrowningChancellor_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_SkinningHomunculus_Hard_EnemyBundle"))._enemyBundles = skinningHomunculusHard;
@@ -1295,6 +1379,21 @@ namespace Hell_Island_Fell.Encounters
                         "GigglingMinister_EN",
                         "Inequity_EN",
                         "EggKeeper_EN",
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                gigglingMinisterHard.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "Inequity_EN",
+                        "FrowningChancellor_EN",
+                    ]));
+                gigglingMinisterHard.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "Inequity_EN",
+                        "Vagabond_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Hard_EnemyBundle"))._enemyBundles = gigglingMinisterHard;

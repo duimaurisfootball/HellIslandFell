@@ -10,14 +10,6 @@ namespace Hell_Island_Fell.Fools
     {
         public static void Add()
         {
-
-            PercentageEffectCondition Chance0 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            Chance0.percentage = 50;
-
-            PreviousEffectCondition Failure = ScriptableObject.CreateInstance<PreviousEffectCondition>();
-            Failure.previousAmount = 2;
-            Failure.wasSuccessful = false;
-
             Ability apoptosis = new Ability("Microapoptosis", "Apoptosis_A")
             {
                 Description = "Deal 4 or 9 damage to this party member.\nHeal all other allies 5 health.",
@@ -27,9 +19,9 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 4, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 9, Targeting.Slot_SelfSlot, Failure),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 4, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 9, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 5, Targeting.Unit_OtherAlliesSlots),
                 ]
             };
@@ -100,7 +92,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(BlueHealth, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 7, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 7, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
                 ]
             };
             golgi.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
@@ -117,7 +109,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(PurpleHealth, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 7, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 7, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
                 ]
             };
             nucleolus.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
@@ -134,7 +126,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(YellowHealth, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 7, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 7, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
                 ]
             };
             DNA.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);

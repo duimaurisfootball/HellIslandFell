@@ -11,7 +11,7 @@ namespace Hell_Island_Fell.Fools
         {
             Character mudball = new Character("Mudball", "Mudball_CH")
             {
-                HealthColor = Pigments.Red,
+                HealthColor = Pigments.Purple,
                 UsesBasicAbility = false,
                 MovesOnOverworld = false,
                 UsesAllAbilities = true,

@@ -14,7 +14,7 @@ namespace Hell_Island_Fell.Items
         {
             SpecialDamagePlusPreviousEffect FireHead = ScriptableObject.CreateInstance<SpecialDamagePlusPreviousEffect>();
             FireHead._addHealthMana = false;
-            FireHead._selfCast = false;
+            FireHead._selfCast = true;
             FireHead._ignoreShield = true;
             FireHead._direct = false;
             FireHead._damageType = CombatType_GameIDs.Dmg_Fire.ToString();

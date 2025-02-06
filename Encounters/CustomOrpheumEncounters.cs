@@ -22,9 +22,6 @@ namespace Hell_Island_Fell.Encounters
                 "SingingStone_EN",
             ]),
             };
-            if (Hell_Island_Fell.CrossMod.EnemyPack)
-            {
-            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_MusicMan_Easy_EnemyBundle"))._enemyBundles = musicManEasy;
 
             List<RandomEnemyGroup> jumbleGutsPurpleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_JumbleGuts_Flummoxing_Medium_EnemyBundle"))._enemyBundles)
@@ -113,12 +110,14 @@ namespace Hell_Island_Fell.Encounters
             [
                 "MusicMan_EN",
                 "MusicMan_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
                 new(
             [
                 "MusicMan_EN",
-                "MusicMan_EN",
+                "SingingStone_EN",
                 "Moone_EN",
                 "VanishingHands_EN",
             ]),
@@ -143,6 +142,27 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "MusicMan_EN",
                         "Gizo_EN",
+                        "SingingStone_EN",
+                        "SingingStone_EN",
+                        "VanishingHands_EN",
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                musicManMedium.Add(new(
+                    [
+                        "MusicMan_EN",
+                        "BackupDancer_EN",
+                        "SingingStone_EN",
+                        "SingingStone_EN",
+                        "VanishingHands_EN",
+                    ]));
+                musicManMedium.Add(new(
+                    [
+                        "MusicMan_EN",
+                        "Jansuli_EN",
+                        "SingingStone_EN",
+                        "SingingStone_EN",
                         "VanishingHands_EN",
                     ]));
             }
@@ -159,6 +179,8 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Spoggle_Writhing_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
             };
@@ -175,6 +197,8 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Spoggle_Resonant_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
             };
@@ -198,6 +222,7 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Scrungie_EN",
                 "Scrungie_EN",
+                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
                 new(
@@ -225,6 +250,12 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Conductor_EN",
                 "Moone_EN",
+                "JumbleGuts_Waning_EN",
+            ]),
+                new(
+            [
+                "Conductor_EN",
+                "Moone_EN",
                 "SingingStone_EN",
             ]),
                 new(
@@ -236,6 +267,8 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Conductor_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
             };
@@ -253,6 +286,28 @@ namespace Hell_Island_Fell.Encounters
                         "Moone_EN",
                         "Neoplasm_EN",
                         "Neoplasm_EN",
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                conductorMedium.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Moone_EN",
+                        "Frostbite_EN",
+                        "Frostbite_EN",
+                    ]));
+                conductorMedium.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Moone_EN",
+                        "BackupDancer_EN",
+                    ]));
+                conductorMedium.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Moone_EN",
+                        "Jansuli_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_Conductor_Medium_EnemyBundle"))._enemyBundles = conductorMedium;
@@ -274,7 +329,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Revola_EN",
-                "Moone_EN",
                 "Moone_EN",
                 "JumbleGuts_Waning_EN",
             ]),
@@ -302,6 +356,8 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Revola_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
             };
@@ -326,6 +382,21 @@ namespace Hell_Island_Fell.Encounters
                         "DesiccatingJumbleguts_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                revolaHard.Add(new(
+                    [
+                        "Revola_EN",
+                        "Moone_EN",
+                        "BackupDancer_EN",
+                    ]));
+                revolaHard.Add(new(
+                    [
+                        "Revola_EN",
+                        "Moone_EN",
+                        "Footshroom_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_Revola_Hard_EnemyBundle"))._enemyBundles = revolaHard;
 
             List<RandomEnemyGroup> wrigglingSacrificeHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_WrigglingSacrifice_Hard_EnemyBundle"))._enemyBundles)
@@ -340,9 +411,9 @@ namespace Hell_Island_Fell.Encounters
             [
                 "WrigglingSacrifice_EN",
                 "Boler_EN",
-                "SilverSuckle_EN",
-                "SilverSuckle_EN",
-                "SilverSuckle_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
             ]),
                 new(
             [
@@ -360,12 +431,8 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "WrigglingSacrifice_EN",
-                "VanishingHands_EN",
-            ]),
-                new(
-            [
-                "WrigglingSacrifice_EN",
-                "WrigglingSacrifice_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
             };
@@ -385,6 +452,15 @@ namespace Hell_Island_Fell.Encounters
                         "Seraphim_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
+                wrigglingSacrificeHard.Add(new(
+                    [
+                        "WrigglingSacrifice_EN",
+                        "Boler_EN",
+                        "Footshroom_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_WrigglingSacrifice_Hard_EnemyBundle"))._enemyBundles = wrigglingSacrificeHard;
 
             List<RandomEnemyGroup> innerChildHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_InnerChild_Hard_EnemyBundle"))._enemyBundles)
@@ -401,8 +477,8 @@ namespace Hell_Island_Fell.Encounters
                 "VanishingHands_EN",
                 "ManicMan_EN",
                 "ManicMan_EN",
-                "ManicMan_EN",
-                "ManicMan_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
             ]),
             };
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_InnerChild_Hard_EnemyBundle"))._enemyBundles = innerChildHard;
@@ -445,13 +521,9 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Conductor_EN",
-                "MusicMan_EN",
-                "VanishingHands_EN",
-            ]),
-                new(
-            [
-                "Conductor_EN",
-                "Moone_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
+                "SingingStone_EN",
                 "VanishingHands_EN",
             ]),
             };
@@ -491,12 +563,26 @@ namespace Hell_Island_Fell.Encounters
                         "Moone_EN",
                         "NeoplasmHeap_EN",
                     ]));
+            }
+            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            {
                 conductorHard.Add(new(
                     [
                         "Conductor_EN",
-                        "Chapman_EN",
-                        "Chapman_EN",
-                        "VanishingHands_EN",
+                        "Moone_EN",
+                        "BipedalFrostbite_EN",
+                    ]));
+                conductorHard.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Moone_EN",
+                        "PrimitiveGizo_Calm_EN",
+                    ]));
+                conductorHard.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Moone_EN",
+                        "Jansuli_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_Conductor_Hard_EnemyBundle"))._enemyBundles = conductorHard;

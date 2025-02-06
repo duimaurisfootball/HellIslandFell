@@ -94,7 +94,6 @@ namespace Hell_Island_Fell.Encounters
                     "SweatingNosestone_EN",
                     "SweatingNosestone_EN",
                     "ChoirBoy_EN",
-                    "ChoirBoy_EN",
                 ], null);
             sweatingHard.CreateNewEnemyEncounterData(
                 [
@@ -108,20 +107,17 @@ namespace Hell_Island_Fell.Encounters
                     "SweatingNosestone_EN",
                     "ScatterbrainedNosestone_EN",
                     "ChoirBoy_EN",
-                    "ChoirBoy_EN",
                 ], null);
             sweatingHard.CreateNewEnemyEncounterData(
                 [
                     "SweatingNosestone_EN",
                     "MesmerizingNosestone_EN",
                     "ChoirBoy_EN",
-                    "ChoirBoy_EN",
                 ], null);
             sweatingHard.CreateNewEnemyEncounterData(
                 [
                     "SweatingNosestone_EN",
                     "UninspiredNosestone_EN",
-                    "ChoirBoy_EN",
                     "ChoirBoy_EN",
                 ], null);
             sweatingHard.CreateNewEnemyEncounterData(

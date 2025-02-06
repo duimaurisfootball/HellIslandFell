@@ -221,7 +221,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(AnchoredCheck, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(AnchoredRemove, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(AnchoredAdd, 1, Targeting.Slot_SelfSlot, HasNot),
-                    Effects.GenerateEffect(ShieldApply, 30, Targeting.Slot_SelfAll, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
+                    Effects.GenerateEffect(ShieldApply, 20, Targeting.Slot_SelfAll, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Fast,

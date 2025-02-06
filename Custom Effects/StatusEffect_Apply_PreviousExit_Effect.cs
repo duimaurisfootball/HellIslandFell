@@ -11,6 +11,8 @@ namespace Hell_Island_Fell.Custom_Effects
         public StatusEffect_SO _Status;
 
         public int additional = 0;
+
+        public bool entryAsAddition = false;
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
             exitAmount = 0;
@@ -23,7 +25,7 @@ namespace Hell_Island_Fell.Custom_Effects
             {
                 if (targets[j].HasUnit)
                 {
-                    exitAmount += ApplyStatusEffect(targets[j].Unit, (entryVariable * PreviousExitValue) + additional);
+                    exitAmount += entryAsAddition ? ApplyStatusEffect(targets[j].Unit, entryVariable + PreviousExitValue + additional) : ApplyStatusEffect(targets[j].Unit, (entryVariable * PreviousExitValue) + additional);
                 }
             }
 

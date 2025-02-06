@@ -22,20 +22,9 @@ namespace Hell_Island_Fell.Encounters
 
             List<RandomEnemyGroup> mudLungEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MudLung_Easy_EnemyBundle"))._enemyBundles)
             {
-                new(
-            [
-                "MudLung_EN",
-                "VanishingHands_EN",
-            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
-                mudLungEasy.Add(new(
-                    [
-                        "MudLung_EN",
-                        "Flarbleft_EN",
-                        "VanishingHands_EN",
-                    ]));
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
@@ -47,7 +36,7 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "MunglingMudLung_EN",
-                "VanishingHands_EN",
+                "Keklung_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -60,11 +49,6 @@ namespace Hell_Island_Fell.Encounters
 
             List<RandomEnemyGroup> redJumbleEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Zone01_JumbleGuts_Clotted_Easy_EnemyBundle"))._enemyBundles)
             {
-                new(
-            [
-                "JumbleGuts_Clotted_EN",
-                "VanishingHands_EN",
-            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -79,6 +63,7 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "JumbleGuts_Waning_EN",
+                "JumbleGuts_Clotted_EN",
                 "VanishingHands_EN",
             ]),
             };
@@ -92,17 +77,6 @@ namespace Hell_Island_Fell.Encounters
 
             List<RandomEnemyGroup> kekoEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Keko_Easy_EnemyBundle"))._enemyBundles)
             {
-                new(
-            [
-                "Keko_EN",
-                "VanishingHands_EN",
-            ]),
-                new(
-            [
-                "Keko_EN",
-                "Keko_EN",
-                "VanishingHands_EN",
-            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -117,13 +91,7 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "FlaMinGoa_EN",
-                "VanishingHands_EN",
-            ]),
-                new(
-            [
-                "Mung_EN",
-                "FlaMinGoa_EN",
-                "VanishingHands_EN",
+                "Keklung_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -148,6 +116,12 @@ namespace Hell_Island_Fell.Encounters
                 "Wringle_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "JumbleGuts_Clotted_EN",
+                "Keko_EN",
+                "Keklung_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -171,6 +145,12 @@ namespace Hell_Island_Fell.Encounters
                 "Wringle_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "JumbleGuts_Waning_EN",
+                "Keko_EN",
+                "Keklung_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -183,6 +163,12 @@ namespace Hell_Island_Fell.Encounters
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
+                yellowJumbleMedium.Add(new(
+                    [
+                        "JumbleGuts_Waning_EN",
+                        "Enno_EN",
+                        "VanishingHands_EN",
+                    ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Waning_Medium_EnemyBundle"))._enemyBundles = yellowJumbleMedium;
 
@@ -191,21 +177,33 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "MudLung_EN",
-                "Flarblet_EN",
+                "MudLung_EN",
                 "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "MudLung_EN",
+                "MudLung_EN",
+                "Keklung_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
                 mudLungMedium.Add(new(
                     [
-                        "MunglingMudLung_EN",
+                        "MudLung_EN",
                         "LipBug_EN",
                         "VanishingHands_EN",
                     ]));
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
+                mudLungMedium.Add(new(
+                    [
+                        "MudLung_EN",
+                        "Enno_EN",
+                        "VanishingHands_EN",
+                    ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MudLung_Medium_EnemyBundle"))._enemyBundles = mudLungMedium;
 
@@ -215,6 +213,11 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Spoggle_Ruminating_EN",
                 "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "Spoggle_Ruminating_EN",
+                "Keklung_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -232,6 +235,11 @@ namespace Hell_Island_Fell.Encounters
                 "Spoggle_Spitfire_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "Spoggle_Spitfire_EN",
+                "Keklung_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -247,8 +255,15 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Keko_EN",
                 "Keko_EN",
-                "Wringle_EN",
+                "Keko_EN",
+                "Keko_EN",
                 "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "Keko_EN",
+                "Keko_EN",
+                "Keklung_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -263,6 +278,13 @@ namespace Hell_Island_Fell.Encounters
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
+                kekoMedium.Add(new(
+                    [
+                        "Keko_EN",
+                        "Keko_EN",
+                        "Flakkid_EN",
+                        "VanishingHands_EN",
+                    ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Keko_Medium_EnemyBundle"))._enemyBundles = kekoMedium;
 
@@ -274,6 +296,18 @@ namespace Hell_Island_Fell.Encounters
                 "MudLung_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "MunglingMudLung_EN",
+                "MudLung_EN",
+                "Keklung_EN",
+            ]),
+                new(
+            [
+                "MunglingMudLung_EN",
+                "Keklung_EN",
+                "Keklung_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -283,9 +317,21 @@ namespace Hell_Island_Fell.Encounters
                         "LipBug_EN",
                         "VanishingHands_EN",
                     ]));
+                munglingMedium.Add(new(
+                    [
+                        "MunglingMudLung_EN",
+                        "LipBug_EN",
+                        "Keklung_EN",
+                    ]));
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
+                munglingMedium.Add(new(
+                    [
+                        "MunglingMudLung_EN",
+                        "Enno_EN",
+                        "Keklung_EN",
+                    ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MunglingMudLung_Medium_EnemyBundle"))._enemyBundles = munglingMedium;
 
@@ -295,8 +341,19 @@ namespace Hell_Island_Fell.Encounters
             [
                 "FlaMinGoa_EN",
                 "Wringle_EN",
-                "MudLung_EN",
                 "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "FlaMinGoa_EN",
+                "Keklung_EN",
+                "Keklung_EN",
+            ]),
+                new(
+            [
+                "FlaMinGoa_EN",
+                "Keklung_EN",
+                "MunglingMudLung_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -307,9 +364,27 @@ namespace Hell_Island_Fell.Encounters
                         "LipBug_EN",
                         "VanishingHands_EN",
                     ]));
+                goaHard.Add(new(
+                    [
+                        "FlaMinGoa_EN",
+                        "LipBug_EN",
+                        "Keklung_EN",
+                    ]));
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
+                goaHard.Add(new(
+                    [
+                        "FlaMinGoa_EN",
+                        "Flakkid_EN",
+                        "VanishingHands_EN",
+                    ]));
+                goaHard.Add(new(
+                    [
+                        "FlaMinGoa_EN",
+                        "Flakkid_EN",
+                        "Keklung_EN",
+                    ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_FlaMingGoa_Hard_EnemyBundle"))._enemyBundles = goaHard;
 
@@ -320,6 +395,12 @@ namespace Hell_Island_Fell.Encounters
                 "Flarb_EN",
                 "Flarblet_EN",
                 "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "Flarb_EN",
+                "Keklung_EN",
+                "Keklung_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -343,6 +424,24 @@ namespace Hell_Island_Fell.Encounters
                 "Voboola_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "Voboola_EN",
+                "FlaMinGoa_EN",
+                "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "Voboola_EN",
+                "MunglingMudLung_EN",
+                "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "Voboola_EN",
+                "Keklung_EN",
+                "Keklung_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -355,6 +454,18 @@ namespace Hell_Island_Fell.Encounters
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
+                voboolaHard.Add(new(
+                    [
+                        "Voboola_EN",
+                        "VanishingHands_EN",
+                        "DryBait_EN",
+                    ]));
+                voboolaHard.Add(new(
+                    [
+                        "Voboola_EN",
+                        "VanishingHands_EN",
+                        "Flakkid_EN",
+                    ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Voboola_Hard_EnemyBundle"))._enemyBundles = voboolaHard;
 
@@ -364,6 +475,11 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Kekastle_EN",
                 "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "Kekastle_EN",
+                "Keklung_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -382,6 +498,12 @@ namespace Hell_Island_Fell.Encounters
                 "FlaMinGoa_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "JumbleGuts_Flummoxing_EN",
+                "Keklung_EN",
+                "Keklung_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -399,6 +521,12 @@ namespace Hell_Island_Fell.Encounters
                 "FlaMinGoa_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "JumbleGuts_Hollowing_EN",
+                "Keklung_EN",
+                "Keklung_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -415,6 +543,12 @@ namespace Hell_Island_Fell.Encounters
                 "Spoggle_Resonant_EN",
                 "VanishingHands_EN",
             ]),
+                new(
+            [
+                "Spoggle_Resonant_EN",
+                "Keklung_EN",
+                "Wringle_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -430,6 +564,12 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Spoggle_Writhing_EN",
                 "VanishingHands_EN",
+            ]),
+                new(
+            [
+                "Spoggle_Writhing_EN",
+                "Keklung_EN",
+                "Wringle_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)

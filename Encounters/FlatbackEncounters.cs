@@ -13,7 +13,7 @@ namespace Hell_Island_Fell.Encounters
             Portals.AddPortalSign("Flatback_Sign", ResourceLoader.LoadSprite("TimelineFlatback", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
             EnemyEncounter_API flatbackHard = new EnemyEncounter_API(0, "H_Zone01_Flatback_Hard_EnemyBundle", "Flatback_Sign")
             {
-                MusicEvent = "event:/Music/DLC_01/Mx_Scrungie_138",
+                MusicEvent = "event:/Enormounclature",
                 RoarEvent = "event:/Characters/Enemies/Mung/CHR_ENM_Mung_Roar",
             };
             flatbackHard.CreateNewEnemyEncounterData(
@@ -44,6 +44,17 @@ namespace Hell_Island_Fell.Encounters
             flatbackHard.CreateNewEnemyEncounterData(
                 [
                     "Flatback_EN",
+                    "Keko_EN",
+                ], null);
+            flatbackHard.CreateNewEnemyEncounterData(
+                [
+                    "Flatback_EN",
+                    "Keko_EN",
+                    "Keko_EN",
+                ], null);
+            flatbackHard.CreateNewEnemyEncounterData(
+                [
+                    "Flatback_EN",
                     "Flarb_EN",
                 ], null);
             flatbackHard.CreateNewEnemyEncounterData(
@@ -66,6 +77,11 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Flatback_EN",
                     "Spoggle_Ruminating_EN",
+                ], null);
+            flatbackHard.CreateNewEnemyEncounterData(
+                [
+                    "Flatback_EN",
+                    "Keklung_EN",
                 ], null);
             flatbackHard.CreateNewEnemyEncounterData(
                 [

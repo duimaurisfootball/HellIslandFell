@@ -20,7 +20,7 @@ namespace Hell_Island_Fell.Items
             {
                 Item_ID = "ParchedScroll_TW",
                 Name = "Parched Scroll",
-                Flavour = "\"Beyond the salt, lies a great beast of nickel.\"",
+                Flavour = "\"Beyond the salt lies a great beast of nickel.\"",
                 Description = "Deal double damage to targets with blue health. Deal half damage to targets with yellow health. Change this party member's health color to yellow.",
                 IsShopItem = false,
                 ShopPrice = 6,

@@ -56,9 +56,9 @@ namespace Hell_Island_Fell.Fools
                 FrontSprite = ResourceLoader.LoadSprite("FelixFront1", new Vector2(0.5f, 0f), 32),
                 BackSprite = ResourceLoader.LoadSprite("FelixBack", new Vector2(0.5f, 0f), 32),
                 OverworldSprite = ResourceLoader.LoadSprite("FelixOverworld", new Vector2(0.5f, 0f), 32),
-                DamageSound = LoadedAssetsHandler.GetCharacter("Doll_CH").deathSound,
-                DeathSound = LoadedAssetsHandler.GetCharacter("Doll_CH").deathSound,
-                DialogueSound = LoadedAssetsHandler.GetCharacter("Doll_CH").damageSound,
+                DamageSound = "event:/FelixDamage",
+                DeathSound = "event:/FelixDeath",
+                DialogueSound = "event:/FelixTalk",
                 ExtraSprites = ClockSprites,
                 BasicAbility = slap2,
                 IgnoredAbilitiesForDPSBuilds = [2],
@@ -76,9 +76,6 @@ namespace Hell_Island_Fell.Fools
 
             SetCasterExtraSpritesEffect ClockTicker = ScriptableObject.CreateInstance<SetCasterExtraSpritesEffect>();
             ClockTicker._ExtraSpriteID = "FelixSpritesSpecial";
-
-            PercentageEffectCondition Chance0 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            Chance0.percentage = 50;
 
             //stored values
             UnitStoreData_ModIntSO DamageUp = ScriptableObject.CreateInstance<UnitStoreData_ModIntSO>();
@@ -153,8 +150,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 0, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgUpChange, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             determinism0.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Reroll_Cost"]);
@@ -175,8 +172,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 0, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgUpChange, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             determinism1.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Reroll_Cost"]);
@@ -197,8 +194,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 0, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgUpChange, 4, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             determinism2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Reroll_Cost"]);
@@ -219,8 +216,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgUpChange, 4, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             determinism3.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Reroll_Cost"]);
@@ -241,8 +238,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgDownChange, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             pendulum0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
@@ -262,8 +259,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgDownChange, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             pendulum1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
@@ -283,8 +280,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgDownChange, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             pendulum2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
@@ -304,8 +301,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(DmgDownChange, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             pendulum3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_16_20)]);
@@ -326,8 +323,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(HealDownChange, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             butterfly0.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
@@ -347,8 +344,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(HealDownChange, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             butterfly1.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
@@ -368,8 +365,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(HealDownChange, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             butterfly2.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
@@ -389,8 +386,8 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(HealDownChange, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
-                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ClockTicker, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
             butterfly3.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_5_10)]);

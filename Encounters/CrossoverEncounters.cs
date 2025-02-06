@@ -29,12 +29,6 @@ namespace Hell_Island_Fell.Encounters
                     "Wringle_EN",
                     "VanishingHands_EN",
                 ]),
-                    new(
-                [
-                    "ColophonComposed_EN",
-                    "MudLung_EN",
-                    "VanishingHands_EN",
-                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ComposedMedium"))._enemyBundles = composedMedium;
 
@@ -44,12 +38,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "ColophonDefeated_EN",
                     "ColophonDefeated_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "ColophonDefeated_EN",
-                    "ColophonComposed_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -63,12 +51,6 @@ namespace Hell_Island_Fell.Encounters
                     "Wringle_EN",
                     "VanishingHands_EN",
                 ]),
-                    new(
-                [
-                    "ColophonDefeated_EN",
-                    "MudLung_EN",
-                    "VanishingHands_EN",
-                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DefeatedMedium"))._enemyBundles = defeatedMedium;
 
@@ -78,12 +60,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "ColophonDelighted_EN",
                     "ColophonDefeated_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "ColophonDelighted_EN",
-                    "ColophonComposed_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -116,11 +92,6 @@ namespace Hell_Island_Fell.Encounters
                     "Moone_EN",
                     "Moone_EN",
                     "ColophonComposed_EN",
-                ]),
-                    new(
-                [
-                    "ColophonDelighted_EN",
-                    "VanishingHands_EN",
                 ]),
                     new(
                 [
@@ -168,11 +139,6 @@ namespace Hell_Island_Fell.Encounters
                     "Moone_EN",
                     "Moone_EN",
                     "ColophonComposed_EN",
-                ]),
-                    new(
-                [
-                    "ColophonMaladjusted_EN",
-                    "VanishingHands_EN",
                 ]),
                     new(
                 [
@@ -305,7 +271,8 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Chapbull_EN",
-                    "Chapman_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -358,21 +325,8 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Chapman_EN",
                     "Chapman_EN",
-                    "Chapman_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Chapman_EN",
-                    "Chapman_EN",
-                    "MusicMan_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Chapman_EN",
-                    "Chapman_EN",
-                    "Moone_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -391,11 +345,6 @@ namespace Hell_Island_Fell.Encounters
                     "Cherubim_EN",
                     "Moone_EN",
                     "MusicMan_EN",
-                ]),
-                    new(
-                [
-                    "Cherubim_EN",
-                    "VanishingHands_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("CherubimHard"))._enemyBundles = cherubimHard;
@@ -471,6 +420,8 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Gizo_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -573,12 +524,14 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Gizo_EN",
                     "Gizo_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "Gizo_EN",
                     "NakedGizo_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -621,12 +574,14 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "DesiccatingJumbleguts_EN",
                     "JumbleGuts_Hollowing_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "DesiccatingJumbleguts_EN",
                     "JumbleGuts_Flummoxing_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -752,13 +707,8 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "NeoplasmHeap_EN",
-                    "Moone_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "NeoplasmHeap_EN",
-                    "MusicMan_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -784,13 +734,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Nephilim_EN",
-                    "Keko_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Nephilim_EN",
-                    "MudLung_EN",
+                    "Voboola_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -838,13 +782,8 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Ophanim_EN",
-                    "MusicMan_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Ophanim_EN",
-                    "Moone_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -961,6 +900,12 @@ namespace Hell_Island_Fell.Encounters
                     "UninspiredNosestone_EN",
                     "MesmerizingNosestone_EN",
                 ]),
+                    new(
+                [
+                    "Psychopomp_EN",
+                    "Psychopomp_EN",
+                    "ProlificNosestone_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompHard"))._enemyBundles = psychopompHard;
 
@@ -969,7 +914,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Psychopomp_EN",
-                    "UninspiredNosestone_EN",
+                    "ProlificNosestone_EN",
                 ]),
                     new(
                 [
@@ -980,7 +925,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Psychopomp_EN",
-                    "UninspiredNosestone_EN",
+                    "ProlificNosestone_EN",
                     "ShiveringHomunculus_EN",
                 ]),
                 };
@@ -1021,13 +966,9 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "RevoltingRevola_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "RevoltingRevola_EN",
-                    "VanishingHands_EN",
                     "SingingStone_EN",
+                    "SingingStone_EN",
+                    "VanishingHands_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("RevoltingHard"))._enemyBundles = revoltingHard;
@@ -1037,24 +978,13 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Seraphim_EN",
+                    "Voboola_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "Seraphim_EN",
                     "MudLung_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Seraphim_EN",
-                    "Flarbleft_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Seraphim_EN",
-                    "Flarblet_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -1070,6 +1000,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "SingingMountain_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -1143,24 +1074,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Unflarb_EN",
-                    "MudLung_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Unflarb_EN",
-                    "Flarblet_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Unflarb_EN",
-                    "Flarbleft_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Unflarb_EN",
                     "Flatback_EN",
                 ]),
                 };
@@ -1168,11 +1081,6 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> zygoteHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ZygoteHard"))._enemyBundles)
                 {
-                    new(
-                [
-                    "BastardZygote_EN",
-                    "VanishingHands_EN",
-                ]),
                     new(
                 [
                     "BastardZygote_EN",
@@ -1187,11 +1095,6 @@ namespace Hell_Island_Fell.Encounters
             {
                 List<RandomEnemyGroup> swineEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineEasy"))._enemyBundles)
                 {
-                    new(
-                [
-                    "UnculturedSwine_EN",
-                    "VanishingHands_EN",
-                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineEasy"))._enemyBundles = swineEasy;
 
@@ -1211,19 +1114,13 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "UnculturedSwine_EN",
-                    "FlaMinGoa_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "UnculturedSwine_EN",
                     "Wringle_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "UnculturedSwine_EN",
-                    "MunglingMudLung_EN",
+                    "Voboola_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -1231,11 +1128,6 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> baitMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitMed"))._enemyBundles)
                 {
-                    new(
-                [
-                    "DryBait_EN",
-                    "VanishingHands_EN",
-                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitMed"))._enemyBundles = baitMedium;
 
@@ -1250,13 +1142,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "DryBait_EN",
-                    "MudLung_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "DryBait_EN",
-                    "MunglingMudLung_EN",
+                    "Voboola_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -1280,18 +1166,6 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> ennoMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("EnnoMed"))._enemyBundles)
                 {
-                    new(
-                [
-                    "Enno_EN",
-                    "Enno_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Enno_EN",
-                    "Wringle_EN",
-                    "VanishingHands_EN",
-                ]),
                     new(
                 [
                     "Enno_EN",
@@ -1341,13 +1215,6 @@ namespace Hell_Island_Fell.Encounters
                     "Wringle_EN",
                     "VanishingHands_EN",
                 ]),
-                    new(
-                [
-                    "Flakkid_EN",
-                    "Flarblet_EN",
-                    "Flarblet_EN",
-                    "VanishingHands_EN",
-                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FlakkidMed"))._enemyBundles = flakkidMedium;
 
@@ -1366,6 +1233,8 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "BackupDancer_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
@@ -1383,12 +1252,16 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "BackupDancer_EN",
                     "BackupDancer_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "BackupDancer_EN",
                     "MusicMan_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
@@ -1548,6 +1421,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Jansuli_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
@@ -1563,12 +1437,6 @@ namespace Hell_Island_Fell.Encounters
                     "Moone_EN",
                     "Footshroom_EN",
                 ]),
-                    new(
-                [
-                    "Jansuli_EN",
-                    "SilverSuckle_EN",
-                    "VanishingHands_EN",
-                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliMed"))._enemyBundles = jansuliMedium;
 
@@ -1578,6 +1446,7 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Jansuli_EN",
                     "Jansuli_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -1598,6 +1467,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "PrimitiveGizo_Calm_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
@@ -1630,6 +1500,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Gizard_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
@@ -1652,6 +1523,9 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Footshroom_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
                 };
@@ -1662,12 +1536,16 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Footshroom_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "ManicMan_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "Footshroom_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
                     "JumbleGuts_Waning_EN",
                     "VanishingHands_EN",
                 ]),
@@ -1684,12 +1562,12 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "MarbleMaw_EN",
-                    "UninspiredNosestone_EN",
+                    "ProlificNosestone_EN",
                 ]),
                     new(
                 [
                     "MarbleMaw_EN",
-                    "UninspiredNosestone_EN",
+                    "ProlificNosestone_EN",
                     "ChoirBoy_EN",
                 ]),
                     new(
@@ -1707,7 +1585,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "MarbleMaw_EN",
-                    "UninspiredNosestone_EN",
+                    "ProlificNosestone_EN",
                     "Inequity_EN",
                 ]),
                     new(
@@ -1742,6 +1620,7 @@ namespace Hell_Island_Fell.Encounters
                     "MarbleMaw_EN",
                     "Inequity_EN",
                     "Vagabond_EN",
+                    "InHisImage_EN",
                 ]),
                     new(
                 [
@@ -1911,13 +1790,11 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "GodsChalice_EN",
                     "MesmerizingNosestone_EN",
-                    "ProlificNosestone_EN",
                 ]),
                     new(
                 [
                     "GodsChalice_EN",
                     "SweatingNosestone_EN",
-                    "ScatterbrainedNosestone_EN",
                 ]),
                     new(
                 [
@@ -1928,13 +1805,13 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "GodsChalice_EN",
-                    "SweatingNosestone_EN",
+                    "ScatterbrainedNosestone_EN",
                     "Inequity_EN",
                 ]),
                     new(
                 [
                     "GodsChalice_EN",
-                    "UninspiredNosestone_EN",
+                    "ScatterbrainedNosestone_EN",
                     "GigglingMinister_EN",
                 ]),
                     new(
@@ -1993,7 +1870,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Vagabond_EN",
-                    "UninspiredNosestone_EN",
+                    "ProlificNosestone_EN",
                 ]),
                     new(
                 [

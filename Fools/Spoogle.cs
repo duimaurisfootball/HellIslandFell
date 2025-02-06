@@ -41,9 +41,6 @@ namespace Hell_Island_Fell.Fools
             DamageEffect IndirectDamage = ScriptableObject.CreateInstance<DamageEffect>();
             IndirectDamage._indirect = true;
 
-            PercentageEffectCondition RefreshChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            RefreshChance.percentage = 75;
-
             //ablate
             Ability ablate0 = new Ability("Feebly Ablate", "Ablate_1_A")
             {
@@ -65,14 +62,14 @@ namespace Hell_Island_Fell.Fools
 
             Ability ablate1 = new Ability("Fiercely Ablate", "Ablate_2_A")
             {
-                Description = "Heal this party member 3 health.\nConsume up to 6 yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
+                Description = "Heal this party member 2 health.\nConsume up to 6 yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleAblate"),
                 Cost = [Pigments.Yellow, Pigments.Yellow],
                 Visuals = Visuals.Bosch,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(YellowEater1, 6, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(AblateDamage, 2, Targeting.Slot_Front),
                 ]
@@ -95,20 +92,20 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(AblateDamage, 2, Targeting.Slot_Front),
                 ]
             };
-            ablate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_5_10)]);
+            ablate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
             ablate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
             ablate2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_16_20)]);
             
             Ability ablate3 = new Ability("Fantasmagorically Ablate", "Ablate_4_A")
             {
-                Description = "Heal this party member 4 health.\nConsume all yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
+                Description = "Heal this party member 3 health.\nConsume all yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleAblate"),
                 Cost = [Pigments.Yellow, Pigments.Yellow],
                 Visuals = Visuals.Bosch,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(YellowEater2, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(AblateDamage, 2, Targeting.Slot_Front),
                 ]
@@ -204,7 +201,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(IndirectDamage, 3, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, RefreshChance)
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
                 ]
             };
             vomit0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
@@ -222,7 +219,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(IndirectDamage, 5, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, RefreshChance)
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
                 ]
             };
             vomit1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
@@ -240,7 +237,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(IndirectDamage, 6, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, RefreshChance)
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
                 ]
             };
             vomit2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
@@ -258,7 +255,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(IndirectDamage, 7, Targeting.Slot_Front),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, RefreshChance)
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
                 ]
             };
             vomit3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);

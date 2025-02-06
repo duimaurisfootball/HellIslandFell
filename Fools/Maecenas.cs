@@ -31,24 +31,8 @@ namespace Hell_Island_Fell.Fools
             RemoveFieldEffectEffect ThunderstormRemove = ScriptableObject.CreateInstance<RemoveFieldEffectEffect>();
             ThunderstormRemove._Field = Thunderstorm;
 
-            PreviousEffectCondition Fail = ScriptableObject.CreateInstance<PreviousEffectCondition>();
-            Fail.wasSuccessful = false;
-            Fail.previousAmount = 2;
-
             HealEffect PrevHeal = ScriptableObject.CreateInstance<HealEffect>();
             PrevHeal.usePreviousExitValue = true;
-
-            PercentageEffectCondition Chance0 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            Chance0.percentage = 40;
-
-            PercentageEffectCondition Chance1 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            Chance1.percentage = 50;
-
-            PercentageEffectCondition Chance2 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            Chance2.percentage = 60;
-
-            PercentageEffectCondition Chance3 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            Chance3.percentage = 70;
 
             DamageEffect KillDamage = ScriptableObject.CreateInstance<DamageEffect>();
             KillDamage._returnKillAsSuccess = true;
@@ -65,7 +49,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ThunderstormRemove, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(PrevHeal, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Fail),
+                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
                 ]
             };
             rain0.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Rem_Field_Thunderstorm"]);
@@ -83,7 +67,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ThunderstormRemove, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(PrevHeal, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ThunderstormApply, 3, Targeting.Slot_SelfSlot, Fail),
+                    Effects.GenerateEffect(ThunderstormApply, 3, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
                 ]
             };
             rain1.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Rem_Field_Thunderstorm"]);
@@ -101,7 +85,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ThunderstormRemove, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(PrevHeal, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ThunderstormApply, 4, Targeting.Slot_SelfSlot, Fail),
+                    Effects.GenerateEffect(ThunderstormApply, 4, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
                 ]
             };
             rain2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Rem_Field_Thunderstorm"]);
@@ -119,7 +103,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ThunderstormRemove, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(PrevHeal, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ThunderstormApply, 5, Targeting.Slot_SelfSlot, Fail),
+                    Effects.GenerateEffect(ThunderstormApply, 5, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
                 ]
             };
             rain3.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Rem_Field_Thunderstorm"]);
@@ -137,7 +121,7 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(40)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 5, Targeting.Slot_Front),
                 ]
             };
@@ -153,7 +137,7 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Chance1),
+                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 7, Targeting.Slot_Front),
                 ]
             };
@@ -169,7 +153,7 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Chance2),
+                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(60)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 9, Targeting.Slot_Front),
                 ]
             };
@@ -185,7 +169,7 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Chance3),
+                    Effects.GenerateEffect(ThunderstormApply, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(70)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 11, Targeting.Slot_Front),
                 ]
             };
@@ -242,7 +226,7 @@ namespace Hell_Island_Fell.Fools
             hail2.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_7_10)]);
             hail2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            Ability hail3 = new Ability("Cannon Hail", "Hail_4_A")
+            Ability hail3 = new Ability("Giant Hail", "Hail_4_A")
             {
                 Description = "Deal 11 damage to the Left and Right enemies.\nIf this move kills, apply 3 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasHail"),
@@ -258,9 +242,9 @@ namespace Hell_Island_Fell.Fools
             hail3.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_11_15)]);
             hail3.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            maecenas.AddLevelData(17, new Ability[] { rain0, lightningStrike0, hail0 });
-            maecenas.AddLevelData(20, new Ability[] { rain1, lightningStrike1, hail1 });
-            maecenas.AddLevelData(22, new Ability[] { rain2, lightningStrike2, hail2 });
+            maecenas.AddLevelData(15, new Ability[] { rain0, lightningStrike0, hail0 });
+            maecenas.AddLevelData(17, new Ability[] { rain1, lightningStrike1, hail1 });
+            maecenas.AddLevelData(20, new Ability[] { rain2, lightningStrike2, hail2 });
             maecenas.AddLevelData(24, new Ability[] { rain3, lightningStrike3, hail3 });
 
             maecenas.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Maecenas_Witness_ACH");

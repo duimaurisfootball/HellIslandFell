@@ -178,26 +178,6 @@ namespace Hell_Island_Fell.Fools
             //pearls
             Ability pearls0 = new Ability("Marrow Pearls", "Pearls_1_A")
             {
-                Description = "Spawn as many Mudballs with 6 health as possible.\nHeal all party members 1 health.",
-                AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
-                Cost = [Pigments.Blue, Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.UglyOnTheInside,
-                AnimationTarget = Targeting.Slot_SelfSlot,
-                Effects =
-                [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 6),
-                    Effects.GenerateEffect(MudballSpawn, 4),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Unit_AllAllies),
-                ]
-            };
-            pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
-            pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
-            pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
-            pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
-            pearls0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
-
-            Ability pearls1 = new Ability("Living Pearls", "Pearls_2_A")
-            {
                 Description = "Spawn as many Mudballs with 7 health as possible.\nHeal all party members 1 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
                 Cost = [Pigments.Blue, Pigments.Blue, Pigments.Blue],
@@ -210,6 +190,26 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Unit_AllAllies),
                 ]
             };
+            pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
+            pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
+            pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
+            pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
+            pearls0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
+
+            Ability pearls1 = new Ability("Living Pearls", "Pearls_2_A")
+            {
+                Description = "Spawn as many Mudballs with 8 health as possible.\nHeal all party members 1 health.",
+                AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
+                Cost = [Pigments.Blue, Pigments.Blue, Pigments.Blue],
+                Visuals = Visuals.UglyOnTheInside,
+                AnimationTarget = Targeting.Slot_SelfSlot,
+                Effects =
+                [
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 8),
+                    Effects.GenerateEffect(MudballSpawn, 4),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Unit_AllAllies),
+                ]
+            };
             pearls1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             pearls1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             pearls1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
@@ -218,14 +218,14 @@ namespace Hell_Island_Fell.Fools
 
             Ability pearls2 = new Ability("Parasitic Pearls", "Pearls_3_A")
             {
-                Description = "Spawn as many Mudballs with 7 health as possible.\nHeal all party members 2 health.",
+                Description = "Spawn as many Mudballs with 9 health as possible.\nHeal all party members 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
                 Cost = [Pigments.Blue, Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.UglyOnTheInside,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 7),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 9),
                     Effects.GenerateEffect(MudballSpawn, 4),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 2, Targeting.Unit_AllAllies),
                 ]
@@ -238,14 +238,14 @@ namespace Hell_Island_Fell.Fools
 
             Ability pearls3 = new Ability("Opulent Pearls", "Pearls_4_A")
             {
-                Description = "Spawn as many Mudballs with 8 health as possible.\nHeal all party members 2 health.",
+                Description = "Spawn as many Mudballs with 10 health as possible.\nHeal all party members 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
                 Cost = [Pigments.Blue, Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.UglyOnTheInside,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 8),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 10),
                     Effects.GenerateEffect(MudballSpawn, 4),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 2, Targeting.Unit_AllAllies),
                 ]
@@ -261,8 +261,8 @@ namespace Hell_Island_Fell.Fools
             morrigan.AddLevelData(20, new Ability[] { mud2, glass2, pearls2 });
             morrigan.AddLevelData(20, new Ability[] { mud3, glass3, pearls3 });
 
-            //morrigan.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Morrigan_Witness_ACH");
-            //morrigan.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Morrigan_Divine_ACH");
+            morrigan.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Morrigan_Witness_ACH");
+            morrigan.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Morrigan_Divine_ACH");
             morrigan.AddCharacter(true, false);
         }
     }

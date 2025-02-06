@@ -14,10 +14,11 @@ global using Hell_Island_Fell.Encounters;
 global using BepInEx.Bootstrap;
 using HarmonyLib;
 using Hell_Island_Fell.Field_Effects;
+using Hell_Island_Fell.Custom_Stuff;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.4.7")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.5.0")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]
@@ -52,6 +53,7 @@ namespace Hell_Island_Fell
 
             //Add AssetBundles
             assetBundle = AssetBundle.LoadFromMemory(ResourceLoader.ResourceBinary("hif_assetbundle"));
+            CustomMusicParameters.Add();
 
             //Add Damage Types
             DisappearingDamage.Add();
@@ -70,6 +72,7 @@ namespace Hell_Island_Fell
             LoadedAssetsHandler.GetCharacter("Bimini_CH").unitTypes.Add("FemaleID");
             CrossMod.Check();
             DivineGlass.Add();
+            Lookatme.Add();
 
             //Add Passives
             CustomPassives.Add();
@@ -80,6 +83,16 @@ namespace Hell_Island_Fell
             Groanbroad.Add();
             FormidableDinners.Add();
             CurlingFinger.Add();
+            PickledBeets.Add();
+            Sauerkraut.Add();
+            AppleCiderVinegar.Add();
+            AlumSalt.Add();
+            BloodThinners.Add();
+            CoughMedicine.Add();
+            Retinol.Add();
+            Melatonin.Add();
+            Hotpot.Add();
+            PaintedDie.Add();
 
             //Osman Unlocks
             SymbolOfPeace.Add();
@@ -91,7 +104,7 @@ namespace Hell_Island_Fell
             CarversTools.Add();
             BowlingBall.Add();
             CheesePlate.Add();
-            //FresnelLens.Add();
+            FresnelLens.Add();
             ParchedScroll.Add();
             ComplexComplexion.Add();
             HoxJar.Add();
@@ -99,7 +112,7 @@ namespace Hell_Island_Fell
             BrailleTypewriter.Add();
             StabbingHomunculus.Add();
             Nemesis.Add();
-            //GreenGlass.Add();
+            GreenGlass.Add();
             FetidTooth.Add();
             BlackPearl.Add();
             //
@@ -115,7 +128,7 @@ namespace Hell_Island_Fell
             MalebolgesSeveredHead.Add();
             TollBell.Add();
             BavarianPretzel.Add();
-            //TheKraken.Add();
+            Kraken.Add();
             LiquidDust.Add();
             AncientWine.Add();
             InfiniteMirror.Add();
@@ -123,7 +136,7 @@ namespace Hell_Island_Fell
             AntiqueCashRegister.Add();
             Ripcord.Add();
             MagicAccelerator.Add();
-            //TheDeal.Add();
+            TheDeal.Add();
             InfernalStone.Add();
             Trinitite.Add();
             //
@@ -181,6 +194,7 @@ namespace Hell_Island_Fell
             //Other Unlocks
             NumberMagnet.Add();
             SparklingFork.Add();
+            FractionAbacus.Add();
 
             //Add Characters
             Vandander.Add();
@@ -192,7 +206,7 @@ namespace Hell_Island_Fell
             Malebolge.Add();
             Felix.Add();
             Alvinar.Add();
-            //Naba.Add();
+            Naba.Add();
             Aelie.Add();
             Gomma.Add();
             Hills.Add();
@@ -200,7 +214,7 @@ namespace Hell_Island_Fell
             Chim.Add();
             Hoftstoldt.Add();
             Pinec.Add();
-            //Stareyed.Add();
+            Stareyed.Add();
             Exambry.Add();
             Morrigan.Add();
             //Nick.Add();
@@ -223,12 +237,13 @@ namespace Hell_Island_Fell
             VanishingHands.Add();
             Flatback.Add();
             Kekingdom.Add();
+            Keklung.Add();
+            Vus.Add();
             //Tubert.Add();
             //Gotanga.Add();
             //Makado.Add();
             //Kreeber.Add();
             //FaceRipper.Add();
-            //Keklung.Add();
 
             //Add Encounters
             CustomFarShoreEncounters.Add();
@@ -247,6 +262,8 @@ namespace Hell_Island_Fell
             MooneEncounters.Add();
             FlatbackEncounters.Add();
             KekingdomEncounters.Add();
+            KeklungEncounters.Add();
+            VusEncounter.Add();
             CrossoverEncounters.Add();
 
             //Add Achievements

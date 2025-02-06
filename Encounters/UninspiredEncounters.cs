@@ -21,18 +21,19 @@ namespace Hell_Island_Fell.Encounters
                     "UninspiredNosestone_EN",
                     "UninspiredNosestone_EN",
                     "ChoirBoy_EN",
-                    "ChoirBoy_EN",
                 ], null);
             uninspiredMedium.CreateNewEnemyEncounterData(
                 [
                     "UninspiredNosestone_EN",
                     "ChoirBoy_EN",
                     "Inequity_EN",
+                    "ShiveringHomunculus_EN",
                 ], null);
             uninspiredMedium.CreateNewEnemyEncounterData(
                 [
                     "UninspiredNosestone_EN",
                     "Inequity_EN",
+                    "ShiveringHomunculus_EN",
                 ], null);
             uninspiredMedium.CreateNewEnemyEncounterData(
                 [
@@ -118,11 +119,10 @@ namespace Hell_Island_Fell.Encounters
                     "UninspiredNosestone_EN",
                     "UninspiredNosestone_EN",
                     "Inequity_EN",
-                    "Inequity_EN",
+                    "StickingHomunculus_EN",
                 ], null);
             uninspiredHard.CreateNewEnemyEncounterData(
                 [
-                    "UninspiredNosestone_EN",
                     "UninspiredNosestone_EN",
                     "ChoirBoy_EN",
                     "Inequity_EN",
@@ -210,7 +210,6 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "UninspiredNosestone_EN",
                         "UninspiredNosestone_EN",
-                        "ProlificNosestone_EN",
                         "GodsChalice_EN",
                     ], null);
             }

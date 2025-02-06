@@ -50,6 +50,7 @@ namespace Hell_Island_Fell.Fools
 
             StatusEffect_Apply_PreviousExit_Effect FrailApply = ScriptableObject.CreateInstance<StatusEffect_Apply_PreviousExit_Effect>();
             FrailApply._Status = StatusField.Frail;
+            FrailApply.entryAsAddition = true;
 
             //chain
             Ability chain0 = new Ability("Chain Lash", "Chain_1_A")
@@ -200,7 +201,7 @@ namespace Hell_Island_Fell.Fools
             //meat
             Ability meat0 = new Ability("Rotten Meat", "Meat_1_A")
             {
-                Description = "Remove 1-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
+                Description = "Remove 1-2 Scars from this party member.\nApply an equivalent amount of Frail + 1 to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
                 Cost = [Pigments.Blue, Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
@@ -217,7 +218,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability meat1 = new Ability("Raw Meat", "Meat_2_A")
             {
-                Description = "Remove 1-2 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
+                Description = "Remove 1-2 Scars from this party member.\nApply an equivalent amount of Frail + 1 to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
                 Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
@@ -234,7 +235,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability meat2 = new Ability("Fresh Meat", "Meat_3_A")
             {
-                Description = "Remove 1-3 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
+                Description = "Remove 1-3 Scars from this party member.\nApply an equivalent amount of Frail + 1 to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
                 Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
@@ -251,7 +252,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability meat3 = new Ability("Pristine Meat", "Meat_4_A")
             {
-                Description = "Remove 1-4 Scars from this party member.\nApply an equivalent amount of Frail to this party member.",
+                Description = "Remove 1-4 Scars from this party member.\nApply an equivalent amount of Frail + 1 to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("PinecMeat"),
                 Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Absolve,
@@ -272,8 +273,8 @@ namespace Hell_Island_Fell.Fools
             pinec.AddLevelData(12, new Ability[] { chain2, spikes2, meat2 });
             pinec.AddLevelData(13, new Ability[] { chain3, spikes3, meat3 });
 
-            //pinec.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Aelie_Witness_ACH");
-            //pinec.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Aelie_Divine_ACH");
+            pinec.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Pinec_Witness_ACH");
+            pinec.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Pinec_Divine_ACH");
             pinec.AddCharacter(true, false);
         }
     }

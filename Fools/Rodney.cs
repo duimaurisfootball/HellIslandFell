@@ -58,10 +58,6 @@ namespace Hell_Island_Fell.Fools
             RemoveStatusEffectEffect CursedRemove = ScriptableObject.CreateInstance<RemoveStatusEffectEffect>();
             CursedRemove._status = StatusField.Cursed;
 
-            PreviousEffectCondition Fail = ScriptableObject.CreateInstance<PreviousEffectCondition>();
-            Fail.wasSuccessful = false;
-            Fail.previousAmount = 2;
-
             PreviousEffectCondition RestoreCondition = ScriptableObject.CreateInstance<PreviousEffectCondition>();
             RestoreCondition.previousAmount = 2;
 

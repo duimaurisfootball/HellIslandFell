@@ -22,9 +22,6 @@ namespace Hell_Island_Fell.Enemies
             ExpensiveLoot._cost = 7;
             ExpensiveLoot._costsLess = false;
 
-            PercentageEffectCondition ChangeChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            ChangeChance.percentage = 17;
-
             PercentageEffectCondition RichChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
             RichChance.percentage = 50;
 
@@ -51,11 +48,11 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, RichChance),
                     Effects.GenerateEffect(CheapLoot, 3, Targeting.Slot_Front, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(ExpensiveLoot, 1, Targeting.Slot_Front, Fail),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ChaosLootReplaceEffect>(), 5, Targeting.Slot_Front, ChangeChance),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ChaosLootReplaceEffect>(), 4, Targeting.Slot_Front),
                 ],
             };
             boler.PrepareEnemyPrefab("Assets/BolerAssetBundle/Boler.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/BolerAssetBundle/BolerGibs.prefab").GetComponent<ParticleSystem>());
-            boler.AddPassives([Passives.EssenceUntethered, Passives.MultiAttack3, Passives.Masochism1, Passives.GetCustomPassive("Disruption_PA")]);
+            boler.AddPassives([Passives.EssenceUntethered, Passives.Masochism1, Passives.GetCustomPassive("Disruption_PA")]);
 
             StatusEffect_Apply_Effect CursedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             CursedApply._Status = StatusField.Cursed;

@@ -44,6 +44,5 @@ namespace Hell_Island_Fell.Custom_Passives
             }
             return value + num;
         }
-
     }
 }

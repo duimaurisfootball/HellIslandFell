@@ -42,15 +42,6 @@ namespace Hell_Island_Fell.Fools
             ScalesShield._Field = StatusField.Shield;
             ScalesShield._UseRandomBetweenPrevious = true;
 
-            PercentageEffectCondition SmokeChance0 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            SmokeChance0.percentage = 40;
-
-            PercentageEffectCondition SmokeChance1 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            SmokeChance1.percentage = 50;
-
-            PercentageEffectCondition SmokeChance2 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            SmokeChance2.percentage = 60;
-
             //forest
             Ability forest0 = new Ability("Tiny Forest", "Forest_1_A")
             {
@@ -197,7 +188,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(WartsUp, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, SmokeChance0),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(40)),
                 ],
             };
             smoke0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
@@ -214,7 +205,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(WartsUp, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, SmokeChance1),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ],
             };
             smoke1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
@@ -231,7 +222,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(WartsUp, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, SmokeChance1),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ],
             };
             smoke2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
@@ -248,7 +239,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(WartsUp, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, SmokeChance2),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(60)),
                 ],
             };
             smoke3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
@@ -260,8 +251,8 @@ namespace Hell_Island_Fell.Fools
             gomma.AddLevelData(18, new Ability[] { forest2, scales2, smoke2 });
             gomma.AddLevelData(21, new Ability[] { forest3, scales3, smoke3 });
 
-            //gomma.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Gomma_Witness_ACH");
-            //gomma.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Gomma_Divine_ACH");
+            gomma.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Gomma_Witness_ACH");
+            gomma.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Gomma_Divine_ACH");
             gomma.AddCharacter(true, false);
         }
     }

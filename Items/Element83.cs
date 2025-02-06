@@ -25,7 +25,7 @@ namespace Hell_Island_Fell.Items
                 Item_ID = "Element83_TW",
                 Name = "Element 83",
                 Flavour = "\"Thousands of islets, like a continent shattered across the sea...\"",
-                Description = "Summon a permanent clone of this party member on combat end. 83% chance to be consumed upon use. 17% chance to be consumed on turn start.",
+                Description = "Summon a copy of this party member on combat end. 83% chance to be consumed upon use. 17% chance to be consumed on turn start.",
                 IsShopItem = false,
                 ShopPrice = 83,
                 DoesPopUpInfo = true,

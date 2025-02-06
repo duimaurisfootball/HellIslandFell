@@ -253,9 +253,9 @@ namespace Hell_Island_Fell.Fools
                 FrontSprite = ResourceLoader.LoadSprite("HoftstoldtBack", new Vector2(0.5f, 0f), 32),
                 BackSprite = ResourceLoader.LoadSprite("HoftstoldtBack", new Vector2(0.5f, 0f), 32),
                 OverworldSprite = ResourceLoader.LoadSprite("HoftstoldtOverworld", new Vector2(0.5f, 0f), 32),
-                DamageSound = LoadedAssetsHandler.GetEnemy("OsmanLeft_BOSS").damageSound,
-                DeathSound = LoadedAssetsHandler.GetEnemy("OsmanLeft_BOSS").deathSound,
-                DialogueSound = LoadedAssetsHandler.GetEnemy("OsmanLeft_BOSS").damageSound,
+                DamageSound = "event:/HoftstoldtDamage",
+                DeathSound = "event:/HoftstoldtDeath",
+                DialogueSound = "event:/HoftstoldtDx",
                 ExtraSprites = FaceSprites,
             };
             hoftstoldt.GenerateMenuCharacter(ResourceLoader.LoadSprite("HoftstoldtMenu"), ResourceLoader.LoadSprite("HoftstoldtLocked"));
@@ -525,8 +525,8 @@ namespace Hell_Island_Fell.Fools
             hoftstoldt.AddLevelData(15, new Ability[] { soul2, ofThePeople2, assimilation2 });
             hoftstoldt.AddLevelData(15, new Ability[] { soul3, ofThePeople3, assimilation3 });
 
-            hoftstoldt.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Salad_Witness_ACH");
-            hoftstoldt.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Salad_Divine_ACH");
+            hoftstoldt.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Hoftstoldt_Witness_ACH");
+            hoftstoldt.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Hoftstoldt_Divine_ACH");
             hoftstoldt.AddCharacter(true, false);
         }
     }

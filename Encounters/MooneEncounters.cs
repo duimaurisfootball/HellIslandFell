@@ -14,7 +14,7 @@ namespace Hell_Island_Fell.Encounters
 
             EnemyEncounter_API MooneEasy = new EnemyEncounter_API(0, "H_Zone02_Moone_Easy_EnemyBundle", "Moone_Sign")
             {
-                MusicEvent = "event:/Music/Mx_InTheirImage",
+                MusicEvent = "event:/AperiodicRecognitionOfPatterns",
                 RoarEvent = "event:/Characters/Enemies/GigglingMinister/CHR_ENM_GigglingMinister_Roar",
             };
             MooneEasy.CreateNewEnemyEncounterData(
@@ -142,7 +142,7 @@ namespace Hell_Island_Fell.Encounters
 
             EnemyEncounter_API MooneMedium = new EnemyEncounter_API(0, "H_Zone02_Moone_Medium_EnemyBundle", "Moone_Sign")
             {
-                MusicEvent = "event:/Music/Mx_InTheirImage",
+                MusicEvent = "event:/AperiodicRecognitionOfPatterns",
                 RoarEvent = "event:/Characters/Enemies/GigglingMinister/CHR_ENM_GigglingMinister_Roar",
             };
             MooneMedium.CreateNewEnemyEncounterData(

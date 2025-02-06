@@ -45,12 +45,17 @@ namespace Hell_Island_Fell.Encounters
                     "Kekingdom_EN",
                     "Voboola_EN",
                 ], null);
+            kekingdomHard.CreateNewEnemyEncounterData(
+                [
+                    "Kekingdom_EN",
+                    "Keklung_EN",
+                ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
                 kekingdomHard.CreateNewEnemyEncounterData(
                     [
                         "Kekingdom_EN",
-                        "Unflarb_EN",
+                        "LipBug_EN",
                     ], null);
             }
             if(Hell_Island_Fell.CrossMod.Colophons)

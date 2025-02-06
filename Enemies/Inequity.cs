@@ -51,7 +51,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability statusQuo = new Ability("Status Quo", "StatusQuo_A")
             {
-                Description = "Add Inanimate as a passive to the party member(s) with the lowest health.",
+                Description = "Add Inanimate as a passive to the party member(s) with the lowest health. Ignores already Inanimate party members.",
                 Cost = [Pigments.Purple, Pigments.Yellow],
                 Effects =
                 [
@@ -64,13 +64,13 @@ namespace Hell_Island_Fell.Enemies
 
             Ability leadThem = new Ability("Lead Them", "LeadThem_A")
             {
-                Description = "Apply 1 Ruptured to every party member.",
+                Description = "Apply 2 Ruptured to every party member.",
                 Cost = [Pigments.Red, Pigments.Red],
                 Visuals = Visuals.StompLeft,
                 AnimationTarget = Targeting.Unit_AllOpponents,
                 Effects =
                 [
-                    Effects.GenerateEffect(RupturedApply, 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(RupturedApply, 2, Targeting.Unit_AllOpponents),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Normal,

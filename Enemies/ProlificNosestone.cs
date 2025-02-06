@@ -28,13 +28,12 @@ namespace Hell_Island_Fell.Enemies
             prolificNosestone.PrepareEnemyPrefab("Assets/ProlificNosestoneAssetBundle/ProlificNosestone.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ProlificNosestoneAssetBundle/ProlificGibs.prefab").GetComponent<ParticleSystem>());
             prolificNosestone.AddPassives([Passives.Pure, Passives.GetCustomPassive("Grinding_PA"), CustomPassives.WartsGenerator(9)]);
 
-            DamageByChancePerTargetEffect conceptDamage = ScriptableObject.CreateInstance<DamageByChancePerTargetEffect>();
+            DamageEffect conceptDamage = ScriptableObject.CreateInstance<DamageEffect>();
             conceptDamage._ignoreShield = true;
-            conceptDamage._percentage = 50;
 
             Ability highConcepts = new Ability("High Concepts", "HighConcepts_A")
             {
-                Description = "50% chance to deal almost no damage to each enemy, twice.\nThis attack ignores shield.",
+                Description = "Deal almost no damage to each enemy, twice.\nThis attack ignores shield.",
                 Cost = [Pigments.Red, Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,

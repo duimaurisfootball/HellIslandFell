@@ -18,7 +18,7 @@ namespace Hell_Island_Fell.Items
 
             TypewriterRedHealthEffect redHealth = ScriptableObject.CreateInstance<TypewriterRedHealthEffect>();
 
-            PerformEffect_Item bavarianPretzel = new PerformEffect_Item("BrailleTypewriter_ID", null)
+            PerformEffect_Item brailleTypewriter = new PerformEffect_Item("BrailleTypewriter_ID", null)
             {
                 Item_ID = "BrailleTypewriter_SW",
                 Name = "Braille Typewriter",
@@ -41,7 +41,7 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(bavarianPretzel.Item, new ItemModdedUnlockInfo("BrailleTypewriter_SW", ResourceLoader.LoadSprite("UnlockOsmanChimLocked", null, 32, null), "HIF_Chim_Witness_ACH"));
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(brailleTypewriter.Item, new ItemModdedUnlockInfo("BrailleTypewriter_SW", ResourceLoader.LoadSprite("UnlockOsmanChimLocked", null, 32, null), "HIF_Chim_Witness_ACH"));
         }
     }
 }

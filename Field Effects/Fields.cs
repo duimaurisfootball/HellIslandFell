@@ -48,6 +48,46 @@ namespace Hell_Island_Fell.Field_Effects
                 };
                 LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Field_Thunderstorm", ThunderstormRemIntent);
             }
+            if (!LoadedDBsHandler.StatusFieldDB.FieldEffects.ContainsKey("ShadowHands_ID"))
+            {
+                SlotStatusEffectInfoSO ShadowHandsInfo = ScriptableObject.CreateInstance<SlotStatusEffectInfoSO>();
+                ShadowHandsInfo.icon = ResourceLoader.LoadSprite("ShadowHands");
+                ShadowHandsInfo._fieldName = "Shadow Hands";
+                ShadowHandsInfo._description = "Upon taking any damage or performing an ability in Shadow Hands, move to the left or right.\n1 Shadow Hands is lost upon taking damage.";
+
+                LoadedDBsHandler.StatusFieldDB.TryGetFieldEffect("Constricted_ID", out FieldEffect_SO constricted);
+                SlotStatusEffectInfoSO baseinfo = constricted.EffectInfo;
+
+                ShadowHandsInfo._applied_SE_Event = baseinfo._applied_SE_Event;
+                ShadowHandsInfo._removed_SE_Event = baseinfo._removed_SE_Event;
+                ShadowHandsInfo._updated_SE_Event = baseinfo._updated_SE_Event;
+
+                GameObject ShadowHandsEnemy = Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ShadowHandsAssetBundle/ShadowHandsEnemy.prefab");
+                ShadowHandsInfo.m_EnemyLayoutTemplate = ShadowHandsEnemy.GetComponent<EnemyFieldEffectLayout>();
+
+                GameObject ShadowHandsCharacters = Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ShadowHandsAssetBundle/ShadowHandsCharacter.prefab");
+                ShadowHandsInfo.m_CharacterLayoutTemplate = ShadowHandsCharacters.GetComponent<CharacterFieldEffectLayout>();
+
+                ShadowHands shadowHands = ScriptableObject.CreateInstance<ShadowHands>();
+                shadowHands._FieldID = "ShadowHands_ID";
+                shadowHands._EffectInfo = ShadowHandsInfo;
+
+                LoadedDBsHandler.StatusFieldDB.AddNewFieldEffect(shadowHands, true);
+
+                IntentInfoBasic ShadowHandsIntent = new()
+                {
+                    _color = Color.white,
+                    _sprite = ResourceLoader.LoadSprite("ShadowHands")
+                };
+                LoadedDBsHandler.IntentDB.AddNewBasicIntent("Field_ShadowHands", ShadowHandsIntent);
+
+                IntentInfoBasic ShadowHandsRemIntent = new()
+                {
+                    _color = Color.grey,
+                    _sprite = ResourceLoader.LoadSprite("ShadowHands")
+                };
+                LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Field_ShadowHands", ShadowHandsRemIntent);
+            }
         }
     }
 }
