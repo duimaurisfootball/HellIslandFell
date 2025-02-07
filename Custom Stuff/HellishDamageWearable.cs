@@ -74,7 +74,7 @@ namespace Hell_Island_Fell.Custom_Stuff
             {
                 if (!increase)
                 {
-                    return Mathf.Max(0, value - amount);
+                    return Mathf.Max(0, value + amount);
                 }
                 return value + amount;
             }

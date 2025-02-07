@@ -18,6 +18,15 @@ namespace Hell_Island_Fell.Enemies
             ProteinEvolution._parameter = (MusicParameter)888833;
             ProteinEvolution._addition = false;
 
+            ExtraShopLootByExactCostEffect EightCost = ScriptableObject.CreateInstance<ExtraShopLootByExactCostEffect>();
+            EightCost._cost = 8;
+
+            ExtraShopLootByExactCostEffect NineCost = ScriptableObject.CreateInstance<ExtraShopLootByExactCostEffect>();
+            NineCost._cost = 9;
+
+            ExtraShopLootByExactCostEffect TenCost = ScriptableObject.CreateInstance<ExtraShopLootByExactCostEffect>();
+            TenCost._cost = 10;
+
             Enemy vus = new Enemy("Vus", "Vus_EN")
             {
                 Health = 124,
@@ -35,6 +44,9 @@ namespace Hell_Island_Fell.Enemies
                 CombatExitEffects =
                 [
                     Effects.GenerateEffect(ProteinEvolution),
+                    Effects.GenerateEffect(EightCost, 1),
+                    Effects.GenerateEffect(NineCost, 1),
+                    Effects.GenerateEffect(TenCost, 1),
                 ],
             };
             vus.PrepareEnemyPrefab("Assets/VusAssetBundle/Vus.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/VusAssetBundle/VusGibs.prefab").GetComponent<ParticleSystem>());

@@ -25,6 +25,7 @@
     <None Remove="Sprites\AchievementHeavenVat.png" />
     <None Remove="Sprites\AchievementIcons\AchievementComedyBoler.png" />
     <None Remove="Sprites\AchievementIcons\AchievementComedyBoojum.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementComedyVus.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenAelie.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenAlvinar.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenChim.png" />
@@ -717,6 +718,7 @@
     <EmbeddedResource Include="Sprites\aaa111aaa111aaa111__lookatme_lookatme.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyBoler.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyBoojum.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyVus.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenAelie.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenAlvinar.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenChim.png" />

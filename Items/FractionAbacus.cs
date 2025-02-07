@@ -27,7 +27,7 @@ namespace Hell_Island_Fell.Items
                 UseSimpleIntegerInsteadOfDamage = false,
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(fractionAbacus.Item, new ItemModdedUnlockInfo("FractionAbacus_SW", ResourceLoader.LoadSprite("ItemFractionAbacusLocked", null, 32, null), "HIF_Vus_Comedy_ACH"));
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(fractionAbacus.Item, new ItemModdedUnlockInfo("FractionAbacus_SW", ResourceLoader.LoadSprite("ShopFractionAbacusLocked", null, 32, null), "HIF_Vus_Comedy_ACH"));
         }
     }
 }

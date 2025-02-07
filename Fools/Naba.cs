@@ -275,7 +275,7 @@ namespace Hell_Island_Fell.Fools
 
             naba.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Naba_Witness_ACH");
             naba.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Naba_Divine_ACH");
-            naba.AddCharacter(false, false);
+            naba.AddCharacter(true, false);
         }
     }
 }

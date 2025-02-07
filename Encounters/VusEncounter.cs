@@ -19,7 +19,7 @@ namespace Hell_Island_Fell.Encounters
                     "Vus_EN",
                 ]);
             vusHard.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Vus_Hard_EnemyBundle", 5, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Hard);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Vus_Hard_EnemyBundle", 8, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Hard);
         }
     }
 }
