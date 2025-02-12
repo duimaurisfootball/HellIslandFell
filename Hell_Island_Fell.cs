@@ -18,7 +18,7 @@ using Hell_Island_Fell.Custom_Stuff;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.5.0")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.5.1")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]
@@ -239,6 +239,7 @@ namespace Hell_Island_Fell
             Kekingdom.Add();
             Keklung.Add();
             Vus.Add();
+            Draugr.Add();
             //Tubert.Add();
             //Gotanga.Add();
             //Makado.Add();
@@ -264,6 +265,7 @@ namespace Hell_Island_Fell
             KekingdomEncounters.Add();
             KeklungEncounters.Add();
             VusEncounter.Add();
+            DraugrEncounters.Add();
             CrossoverEncounters.Add();
 
             //Add Achievements

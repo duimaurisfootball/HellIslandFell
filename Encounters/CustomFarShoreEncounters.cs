@@ -219,6 +219,11 @@ namespace Hell_Island_Fell.Encounters
                 "Spoggle_Ruminating_EN",
                 "Keklung_EN",
             ]),
+                new(
+            [
+                "Spoggle_Ruminating_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -239,6 +244,11 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Spoggle_Spitfire_EN",
                 "Keklung_EN",
+            ]),
+                new(
+            [
+                "Spoggle_Spitfire_EN",
+                "Draugr_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -273,7 +283,7 @@ namespace Hell_Island_Fell.Encounters
                         "Keko_EN",
                         "Keko_EN",
                         "LipBug_EN",
-                        "VanishingHands_EN",
+                        "Keklung_EN",
                     ]));
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
@@ -307,6 +317,11 @@ namespace Hell_Island_Fell.Encounters
                 "MunglingMudLung_EN",
                 "Keklung_EN",
                 "Keklung_EN",
+            ]),
+                new(
+            [
+                "MunglingMudLung_EN",
+                "Draugr_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -355,6 +370,11 @@ namespace Hell_Island_Fell.Encounters
                 "Keklung_EN",
                 "MunglingMudLung_EN",
             ]),
+                new(
+            [
+                "FlaMinGoa_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -402,6 +422,11 @@ namespace Hell_Island_Fell.Encounters
                 "Keklung_EN",
                 "Keklung_EN",
             ]),
+                new(
+            [
+                "Flarb_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -442,6 +467,11 @@ namespace Hell_Island_Fell.Encounters
                 "Keklung_EN",
                 "Keklung_EN",
             ]),
+                new(
+            [
+                "Voboola_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -481,6 +511,11 @@ namespace Hell_Island_Fell.Encounters
                 "Kekastle_EN",
                 "Keklung_EN",
             ]),
+                new(
+            [
+                "Kekastle_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -503,6 +538,12 @@ namespace Hell_Island_Fell.Encounters
                 "JumbleGuts_Flummoxing_EN",
                 "Keklung_EN",
                 "Keklung_EN",
+            ]),
+                new(
+            [
+                "JumbleGuts_Flummoxing_EN",
+                "MudLung_EN",
+                "Draugr_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -527,6 +568,12 @@ namespace Hell_Island_Fell.Encounters
                 "Keklung_EN",
                 "Keklung_EN",
             ]),
+                new(
+            [
+                "JumbleGuts_Hollowing_EN",
+                "MudLung_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -549,6 +596,11 @@ namespace Hell_Island_Fell.Encounters
                 "Keklung_EN",
                 "Wringle_EN",
             ]),
+                new(
+            [
+                "Spoggle_Resonant_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -570,6 +622,11 @@ namespace Hell_Island_Fell.Encounters
                 "Spoggle_Writhing_EN",
                 "Keklung_EN",
                 "Wringle_EN",
+            ]),
+                new(
+            [
+                "Spoggle_Writhing_EN",
+                "Draugr_EN",
             ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)

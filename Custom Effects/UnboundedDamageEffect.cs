@@ -7,6 +7,8 @@ namespace Hell_Island_Fell.Custom_Effects
 {
     public class UnboundedDamageEffect : EffectSO
     {
+        public bool usePreviousExitValue;
+
         public string _DeathTypeID = "Basic";
 
         public bool _ignoreShield;
@@ -21,6 +23,10 @@ namespace Hell_Island_Fell.Custom_Effects
 
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
+            if (usePreviousExitValue)
+            {
+                _cycles *= PreviousExitValue;
+            }
             exitAmount = 0;
             bool flag = false;
             foreach (TargetSlotInfo targetSlotInfo in targets)

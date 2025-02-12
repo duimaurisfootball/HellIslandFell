@@ -12,9 +12,12 @@ namespace Hell_Island_Fell.Custom_Effects
         {
             exitAmount = entryVariable;
             IEnumerable<string> items = LoadShopItemIds(_cost);
+            if (items.Count() != 0)
+            {
             for (int i = 0; i < entryVariable; i++)
             {
                 stats.AddExtraLootAddition(items.ElementAt(UnityEngine.Random.Range(0, items.Count())));
+            }
             }
 
             return exitAmount > 0;
@@ -23,17 +26,14 @@ namespace Hell_Island_Fell.Custom_Effects
         private static IEnumerable<string> LoadShopItemIds(int cost)
         {
             var processed = new List<string>();
-            var unlocks = LoadedDBsHandler.ItemUnlocksDB;
 
-            foreach (var i in unlocks.ShopItems)
+            foreach (var kvp in LoadedAssetsHandler.LoadedWearables)
             {
-                if (!processed.Contains(i.itemName.ToLowerInvariant()))
+                if (kvp.Value != null && !processed.Contains(kvp.Key.ToLowerInvariant()) && kvp.Value.isShopItem && kvp.Value.shopPrice == cost)
                 {
-                    if (i.LoadedItem.shopPrice == cost)
-                    {
-                        processed.Add(i.itemName.ToLowerInvariant());
-                        yield return i.itemName;
-                    }
+                    processed.Add(kvp.Key.ToLowerInvariant());
+
+                    yield return kvp.Key;
                 }
             }
         }

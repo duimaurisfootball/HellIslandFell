@@ -20,7 +20,7 @@ namespace Hell_Island_Fell.Custom_Stuff
                 int minute = time.Minute;
                 int second = time.Second;
 
-                if (hour == 22 && prevHour != 22 && prevHour != -1 && minute == 38 && prevMinute != 38 && prevMinute != -1)
+                if (hour == 22 && minute == 38 && prevMinute != 38 && prevMinute != -1)
                 {
                     CombatManager.Instance.AddRootAction(new Trigger1038PMAction());
                 }

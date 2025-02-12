@@ -118,6 +118,7 @@
     <None Remove="Sprites\DeadBoler.png" />
     <None Remove="Sprites\DeadBoojum.png" />
     <None Remove="Sprites\DeadDivineGlass.png" />
+    <None Remove="Sprites\DeadDraugr.png" />
     <None Remove="Sprites\DeadFlatback.png" />
     <None Remove="Sprites\DeadInequity.png" />
     <None Remove="Sprites\DeadKekingdom.png" />
@@ -134,11 +135,14 @@
     <None Remove="Sprites\DeadVus.png" />
     <None Remove="Sprites\Disappearing.png" />
     <None Remove="Sprites\ErasBack.png" />
+    <None Remove="Sprites\ErasBeat.png" />
     <None Remove="Sprites\ErasElectricity.png" />
     <None Remove="Sprites\ErasFront.png" />
     <None Remove="Sprites\ErasLocked.png" />
     <None Remove="Sprites\ErasMenu.png" />
     <None Remove="Sprites\ErasOverworld.png" />
+    <None Remove="Sprites\ErasPulse.png" />
+    <None Remove="Sprites\ErasPump.png" />
     <None Remove="Sprites\ExambryBack.png" />
     <None Remove="Sprites\ExambryFront.png" />
     <None Remove="Sprites\ExambryInterpolated.png" />
@@ -568,6 +572,7 @@
     <None Remove="Sprites\TimelineBoler.png" />
     <None Remove="Sprites\TimelineBoojum.png" />
     <None Remove="Sprites\TimelineDivineGlass.png" />
+    <None Remove="Sprites\TimelineDraugr.png" />
     <None Remove="Sprites\TimelineFlatback.png" />
     <None Remove="Sprites\TimelineInequity.png" />
     <None Remove="Sprites\TimelineKekingdom.png" />
@@ -799,6 +804,7 @@
     <EmbeddedResource Include="Sprites\DeadBoler.png" />
     <EmbeddedResource Include="Sprites\DeadBoojum.png" />
     <EmbeddedResource Include="Sprites\DeadDivineGlass.png" />
+    <EmbeddedResource Include="Sprites\DeadDraugr.png" />
     <EmbeddedResource Include="Sprites\DeadFlatback.png" />
     <EmbeddedResource Include="Sprites\DeadInequity.png" />
     <EmbeddedResource Include="Sprites\DeadKekingdom.png" />
@@ -808,11 +814,14 @@
     <EmbeddedResource Include="Sprites\DeadStickingHomunculus.png" />
     <EmbeddedResource Include="Sprites\DeadVus.png" />
     <EmbeddedResource Include="Sprites\ErasBack.png" />
+    <EmbeddedResource Include="Sprites\ErasBeat.png" />
     <EmbeddedResource Include="Sprites\ErasElectricity.png" />
     <EmbeddedResource Include="Sprites\ErasFront.png" />
     <EmbeddedResource Include="Sprites\ErasLocked.png" />
     <EmbeddedResource Include="Sprites\ErasMenu.png" />
     <EmbeddedResource Include="Sprites\ErasOverworld.png" />
+    <EmbeddedResource Include="Sprites\ErasPulse.png" />
+    <EmbeddedResource Include="Sprites\ErasPump.png" />
     <EmbeddedResource Include="Sprites\ExtraBatteredNemesis.png" />
     <EmbeddedResource Include="Sprites\ExtraBloodyNemesis.png" />
     <EmbeddedResource Include="Sprites\ExtraFatesBoundByNemesis.png" />
@@ -1245,6 +1254,7 @@
     <EmbeddedResource Include="Sprites\SpoogleVomit.png" />
     <EmbeddedResource Include="Sprites\TimelineBoojum.png" />
     <EmbeddedResource Include="Sprites\TimelineDivineGlass.png" />
+    <EmbeddedResource Include="Sprites\TimelineDraugr.png" />
     <EmbeddedResource Include="Sprites\TimelineFlatback.png" />
     <EmbeddedResource Include="Sprites\TimelineInequity.png" />
     <EmbeddedResource Include="Sprites\TimelineKekingdom.png" />
@@ -1419,6 +1429,9 @@
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.AssetBundleModule.dll</HintPath>

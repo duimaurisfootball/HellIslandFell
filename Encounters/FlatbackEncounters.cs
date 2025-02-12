@@ -88,6 +88,11 @@ namespace Hell_Island_Fell.Encounters
                     "Flatback_EN",
                     "VanishingHands_EN",
                 ], null);
+            flatbackHard.CreateNewEnemyEncounterData(
+                [
+                    "Flatback_EN",
+                    "Draugr_EN",
+                ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
                 flatbackHard.CreateNewEnemyEncounterData(

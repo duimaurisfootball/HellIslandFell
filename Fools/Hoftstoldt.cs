@@ -313,7 +313,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
                 ],
             };
-            soul0.AddIntentsToTarget(TargettingByTargetting.Create(ScriptableObject.CreateInstance<AlliesWithConstruct>(), Targeting.Slot_AllySides), [nameof(IntentType_GameIDs.Heal_1_4)]);
+            soul0.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
             soul0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
             Ability soul1 = new Ability("Soul Stone", "Soul_2_A")
@@ -330,7 +330,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
                 ],
             };
-            soul1.AddIntentsToTarget(TargettingByTargetting.Create(ScriptableObject.CreateInstance<AlliesWithConstruct>(), Targeting.Slot_AllySides), [nameof(IntentType_GameIDs.Heal_1_4)]);
+            soul1.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
             soul1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
             Ability soul2 = new Ability("Soul Prison", "Soul_3_A")
@@ -347,7 +347,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
                 ],
             };
-            soul2.AddIntentsToTarget(TargettingByTargetting.Create(ScriptableObject.CreateInstance<AlliesWithConstruct>(), Targeting.Slot_AllySides), [nameof(IntentType_GameIDs.Heal_1_4)]);
+            soul2.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
             soul2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
             Ability soul3 = new Ability("Soul Screen", "Soul_4_A")
@@ -364,7 +364,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
                 ],
             };
-            soul3.AddIntentsToTarget(TargettingByTargetting.Create(ScriptableObject.CreateInstance<AlliesWithConstruct>(), Targeting.Slot_AllySides), [nameof(IntentType_GameIDs.Heal_5_10)]);
+            soul3.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_5_10)]);
             soul3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
 
@@ -383,7 +383,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
                 ],
             };
-            ofThePeople0.AddIntentsToTarget(TargettingByTargetting.Create(ScriptableObject.CreateInstance<AlliesWithConstruct>(), Targeting.Slot_Front), [nameof(IntentType_GameIDs.Damage_3_6)]);
+            ofThePeople0.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_3_6)]);
             ofThePeople0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
             Ability ofThePeople1 = new Ability("Bodies of the People", "OfThePeople_2_A")
@@ -400,7 +400,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
                 ],
             };
-            ofThePeople1.AddIntentsToTarget(TargettingByTargetting.Create(ScriptableObject.CreateInstance<AlliesWithConstruct>(), Targeting.Slot_Front), [nameof(IntentType_GameIDs.Damage_3_6)]);
+            ofThePeople1.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_3_6)]);
             ofThePeople1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
             Ability ofThePeople2 = new Ability("Minds of the People", "OfThePeople_3_A")
@@ -417,7 +417,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
                 ],
             };
-            ofThePeople2.AddIntentsToTarget(TargettingByTargetting.Create(ScriptableObject.CreateInstance<AlliesWithConstruct>(), Targeting.Slot_Front), [nameof(IntentType_GameIDs.Damage_3_6)]);
+            ofThePeople2.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_3_6)]);
             ofThePeople2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Randomize)]);
             ofThePeople2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
@@ -435,7 +435,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
                 ],
             };
-            ofThePeople3.AddIntentsToTarget(TargettingByTargetting.Create(ScriptableObject.CreateInstance<AlliesWithConstruct>(), Targeting.Slot_Front), [nameof(IntentType_GameIDs.Damage_7_10)]);
+            ofThePeople3.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_7_10)]);
             ofThePeople3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
 

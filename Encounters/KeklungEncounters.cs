@@ -51,6 +51,12 @@ namespace Hell_Island_Fell.Encounters
                     "Wringle_EN",
                     "Keko_EN",
                 ], null);
+            keklungMedium.CreateNewEnemyEncounterData(
+                [
+                    "Keklung_EN",
+                    "Keklung_EN",
+                    "Draugr_EN",
+                ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
                 keklungMedium.CreateNewEnemyEncounterData(

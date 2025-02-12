@@ -121,6 +121,7 @@ namespace Hell_Island_Fell.Enemies
             [
                 Passives.Pure,
                 Passives.Abomination1,
+                Passives.Skittish,
             ];
 
             SwapCasterPassivesEffect Extertate = ScriptableObject.CreateInstance<SwapCasterPassivesEffect>();
@@ -139,10 +140,10 @@ namespace Hell_Island_Fell.Enemies
                 Cost = [Pigments.Grey, Pigments.Grey, Pigments.Grey, Pigments.Grey],
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealRandomSplitBetweenEntryEffect>(), 6, Targeting.Unit_AllAllies),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealRandomSplitBetweenEntryEffect>(), 10, Targeting.Unit_AllAllies),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<AddRandomTimelineAbilityEffect>(), 1, Targeting.Unit_OtherAllies),
                 ],
-                Rarity = CustomAbilityRarity.Weight(19, true),
+                Rarity = CustomAbilityRarity.Weight(18, true),
                 Priority = Priority.Normal,
             };
             pollenation.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
@@ -270,7 +271,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(IncreaseMaxHealth, 66, Targeting.Unit_OtherAllies),
                     Effects.GenerateEffect(PercentageHeal, 33, Targeting.Unit_OtherAllies),
                 ],
-                Rarity = CustomAbilityRarity.Weight(10, true),
+                Rarity = CustomAbilityRarity.Weight(7, true),
                 Priority = Priority.Normal,
             };
             bloom.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.Misc_State_Sit)]);

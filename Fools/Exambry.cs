@@ -76,6 +76,7 @@ namespace Hell_Island_Fell.Fools
             };
             melter0.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
             melter0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Shield)]);
+            melter0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
             Ability melter1 = new Ability("Heart Melter", "Melter_2_A")
             {
@@ -93,6 +94,7 @@ namespace Hell_Island_Fell.Fools
             };
             melter1.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
             melter1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Shield)]);
+            melter0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
             Ability melter2 = new Ability("Mind Melter", "Melter_3_A")
             {
@@ -110,6 +112,7 @@ namespace Hell_Island_Fell.Fools
             };
             melter2.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
             melter2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Shield)]);
+            melter0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
             Ability melter3 = new Ability("Life Melter", "Melter_4_A")
             {
@@ -127,6 +130,7 @@ namespace Hell_Island_Fell.Fools
             };
             melter3.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
             melter3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Shield)]);
+            melter0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
 
             //resolution

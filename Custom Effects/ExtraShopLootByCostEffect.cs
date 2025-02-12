@@ -24,17 +24,14 @@ namespace Hell_Island_Fell.Custom_Effects
         private static IEnumerable<string> LoadShopItemIds(int cost, bool costsLess)
         {
             var processed = new List<string>();
-            var unlocks = LoadedDBsHandler.ItemUnlocksDB;
 
-            foreach (var i in unlocks.ShopItems)
+            foreach (var kvp in LoadedAssetsHandler.LoadedWearables)
             {
-                if (!processed.Contains(i.itemName.ToLowerInvariant()))
+                if (kvp.Value != null && !processed.Contains(kvp.Key.ToLowerInvariant()) && kvp.Value.shopPrice != cost && ((kvp.Value.shopPrice < cost) == costsLess))
                 {
-                    if (i.LoadedItem.shopPrice != cost && ((i.LoadedItem.shopPrice < cost) == costsLess))
-                    {
-                        processed.Add(i.itemName.ToLowerInvariant());
-                        yield return i.itemName;
-                    }
+                    processed.Add(kvp.Key.ToLowerInvariant());
+
+                    yield return kvp.Key;
                 }
             }
         }
