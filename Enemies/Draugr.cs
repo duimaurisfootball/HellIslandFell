@@ -52,7 +52,7 @@ namespace Hell_Island_Fell.Enemies
                 [
                     Effects.GenerateEffect(SaltedApply, 3, Targeting.Unit_AllOpponents),
                 ],
-                Rarity = CustomAbilityRarity.Weight(4, true),
+                Rarity = CustomAbilityRarity.Weight(8, true),
                 Priority = Priority.Normal,
             };
             ashes.AddIntentsToTarget(Targeting.Unit_AllOpponents, ["Status_Salted"]);

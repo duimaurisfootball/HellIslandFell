@@ -31,12 +31,6 @@ namespace Hell_Island_Fell.Encounters
             inequityEasy.CreateNewEnemyEncounterData(
                 [
                     "Inequity_EN",
-                    "Inequity_EN",
-                    "ChoirBoy_EN",
-                ]);
-            inequityEasy.CreateNewEnemyEncounterData(
-                [
-                    "Inequity_EN",
                     "ShiveringHomunculus_EN",
                     "ShiveringHomunculus_EN",
                 ]);
@@ -51,7 +45,6 @@ namespace Hell_Island_Fell.Encounters
             {
                 inequityEasy.CreateNewEnemyEncounterData(
                     [
-                        "Inequity_EN",
                         "Inequity_EN",
                         "Inequity_EN",
                         "Unterling_EN",
@@ -98,8 +91,6 @@ namespace Hell_Island_Fell.Encounters
                 ]);
             inequityHard.CreateNewEnemyEncounterData(
                 [
-                    "Inequity_EN",
-                    "Inequity_EN",
                     "Inequity_EN",
                     "ChoirBoy_EN",
                 ]);
@@ -163,7 +154,6 @@ namespace Hell_Island_Fell.Encounters
                     ]);
                 inequityHard.CreateNewEnemyEncounterData(
                     [
-                        "Inequity_EN",
                         "Inequity_EN",
                         "MarbleMaw_EN",
                     ]);

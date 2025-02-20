@@ -57,6 +57,18 @@ namespace Hell_Island_Fell.Encounters
                     "Keklung_EN",
                     "Draugr_EN",
                 ], null);
+            keklungMedium.CreateNewEnemyEncounterData(
+                [
+                    "Keklung_EN",
+                    "MudLung_EN",
+                    "Draugr_EN",
+                ], null);
+            keklungMedium.CreateNewEnemyEncounterData(
+                [
+                    "Keklung_EN",
+                    "Wringle_EN",
+                    "Draugr_EN",
+                ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
                 keklungMedium.CreateNewEnemyEncounterData(

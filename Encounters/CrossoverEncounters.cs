@@ -16,7 +16,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "ColophonComposed_EN",
-                    "VanishingHands_EN",
+                    "Draugr_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ComposedEasy"))._enemyBundles = composedEasy;
@@ -37,8 +37,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "ColophonDefeated_EN",
-                    "ColophonDefeated_EN",
-                    "VanishingHands_EN",
+                    "Draugr_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DefeatedEasy"))._enemyBundles = defeatedEasy;
@@ -59,8 +58,12 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "ColophonDelighted_EN",
-                    "ColophonDefeated_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "ColophonDelighted_EN",
+                    "Draugr_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DelightedFarShoreHard"))._enemyBundles = delightedHard;
@@ -108,6 +111,11 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "ColophonMaladjusted_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "ColophonMaladjusted_EN",
+                    "Draugr_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MaladjustedFarShoreHard"))._enemyBundles = maladjustedHard;
@@ -220,12 +228,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "ImpenetrableAngler_EN",
-                    "ScatterbrainedNosestone_EN",
-                    "SweatingNosestone_EN",
-                ]),
-                    new(
-                [
-                    "ImpenetrableAngler_EN",
                     "Inequity_EN",
                     "InHisImage_EN",
                     "InHisImage_EN",
@@ -265,8 +267,12 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Chapbull_EN",
-                    "Chapman_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Chapbull_EN",
+                    "Heehoo_EN",
                 ]),
                     new(
                 [
@@ -325,6 +331,12 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Chapman_EN",
                     "Chapman_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Chapman_EN",
+                    "Chapman_EN",
                     "SingingStone_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
@@ -354,7 +366,13 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "DrySimian_EN",
-                    "VanishingHands_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "DrySimian_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianMedium"))._enemyBundles = drySimianMedium;
@@ -365,7 +383,33 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "DrySimian_EN",
                     "Keko_EN",
+                    "Keko_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "DrySimian_EN",
+                    "Keklung_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "DrySimian_EN",
+                    "Keklung_EN",
+                    "MudLung_EN",
+                ]),
+                    new(
+                [
+                    "DrySimian_EN",
+                    "MudLung_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "DrySimian_EN",
+                    "Flarblet_EN",
+                    "Flarbleft_EN",
+                    "Draugr_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianHard"))._enemyBundles = drySimianHard;
@@ -416,6 +460,12 @@ namespace Hell_Island_Fell.Encounters
                     "Gizo_EN",
                     "NakedGizo_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "NakedGizo_EN",
+                    "Heehoo_EN",
                 ]),
                     new(
                 [
@@ -523,14 +573,28 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Gizo_EN",
-                    "Gizo_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
+                    "NakedGizo_EN",
+                    "Heehoo_EN",
+                    "MusicMan_EN",
                 ]),
                     new(
                 [
                     "Gizo_EN",
                     "NakedGizo_EN",
+                    "Heehoo_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "NakedGizo_EN",
+                    "Heehoo_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "Gizo_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
@@ -539,6 +603,12 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> greyJumbleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GreyJumbleMedium"))._enemyBundles)
                 {
+                    new(
+                [
+                    "DesiccatingJumbleguts_EN",
+                    "DesiccatingJumbleguts_EN",
+                    "Heehoo_EN",
+                ]),
                     new(
                 [
                     "DesiccatingJumbleguts_EN",
@@ -573,14 +643,8 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "DesiccatingJumbleguts_EN",
-                    "JumbleGuts_Hollowing_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
                     "JumbleGuts_Flummoxing_EN",
+                    "SingingStone_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
@@ -598,12 +662,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Metatron_EN",
-                    "UninspiredNosestone_EN",
-                    "ScatterbrainedNosestone_EN",
-                ]),
-                    new(
-                [
-                    "Metatron_EN",
                     "ProlificNosestone_EN",
                     "InHisImage_EN",
                     "InHisImage_EN",
@@ -611,6 +669,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Metatron_EN",
+                    "UninspiredNosestone_EN",
                     "MesmerizingNosestone_EN",
                 ]),
                     new(
@@ -675,6 +734,11 @@ namespace Hell_Island_Fell.Encounters
                     "NeoplasmHeap_EN",
                     "Moone_EN",
                 ]),
+                    new(
+                [
+                    "NeoplasmHeap_EN",
+                    "Heehoo_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapMedium"))._enemyBundles = neoplasmHeapMedium;
 
@@ -711,11 +775,28 @@ namespace Hell_Island_Fell.Encounters
                     "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
+                    new(
+                [
+                    "NeoplasmHeap_EN",
+                    "Heehoo_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "NeoplasmHeap_EN",
+                    "Heehoo_EN",
+                    "Scrungie_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapHard"))._enemyBundles = neoplasmHeapHard;
 
                 List<RandomEnemyGroup> neoplasmLakeHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("LakeHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "NeoplasmLake_EN",
+                    "Heehoo_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("LakeHard"))._enemyBundles = neoplasmLakeHard;
 
@@ -724,7 +805,13 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Nephilim_EN",
-                    "VanishingHands_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "Keklung_EN",
+                    "MudLung_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("NephilimMedium"))._enemyBundles = nephilimMedium;
@@ -736,6 +823,43 @@ namespace Hell_Island_Fell.Encounters
                     "Nephilim_EN",
                     "Voboola_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "Keklung_EN",
+                    "MunglingMudLung_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "Draugr_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "Draugr_EN",
+                    "FlaMinGoa_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "Draugr_EN",
+                    "Wringle_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "Draugr_EN",
+                    "Seraphim_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("NephilimHard"))._enemyBundles = nephilimHard;
@@ -782,7 +906,12 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Ophanim_EN",
-                    "SingingStone_EN",
+                    "Heehoo_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Ophanim_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
@@ -796,6 +925,11 @@ namespace Hell_Island_Fell.Encounters
                     "Opisthotonus_EN",
                     "Moone_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Opisthotonus_EN",
+                    "Heehoo_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("OpisthotonusHard"))._enemyBundles = opisthotonusHard;
@@ -879,20 +1013,9 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Psychopomp_EN",
-                    "ProlificNosestone_EN",
-                    "StickingHomunculus_EN",
-                ]),
-                    new(
-                [
-                    "Psychopomp_EN",
                     "ScatterbrainedNosestone_EN",
                     "InHerImage_EN",
                     "InHerImage_EN",
-                ]),
-                    new(
-                [
-                    "Psychopomp_EN",
-                    "MesmerizingNosestone_EN",
                 ]),
                     new(
                 [
@@ -914,11 +1037,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Psychopomp_EN",
-                    "ProlificNosestone_EN",
-                ]),
-                    new(
-                [
-                    "Psychopomp_EN",
                     "UninspiredNosestone_EN",
                     "StickingHomunculus_EN",
                 ]),
@@ -937,6 +1055,12 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "RevoltingRevola_EN",
                     "Moone_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "RevoltingRevola_EN",
+                    "Heehoo_EN",
                     "Moone_EN",
                 ]),
                     new(
@@ -984,8 +1108,13 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Seraphim_EN",
-                    "MudLung_EN",
-                    "VanishingHands_EN",
+                    "Voboola_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Seraphim_EN",
+                    "Keklung_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SeraphimHard"))._enemyBundles = seraphimHard;
@@ -996,6 +1125,11 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "SingingMountain_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "SingingMountain_EN",
+                    "Heehoo_EN",
                 ]),
                     new(
                 [
@@ -1018,19 +1152,7 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "SterileBud_EN",
                     "SterileBud_EN",
-                    "UninspiredNosestone_EN",
-                ]),
-                    new(
-                [
-                    "SterileBud_EN",
-                    "SterileBud_EN",
                     "ScatterbrainedNosestone_EN",
-                ]),
-                    new(
-                [
-                    "SterileBud_EN",
-                    "Inequity_EN",
-                    "Unterling_EN",
                 ]),
                     new(
                 [
@@ -1076,6 +1198,23 @@ namespace Hell_Island_Fell.Encounters
                     "Unflarb_EN",
                     "Flatback_EN",
                 ]),
+                    new(
+                [
+                    "Unflarb_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Unflarb_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "Unflarb_EN",
+                    "Keklung_EN",
+                    "MudLung_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("UnflarbHard"))._enemyBundles = unflarbHard;
 
@@ -1087,6 +1226,17 @@ namespace Hell_Island_Fell.Encounters
                     "Keko_EN",
                     "VanishingHands_EN",
                 ]),
+                    new(
+                [
+                    "BastardZygote_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "BastardZygote_EN",
+                    "Draugr_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ZygoteHard"))._enemyBundles = zygoteHard;
             }
@@ -1095,6 +1245,11 @@ namespace Hell_Island_Fell.Encounters
             {
                 List<RandomEnemyGroup> swineEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineEasy"))._enemyBundles)
                 {
+                    new(
+                [
+                    "UnculturedSwine_EN",
+                    "Keklung_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineEasy"))._enemyBundles = swineEasy;
 
@@ -1103,8 +1258,19 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "UnculturedSwine_EN",
+                    "Keklung_EN",
                     "MudLung_EN",
-                    "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "UnculturedSwine_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "UnculturedSwine_EN",
+                    "Draugr_EN",
+                    "Flarblet_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineMed"))._enemyBundles = swineMedium;
@@ -1114,20 +1280,32 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "UnculturedSwine_EN",
-                    "Wringle_EN",
+                    "Voboola_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "UnculturedSwine_EN",
-                    "Voboola_EN",
-                    "VanishingHands_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "UnculturedSwine_EN",
+                    "Draugr_EN",
+                    "Wringle_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineHard"))._enemyBundles = swineHard;
 
                 List<RandomEnemyGroup> baitMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitMed"))._enemyBundles)
                 {
+                    new(
+                [
+                    "DryBait_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitMed"))._enemyBundles = baitMedium;
 
@@ -1136,14 +1314,40 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "DryBait_EN",
-                    "Wringle_EN",
+                    "Voboola_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "DryBait_EN",
-                    "Voboola_EN",
-                    "VanishingHands_EN",
+                    "Flarb_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "DryBait_EN",
+                    "NotAn_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "DryBait_EN",
+                    "Wringle_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "DryBait_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                    "Keko_EN",
+                ]),
+                    new(
+                [
+                    "DryBait_EN",
+                    "Keklung_EN",
+                    "Keko_EN",
+                    "Keko_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitHard"))._enemyBundles = baitHard;
@@ -1153,13 +1357,8 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Enno_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Enno_EN",
                     "Mung_EN",
-                    "VanishingHands_EN",
+                    "Draugr_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("EnnoEasy"))._enemyBundles = ennoEasy;
@@ -1169,14 +1368,21 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Enno_EN",
-                    "FlaMinGoa_EN",
+                    "MudLung_EN",
                     "VanishingHands_EN",
                 ]),
                     new(
                 [
                     "Enno_EN",
                     "MudLung_EN",
-                    "VanishingHands_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Enno_EN",
+                    "Enno_EN",
+                    "MudLung_EN",
+                    "Keklung_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("EnnoMed"))._enemyBundles = ennoMedium;
@@ -1186,7 +1392,26 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "NotAn_EN",
+                    "Voboola_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "NotAn_EN",
+                    "MudLung_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "NotAn_EN",
+                    "MudLung_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "NotAn_EN",
+                    "Keko_EN",
+                    "Keklung_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PipeMed"))._enemyBundles = pipeMedium;
@@ -1196,7 +1421,7 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Flakkid_EN",
-                    "VanishingHands_EN",
+                    "Draugr_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FlakkidEasy"))._enemyBundles = flakkidEasy;
@@ -1207,10 +1432,23 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Flakkid_EN",
                     "Flakkid_EN",
-                    "VanishingHands_EN",
+                    "Draugr_EN",
                 ]),
                     new(
                 [
+                    "Flakkid_EN",
+                    "Voboola_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Flakkid_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "Flakkid_EN",
                     "Flakkid_EN",
                     "Wringle_EN",
                     "VanishingHands_EN",
@@ -1233,14 +1471,13 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "BackupDancer_EN",
-                    "SingingStone_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
+                    "BackupDancer_EN",
+                    "Moone_EN",
                 ]),
                     new(
                 [
                     "BackupDancer_EN",
-                    "BackupDancer_EN",
+                    "Moone_EN",
                     "Moone_EN",
                 ]),
                 };
@@ -1285,6 +1522,20 @@ namespace Hell_Island_Fell.Encounters
                     "Jansuli_EN",
                     "Moone_EN",
                 ]),
+                    new(
+                [
+                    "BackupDancer_EN",
+                    "BackupDancer_EN",
+                    "Jansuli_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "BackupDancer_EN",
+                    "BackupDancer_EN",
+                    "MusicMan_EN",
+                    "Heehoo_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BDancerHard"))._enemyBundles = backupDancerHard;
 
@@ -1295,6 +1546,11 @@ namespace Hell_Island_Fell.Encounters
                     "Frostbite_EN",
                     "Frostbite_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_EN",
+                    "Heehoo_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FrostbiteEasy"))._enemyBundles = frostbiteEasy;
@@ -1315,6 +1571,13 @@ namespace Hell_Island_Fell.Encounters
                     "Frostbite_EN",
                     "Moone_EN",
                 ]),
+                    new(
+                [
+                    "Frostbite_EN",
+                    "Frostbite_EN",
+                    "Frostbite_EN",
+                    "Heehoo_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FrostbiteMed"))._enemyBundles = frostbiteMedium;
 
@@ -1326,6 +1589,20 @@ namespace Hell_Island_Fell.Encounters
                     "Frostbite_EN",
                     "ManicMan_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_EN",
+                    "Frostbite_EN",
+                    "Heehoo_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_EN",
+                    "Frostbite_EN",
+                    "Heehoo_EN",
+                    "Heehoo_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FrostbiteHard"))._enemyBundles = frostbiteHard;
@@ -1356,6 +1633,12 @@ namespace Hell_Island_Fell.Encounters
                     "SingingStone_EN",
                     "SingingStone_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_Bipedal_EN",
+                    "Frostbite_EN",
+                    "Heehoo_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BFrostbiteMed"))._enemyBundles = bipedalFrostbiteMedium;
@@ -1403,6 +1686,18 @@ namespace Hell_Island_Fell.Encounters
                     "PrimitiveGizo_Calm_EN",
                     "Moone_EN",
                 ]),
+                    new(
+                [
+                    "Frostbite_Bipedal_EN",
+                    "PrimitiveGizo_Calm_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_Bipedal_EN",
+                    "Jansuli_EN",
+                    "Heehoo_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BFrostbiteHard"))._enemyBundles = bipedalFrostbiteHard;
 
@@ -1421,12 +1716,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Jansuli_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "Jansuli_EN",
                     "Jansuli_EN",
                     "Moone_EN",
                 ]),
@@ -1436,6 +1725,11 @@ namespace Hell_Island_Fell.Encounters
                     "Jansuli_EN",
                     "Moone_EN",
                     "Footshroom_EN",
+                ]),
+                    new(
+                [
+                    "Jansuli_EN",
+                    "Heehoo_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliMed"))._enemyBundles = jansuliMedium;
@@ -1447,7 +1741,14 @@ namespace Hell_Island_Fell.Encounters
                     "Jansuli_EN",
                     "Jansuli_EN",
                     "SingingStone_EN",
+                    "SingingStone_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "Jansuli_EN",
+                    "Jansuli_EN",
+                    "Heehoo_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliHard"))._enemyBundles = jansuliHard;
@@ -1482,6 +1783,12 @@ namespace Hell_Island_Fell.Encounters
                     "MusicMan_EN",
                     "Moone_EN",
                 ]),
+                    new(
+                [
+                    "PrimitiveGizo_Calm_EN",
+                    "Moone_EN",
+                    "Heehoo_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PGizoHard"))._enemyBundles = primitiveGizoHard;
 
@@ -1506,6 +1813,25 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Gizard_EN",
+                    "Spoggle_Writhing_EN",
+                    "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "Moone_EN",
+                    "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "ManicMan_EN",
+                    "ManicMan_EN",
+                    "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
                     "PrimitiveGizo_Calm_EN",
                     "Moone_EN",
                 ]),
@@ -1514,6 +1840,18 @@ namespace Hell_Island_Fell.Encounters
                     "Gizard_EN",
                     "Frostbite_Bipedal_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "Heehoo_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "Heehoo_EN",
+                    "MusicMan_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizardHard"))._enemyBundles = gizardHard;
@@ -1549,21 +1887,27 @@ namespace Hell_Island_Fell.Encounters
                     "JumbleGuts_Waning_EN",
                     "VanishingHands_EN",
                 ]),
+                    new(
+                [
+                    "Footshroom_EN",
+                    "Heehoo_EN",
+                    "Heehoo_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FootshroomHard"))._enemyBundles = footshroomHard;
 
                 List<RandomEnemyGroup> incubatorHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("IncubatorHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "ExternalIncubator_EN",
+                    "Heehoo_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("IncubatorHard"))._enemyBundles = incubatorHard;
 
                 List<RandomEnemyGroup> marbleMawEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MawEasy"))._enemyBundles)
                 {
-                    new(
-                [
-                    "MarbleMaw_EN",
-                    "ProlificNosestone_EN",
-                ]),
                     new(
                 [
                     "MarbleMaw_EN",
@@ -1587,13 +1931,6 @@ namespace Hell_Island_Fell.Encounters
                     "MarbleMaw_EN",
                     "ProlificNosestone_EN",
                     "Inequity_EN",
-                ]),
-                    new(
-                [
-                    "MarbleMaw_EN",
-                    "SweatingNosestone_EN",
-                    "InHerImage_EN",
-                    "InHisImage_EN",
                 ]),
                     new(
                 [
@@ -1633,21 +1970,6 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> chancellorEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChancellorEasy"))._enemyBundles)
                 {
-                    new(
-                [
-                    "FrowningChancellor_EN",
-                    "ProlificNosestone_EN",
-                ]),
-                    new(
-                [
-                    "FrowningChancellor_EN",
-                    "ScatterbrainedNosestone_EN",
-                ]),
-                    new(
-                [
-                    "FrowningChancellor_EN",
-                    "UninspiredNosestone_EN",
-                ]),
                     new(
                 [
                     "FrowningChancellor_EN",
@@ -1776,12 +2098,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "GodsChalice_EN",
-                    "ProlificNosestone_EN",
-                    "ProlificNosestone_EN",
-                ]),
-                    new(
-                [
-                    "GodsChalice_EN",
                     "StickingHomunculus_EN",
                     "SkinningHomunculus_EN",
                     "ShiveringHomunculus_EN",
@@ -1819,13 +2135,6 @@ namespace Hell_Island_Fell.Encounters
                     "GodsChalice_EN",
                     "ProlificNosestone_EN",
                     "SkinningHomunculus_EN",
-                ]),
-                    new(
-                [
-                    "GodsChalice_EN",
-                    "ScatterbrainedNosestone_EN",
-                    "NextOfKin_EN",
-                    "NextOfKin_EN",
                 ]),
                     new(
                 [
@@ -2076,12 +2385,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Psychopomp_EN",
-                    "MesmerizingNosestone_EN",
-                    "EggKeeper_EN",
-                ]),
-                    new(
-                [
-                    "Psychopomp_EN",
                     "StickingHomunculus_EN",
                     "EggKeeper_EN",
                 ]),
@@ -2147,6 +2450,18 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> swineHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "UnculturedSwine_EN",
+                    "LipBug_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "UnculturedSwine_EN",
+                    "LipBug_EN",
+                    "Keklung_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineHard"))._enemyBundles = swineHard;
 
@@ -2157,6 +2472,12 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> baitHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "DryBait_EN",
+                    "DrySimian_EN",
+                    "Draugr_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BaitHard"))._enemyBundles = baitHard;
 
@@ -2167,6 +2488,13 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> ennoMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("EnnoMed"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Enno_EN",
+                    "LipBug_EN",
+                    "Draugr_EN",
+                    "Jumble_Guts_Clotted_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("EnnoMed"))._enemyBundles = ennoMedium;
 
@@ -2182,6 +2510,18 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> flakkidMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FlakkidMed"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Flakkid_EN",
+                    "LipBug_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Flakkid_EN",
+                    "DrySimian_EN",
+                    "Keklung_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FlakkidMed"))._enemyBundles = flakkidMedium;
 
@@ -2232,11 +2572,24 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> jansuliMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliMed"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Gizo_EN",
+                    "Jansuli_EN",
+                    "Moone_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliMed"))._enemyBundles = jansuliMedium;
 
                 List<RandomEnemyGroup> jansuliHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Gizo_EN",
+                    "Jansuli_EN",
+                    "Jansuli_EN",
+                    "Moone_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliHard"))._enemyBundles = jansuliHard;
 
@@ -2332,6 +2685,20 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> chapmanMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChapmanMedium"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Chapman_EN",
+                    "Chapman_EN",
+                    "BackupDancer_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Chapman_EN",
+                    "Chapman_EN",
+                    "Jansuli_EN",
+                    "Moone_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChapmanMedium"))._enemyBundles = chapmanMedium;
 
@@ -2342,21 +2709,61 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> drySimianMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianMedium"))._enemyBundles)
                 {
+                    new(
+                [
+                    "DrySimian_EN",
+                    "Enno_EN",
+                    "Draugr_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianMedium"))._enemyBundles = drySimianMedium;
 
                 List<RandomEnemyGroup> drySimianHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "DrySimian_EN",
+                    "Flakkid_EN",
+                    "Flakkid_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "DrySimian_EN",
+                    "Flakkid_EN",
+                    "Keklung_EN",
+                    "Keklung_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DrySimianHard"))._enemyBundles = drySimianHard;
 
                 List<RandomEnemyGroup> gizoMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoMedium"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Gizo_EN",
+                    "Jansuli_EN",
+                    "Moone_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoMedium"))._enemyBundles = gizoMedium;
 
                 List<RandomEnemyGroup> gizoHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Gizo_EN",
+                    "Gizo_EN",
+                    "BackupDancer_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "Gizo_EN",
+                    "BipedalFrostbite_EN",
+                    "Moone_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoHard"))._enemyBundles = gizoHard;
 
@@ -2387,6 +2794,24 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> nephilimHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("NephilimHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Nephilim_EN",
+                    "Flakkid_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "DryBait_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Nephilim_EN",
+                    "UnculturedSwine_EN",
+                    "Draugr_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("NephilimHard"))._enemyBundles = nephilimHard;
 
@@ -2407,6 +2832,12 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> psychopompHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Psychopomp_EN",
+                    "FrowningChancellor_EN",
+                    "Maneater_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PsychopompHard"))._enemyBundles = psychopompHard;
 
@@ -2422,6 +2853,13 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> seraphimHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SeraphimHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Seraphim_EN",
+                    "DryBait_EN",
+                    "Draugr_EN",
+                    "Jumble_Guts_Clotted_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SeraphimHard"))._enemyBundles = seraphimHard;
 
@@ -2442,11 +2880,47 @@ namespace Hell_Island_Fell.Encounters
 
                 List<RandomEnemyGroup> unflarbHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("UnflarbHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "Unflarb_EN",
+                    "DryBait_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Unflarb_EN",
+                    "Enno_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Unflarb_EN",
+                    "Flakkid_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Unflarb_EN",
+                    "UnculturedSwine_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "Unflarb_EN",
+                    "UnculturedSwine_EN",
+                    "VanishingHands_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("UnflarbHard"))._enemyBundles = unflarbHard;
 
                 List<RandomEnemyGroup> zygoteHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ZygoteHard"))._enemyBundles)
                 {
+                    new(
+                [
+                    "BastardZygote_EN",
+                    "Flakkid_EN",
+                    "Keklung_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ZygoteHard"))._enemyBundles = zygoteHard;
             }

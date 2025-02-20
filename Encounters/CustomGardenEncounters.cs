@@ -40,13 +40,6 @@ namespace Hell_Island_Fell.Encounters
             ]),
                 new(
             [
-                "UninspiredNosestone_EN",
-                "InHerImage_EN",
-                "NextOfKin_EN",
-                "NextOfKin_EN",
-            ]),
-                new(
-            [
                 "InHerImage_EN",
                 "InHerImage_EN",
                 "Inequity_EN",
@@ -72,13 +65,6 @@ namespace Hell_Island_Fell.Encounters
                         "InHerImage_EN",
                         "UninspiredNosestone_EN",
                         "SterileBud_EN",
-                    ]));
-                herImageEasy.Add(new(
-                    [
-                        "InHerImage_EN",
-                        "UninspiredNosestone_EN",
-                        "Unterling_EN",
-                        "Unterling_EN",
                     ]));
             }
             if (Hell_Island_Fell.CrossMod.EggKeeper)
@@ -110,13 +96,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Maneater_EN",
-                "InHisImage_EN",
-                "NextOfKin_EN",
-                "NextOfKin_EN",
-            ]),
-                new(
-            [
-                "ScatterbrainedNosestone_EN",
                 "InHisImage_EN",
                 "NextOfKin_EN",
                 "NextOfKin_EN",
@@ -186,11 +165,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "GigglingMinister_EN",
-                "ProlificNosestone_EN"
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
                 "ScatterbrainedNosestone_EN"
             ]),
                 new(
@@ -253,12 +227,6 @@ namespace Hell_Island_Fell.Encounters
             [
                 "UninspiredNosestone_EN",
                 "SweatingNosestone_EN",
-                "ChoirBoy_EN",
-                "ChoirBoy_EN",
-            ]),
-                new(
-            [
-                "MesmerizingNosestone_EN",
                 "ChoirBoy_EN",
                 "ChoirBoy_EN",
             ]),
@@ -496,27 +464,6 @@ namespace Hell_Island_Fell.Encounters
             ]),
                 new(
             [
-                "ProlificNosestone_EN",
-                "InHisImage_EN",
-                "InHisImage_EN",
-                "NextOfKin_EN",
-            ]),
-                new(
-            [
-                "UninspiredNosestone_EN",
-                "InHisImage_EN",
-                "InHisImage_EN",
-                "NextOfKin_EN",
-            ]),
-                new(
-            [
-                "ProlificNosestone_EN",
-                "InHisImage_EN",
-                "InHisImage_EN",
-                "SkinningHomunculus_EN",
-            ]),
-                new(
-            [
                 "MesmerizingNosestone_EN",
                 "InHisImage_EN",
                 "InHisImage_EN",
@@ -552,27 +499,12 @@ namespace Hell_Island_Fell.Encounters
                         "InHisImage_EN",
                         "ProlificNosestone_EN",
                         "SterileBud_EN",
-                        "SterileBud_EN",
-                    ]));
-                hisImageMedium.Add(new(
-                    [
-                        "InHisImage_EN",
-                        "InHisImage_EN",
-                        "ProlificNosestone_EN",
-                        "Unterling_EN",
                     ]));
                 hisImageMedium.Add(new(
                     [
                         "InHisImage_EN",
                         "InHisImage_EN",
                         "UninspiredNosestone_EN",
-                        "Unterling_EN",
-                    ]));
-                hisImageMedium.Add(new(
-                    [
-                        "InHisImage_EN",
-                        "InHerImage_EN",
-                        "ProlificNosestone_EN",
                         "Unterling_EN",
                     ]));
                 hisImageMedium.Add(new(
@@ -624,13 +556,6 @@ namespace Hell_Island_Fell.Encounters
                         "InHerImage_EN",
                         "ScatterbrainedNosestone_EN",
                         "TitteringPeon_EN",
-                    ]));
-                hisImageMedium.Add(new(
-                    [
-                        "InHisImage_EN",
-                        "InHerImage_EN",
-                        "MesmerizingNosestone_EN",
-                        "SterileBud_EN",
                     ]));
             }
             if (Hell_Island_Fell.CrossMod.EggKeeper)
@@ -691,34 +616,12 @@ namespace Hell_Island_Fell.Encounters
                 "InHerImage_EN",
                 "InHerImage_EN",
                 "InHerImage_EN",
-                "NextOfKin_EN",
-            ]),
-                new(
-            [
-                "ScatterbrainedNosestone_EN",
-                "InHerImage_EN",
-                "InHerImage_EN",
-                "InHerImage_EN",
-            ]),
-                new(
-            [
-                "ScatterbrainedNosestone_EN",
-                "UninspiredNosestone_EN",
-                "InHerImage_EN",
-                "InHerImage_EN",
             ]),
                 new(
             [
                 "MesmerizingNosestone_EN",
                 "InHerImage_EN",
                 "InHerImage_EN",
-            ]),
-                new(
-            [
-                "ScatterbrainedNosestone_EN",
-                "InHerImage_EN",
-                "InHerImage_EN",
-                "InHisImage_EN",
             ]),
                 new(
             [
@@ -757,13 +660,6 @@ namespace Hell_Island_Fell.Encounters
                         "Maneater_EN",
                         "ScatterbrainedNosestone_EN",
                         "SterileBud_EN",
-                    ]));
-                herImageMedium.Add(new(
-                    [
-                        "InHerImage_EN",
-                        "InHerImage_EN",
-                        "SweatingNosestone_EN",
-                        "TitteringPeon_EN",
                     ]));
             }
             if (Hell_Island_Fell.CrossMod.EggKeeper)
@@ -832,12 +728,6 @@ namespace Hell_Island_Fell.Encounters
             [
                 "GigglingMinister_EN",
                 "ProlificNosestone_EN",
-                "Maneater_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
-                "ScatterbrainedNosestone_EN",
                 "Maneater_EN",
             ]),
                 new(
@@ -936,13 +826,6 @@ namespace Hell_Island_Fell.Encounters
             ]),
                 new(
             [
-                "UninspiredNosestone_EN",
-                "ProlificNosestone_EN",
-                "SkinningHomunculus_EN",
-                "ShiveringHomunculus_EN",
-            ]),
-                new(
-            [
                 "ProlificNosestone_EN",
                 "SkinningHomunculus_EN",
                 "SkinningHomunculus_EN",
@@ -951,13 +834,6 @@ namespace Hell_Island_Fell.Encounters
             [
                 "MesmerizingNosestone_EN",
                 "SkinningHomunculus_EN",
-            ]),
-                new(
-            [
-                "ScatterbrainedNosestone_EN",
-                "SkinningHomunculus_EN",
-                "SkinningHomunculus_EN",
-                "ChoirBoy_EN",
             ]),
                 new(
             [
@@ -1083,13 +959,6 @@ namespace Hell_Island_Fell.Encounters
                 skinningHomunculusHard.Add(new(
                     [
                         "SkinningHomunculus_EN",
-                        "SweatingNosestone_EN",
-                        "Unterling_EN",
-                        "Unterling_EN",
-                    ]));
-                skinningHomunculusHard.Add(new(
-                    [
-                        "SkinningHomunculus_EN",
                         "ScatterbrainedNosestone_EN",
                         "Unterling_EN",
                         "Unterling_EN",
@@ -1183,12 +1052,6 @@ namespace Hell_Island_Fell.Encounters
             {
                 new(
             [
-                "MesmerizingNosestone_EN",
-                "GigglingMinister_EN",
-                "GigglingMinister_EN",
-            ]),
-                new(
-            [
                 "SweatingNosestone_EN",
                 "GigglingMinister_EN",
                 "GigglingMinister_EN",
@@ -1221,13 +1084,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "GigglingMinister_EN",
-                "ProlificNosestone_EN",
-                "Maneater_EN",
-                "Inequity_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
                 "Inequity_EN",
                 "NextOfKin_EN",
             ]),
@@ -1243,12 +1099,6 @@ namespace Hell_Island_Fell.Encounters
                 "GigglingMinister_EN",
                 "Inequity_EN",
                 "SweatingNosestone_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
-                "Inequity_EN",
-                "ProlificNosestone_EN",
             ]),
                 new(
             [
@@ -1351,20 +1201,7 @@ namespace Hell_Island_Fell.Encounters
                 gigglingMinisterHard.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "GigglingMinister_EN",
-                        "UninspiredNosestone_EN",
-                        "EggKeeper_EN",
-                    ]));
-                gigglingMinisterHard.Add(new(
-                    [
-                        "GigglingMinister_EN",
                         "MesmerizingNosestone_EN",
-                        "EggKeeper_EN",
-                    ]));
-                gigglingMinisterHard.Add(new(
-                    [
-                        "GigglingMinister_EN",
-                        "SweatingNosestone_EN",
                         "EggKeeper_EN",
                     ]));
                 gigglingMinisterHard.Add(new(

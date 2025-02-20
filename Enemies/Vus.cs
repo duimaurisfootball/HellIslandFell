@@ -21,12 +21,6 @@ namespace Hell_Island_Fell.Enemies
             ExtraShopLootByExactCostEffect EightCost = ScriptableObject.CreateInstance<ExtraShopLootByExactCostEffect>();
             EightCost._cost = 8;
 
-            ExtraShopLootByExactCostEffect NineCost = ScriptableObject.CreateInstance<ExtraShopLootByExactCostEffect>();
-            NineCost._cost = 9;
-
-            ExtraShopLootByExactCostEffect TenCost = ScriptableObject.CreateInstance<ExtraShopLootByExactCostEffect>();
-            TenCost._cost = 10;
-
             Enemy vus = new Enemy("Vus", "Vus_EN")
             {
                 Health = 124,
@@ -44,9 +38,7 @@ namespace Hell_Island_Fell.Enemies
                 CombatExitEffects =
                 [
                     Effects.GenerateEffect(ProteinEvolution),
-                    Effects.GenerateEffect(EightCost, 1),
-                    Effects.GenerateEffect(NineCost, 1),
-                    Effects.GenerateEffect(TenCost, 1),
+                    Effects.GenerateEffect(EightCost, 2),
                 ],
             };
             vus.PrepareEnemyPrefab("Assets/VusAssetBundle/Vus.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/VusAssetBundle/VusGibs.prefab").GetComponent<ParticleSystem>());
@@ -136,7 +128,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability pollenation = new Ability("Pollenation", "HIF_Pollenation_A")
             {
-                Description = "Heal all enemies.\nGive a random ally an additional ability on the timeline.",
+                Description = "Heal all enemies.\nHealing is spread out between enemies.\nGive a random ally an additional ability on the timeline.",
                 Cost = [Pigments.Grey, Pigments.Grey, Pigments.Grey, Pigments.Grey],
                 Effects =
                 [
@@ -144,7 +136,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<AddRandomTimelineAbilityEffect>(), 1, Targeting.Unit_OtherAllies),
                 ],
                 Rarity = CustomAbilityRarity.Weight(18, true),
-                Priority = Priority.Normal,
+                Priority = Priority.ExtremelyFast,
             };
             pollenation.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
             pollenation.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
@@ -162,7 +154,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(Unabominate, 0),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
-                Priority = Priority.Normal,
+                Priority = Priority.VeryFast,
             };
             germinate.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Misc_Hidden)]);
 
@@ -268,14 +260,16 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(OpenUp),
                     Effects.GenerateEffect(Abominate),
                     Effects.GenerateEffect(OpenAbilities),
-                    Effects.GenerateEffect(IncreaseMaxHealth, 66, Targeting.Unit_OtherAllies),
+                    Effects.GenerateEffect(IncreaseMaxHealth, 100, Targeting.Unit_OtherAllies),
                     Effects.GenerateEffect(PercentageHeal, 33, Targeting.Unit_OtherAllies),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ChangeMaxHealthByCurrentHealthEffect>(), 1, Targeting.Slot_SelfSlot),
                 ],
-                Rarity = CustomAbilityRarity.Weight(7, true),
+                Rarity = CustomAbilityRarity.Weight(6, true),
                 Priority = Priority.Normal,
             };
             bloom.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.Misc_State_Sit)]);
             bloom.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Heal_21)]);
+            bloom.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_MaxHealth_Alt)]);
 
             ExtraAbilityInfo imCastling = new()
             {

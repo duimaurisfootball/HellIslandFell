@@ -109,33 +109,9 @@ namespace Hell_Island_Fell.Encounters
                         "MusicMan_EN",
                         "NakedGizo_EN",
                     ], null);
-                MooneEasy.CreateNewEnemyEncounterData(
-                    [
-                        "Moone_EN",
-                        "NakedGizo_EN",
-                        "VanishingHands_EN",
-                    ], null);
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
-                MooneEasy.CreateNewEnemyEncounterData(
-                    [
-                        "Moone_EN",
-                        "Footshroom_EN",
-                        "VanishingHands_EN",
-                    ], null);
-                MooneEasy.CreateNewEnemyEncounterData(
-                    [
-                        "Moone_EN",
-                        "BackupDancer_EN",
-                        "VanishingHands_EN",
-                    ], null);
-                MooneEasy.CreateNewEnemyEncounterData(
-                    [
-                        "Moone_EN",
-                        "PrimitiveGizo_EN",
-                        "VanishingHands_EN",
-                    ], null);
             }
             MooneEasy.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Moone_Easy_EnemyBundle", 8, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Easy);

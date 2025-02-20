@@ -22,6 +22,7 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "MusicMan_EN",
                     "MusicMan_EN",
+                    "SilverSuckle_EN",
                 ], null);
             BolerMedium.CreateNewEnemyEncounterData(
                 [
@@ -44,12 +45,18 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "ManicMan_EN",
                     "ManicMan_EN",
+                    "SilverSuckle_EN",
                 ], null);
             BolerMedium.CreateNewEnemyEncounterData(
                 [
                     "Boler_EN",
                     "Moone_EN",
                     "Moone_EN",
+                ], null);
+            BolerMedium.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Heehoo_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -58,17 +65,20 @@ namespace Hell_Island_Fell.Encounters
                         "Boler_EN",
                         "NakedGizo_EN",
                         "NakedGizo_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerMedium.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
                         "Seraphim_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerMedium.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
                         "Chapman_EN",
                         "Chapman_EN",
+                        "SilverSuckle_EN",
                     ], null);
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
@@ -78,21 +88,24 @@ namespace Hell_Island_Fell.Encounters
                         "Boler_EN",
                         "BackupDancer_EN",
                         "BackupDancer_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerMedium.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
                         "Frostbite_EN",
                         "Frostbite_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerMedium.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
                         "Jansuli_EN",
+                        "SilverSuckle_EN",
                     ], null);
             }
             BolerMedium.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Medium_EnemyBundle", 6, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Medium);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Medium_EnemyBundle", 4, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Medium);
 
             EnemyEncounter_API BolerHard = new EnemyEncounter_API(0, "H_Zone02_Boler_Hard_EnemyBundle", "Boler_Sign")
             {
@@ -105,14 +118,7 @@ namespace Hell_Island_Fell.Encounters
                     "MusicMan_EN",
                     "MusicMan_EN",
                     "MusicMan_EN",
-                ], null);
-            BolerHard.CreateNewEnemyEncounterData(
-                [
-                    "Boler_EN",
-                    "MusicMan_EN",
-                    "MusicMan_EN",
-                    "MusicMan_EN",
-                    "MusicMan_EN",
+                    "SilverSuckle_EN",
                 ], null);
             BolerHard.CreateNewEnemyEncounterData(
                 [
@@ -127,6 +133,7 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "Revola_EN",
                     "SingingStone_EN",
+                    "SilverSuckle_EN",
                 ], null);
             BolerHard.CreateNewEnemyEncounterData(
                 [
@@ -154,6 +161,7 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Boler_EN",
                     "Conductor_EN",
+                    "SilverSuckle_EN",
                 ], null);
             BolerHard.CreateNewEnemyEncounterData(
                 [
@@ -177,6 +185,12 @@ namespace Hell_Island_Fell.Encounters
                     "SingingStone_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
+                ], null);
+            BolerHard.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Heehoo_EN",
+                    "Heehoo_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.Colophons)
             {
@@ -228,17 +242,20 @@ namespace Hell_Island_Fell.Encounters
                         "Boler_EN",
                         "Chapbull_EN",
                         "Chapman_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
                         "Gizo_EN",
                         "Gizo_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
                         "RevoltingRevola_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
@@ -262,7 +279,7 @@ namespace Hell_Island_Fell.Encounters
                         "BackupDancer_EN",
                         "BackupDancer_EN",
                         "BackupDancer_EN",
-                        "BackupDancer_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
@@ -270,7 +287,7 @@ namespace Hell_Island_Fell.Encounters
                         "Frostbite_EN",
                         "Frostbite_EN",
                         "Frostbite_EN",
-                        "Frostbite_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
@@ -283,17 +300,20 @@ namespace Hell_Island_Fell.Encounters
                         "Boler_EN",
                         "Jansuli_EN",
                         "Jansuli_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
                         "PrimitiveGizo_Calm_EN",
                         "PrimitiveGizo_Calm_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
                         "Boler_EN",
                         "Gizard_EN",
+                        "SilverSuckle_EN",
                     ], null);
                 BolerHard.CreateNewEnemyEncounterData(
                     [
@@ -305,7 +325,7 @@ namespace Hell_Island_Fell.Encounters
                     ], null);
             }
             BolerHard.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Hard_EnemyBundle", 10, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Hard_EnemyBundle", 5, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
 
             EnemyEncounter_API Boler2 = new EnemyEncounter_API(0, "H_Zone02_DoubleBoler_EnemyBundle", "Boler_Sign")
             {
@@ -468,7 +488,7 @@ namespace Hell_Island_Fell.Encounters
                     ], null);
             }
             Boler2.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_DoubleBoler_EnemyBundle", 2, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_DoubleBoler_EnemyBundle", 1, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
         }
     }
 }

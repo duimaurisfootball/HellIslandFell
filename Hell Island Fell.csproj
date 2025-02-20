@@ -120,6 +120,7 @@
     <None Remove="Sprites\DeadDivineGlass.png" />
     <None Remove="Sprites\DeadDraugr.png" />
     <None Remove="Sprites\DeadFlatback.png" />
+    <None Remove="Sprites\DeadHeehoo.png" />
     <None Remove="Sprites\DeadInequity.png" />
     <None Remove="Sprites\DeadKekingdom.png" />
     <None Remove="Sprites\DeadKeklung.png" />
@@ -488,8 +489,12 @@
     <None Remove="Sprites\NabaOverworld.png" />
     <None Remove="Sprites\NabaRevelation.png" />
     <None Remove="Sprites\NabaTwoPrayers.png" />
+    <None Remove="Sprites\NickFlex.png" />
+    <None Remove="Sprites\NickSlam.png" />
+    <None Remove="Sprites\NickStance.png" />
     <None Remove="Sprites\NosestoneGrinding.png" />
     <None Remove="Sprites\OverworldBoojum.png" />
+    <None Remove="Sprites\OverworldHeehoo.png" />
     <None Remove="Sprites\OverworldInequity.png" />
     <None Remove="Sprites\PassiveAltAttacks.png" />
     <None Remove="Sprites\PassiveChaos.png" />
@@ -574,6 +579,7 @@
     <None Remove="Sprites\TimelineDivineGlass.png" />
     <None Remove="Sprites\TimelineDraugr.png" />
     <None Remove="Sprites\TimelineFlatback.png" />
+    <None Remove="Sprites\TimelineHeehoo.png" />
     <None Remove="Sprites\TimelineInequity.png" />
     <None Remove="Sprites\TimelineKekingdom.png" />
     <None Remove="Sprites\TimelineKeklung.png" />
@@ -806,6 +812,7 @@
     <EmbeddedResource Include="Sprites\DeadDivineGlass.png" />
     <EmbeddedResource Include="Sprites\DeadDraugr.png" />
     <EmbeddedResource Include="Sprites\DeadFlatback.png" />
+    <EmbeddedResource Include="Sprites\DeadHeehoo.png" />
     <EmbeddedResource Include="Sprites\DeadInequity.png" />
     <EmbeddedResource Include="Sprites\DeadKekingdom.png" />
     <EmbeddedResource Include="Sprites\DeadKeklung.png" />
@@ -1095,7 +1102,11 @@
     <EmbeddedResource Include="Sprites\NabaOverworld.png" />
     <EmbeddedResource Include="Sprites\NabaRevelation.png" />
     <EmbeddedResource Include="Sprites\NabaTwoPrayers.png" />
+    <EmbeddedResource Include="Sprites\NickFlex.png" />
+    <EmbeddedResource Include="Sprites\NickSlam.png" />
+    <EmbeddedResource Include="Sprites\NickStance.png" />
     <EmbeddedResource Include="Sprites\OverworldBoojum.png" />
+    <EmbeddedResource Include="Sprites\OverworldHeehoo.png" />
     <EmbeddedResource Include="Sprites\OverworldInequity.png" />
     <EmbeddedResource Include="Sprites\PassiveNemesis.png" />
     <EmbeddedResource Include="Sprites\PassiveRetortion.png" />
@@ -1256,6 +1267,7 @@
     <EmbeddedResource Include="Sprites\TimelineDivineGlass.png" />
     <EmbeddedResource Include="Sprites\TimelineDraugr.png" />
     <EmbeddedResource Include="Sprites\TimelineFlatback.png" />
+    <EmbeddedResource Include="Sprites\TimelineHeehoo.png" />
     <EmbeddedResource Include="Sprites\TimelineInequity.png" />
     <EmbeddedResource Include="Sprites\TimelineKekingdom.png" />
     <EmbeddedResource Include="Sprites\TimelineKeklung.png" />

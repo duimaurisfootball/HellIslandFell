@@ -267,7 +267,7 @@ namespace Hell_Island_Fell.Custom_Passives
                 ];
             disruption.connectionEffects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<BolerRandomizeEffect>(), 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<BolerRandomizeEffect>(), 1, Targeting.AllUnits),
                 ];
             disruption.disconnectionEffects =
                 [
