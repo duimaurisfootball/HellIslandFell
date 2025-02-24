@@ -132,6 +132,7 @@
     <None Remove="Sprites\DeadScatterbrainedNosestone.png" />
     <None Remove="Sprites\DeadStickingHomunculus.png" />
     <None Remove="Sprites\DeadSweatingNosestone.png" />
+    <None Remove="Sprites\DeadThunderdome.png" />
     <None Remove="Sprites\DeadUninspiredNosestone.png" />
     <None Remove="Sprites\DeadVus.png" />
     <None Remove="Sprites\Disappearing.png" />
@@ -591,6 +592,7 @@
     <None Remove="Sprites\TimelineScatterbrainedNosestone.png" />
     <None Remove="Sprites\TimelineStickingHomunculus.png" />
     <None Remove="Sprites\TimelineSweatingNosestone.png" />
+    <None Remove="Sprites\TimelineThunderdome.png" />
     <None Remove="Sprites\TimelineUninspiredNosestone.png" />
     <None Remove="Sprites\TimelineVus.png" />
     <None Remove="Sprites\TreasureFormidableDinners.png" />
@@ -819,6 +821,7 @@
     <EmbeddedResource Include="Sprites\DeadLegion.png" />
     <EmbeddedResource Include="Sprites\DeadMoone.png" />
     <EmbeddedResource Include="Sprites\DeadStickingHomunculus.png" />
+    <EmbeddedResource Include="Sprites\DeadThunderdome.png" />
     <EmbeddedResource Include="Sprites\DeadVus.png" />
     <EmbeddedResource Include="Sprites\ErasBack.png" />
     <EmbeddedResource Include="Sprites\ErasBeat.png" />
@@ -1279,6 +1282,7 @@
     <EmbeddedResource Include="Sprites\TimelineScatterbrainedNosestone.png" />
     <EmbeddedResource Include="Sprites\TimelineStickingHomunculus.png" />
     <EmbeddedResource Include="Sprites\TimelineSweatingNosestone.png" />
+    <EmbeddedResource Include="Sprites\TimelineThunderdome.png" />
     <EmbeddedResource Include="Sprites\TimelineUninspiredNosestone.png" />
     <EmbeddedResource Include="Sprites\TimelineVus.png" />
     <EmbeddedResource Include="Sprites\TreasureFormidableDinners.png" />
@@ -1434,7 +1438,7 @@
       <HintPath>..\..\..\Desktop\BOModdingRefs\MonoMod.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\PUBLIC-Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Brutal Orchestra\BepInEx\utils\PUBLIC-Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>..\..\..\Desktop\BOModdingRefs\Unity.TextMeshPro.dll</HintPath>

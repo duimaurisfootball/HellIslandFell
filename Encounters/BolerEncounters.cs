@@ -58,6 +58,11 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "Heehoo_EN",
                 ], null);
+            BolerMedium.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Thunderdome_EN",
+                ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
                 BolerMedium.CreateNewEnemyEncounterData(
@@ -191,6 +196,12 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "Heehoo_EN",
                     "Heehoo_EN",
+                ], null);
+            BolerHard.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.Colophons)
             {
@@ -391,6 +402,18 @@ namespace Hell_Island_Fell.Encounters
                     "Boler_EN",
                     "Boler_EN",
                     "Moone_EN",
+                ], null);
+            Boler2.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Boler_EN",
+                    "Heehoo_EN",
+                ], null);
+            Boler2.CreateNewEnemyEncounterData(
+                [
+                    "Boler_EN",
+                    "Boler_EN",
+                    "Thunderdome_EN",
                 ], null);
             Boler2.CreateNewEnemyEncounterData(
                 [

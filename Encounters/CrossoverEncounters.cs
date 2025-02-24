@@ -99,8 +99,21 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "ColophonDelighted_EN",
+                    "Thunderdome_EN",
                     "Moone_EN",
+                    "ColophonDefeated_EN",
+                ]),
+                    new(
+                [
+                    "ColophonDelighted_EN",
+                    "Heehoo_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "ColophonDelighted_EN",
+                    "ColophonMaladjusted_EN",
+                    "Heehoo_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("DelightedMedium"))._enemyBundles = delightedMedium;
@@ -151,8 +164,21 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "ColophonMaladjusted_EN",
+                    "Thunderdome_EN",
                     "Moone_EN",
+                    "ColophonComposed_EN",
+                ]),
+                    new(
+                [
+                    "ColophonMaladjusted_EN",
+                    "Heehoo_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "ColophonMaladjusted_EN",
+                    "ColophonDelighted_EN",
+                    "Heehoo_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MaladjustedMedium"))._enemyBundles = maladjustedMedium;
@@ -281,6 +307,11 @@ namespace Hell_Island_Fell.Encounters
                     "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
+                    new(
+                [
+                    "Chapbull_EN",
+                    "Thunderdome_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ChapbullHard"))._enemyBundles = chapbullHard;
 
@@ -332,6 +363,20 @@ namespace Hell_Island_Fell.Encounters
                     "Chapman_EN",
                     "Chapman_EN",
                     "Heehoo_EN",
+                    "MusicMan_EN",
+                ]),
+                    new(
+                [
+                    "Chapman_EN",
+                    "Chapman_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "Chapman_EN",
+                    "Chapman_EN",
+                    "Heehoo_EN",
+                    "Moone_EN",
                 ]),
                     new(
                 [
@@ -356,6 +401,18 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Cherubim_EN",
                     "Moone_EN",
+                    "MusicMan_EN",
+                ]),
+                    new(
+                [
+                    "Cherubim_EN",
+                    "Heehoo_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Cherubim_EN",
+                    "Thunderdome_EN",
                     "MusicMan_EN",
                 ]),
                 };
@@ -466,6 +523,24 @@ namespace Hell_Island_Fell.Encounters
                     "Gizo_EN",
                     "NakedGizo_EN",
                     "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "Moone_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "Thunderdome_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "Thunderdome_EN",
+                    "Moone_EN",
                 ]),
                     new(
                 [
@@ -595,6 +670,27 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Gizo_EN",
                     "Gizo_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "Gizo_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "Gizo_EN",
+                    "Thunderdome_EN",
+                    "Scrungie_EN",
+                ]),
+                    new(
+                [
+                    "Gizo_EN",
+                    "Gizo_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
@@ -639,6 +735,12 @@ namespace Hell_Island_Fell.Encounters
                     "DesiccatingJumbleguts_EN",
                     "JumbleGuts_Hollowing_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "DesiccatingJumbleguts_EN",
+                    "JumbleGuts_Hollowing_EN",
+                    "Thunderdome_EN",
                 ]),
                     new(
                 [
@@ -739,6 +841,11 @@ namespace Hell_Island_Fell.Encounters
                     "NeoplasmHeap_EN",
                     "Heehoo_EN",
                 ]),
+                    new(
+                [
+                    "NeoplasmHeap_EN",
+                    "Thunderdome_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapMedium"))._enemyBundles = neoplasmHeapMedium;
 
@@ -787,6 +894,24 @@ namespace Hell_Island_Fell.Encounters
                     "Heehoo_EN",
                     "Scrungie_EN",
                 ]),
+                    new(
+                [
+                    "NeoplasmHeap_EN",
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "NeoplasmHeap_EN",
+                    "Thunderdome_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "NeoplasmHeap_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("HeapHard"))._enemyBundles = neoplasmHeapHard;
 
@@ -796,6 +921,11 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "NeoplasmLake_EN",
                     "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "NeoplasmLake_EN",
+                    "Thunderdome_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("LakeHard"))._enemyBundles = neoplasmLakeHard;
@@ -912,6 +1042,24 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Ophanim_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "Ophanim_EN",
+                    "Thunderdome_EN",
+                    "JumbleGuts_Hollowing_EN",
+                ]),
+                    new(
+                [
+                    "Ophanim_EN",
+                    "Thunderdome_EN",
+                    "JumbleGuts_Clotted_EN",
+                ]),
+                    new(
+                [
+                    "Ophanim_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
                 ]),
@@ -930,6 +1078,12 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Opisthotonus_EN",
                     "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Opisthotonus_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("OpisthotonusHard"))._enemyBundles = opisthotonusHard;
@@ -1090,6 +1244,30 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "RevoltingRevola_EN",
+                    "Heehoo_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "RevoltingRevola_EN",
+                    "Heehoo_EN",
+                    "Scrungie_EN",
+                ]),
+                    new(
+                [
+                    "RevoltingRevola_EN",
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "RevoltingRevola_EN",
+                    "Moone_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "RevoltingRevola_EN",
                     "SingingStone_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
@@ -1130,6 +1308,12 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "SingingMountain_EN",
                     "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "SingingMountain_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
                 ]),
                     new(
                 [
@@ -1463,6 +1647,11 @@ namespace Hell_Island_Fell.Encounters
                     "BackupDancer_EN",
                     "Moone_EN",
                 ]),
+                    new(
+                [
+                    "BackupDancer_EN",
+                    "Thunderdome_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BDancerEasy"))._enemyBundles = backupDancerEasy;
 
@@ -1480,27 +1669,17 @@ namespace Hell_Island_Fell.Encounters
                     "Moone_EN",
                     "Moone_EN",
                 ]),
+                    new(
+                [
+                    "BackupDancer_EN",
+                    "BackupDancer_EN",
+                    "Thunderdome_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BDancerMed"))._enemyBundles = backupDancerMedium;
 
                 List<RandomEnemyGroup> backupDancerHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BDancerHard"))._enemyBundles)
                 {
-                    new(
-                [
-                    "BackupDancer_EN",
-                    "BackupDancer_EN",
-                    "SingingStone_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
-                ]),
-                    new(
-                [
-                    "BackupDancer_EN",
-                    "MusicMan_EN",
-                    "SingingStone_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
-                ]),
                     new(
                 [
                     "BackupDancer_EN",
@@ -1536,6 +1715,35 @@ namespace Hell_Island_Fell.Encounters
                     "MusicMan_EN",
                     "Heehoo_EN",
                 ]),
+                    new(
+                [
+                    "BackupDancer_EN",
+                    "BackupDancer_EN",
+                    "BackupDancer_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "BackupDancer_EN",
+                    "BackupDancer_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "BackupDancer_EN",
+                    "MusicMan_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "BackupDancer_EN",
+                    "BackupDancer_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
+                    "VanishingHands_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BDancerHard"))._enemyBundles = backupDancerHard;
 
@@ -1551,6 +1759,11 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Frostbite_EN",
                     "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_EN",
+                    "Thunderdome_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FrostbiteEasy"))._enemyBundles = frostbiteEasy;
@@ -1578,6 +1791,12 @@ namespace Hell_Island_Fell.Encounters
                     "Frostbite_EN",
                     "Heehoo_EN",
                 ]),
+                    new(
+                [
+                    "Frostbite_EN",
+                    "Frostbite_EN",
+                    "Thunderdome_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FrostbiteMed"))._enemyBundles = frostbiteMedium;
 
@@ -1603,6 +1822,14 @@ namespace Hell_Island_Fell.Encounters
                     "Frostbite_EN",
                     "Heehoo_EN",
                     "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_EN",
+                    "Frostbite_EN",
+                    "Frostbite_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FrostbiteHard"))._enemyBundles = frostbiteHard;
@@ -1639,6 +1866,12 @@ namespace Hell_Island_Fell.Encounters
                     "Frostbite_Bipedal_EN",
                     "Frostbite_EN",
                     "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_Bipedal_EN",
+                    "Frostbite_EN",
+                    "Thunderdome_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BFrostbiteMed"))._enemyBundles = bipedalFrostbiteMedium;
@@ -1698,6 +1931,27 @@ namespace Hell_Island_Fell.Encounters
                     "Jansuli_EN",
                     "Heehoo_EN",
                 ]),
+                    new(
+                [
+                    "Frostbite_Bipedal_EN",
+                    "Frostbite_Bipedal_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_Bipedal_EN",
+                    "Frostbite_Bipedal_EN",
+                    "Thunderdome_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Frostbite_Bipedal_EN",
+                    "Frostbite_Bipedal_EN",
+                    "Frostbite_EN",
+                    "Thunderdome_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BFrostbiteHard"))._enemyBundles = bipedalFrostbiteHard;
 
@@ -1707,6 +1961,11 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Jansuli_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Jansuli_EN",
+                    "Thunderdome_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliEasy"))._enemyBundles = jansuliEasy;
@@ -1731,6 +1990,18 @@ namespace Hell_Island_Fell.Encounters
                     "Jansuli_EN",
                     "Heehoo_EN",
                 ]),
+                    new(
+                [
+                    "Jansuli_EN",
+                    "Thunderdome_EN",
+                    "Footshroom_EN",
+                ]),
+                    new(
+                [
+                    "Jansuli_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliMed"))._enemyBundles = jansuliMedium;
 
@@ -1740,15 +2011,22 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Jansuli_EN",
                     "Jansuli_EN",
-                    "SingingStone_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
+                    "Heehoo_EN",
                 ]),
                     new(
                 [
                     "Jansuli_EN",
                     "Jansuli_EN",
-                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "Jansuli_EN",
+                    "Jansuli_EN",
+                    "SingingStone_EN",
+                    "SingingStone_EN",
+                    "VanishingHands_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("JansuliHard"))._enemyBundles = jansuliHard;
@@ -1759,6 +2037,11 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "PrimitiveGizo_Calm_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "PrimitiveGizo_Calm_EN",
+                    "Thunderdome_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PGizoMed"))._enemyBundles = primitiveGizoMedium;
@@ -1789,6 +2072,18 @@ namespace Hell_Island_Fell.Encounters
                     "Moone_EN",
                     "Heehoo_EN",
                 ]),
+                    new(
+                [
+                    "PrimitiveGizo_Calm_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "PrimitiveGizo_Calm_EN",
+                    "MusicMan_EN",
+                    "Thunderdome_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PGizoHard"))._enemyBundles = primitiveGizoHard;
 
@@ -1797,7 +2092,20 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Gizard_EN",
+                    "MusicMan_EN",
                     "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "Thunderdome_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizardMed"))._enemyBundles = gizardMedium;
@@ -1853,6 +2161,26 @@ namespace Hell_Island_Fell.Encounters
                     "Heehoo_EN",
                     "MusicMan_EN",
                 ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
+                    "MusicMan_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
+                ]),
+                    new(
+                [
+                    "Gizard_EN",
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizardHard"))._enemyBundles = gizardHard;
 
@@ -1865,6 +2193,18 @@ namespace Hell_Island_Fell.Encounters
                     "SingingStone_EN",
                     "SingingStone_EN",
                     "VanishingHands_EN",
+                ]),
+                    new(
+                [
+                    "Footshroom_EN",
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "Footshroom_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FootshroomMed"))._enemyBundles = footshroomMed;
@@ -1893,6 +2233,14 @@ namespace Hell_Island_Fell.Encounters
                     "Heehoo_EN",
                     "Heehoo_EN",
                 ]),
+                    new(
+                [
+                    "Footshroom_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
+                    "MusicMan_EN",
+                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("FootshroomHard"))._enemyBundles = footshroomHard;
 
@@ -1902,6 +2250,12 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "ExternalIncubator_EN",
                     "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "ExternalIncubator_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("IncubatorHard"))._enemyBundles = incubatorHard;

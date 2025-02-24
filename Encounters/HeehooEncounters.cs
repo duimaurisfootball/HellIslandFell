@@ -60,6 +60,18 @@ namespace Hell_Island_Fell.Encounters
                     "Moone_EN",
                     "Moone_EN",
                 ], null);
+            HeehooMedium.CreateNewEnemyEncounterData(
+                [
+                    "Heehoo_EN",
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                ], null);
+            HeehooMedium.CreateNewEnemyEncounterData(
+                [
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ], null);
             if (Hell_Island_Fell.CrossMod.Colophons)
             {
                 HeehooMedium.CreateNewEnemyEncounterData(
@@ -156,6 +168,27 @@ namespace Hell_Island_Fell.Encounters
                     "Heehoo_EN",
                     "Spoggle_Resonant_EN",
                     "Spoggle_Writhing_EN",
+                ], null);
+            HeehooHard.CreateNewEnemyEncounterData(
+                [
+                    "Heehoo_EN",
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ], null);
+            HeehooHard.CreateNewEnemyEncounterData(
+                [
+                    "Heehoo_EN",
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
+                ], null);
+            HeehooHard.CreateNewEnemyEncounterData(
+                [
+                    "Heehoo_EN",
+                    "Thunderdome_EN",
+                    "MusicMan_EN",
+                    "MusicMan_EN",
                 ], null);
             HeehooHard.CreateNewEnemyEncounterData(
                 [

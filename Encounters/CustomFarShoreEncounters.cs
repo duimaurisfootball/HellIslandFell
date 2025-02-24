@@ -205,6 +205,12 @@ namespace Hell_Island_Fell.Encounters
                 "Keklung_EN",
                 "Draugr_EN",
             ]),
+                new(
+            [
+                "MudLung_EN",
+                "Flarblet_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -355,6 +361,12 @@ namespace Hell_Island_Fell.Encounters
                 "Mung_EN",
                 "Draugr_EN",
             ]),
+                new(
+            [
+                "MunglingMudLung_EN",
+                "MudLung_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -414,6 +426,12 @@ namespace Hell_Island_Fell.Encounters
                 "MunglingMudLung_EN",
                 "Draugr_EN",
             ]),
+                new(
+            [
+                "FlaMinGoa_EN",
+                "Draugr_EN",
+                "Draugr_EN",
+            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -452,6 +470,12 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "Flarb_EN",
+                "Draugr_EN",
+            ]),
+                new(
+            [
+                "Flarb_EN",
+                "Flarblet_EN",
                 "Draugr_EN",
             ]),
             };
@@ -503,6 +527,18 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Voboola_EN",
                 "MudLung_EN",
+                "Draugr_EN",
+            ]),
+                new(
+            [
+                "Voboola_EN",
+                "Wringle_EN",
+                "Draugr_EN",
+            ]),
+                new(
+            [
+                "Voboola_EN",
+                "FlaMinGoa_EN",
                 "Draugr_EN",
             ]),
             };

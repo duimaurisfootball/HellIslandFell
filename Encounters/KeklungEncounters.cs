@@ -11,7 +11,7 @@ namespace Hell_Island_Fell.Encounters
             Portals.AddPortalSign("Keklung_Sign", ResourceLoader.LoadSprite("TimelineKeklung", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
             EnemyEncounter_API keklungMedium = new EnemyEncounter_API(0, "H_Zone01_Keklung_Medium_EnemyBundle", "Keklung_Sign")
             {
-                MusicEvent = "event:/Music/Mx_Mudlung",
+                MusicEvent = "event:/FusionCuisine",
                 RoarEvent = "event:/Characters/Enemies/MudLung_Mungling/CHR_ENM_MudLung_Mungling_Roar",
             };
             keklungMedium.CreateNewEnemyEncounterData(

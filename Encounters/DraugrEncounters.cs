@@ -34,12 +34,12 @@ namespace Hell_Island_Fell.Encounters
             draugrEasy.CreateNewEnemyEncounterData(
                 [
                     "Draugr_EN",
-                    "Jumble_Guts_Clotted_EN",
+                    "JumbleGuts_Clotted_EN",
                 ], null);
             draugrEasy.CreateNewEnemyEncounterData(
                 [
                     "Draugr_EN",
-                    "Jumble_Guts_Waning_EN",
+                    "JumbleGuts_Waning_EN",
                 ], null);
             draugrEasy.CreateNewEnemyEncounterData(
                 [

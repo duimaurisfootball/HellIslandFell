@@ -23,13 +23,13 @@ namespace Hell_Island_Fell.Fools
             };
             maecenas.GenerateMenuCharacter(ResourceLoader.LoadSprite("MaecenasMenu"), ResourceLoader.LoadSprite("MaecenasLocked"));
             maecenas.SetMenuCharacterAsFullDPS();
-
+            
             LoadedDBsHandler.StatusFieldDB.TryGetFieldEffect("Thunderstorm_ID", out FieldEffect_SO Thunderstorm);
             FieldEffect_Apply_Effect ThunderstormApply = ScriptableObject.CreateInstance<FieldEffect_Apply_Effect>();
             ThunderstormApply._Field = Thunderstorm;
 
             RemoveFieldEffectEffect ThunderstormRemove = ScriptableObject.CreateInstance<RemoveFieldEffectEffect>();
-            ThunderstormRemove._Field = Thunderstorm;
+            ThunderstormRemove._field = Thunderstorm;
 
             HealEffect PrevHeal = ScriptableObject.CreateInstance<HealEffect>();
             PrevHeal.usePreviousExitValue = true;

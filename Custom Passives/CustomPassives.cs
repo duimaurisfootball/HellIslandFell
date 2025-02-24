@@ -337,7 +337,7 @@ namespace Hell_Island_Fell.Custom_Passives
             MoveLeft._swapRight = false;
 
             RemoveFieldEffectEffect RemoveConstricted = ScriptableObject.CreateInstance<RemoveFieldEffectEffect>();
-            RemoveConstricted._Field = StatusField.Constricted;
+            RemoveConstricted._field = StatusField.Constricted;
 
             PerformEffectPassiveAbility billiard = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
             billiard.m_PassiveID = "Billiard";
