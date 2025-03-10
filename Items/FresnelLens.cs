@@ -45,7 +45,7 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(fresnelLens.Item, new ItemModdedUnlockInfo("FresnelLens_SW", ResourceLoader.LoadSprite("UnlockOsmanNabaLocked", null, 32, null), "HIF_Naba_Osman_ACH"));
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(fresnelLens.Item, new ItemModdedUnlockInfo("FresnelLens_SW", ResourceLoader.LoadSprite("UnlockOsmanNabaLocked", null, 32, null), "HIF_Naba_Witness_ACH"));
         }
     }
 }

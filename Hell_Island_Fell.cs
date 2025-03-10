@@ -18,7 +18,7 @@ using Hell_Island_Fell.Custom_Stuff;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "1.5.7")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "2.0.0")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]
@@ -115,8 +115,8 @@ namespace Hell_Island_Fell
             GreenGlass.Add();
             FetidTooth.Add();
             BlackPearl.Add();
-            //
-            //
+            BlankPointBlankPoint.Add();
+            Heartworm.Add();
 
             //Heaven 
             ThousandFish.Add();
@@ -139,8 +139,8 @@ namespace Hell_Island_Fell
             TheDeal.Add();
             InfernalStone.Add();
             Trinitite.Add();
-            //
-            //
+            EnamelSandpaper.Add();
+            Blastocyst.Add();
 
             //Doula Unlocks
             //CatastropheStick.Add();
@@ -217,8 +217,8 @@ namespace Hell_Island_Fell
             Stareyed.Add();
             Exambry.Add();
             Morrigan.Add();
-            //Nick.Add();
-            //Eras.Add();
+            Nick.Add();
+            Eras.Add();
             HolesOfVandander.Add();
             Mudball.Add();
 
@@ -242,6 +242,7 @@ namespace Hell_Island_Fell
             Draugr.Add();
             Heehoo.Add();
             Thunderdome.Add();
+            //OneShooter.Add();
             //Tubert.Add();
             //Gotanga.Add();
             //Makado.Add();

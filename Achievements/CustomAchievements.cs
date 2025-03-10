@@ -129,7 +129,19 @@ namespace Hell_Island_Fell.Achievements
             AchievementWitnessMorrigan.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
             FinalBossCharUnlockCheck UnlockWitnessMorrigan = Unlocks.GetUnlock_OsmanFinalBoss();
             UnlockWitnessMorrigan.AddUnlockData("Morrigan_CH", Unlocks.GenerateUnlockData("HIF_Morrigan_Witness_Unlock", "HIF_Morrigan_Witness_ACH", "", "", ["BlackPearl_TW"]));
-            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Morrigan_Witness_ACH", "Black Pearl_TW");
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Morrigan_Witness_ACH", "BlackPearl_TW");
+
+            ModdedAchievements AchievementWitnessNick = new ModdedAchievements("Heartworm", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanNick", null, 32, null), "HIF_Nick_Witness_ACH");
+            AchievementWitnessNick.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessNick = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessNick.AddUnlockData("Nick_CH", Unlocks.GenerateUnlockData("HIF_Nick_Witness_Unlock", "HIF_Nick_Witness_ACH", "", "", ["BlankPointBlankPoint_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Nick_Witness_ACH", "BlankPointBlankPoint_SW");
+
+            ModdedAchievements AchievementWitnessEras = new ModdedAchievements("Heartworm", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanEras", null, 32, null), "HIF_Eras_Witness_ACH");
+            AchievementWitnessEras.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessEras = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessEras.AddUnlockData("Eras_CH", Unlocks.GenerateUnlockData("HIF_Eras_Witness_Unlock", "HIF_Eras_Witness_ACH", "", "", ["Heartworm_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Eras_Witness_ACH", "Black Pearl_TW");
 
 
             //Heaven Unlocks
@@ -253,6 +265,18 @@ namespace Hell_Island_Fell.Achievements
             FinalBossCharUnlockCheck UnlockDivineMorrigan = Unlocks.GetUnlock_HeavenFinalBoss();
             UnlockDivineMorrigan.AddUnlockData("Morrigan_CH", Unlocks.GenerateUnlockData("HIF_Morrigan_Divine_Unlock", "HIF_Morrigan_Divine_ACH", "", "", ["Trinitite_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Morrigan_Divine_ACH", "Trinitite_TW");
+
+            ModdedAchievements AchievementDivineNick = new ModdedAchievements("Enamel Sandpaper", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenNick", null, 32, null), "HIF_Nick_Divine_ACH");
+            AchievementDivineNick.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineNick = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineNick.AddUnlockData("Nick_CH", Unlocks.GenerateUnlockData("HIF_Nick_Divine_Unlock", "HIF_Nick_Divine_ACH", "", "", ["EnamelSandpaper_SW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Nick_Divine_ACH", "EnamelSandpaper_SW");
+
+            ModdedAchievements AchievementDivineEras = new ModdedAchievements("Blastocyst", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenEras", null, 32, null), "HIF_Eras_Divine_ACH");
+            AchievementDivineEras.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineEras = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineEras.AddUnlockData("Eras_CH", Unlocks.GenerateUnlockData("HIF_Eras_Divine_Unlock", "HIF_Eras_Divine_ACH", "", "", ["Blastocyst_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Eras_Divine_ACH", "Blastocyst_TW");
 
             //Doula Unlocks
 

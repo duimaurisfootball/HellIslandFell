@@ -1,5 +1,6 @@
 ﻿using BrutalAPI;
 using Hell_Island_Fell.Custom_Effects;
+using Hell_Island_Fell.Custom_Stuff;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -388,7 +389,52 @@ namespace Hell_Island_Fell.Custom_Passives
             conviction.status = StatusField.DivineProtection;
             conviction.affectedUnitsStoredValue = UnitStoreData.CreateAndAddCustom_Basic_UnitStoreDataToPool("DivineProtectingProtectedUnits_USD");
 
-            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            UnitStoreData_Nick_ModIntSO hammerState = ScriptableObject.CreateInstance<UnitStoreData_Nick_ModIntSO>();
+            hammerState._UnitStoreDataID = "HammerStoredValue";
+            hammerState.m_TextColor = Color.yellow;
+            hammerState.m_CompareDataToThis = 0;
+            hammerState.m_ShowIfDataIsOver = true;
+            LoadedDBsHandler.MiscDB.AddNewUnitStoreData("HammerStoredValue", hammerState);
+
+            CasterStoreValueSetterEffect HammerSet = ScriptableObject.CreateInstance<CasterStoreValueSetterEffect>();
+            HammerSet.m_unitStoredDataID = "HammerStoredValue";
+
+            SetCasterExtraSpritesEffect HammerUp = ScriptableObject.CreateInstance<SetCasterExtraSpritesEffect>();
+            HammerUp._ExtraSpriteID = "NickSpritesRaised";
+
+            Connection_PerformEffectPassiveAbility armed = ScriptableObject.CreateInstance<Connection_PerformEffectPassiveAbility>();
+            armed.m_PassiveID = "Armed";
+            armed.passiveIcon = ResourceLoader.LoadSprite("NickArmed");
+            armed._characterDescription = "This party member starts combat with the hammer Raised or Lowered.";
+            armed._enemyDescription = "This passive is not meant for enemies.";
+            armed.connectionEffects =
+                [
+                    Effects.GenerateEffect(HammerSet, 1),
+                    Effects.GenerateEffect(HammerSet, 2, null, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(HammerUp, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                ];
+            armed.disconnectionEffects =
+                [
+
+                ];
+            armed._triggerOn =
+                [
+
+                ];
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            UniversalInfantilePassiveAbility universalInfantile = ScriptableObject.CreateInstance<UniversalInfantilePassiveAbility>();
+            universalInfantile.m_PassiveID = Passives.Infantile.m_PassiveID;
+            universalInfantile.passiveIcon = Passives.Infantile.passiveIcon;
+            universalInfantile._characterDescription = "This party member is an infant and will trigger Parental enemies to perform additional actions in retribution upon receiving direct damage. ";
+            universalInfantile._enemyDescription = "This enemy is an infant and will trigger Parental enemies to perform additional actions in retribution upon receiving direct damage. ";
+            universalInfantile._triggerOn =
+                [
+                    TriggerCalls.OnDirectDamaged,
+                ];
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             Passives.AddCustomPassiveToPool("Impunity_PA", "Impunity", impunity);
             Passives.AddCustomPassiveToPool("Metallurgy_PA", "Metallurgy", metallurgy);
             Passives.AddCustomPassiveToPool("Sacrilege_PA", "Sacrilege", sacrilege);
@@ -406,6 +452,8 @@ namespace Hell_Island_Fell.Custom_Passives
             Passives.AddCustomPassiveToPool("Billiard_PA", "Billiard", billiard);
             Passives.AddCustomPassiveToPool("Mirage_PA", "Mirage", mirage);
             Passives.AddCustomPassiveToPool("Conviction_PA", "Conviction", conviction);
+            Passives.AddCustomPassiveToPool("Armed_PA", "Armed", armed);
+            Passives.AddCustomPassiveToPool("UniInfantile_PA", "Infantile", universalInfantile);
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             GlossaryPassives ImpunityInfo = new GlossaryPassives("Impunity", "The yellow pigment generator now generates gray pigment instead.", ResourceLoader.LoadSprite("FarahImpunity"));
             GlossaryPassives MetallurgyInfo = new GlossaryPassives("Metallurgy", "This party member/enemy scales based on how much money you have at the start of combat.", ResourceLoader.LoadSprite("SaladMetallurgy"));

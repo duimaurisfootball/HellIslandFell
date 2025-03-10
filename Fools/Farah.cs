@@ -44,13 +44,6 @@ namespace Hell_Island_Fell.Fools
             MutualismEffect._increase = true;
             MutualismEffect._minimumValue = 0;
 
-            IntentInfoBasic MutualismIntent = new()
-            {
-                _color = Color.white,
-                _sprite = Passives.ParasiteMutualism.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Mutualism", MutualismIntent);
-
             LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Salted_ID", out StatusEffect_SO Salted);
             StatusEffect_Apply_Effect SaltedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             SaltedApply._Status = Salted;
@@ -79,7 +72,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(SaltedApply, 2, Targeting.Slot_Front),
                 ]
             };
-            bilge0.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Passive_Mutualism"]);
+            bilge0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.PA_Mutualism)]);
             bilge0.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Salted"]);
 
             Ability bilge1 = new Ability("Infectious Bilge", "Bilge_2_A")
@@ -96,7 +89,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(SaltedApply, 2, Targeting.Slot_Front),
                 ]
             };
-            bilge1.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Passive_Mutualism"]);
+            bilge1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.PA_Mutualism)]);
             bilge1.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Salted"]);
 
             Ability bilge2 = new Ability("Mutating Bilge", "Bilge_3_A")
@@ -113,7 +106,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(SaltedApply, 2, Targeting.Slot_Front),
                 ]
             };
-            bilge2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Passive_Mutualism"]);
+            bilge2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.PA_Mutualism)]);
             bilge2.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Salted"]);
 
             Ability bilge3 = new Ability("Unimaginable Bilge", "Bilge_4_A")
@@ -130,7 +123,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(SaltedApply, 2, Targeting.Slot_Front),
                 ]
             };
-            bilge3.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Passive_Mutualism"]);
+            bilge3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.PA_Mutualism)]);
             bilge3.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Salted"]);
 
 

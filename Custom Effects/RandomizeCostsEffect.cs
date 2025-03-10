@@ -84,6 +84,7 @@ namespace Hell_Island_Fell.Custom_Effects
                             break;
                         }
                     }
+                    CombatManager.Instance.AddUIAction(new CharacterUpdateAllAttacksUIAction((targetSlotInfo.Unit as CharacterCombat).ID, [.. (targetSlotInfo.Unit as CharacterCombat).CombatAbilities]));
                 }
             }
             return exitAmount > 0;

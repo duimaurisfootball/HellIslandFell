@@ -34,6 +34,10 @@ namespace Hell_Island_Fell.Enemies
             BoojumStatusEffectEffect BarristerEffect = ScriptableObject.CreateInstance<BoojumStatusEffectEffect>();
             BarristerEffect._Status = StatusField.Ruptured;
 
+            LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Disappearing_ID", out StatusEffect_SO Disappearing);
+            BoojumStatusEffectMultiplyEffect BakerEffect = ScriptableObject.CreateInstance<BoojumStatusEffectMultiplyEffect>();
+            BakerEffect._Status = Disappearing;
+
             SwapToOneSideEffect MoveLeft = ScriptableObject.CreateInstance<SwapToOneSideEffect>();
             MoveLeft._swapRight = false;
 
@@ -133,6 +137,25 @@ namespace Hell_Island_Fell.Enemies
             banker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Rem_Field_Constricted)]);
             banker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
+            Ability baker = new Ability("Baker", "Baker_A")
+            {
+                Description = "Apply 1 Disappearing to the Rightmost position, then triple the amount of Disappearing on them.\nMove to the Right and remove all Constricted from this position.\nIf the previous effect was successful, repeat this attack.",
+                Cost = [Pigments.Yellow, Pigments.Yellow, Pigments.Yellow, Pigments.Yellow],
+                Visuals = Visuals.Takedown,
+                AnimationTarget = ScriptableObject.CreateInstance<RightmostTargeting>(),
+                Effects =
+                [
+                    Effects.GenerateEffect(BakerEffect, 1, ScriptableObject.CreateInstance<RightmostTargeting>()),
+                ],
+                Rarity = CustomAbilityRarity.Weight(3, true),
+                Priority = Priority.Fast,
+            };
+            baker.AddIntentsToTarget(ScriptableObject.CreateInstance<RightmostTargeting>(), ["Status_Disappearing"]);
+            baker.AddIntentsToTarget(ScriptableObject.CreateInstance<RightmostTargeting>(), ["Status_Disappearing"]);
+            baker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Swap_Right)]);
+            baker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Rem_Field_Constricted)]);
+            baker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
+
             Ability beaver = new Ability("Beaver", "Beaver_A")
             {
                 Description = "Move this enemy to the Furthest Left position.",
@@ -155,6 +178,7 @@ namespace Hell_Island_Fell.Enemies
                     butcher,
                     broker,
                     banker,
+                    baker,
                     beaver,
                 ]);
             boojum.AddEnemy(true, false, false);

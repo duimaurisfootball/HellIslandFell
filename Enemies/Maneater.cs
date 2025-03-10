@@ -252,7 +252,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability multidimensionalMateriality = new Ability("Multidimensional Materiality", "MultidimensionalMateriality_A")
             {
-                Description = "If this enemy is Obscured, reveal it and deal an agonizing amount of damage to the Opposing party members.\nOtherwise, Obscure this enemy.",
+                Description = "If this enemy is Obscured, reveal it and deal an Agonizing amount of damage to the Opposing party members.\nOtherwise, Obscure this enemy.",
                 Cost = [Pigments.Red, Pigments.Purple],
                 Visuals = Visuals.Poke,
                 AnimationTarget = Targeting.GenerateBigUnitSlotTarget([0, 1]),
@@ -300,7 +300,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability flummoxingFilaments = new Ability("Flummoxing Filaments", "FlummoxingFilaments_A")
             {
-                Description = "If this enemy is a Catalyst, remove it and deal a lethal amount of damage to this enemy.\nOtherwise, apply Catalyst to this enemy.",
+                Description = "If this enemy is a Catalyst, remove it and deal a Lethal amount of damage to this enemy.\nOtherwise, apply Catalyst to this enemy.",
                 Cost = [Pigments.Yellow, Pigments.BlueYellow],
                 Visuals = Visuals.Mitosis,
                 AnimationTarget = CenterTarget,

@@ -120,151 +120,151 @@ namespace Hell_Island_Fell.Fools
             //revelation
             Ability revelation0 = new Ability("A Revelation", "Revelation_1_A")
             {
-                Description = "Deal 8 damage to the Right ally.\nHeal the Right ally 4 health.\nRefresh the Left and Right allies and restore their movement.",
+                Description = "Deal 8 damage to the Right ally.\nHeal the Left ally 3 health.\nRefresh the Left and Right allies and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaRevelation"),
                 Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.Burn,
+                Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_AllySides,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 8, Targeting.Slot_AllyRight),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyRight),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_AllySides),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllySides),
                 ]
             };
             revelation0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Damage_7_10)]);
-            revelation0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            revelation0.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
             revelation0.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             Ability revelation1 = new Ability("The Revelation", "Revelation_2_A")
             {
-                Description = "Deal 7 damage to the Right ally.\nHeal the Right ally 4 health.\nRefresh the Left and Right allies and restore their movement.",
+                Description = "Deal 7 damage to the Right ally.\nHeal the Left ally 3 health.\nRefresh the Left and Right allies and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaRevelation"),
                 Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.Burn,
+                Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_AllySides,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 7, Targeting.Slot_AllyRight),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyRight),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_AllySides),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllySides),
                 ]
             };
             revelation1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Damage_7_10)]);
-            revelation1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            revelation1.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
             revelation1.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             Ability revelation2 = new Ability("And Revelation", "Revelation_3_A")
             {
-                Description = "Deal 6 damage to the Right ally.\nHeal the Right ally 4 health.\nRefresh the Left and Right allies and restore their movement.",
+                Description = "Deal 6 damage to the Right ally.\nHeal the Left ally 3 health.\nRefresh the Left and Right allies and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaRevelation"),
                 Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.Burn,
+                Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_AllySides,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 6, Targeting.Slot_AllyRight),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyRight),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_AllySides),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllySides),
                 ]
             };
             revelation2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            revelation2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            revelation2.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
             revelation2.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             Ability revelation3 = new Ability("Revelations", "Revelation_4_A")
             {
-                Description = "Deal 5 damage to the Right ally.\nHeal the Right ally 4 health.\nRefresh the Left and Right allies and restore their movement.",
+                Description = "Deal 5 damage to the Right ally.\nHeal the Left ally 3 health.\nRefresh the Left and Right allies and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaRevelation"),
                 Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.Burn,
+                Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_AllySides,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 5, Targeting.Slot_AllyRight),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyRight),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyLeft),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_AllySides),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllySides),
                 ]
             };
             revelation3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            revelation3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            revelation3.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
             revelation3.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             //two prayers
             Ability twoPrayers0 = new Ability("Two Prayers for the Ill", "TwoPrayers_1_A")
             {
-                Description = "Deal 8 damage to the Left ally.\nHeal the Left ally 4 health.\nApply Focused to the Left and Right allies.",
+                Description = "Deal 8 damage to the Left ally.\nHeal the Right ally 3 health.\nApply Focused to the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaTwoPrayers"),
                 Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.MotherlyLove,
+                Visuals = Visuals.Innocence,
                 AnimationTarget = Targeting.Slot_AllySides,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 8, Targeting.Slot_AllyLeft),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyLeft),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_AllySides),
                 ]
             };
             twoPrayers0.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Damage_7_10)]);
-            twoPrayers0.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            twoPrayers0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             twoPrayers0.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_Focused)]);
 
             Ability twoPrayers1 = new Ability("Two Prayers for the Poor", "TwoPrayers_2_A")
             {
-                Description = "Deal 7 damage to the Left ally.\nHeal the Left ally 4 health.\nApply Focused to the Left and Right allies.",
+                Description = "Deal 7 damage to the Left ally.\nHeal the Right ally 3 health.\nApply Focused to the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaTwoPrayers"),
                 Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.MotherlyLove,
+                Visuals = Visuals.Innocence,
                 AnimationTarget = Targeting.Slot_AllySides,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 7, Targeting.Slot_AllyLeft),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyLeft),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_AllySides),
                 ]
             };
             twoPrayers1.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Damage_7_10)]);
-            twoPrayers1.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            twoPrayers1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             twoPrayers1.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_Focused)]);
 
             Ability twoPrayers2 = new Ability("Two Prayers for the Wicked", "TwoPrayers_3_A")
             {
-                Description = "Deal 6 damage to the Left ally.\nHeal the Left ally 4 health.\nApply Focused to the Left and Right allies.",
+                Description = "Deal 6 damage to the Left ally.\nHeal the Right ally 3 health.\nApply Focused to the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaTwoPrayers"),
                 Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.MotherlyLove,
+                Visuals = Visuals.Innocence,
                 AnimationTarget = Targeting.Slot_AllySides,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 6, Targeting.Slot_AllyLeft),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyLeft),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_AllySides),
                 ]
             };
             twoPrayers2.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            twoPrayers2.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            twoPrayers2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             twoPrayers2.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_Focused)]);
 
             Ability twoPrayers3 = new Ability("Two Prayers for the Wicked", "TwoPrayers_4_A")
             {
-                Description = "Deal 5 damage to the Left ally.\nHeal the Left ally 4 health.\nApply Focused to the Left and Right allies.",
+                Description = "Deal 5 damage to the Left ally.\nHeal the Right ally 3 health.\nApply Focused to the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaTwoPrayers"),
                 Cost = [Pigments.Blue, Pigments.Blue],
-                Visuals = Visuals.MotherlyLove,
+                Visuals = Visuals.Innocence,
                 AnimationTarget = Targeting.Slot_AllySides,
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 5, Targeting.Slot_AllyLeft),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyLeft),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_AllySides),
                 ]
             };
             twoPrayers3.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            twoPrayers3.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            twoPrayers3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             twoPrayers3.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_Focused)]);
 
 

@@ -52,7 +52,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(DisappearingApply, 10, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 5, Targeting.Slot_SelfSlot)
                 ],
-                Rarity = CustomAbilityRarity.Weight(3, true),
+                Rarity = CustomAbilityRarity.Weight(2, true),
                 Priority = Priority.Normal,
             };
             playtime.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Status_Disappearing"]);
@@ -69,7 +69,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(ConsumeRandom, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(PrevDamage, 1, Targeting.Slot_Front),
                 ],
-                Rarity = CustomAbilityRarity.Weight(3, true),
+                Rarity = CustomAbilityRarity.Weight(4, true),
                 Priority = Priority.Normal,
             };
             semanticDrip.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);

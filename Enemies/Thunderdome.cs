@@ -9,7 +9,7 @@ namespace Hell_Island_Fell.Enemies
         {
             Enemy thunderdome = new Enemy("Thunderdome", "Thunderdome_EN")
             {
-                Health = 20,
+                Health = 25,
                 HealthColor = Pigments.Blue,
                 Size = 1,
                 CombatSprite = ResourceLoader.LoadSprite("TimelineThunderdome", new Vector2(0.5f, 0f), 32),
@@ -33,13 +33,13 @@ namespace Hell_Island_Fell.Enemies
 
             Ability cyclogenesis = new Ability("Cyclogenesis", "Cyclogenesis_A")
             {
-                Description = "Apply 2 Thunderstorm to this position.",
+                Description = "Apply 5 Thunderstorm to this position.",
                 Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Connection,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ThunderstormApply, 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ThunderstormApply, 5, Targeting.Slot_SelfSlot),
                 ],
                 Rarity = CustomAbilityRarity.Weight(3, true),
                 Priority = Priority.VeryFast,
@@ -48,17 +48,19 @@ namespace Hell_Island_Fell.Enemies
 
             Ability magnetism = new Ability("Magnetism", "Magnetism_A")
             {
-                Description = "Deal a Painful amount of damage to the Opposing party member.\nDamage spreads indirectly to the Left and Right, even across empty spaces.",
+                Description = "Move to the left or right.\nDeal a Painful amount of damage to the Opposing party member.\nDamage spreads indirectly to the Left and Right, even across empty spaces.",
                 Cost = [Pigments.Yellow, Pigments.Purple],
                 Visuals = Visuals.Contusion,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(MagnetDamage, 6, ScriptableObject.CreateInstance<AllUnitsAndOpposing>()),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<SwapToSidesEffect>(), 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(MagnetDamage, 4, ScriptableObject.CreateInstance<AllUnitsAndOpposing>()),
                 ],
                 Rarity = CustomAbilityRarity.Weight(3, true),
                 Priority = Priority.VeryFast,
             };
+            magnetism.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Swap_Sides)]);
             magnetism.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
             magnetism.AddIntentsToTarget(ScriptableObject.CreateInstance<AllOpponentsButFront>(), [nameof(IntentType_GameIDs.Damage_1_2)]);
 

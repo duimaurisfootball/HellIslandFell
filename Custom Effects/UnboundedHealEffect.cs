@@ -35,18 +35,17 @@ namespace Hell_Island_Fell.Custom_Effects
                 }
                 if (targetSlotInfo.HasUnit && (!_onlyIfHasHealthOver0 || targetSlotInfo.Unit.CurrentHealth > 0))
                 {
-                    int num = entryVariable;
                     if (entryAsPercentage)
                     {
-                        num = targetSlotInfo.Unit.CalculatePercentualAmount(num);
+                        ball = targetSlotInfo.Unit.CalculatePercentualAmount(ball);
                     }
 
                     if (_directHeal)
                     {
-                        num = caster.WillApplyHeal(num, targetSlotInfo.Unit);
+                        ball = caster.WillApplyHeal(ball, targetSlotInfo.Unit);
                     }
 
-                    exitAmount += targetSlotInfo.Unit.Heal(num, caster, _directHeal);
+                    exitAmount += targetSlotInfo.Unit.Heal(ball, caster, _directHeal);
                 }
             }
 
