@@ -84,14 +84,6 @@ namespace Hell_Island_Fell.Encounters
             inequityHard.CreateNewEnemyEncounterData(
                 [
                     "Inequity_EN",
-                    "Inequity_EN",
-                    "Inequity_EN",
-                    "InHerImage_EN",
-                    "InHerImage_EN",
-                ]);
-            inequityHard.CreateNewEnemyEncounterData(
-                [
-                    "Inequity_EN",
                     "ChoirBoy_EN",
                 ]);
             inequityHard.CreateNewEnemyEncounterData(

@@ -18,7 +18,7 @@ using Hell_Island_Fell.Custom_Stuff;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "2.0.0")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "2.0.1")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]

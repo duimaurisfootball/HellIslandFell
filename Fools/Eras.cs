@@ -211,7 +211,7 @@ namespace Hell_Island_Fell.Fools
 
             eras.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Eras_Witness_ACH");
             eras.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Eras_Divine_ACH");
-            eras.AddCharacter(true, false);
+            eras.AddCharacter(true, true);
         }
     }
 }

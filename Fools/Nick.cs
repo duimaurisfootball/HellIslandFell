@@ -72,7 +72,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ReRollTargetTimelineAbilityEffect>(), 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(false, 3)),
                     Effects.GenerateEffect(HammerDown, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 4)),
                     Effects.GenerateEffect(HammerSet, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 5)),
-                    Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(true, 6)),
+                    Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 6)),
                 ]
             };
             stance0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Sit)]);
@@ -90,12 +90,12 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(HammerCheck, 1, Targeting.Slot_SelfSlot),
-                Effects.GenerateEffect(HammerUp, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 1)),
-                Effects.GenerateEffect(HammerSet, 2, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
-                Effects.GenerateEffect(ScriptableObject.CreateInstance<ReRollTargetTimelineAbilityEffect>(), 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(false, 3)),
-                Effects.GenerateEffect(HammerDown, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 4)),
-                Effects.GenerateEffect(HammerSet, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 5)),
-                Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(true, 6)),
+                    Effects.GenerateEffect(HammerUp, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 1)),
+                    Effects.GenerateEffect(HammerSet, 2, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ReRollTargetTimelineAbilityEffect>(), 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(false, 3)),
+                    Effects.GenerateEffect(HammerDown, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 4)),
+                    Effects.GenerateEffect(HammerSet, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 5)),
+                    Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 6)),
                 ],
             };
             stance1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Sit)]);
@@ -118,7 +118,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ReRollTargetTimelineAbilityEffect>(), 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(false, 3)),
                     Effects.GenerateEffect(HammerDown, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 4)),
                     Effects.GenerateEffect(HammerSet, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 5)),
-                    Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(true, 6)),
+                    Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 6)),
                 ]
             };
             stance2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Sit)]);
@@ -141,7 +141,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ReRollTargetTimelineAbilityEffect>(), 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(false, 3)),
                     Effects.GenerateEffect(HammerDown, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 4)),
                     Effects.GenerateEffect(HammerSet, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 5)),
-                    Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_Front, Effects.CheckPreviousEffectCondition(true, 6)),
+                    Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 6)),
                 ]
             };
             stance3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Sit)]);

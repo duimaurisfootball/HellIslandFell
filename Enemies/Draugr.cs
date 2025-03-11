@@ -10,7 +10,7 @@ namespace Hell_Island_Fell.Enemies
     {
         public static void Add()
         {
-            Enemy boler = new Enemy("Draugr", "Draugr_EN")
+            Enemy draugr = new Enemy("Draugr", "Draugr_EN")
             {
                 Health = 17,
                 HealthColor = Pigments.Grey,
@@ -21,8 +21,8 @@ namespace Hell_Island_Fell.Enemies
                 DamageSound = LoadedAssetsHandler.GetCharacter("LongLiver_CH").damageSound,
                 DeathSound = LoadedAssetsHandler.GetCharacter("LongLiver_CH").deathSound,
             };
-            boler.PrepareEnemyPrefab("Assets/DraugrAssetBundle/Draugr.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/DraugrAssetBundle/DraugrGibs.prefab").GetComponent<ParticleSystem>());
-            boler.AddPassives([]);
+            draugr.PrepareEnemyPrefab("Assets/DraugrAssetBundle/Draugr.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/DraugrAssetBundle/DraugrGibs.prefab").GetComponent<ParticleSystem>());
+            draugr.AddPassives([]);
 
             LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Salted_ID", out StatusEffect_SO Salted);
             StatusEffect_Apply_Effect SaltedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
@@ -102,14 +102,14 @@ namespace Hell_Island_Fell.Enemies
             };
             stones.AddIntentsToTarget(Targeting.GenerateBigUnitSlotTarget([0, 1]), [nameof(IntentType_GameIDs.Status_Frail)]);
 
-            boler.AddEnemyAbilities(
+            draugr.AddEnemyAbilities(
                 [
                     ashes,
                     hexes,
                     blades,
                     stones,
                 ]);
-            boler.AddEnemy(true, true, false);
+            draugr.AddEnemy(true, true, false);
         }
     }
 }
