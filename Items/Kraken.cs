@@ -48,8 +48,8 @@ namespace Hell_Island_Fell.Items
             };
 
             ItemUtils.JustAddItemSoItCanBeLoaded(kraken.Item);
-            ItemUtils.AddItemFishingRodPool(kraken.Item, 3);
-            ItemUtils.AddItemCanOfWormsPool(kraken.Item, 8);
+            ItemUtils.AddItemFishingRodPool(kraken.Item, 3, true);
+            ItemUtils.AddItemCanOfWormsPool(kraken.Item, 8, true);
         }
     }
 }

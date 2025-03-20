@@ -14,7 +14,7 @@ namespace Hell_Island_Fell.Encounters
             EnemyEncounter_API scatterbrainedMedium = new EnemyEncounter_API(0, "H_Zone03_ScatterbrainedNosestone_Medium_EnemyBundle", "ScatterbrainedNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
-                RoarEvent = "event:/Characters/Enemies/Spoggle_Blue/CHR_ENM_Spoggle_Blue_Roar",
+                RoarEvent = "event:/ScatterbrainedRoar",
             };
             scatterbrainedMedium.CreateNewEnemyEncounterData(
                 [
@@ -27,26 +27,9 @@ namespace Hell_Island_Fell.Encounters
             scatterbrainedMedium.CreateNewEnemyEncounterData(
                 [
                     "ScatterbrainedNosestone_EN",
-                    "ChoirBoy_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            scatterbrainedMedium.CreateNewEnemyEncounterData(
-                [
-                    "ScatterbrainedNosestone_EN",
-                    "Inequity_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            scatterbrainedMedium.CreateNewEnemyEncounterData(
-                [
-                    "ScatterbrainedNosestone_EN",
                     "InHerImage_EN",
                     "InHerImage_EN",
                     "Maneater_EN",
-                ], null);
-            scatterbrainedMedium.CreateNewEnemyEncounterData(
-                [
-                    "ScatterbrainedNosestone_EN",
-                    "Inequity_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -68,6 +51,7 @@ namespace Hell_Island_Fell.Encounters
                 scatterbrainedMedium.CreateNewEnemyEncounterData(
                     [
                         "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
                         "EggKeeper_EN",
                     ], null);
             }
@@ -92,8 +76,15 @@ namespace Hell_Island_Fell.Encounters
             EnemyEncounter_API scatterbrainedHard = new EnemyEncounter_API(0, "H_Zone03_ScatterbrainedNosestone_Hard_EnemyBundle", "ScatterbrainedNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
-                RoarEvent = "event:/Characters/Enemies/Spoggle_Blue/CHR_ENM_Spoggle_Blue_Roar",
+                RoarEvent = "event:/ScatterbrainedRoar",
             };
+            scatterbrainedHard.CreateNewEnemyEncounterData(
+                [
+                    "ScatterbrainedNosestone_EN",
+                    "ScatterbrainedNosestone_EN",
+                    "ScatterbrainedNosestone_EN",
+                    "InHerImage_EN",
+                ], null);
             scatterbrainedHard.CreateNewEnemyEncounterData(
                 [
                     "ScatterbrainedNosestone_EN",
@@ -118,13 +109,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "ScatterbrainedNosestone_EN",
                     "ProlificNosestone_EN",
-                    "InHerImage_EN",
-                    "InHerImage_EN",
-                ], null);
-            scatterbrainedHard.CreateNewEnemyEncounterData(
-                [
-                    "ScatterbrainedNosestone_EN",
-                    "MesmerizingNosestone_EN",
                     "InHerImage_EN",
                     "InHerImage_EN",
                 ], null);

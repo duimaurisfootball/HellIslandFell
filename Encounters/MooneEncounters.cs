@@ -139,12 +139,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Moone_EN",
                     "Moone_EN",
-                    "MusicMan_EN",
-                ], null);
-            MooneMedium.CreateNewEnemyEncounterData(
-                [
-                    "Moone_EN",
-                    "Moone_EN",
                     "Moone_EN",
                     "MusicMan_EN",
                 ], null);
@@ -198,7 +192,7 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Moone_EN",
                         "Moone_EN",
-                        "Moone_EN",
+                        "Chapman_EN",
                         "Chapman_EN",
                     ], null);
                 MooneMedium.CreateNewEnemyEncounterData(

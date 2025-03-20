@@ -50,6 +50,8 @@ namespace Hell_Island_Fell.Items
                     new("FormidableDinners_TW", 10),
                     new("FetidTooth_TW", 4),
                     new("BismuthSubsalicylate_SW", 5),
+                    new("AncientWine_SW", 5),
+                    new("Blastocyst_TW", 5),
                 ];
 
             ExtraLootListEffect foodList = ScriptableObject.CreateInstance<ExtraLootListEffect>();

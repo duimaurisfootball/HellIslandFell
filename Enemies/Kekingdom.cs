@@ -28,6 +28,13 @@ namespace Hell_Island_Fell.Enemies
                 ],
             };
             kekingdom.PrepareEnemyPrefab("Assets/KekingdomAssetBundle/Kekingdom.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/KekingdomAssetBundle/KekingdomGibs.prefab").GetComponent<ParticleSystem>());
+            if (Hell_Island_Fell.arachnophobiaMode.Value)
+            {
+                kekingdom.CombatSprite = ResourceLoader.LoadSprite("ARCTimelineKekingdom", new Vector2(0.5f, 0f), 32);
+                kekingdom.OverworldDeadSprite = ResourceLoader.LoadSprite("DeadKekingdom", new Vector2(0.5f, 0f), 32);
+                kekingdom.OverworldAliveSprite = ResourceLoader.LoadSprite("ARCTimelineKekingdom", new Vector2(0.5f, 0f), 32);
+                kekingdom.PrepareEnemyPrefab("Assets/ARC_KekingdomAssetBundle/ARC_Kekingdom.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ARC_FlatbackAssetBundle/ARC_FlatbackGibs.prefab").GetComponent<ParticleSystem>());
+            }
             kekingdom.AddPassives([Passives.InfestationGenerator(3), Passives.Dying, Passives.Forgetful, Passives.GetCustomPassive("DecayKekingdom_PA")]);
 
             Targetting_ByUnit_Index CenterTarget = ScriptableObject.CreateInstance<Targetting_ByUnit_Index>();

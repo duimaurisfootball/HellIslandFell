@@ -14,20 +14,13 @@ namespace Hell_Island_Fell.Encounters
             EnemyEncounter_API uninspiredMedium = new EnemyEncounter_API(0, "H_Zone03_UninspiredNosestone_Medium_EnemyBundle", "UninspiredNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
-                RoarEvent = "event:/Characters/Enemies/Mung/CHR_ENM_Mung_Roar",
+                RoarEvent = "event:/UninspiredRoar",
             };
             uninspiredMedium.CreateNewEnemyEncounterData(
                 [
                     "UninspiredNosestone_EN",
                     "UninspiredNosestone_EN",
                     "ChoirBoy_EN",
-                ], null);
-            uninspiredMedium.CreateNewEnemyEncounterData(
-                [
-                    "UninspiredNosestone_EN",
-                    "ChoirBoy_EN",
-                    "Inequity_EN",
-                    "ShiveringHomunculus_EN",
                 ], null);
             uninspiredMedium.CreateNewEnemyEncounterData(
                 [
@@ -81,7 +74,7 @@ namespace Hell_Island_Fell.Encounters
             EnemyEncounter_API uninspiredHard = new EnemyEncounter_API(0, "H_Zone03_UninspiredNosestone_Hard_EnemyBundle", "UninspiredNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
-                RoarEvent = "event:/Characters/Enemies/Mung/CHR_ENM_Mung_Roar",
+                RoarEvent = "event:/UninspiredRoar",
             };
             uninspiredHard.CreateNewEnemyEncounterData(
                 [
@@ -117,21 +110,8 @@ namespace Hell_Island_Fell.Encounters
             uninspiredHard.CreateNewEnemyEncounterData(
                 [
                     "UninspiredNosestone_EN",
-                    "UninspiredNosestone_EN",
-                    "Inequity_EN",
-                    "StickingHomunculus_EN",
-                ], null);
-            uninspiredHard.CreateNewEnemyEncounterData(
-                [
-                    "UninspiredNosestone_EN",
                     "ChoirBoy_EN",
                     "Inequity_EN",
-                ], null);
-            uninspiredHard.CreateNewEnemyEncounterData(
-                [
-                    "UninspiredNosestone_EN",
-                    "SweatingNosestone_EN",
-                    "StickingHomunculus_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -140,14 +120,12 @@ namespace Hell_Island_Fell.Encounters
                         "UninspiredNosestone_EN",
                         "UninspiredNosestone_EN",
                         "SterileBud_EN",
-                        "Inequity_EN",
                     ], null);
                 uninspiredHard.CreateNewEnemyEncounterData(
                     [
                         "UninspiredNosestone_EN",
                         "UninspiredNosestone_EN",
                         "TitteringPeon_EN",
-                        "ChoirBoy_EN",
                     ], null);
                 uninspiredHard.CreateNewEnemyEncounterData(
                     [
@@ -160,13 +138,6 @@ namespace Hell_Island_Fell.Encounters
                         "UninspiredNosestone_EN",
                         "MesmerizingNosestone_EN",
                         "TitteringPeon_EN",
-                    ], null);
-                uninspiredHard.CreateNewEnemyEncounterData(
-                    [
-                        "UninspiredNosestone_EN",
-                        "ScatterbrainedNosestone_EN",
-                        "Unterling_EN",
-                        "Unterling_EN",
                     ], null);
                 uninspiredHard.CreateNewEnemyEncounterData(
                     [

@@ -141,6 +141,7 @@ namespace Hell_Island_Fell.Encounters
             ThunderdomeHard.CreateNewEnemyEncounterData(
                 [
                     "Thunderdome_EN",
+                    "Thunderdome_EN",
                     "ManicMan_EN",
                     "ManicMan_EN",
                     "ManicMan_EN",

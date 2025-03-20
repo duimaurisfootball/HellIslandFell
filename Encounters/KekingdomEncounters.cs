@@ -10,7 +10,14 @@ namespace Hell_Island_Fell.Encounters
     {
         public static void Add()
         {
-            Portals.AddPortalSign("Kekingdom_Sign", ResourceLoader.LoadSprite("TimelineKekingdom", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
+            if (Hell_Island_Fell.arachnophobiaMode.Value)
+            {
+                Portals.AddPortalSign("Kekingdom_Sign", ResourceLoader.LoadSprite("ARCTimelineKekingdom", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
+            }
+            else
+            {
+                Portals.AddPortalSign("Kekingdom_Sign", ResourceLoader.LoadSprite("TimelineKekingdom", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
+            }
             EnemyEncounter_API kekingdomHard = new EnemyEncounter_API(0, "H_Zone01_Kekingdom_Hard_EnemyBundle", "Kekingdom_Sign")
             {
                 MusicEvent = "event:/Music/DLC_01/Mx_Kekastle_125",

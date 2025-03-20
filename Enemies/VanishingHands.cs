@@ -37,19 +37,19 @@ namespace Hell_Island_Fell.Enemies
 
             Ability drag = new Ability("Drag", "Drag_A")
             {
-                Description = "\"What a nightmare...\"\nApply 1 Disappearing to all party members.",
+                Description = "\"What a nightmare...\"\nApply 1 Disappearing to the Very Far Left, Far Left, Far Right, and Very Far Right party members.",
                 Cost = [Pigments.RedPurple],
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(DisappearingApply, 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(DisappearingApply, 1, Targeting.GenerateSlotTarget([-3, -2, 2, 3], false, false)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<CasterSideWitheringEffect>(), 1, null, Effects.ChanceCondition(20)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DirectDeathEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(1)),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1000, true),
                 Priority = Priority.ExtremelySlow,
             };
-            drag.AddIntentsToTarget(Targeting.Unit_AllOpponents, ["Status_Disappearing"]);
+            drag.AddIntentsToTarget(Targeting.GenerateSlotTarget([-3, -2, 2, 3], false, false), ["Status_Disappearing"]);
 
             vanishingHands.AddEnemyAbilities(
                 [

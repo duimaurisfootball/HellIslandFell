@@ -25,7 +25,7 @@ namespace Hell_Island_Fell.Encounters
             ManeaterEasy.CreateNewEnemyEncounterData(
                 [
                     "Maneater_EN",
-                    "InHisImage",
+                    "InHisImage_EN",
                 ], null);
             ManeaterEasy.CreateNewEnemyEncounterData(
                 [
@@ -47,11 +47,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Maneater_EN",
                     "UninspiredNosestone_EN",
-                ], null);
-            ManeaterEasy.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "Inequity_EN",
                 ], null);
             ManeaterEasy.CreateNewEnemyEncounterData(
                 [
@@ -116,14 +111,14 @@ namespace Hell_Island_Fell.Encounters
             ManeaterMedium.CreateNewEnemyEncounterData(
                 [
                     "Maneater_EN",
-                    "SkinningHomunculus_EN",
+                    "InHisImage_EN",
                     "InHisImage_EN",
                     "InHerImage_EN",
                 ], null);
             ManeaterMedium.CreateNewEnemyEncounterData(
                 [
                     "Maneater_EN",
-                    "SkinningHomunculus_EN",
+                    "ChoirBoy_EN",
                     "ChoirBoy_EN",
                 ], null);
             ManeaterMedium.CreateNewEnemyEncounterData(
@@ -131,13 +126,6 @@ namespace Hell_Island_Fell.Encounters
                     "Maneater_EN",
                     "Maneater_EN",
                     "ChoirBoy_EN",
-                ], null);
-            ManeaterMedium.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "ChoirBoy_EN",
-                    "InHisImage_EN",
-                    "InHerImage_EN",
                 ], null);
             ManeaterMedium.CreateNewEnemyEncounterData(
                 [
@@ -148,12 +136,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Maneater_EN",
                     "GigglingMinister_EN",
-                    "SweatingNosestone_EN",
-                ], null);
-            ManeaterMedium.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "SkinningHomunculus_EN",
                     "SweatingNosestone_EN",
                 ], null);
             ManeaterMedium.CreateNewEnemyEncounterData(
@@ -172,19 +154,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Maneater_EN",
                     "Inequity_EN",
-                    "ChoirBoy_EN",
-                ], null);
-            ManeaterMedium.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "Inequity_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            ManeaterMedium.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "Inequity_EN",
-                    "ProlificNosestone_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -197,20 +166,8 @@ namespace Hell_Island_Fell.Encounters
                 ManeaterMedium.CreateNewEnemyEncounterData(
                     [
                         "Maneater_EN",
-                        "Unterling_EN",
-                        "Inequity_EN",
-                    ], null);
-                ManeaterMedium.CreateNewEnemyEncounterData(
-                    [
-                        "Maneater_EN",
                         "SterileBud_EN",
-                        "ChoirBoy_EN",
-                    ], null);
-                ManeaterMedium.CreateNewEnemyEncounterData(
-                    [
-                        "Maneater_EN",
                         "SterileBud_EN",
-                        "Inequity_EN",
                     ], null);
                 ManeaterMedium.CreateNewEnemyEncounterData(
                     [
@@ -284,7 +241,7 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Maneater_EN",
                     "SkinningHomunculus_EN",
-                    "ShiveringHomunculus_EN",
+                    "SkinningHomunculus_EN",
                 ], null);
             ManeaterHard.CreateNewEnemyEncounterData(
                 [
@@ -325,26 +282,8 @@ namespace Hell_Island_Fell.Encounters
             ManeaterHard.CreateNewEnemyEncounterData(
                 [
                     "Maneater_EN",
-                    "Inequity_EN",
-                    "SweatingNosestone_EN",
-                ], null);
-            ManeaterHard.CreateNewEnemyEncounterData(
-                [
                     "Maneater_EN",
                     "Inequity_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            ManeaterHard.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "Inequity_EN",
-                    "Maneater_EN",
-                ], null);
-            ManeaterHard.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "StickingHomunculus_EN",
-                    "Maneater_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -373,13 +312,6 @@ namespace Hell_Island_Fell.Encounters
                         "StickingHomunculus_EN",
                         "StickingHomunculus_EN",
                         "ScreamingHomunculus_EN",
-                    ], null);
-                ManeaterHard.CreateNewEnemyEncounterData(
-                    [
-                        "Maneater_EN",
-                        "SterileBud_EN",
-                        "SterileBud_EN",
-                        "SweatingNosestone_EN",
                     ], null);
             }
             if (Hell_Island_Fell.CrossMod.EggKeeper)

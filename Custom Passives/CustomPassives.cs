@@ -1,4 +1,5 @@
-﻿using BrutalAPI;
+﻿using BepInEx;
+using BrutalAPI;
 using Hell_Island_Fell.Custom_Effects;
 using Hell_Island_Fell.Custom_Stuff;
 using System;
@@ -260,7 +261,7 @@ namespace Hell_Island_Fell.Custom_Passives
             Connection_PerformEffectPassiveAbility disruption = ScriptableObject.CreateInstance<Connection_PerformEffectPassiveAbility>();
             disruption.m_PassiveID = "Disruption";
             disruption.passiveIcon = ResourceLoader.LoadSprite("BolerDisruption");
-            disruption._characterDescription = "Not intended for party members.";
+            disruption._characterDescription = "Randomize and reduce all party member ability costs.";
             disruption._enemyDescription = "Randomize and reduce all party member ability costs.";
             disruption._triggerOn =
                 [
@@ -276,10 +277,8 @@ namespace Hell_Island_Fell.Custom_Passives
                 ];
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            RandomizeCasterExtraSpritesEffect FaceOff = ScriptableObject.CreateInstance<RandomizeCasterExtraSpritesEffect>();
+            SetCasterExtraSpritesEffect FaceOff = ScriptableObject.CreateInstance<SetCasterExtraSpritesEffect>();
             FaceOff._ExtraSpriteID = "HoftstoldtSpritesSpecial";
-
-            int FaceOn = 216;
 
             Connection_PerformEffectPassiveAbility HConstruct = ScriptableObject.CreateInstance<Connection_PerformEffectPassiveAbility>();
             HConstruct.m_PassiveID = Passives.Construct.m_PassiveID;
@@ -290,7 +289,7 @@ namespace Hell_Island_Fell.Custom_Passives
             HConstruct.connectionEffects =
                 [
                     Effects.GenerateEffect((LoadedAssetsHandler.GetPassive("Construct_PA") as Connection_PerformEffectPassiveAbility).connectionEffects[1].effect, 1),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ];
             HConstruct.disconnectionEffects = [];
 
@@ -555,6 +554,7 @@ namespace Hell_Island_Fell.Custom_Passives
         public static BasePassiveAbilitySO AltAttacksGenerator(List<ExtraAbilityInfo> bonusAbilities)
         {
             List<string> names = [];
+            List<ExtraAbilityInfo> weights = [];
             foreach (ExtraAbilityInfo ability in bonusAbilities)
             {
                 if (ability == null || ability.ability == null)
@@ -563,7 +563,13 @@ namespace Hell_Island_Fell.Custom_Passives
                     return null;
                 }
                 names.Add(ability.ability._abilityName);
+                for (int i = 0; i < ability.rarity.rarityValue; i++)
+                {
+                    weights.Add(ability);
+                }
+                ability.rarity = CustomAbilityRarity.Weight(0, ability.rarity.canBeRerolled);
             }
+
             AltAttacksPassiveAbility altAttacksPassiveAbility = ScriptableObject.CreateInstance<AltAttacksPassiveAbility>();
 
             altAttacksPassiveAbility.name = string.Join("_", names) + "_PA";
@@ -576,7 +582,7 @@ namespace Hell_Island_Fell.Custom_Passives
             altAttacksPassiveAbility.conditions = [];
             altAttacksPassiveAbility.doesPassiveTriggerInformationPanel = false;
             altAttacksPassiveAbility.specialStoredData = null;
-            altAttacksPassiveAbility._altAbilities = bonusAbilities;
+            altAttacksPassiveAbility._altAbilities = weights;
             return altAttacksPassiveAbility;
         }
 

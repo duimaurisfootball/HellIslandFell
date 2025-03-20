@@ -1,4 +1,5 @@
 ﻿using BrutalAPI.Items;
+using Hell_Island_Fell.Custom_Effects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +16,10 @@ namespace Hell_Island_Fell.Items
             StatusEffect_Apply_Effect FocusedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             FocusedApply._Status = StatusField.Focused;
 
+            SpecialDamageEffect CasterlessDamage = ScriptableObject.CreateInstance<SpecialDamageEffect>();
+            CasterlessDamage._selfCast = false;
+            CasterlessDamage._damageType = CombatType_GameIDs.Dmg_Normal.ToString();
+
             PerformEffect_Item blankPointBlankPoint = new PerformEffect_Item("BlankPointBlankPoint_ID", null, false)
             {
                 Item_ID = "BlankPointBlankPoint_SW",
@@ -30,7 +35,7 @@ namespace Hell_Island_Fell.Items
                 Effects =
                 [
                     Effects.GenerateEffect(IsFocused, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 2, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(CasterlessDamage, 2, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
                     Effects.GenerateEffect(FocusedApply, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
                 ],
             };

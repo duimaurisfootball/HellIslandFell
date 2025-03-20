@@ -30,8 +30,8 @@ namespace Hell_Island_Fell.Items
                     Effects.GenerateEffect(Divinity, 1),
                 ],
             };
-
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(trinitite.Item, new ItemModdedUnlockInfo("Trinitite_TW", ResourceLoader.LoadSprite("UnlockHeavenMorriganLocked", null, 32, null), "HIF_Morrigan_Divine_ACH"));
+
         }
     }
 }

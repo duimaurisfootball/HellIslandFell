@@ -14,7 +14,7 @@ namespace Hell_Island_Fell.Encounters
             EnemyEncounter_API mesmerizingMedium = new EnemyEncounter_API(0, "H_Zone03_MesmerizingNosestone_Medium_EnemyBundle", "MesmerizingNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
-                RoarEvent = "event:/Characters/Enemies/Spoggle_Purple/CHR_ENM_Spoggle_Purple_Roar",
+                RoarEvent = "event:/MesmerizingRoar",
             };
             mesmerizingMedium.CreateNewEnemyEncounterData(
                 [
@@ -32,18 +32,7 @@ namespace Hell_Island_Fell.Encounters
             mesmerizingMedium.CreateNewEnemyEncounterData(
                 [
                     "MesmerizingNosestone_EN",
-                    "SkinningHomunculus_EN",
-                    "GigglingMinister_EN",
-                ], null);
-            mesmerizingMedium.CreateNewEnemyEncounterData(
-                [
-                    "MesmerizingNosestone_EN",
                     "Maneater_EN",
-                ], null);
-            mesmerizingMedium.CreateNewEnemyEncounterData(
-                [
-                    "MesmerizingNosestone_EN",
-                    "Inequity_EN",
                 ], null);
             mesmerizingMedium.CreateNewEnemyEncounterData(
                 [
@@ -60,12 +49,6 @@ namespace Hell_Island_Fell.Encounters
                 mesmerizingMedium.CreateNewEnemyEncounterData(
                     [
                         "MesmerizingNosestone_EN",
-                        "TitteringPeon_EN",
-                    ], null);
-                mesmerizingMedium.CreateNewEnemyEncounterData(
-                    [
-                        "MesmerizingNosestone_EN",
-                        "SterileBud_EN",
                         "TitteringPeon_EN",
                     ], null);
             }
@@ -91,7 +74,7 @@ namespace Hell_Island_Fell.Encounters
             EnemyEncounter_API mesmerizingHard = new EnemyEncounter_API(0, "H_Zone03_MesmerizingNosestone_Hard_EnemyBundle", "MesmerizingNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
-                RoarEvent = "event:/Characters/Enemies/Spoggle_Purple/CHR_ENM_Spoggle_Purple_Roar",
+                RoarEvent = "event:/MesmerizingRoar",
             };
             mesmerizingHard.CreateNewEnemyEncounterData(
                 [
@@ -116,18 +99,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "MesmerizingNosestone_EN",
                     "ProlificNosestone_EN",
-                    "GigglingMinister_EN",
-                ], null);
-            mesmerizingHard.CreateNewEnemyEncounterData(
-                [
-                    "MesmerizingNosestone_EN",
-                    "ScatterbrainedNosestone_EN",
-                    "GigglingMinister_EN",
-                ], null);
-            mesmerizingHard.CreateNewEnemyEncounterData(
-                [
-                    "MesmerizingNosestone_EN",
-                    "ProlificNosestone_EN",
                     "Maneater_EN",
                 ], null);
             mesmerizingHard.CreateNewEnemyEncounterData(
@@ -141,13 +112,6 @@ namespace Hell_Island_Fell.Encounters
                     "MesmerizingNosestone_EN",
                     "StickingHomunculus_EN",
                     "GigglingMinister_EN",
-                ], null);
-            mesmerizingHard.CreateNewEnemyEncounterData(
-                [
-                    "MesmerizingNosestone_EN",
-                    "StickingHomunculus_EN",
-                    "InHisImage_EN",
-                    "InHisImage_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {

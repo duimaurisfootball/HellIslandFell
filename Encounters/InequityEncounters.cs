@@ -84,11 +84,16 @@ namespace Hell_Island_Fell.Encounters
             inequityHard.CreateNewEnemyEncounterData(
                 [
                     "Inequity_EN",
-                    "ChoirBoy_EN",
+                    "NextOfKin_EN",
+                    "GigglingMinister_EN",
                 ]);
             inequityHard.CreateNewEnemyEncounterData(
                 [
                     "Inequity_EN",
+                    "ChoirBoy_EN",
+                ]);
+            inequityHard.CreateNewEnemyEncounterData(
+                [
                     "Inequity_EN",
                     "Inequity_EN",
                     "SkinningHomunculus_EN",
@@ -97,12 +102,10 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Inequity_EN",
                     "Inequity_EN",
-                    "Inequity_EN",
                     "ProlificNosestone_EN",
                 ]);
             inequityHard.CreateNewEnemyEncounterData(
                 [
-                    "Inequity_EN",
                     "Inequity_EN",
                     "Inequity_EN",
                     "UninspiredNosestone_EN",
@@ -111,12 +114,10 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Inequity_EN",
                     "Inequity_EN",
-                    "Inequity_EN",
                     "ScatterbrainedNosestone_EN",
                 ]);
             inequityHard.CreateNewEnemyEncounterData(
                 [
-                    "Inequity_EN",
                     "Inequity_EN",
                     "Inequity_EN",
                     "StickingHomunculus_EN",

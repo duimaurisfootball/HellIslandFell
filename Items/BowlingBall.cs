@@ -12,9 +12,6 @@ namespace Hell_Island_Fell.Items
     {
         public static void Add()
         {
-            PercentageEffectCondition lootChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            lootChance.percentage = 25;
-
             DoublePerformEffect_Item bowlingBall = new DoublePerformEffect_Item("BowlingBall_ID", null)
             {
                 Item_ID = "BowlingBall_SW",
@@ -29,7 +26,7 @@ namespace Hell_Island_Fell.Items
                 TriggerOn = TriggerCalls.OnKill,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraLootRandomEffect>(), 1, Targeting.Slot_SelfSlot, lootChance),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraLootRandomEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(25)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<PopUpCasterItemInfoEffect>(), 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                 ],
                 SecondaryDoesPopUpInfo = false,
@@ -39,6 +36,7 @@ namespace Hell_Island_Fell.Items
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ChaosLootReplaceEffect>(), 83, Targeting.Slot_SelfSlot),
                 ],
             };
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(bowlingBall.Item, new ItemModdedUnlockInfo("BowlingBall_SW", ResourceLoader.LoadSprite("UnlockOsmanFelixLocked", null, 32, null), "HIF_Felix_Witness_ACH"));
         }
     }

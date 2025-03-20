@@ -52,11 +52,7 @@ namespace Hell_Island_Fell.Custom_Stuff
 
             front = _frontSprite[specialID];
             back = _backSprite;
-            specialID++;
-            if (_doesLoop && specialID >= num)
-            {
-                specialID = 0;
-            }
+            specialID = UnityEngine.Random.Range(0, num);
 
             return specialID;
         }

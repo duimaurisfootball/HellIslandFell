@@ -17,7 +17,7 @@ namespace Hell_Island_Fell.Custom_Effects
 
             for (int cont = 0; cont < 1;)
             {
-                TargetSlotInfo[] targets0 = CreateInstance<RightmostTargeting>().GetTargets(stats.combatSlots, caster.SlotID, caster.IsUnitCharacter);
+                TargetSlotInfo[] targets0 = Targeting.GenerateGenericTarget([4], false).GetTargets(stats.combatSlots, caster.SlotID, caster.IsUnitCharacter);
                 TargetSlotInfo[] targets1 = Targeting.Slot_SelfSlot.GetTargets(stats.combatSlots, caster.SlotID, caster.IsUnitCharacter);
 
                 for (int i = 0; i < targets0.Length; i++)

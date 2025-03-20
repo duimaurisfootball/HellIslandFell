@@ -38,7 +38,7 @@ namespace Hell_Island_Fell.Fools
             //blink
             Ability blink0 = new Ability("Blink Low", "hifBlink_1_A")
             {
-                Description = "Deal 7 damage to the Opposing enemy.\nApply 3 Shadow Hands to the Opposing enemy.",
+                Description = "Deal 7 damage to the Opposing enemy.\nApply 3 Shadow Hands to the Opposing enemy position.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedBlink"),
                 Cost = [Pigments.Red],
                 Visuals = Visuals.Crush,
@@ -54,7 +54,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability blink1 = new Ability("Blink Terse", "hifBlink_2_A")
             {
-                Description = "Deal 10 damage to the Opposing enemy.\nApply 3 Shadow Hands to the Opposing enemy.",
+                Description = "Deal 10 damage to the Opposing enemy.\nApply 3 Shadow Hands to the Opposing enemy position.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedBlink"),
                 Cost = [Pigments.Red],
                 Visuals = Visuals.Crush,
@@ -70,7 +70,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability blink2 = new Ability("Blink Sharp", "hifBlink_3_A")
             {
-                Description = "Deal 13 damage to the Opposing enemy.\nApply 4 Shadow Hands to the Opposing enemy.",
+                Description = "Deal 13 damage to the Opposing enemy.\nApply 4 Shadow Hands to the Opposing enemy position.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedBlink"),
                 Cost = [Pigments.Red],
                 Visuals = Visuals.Crush,
@@ -86,18 +86,18 @@ namespace Hell_Island_Fell.Fools
 
             Ability blink3 = new Ability("Blink Once", "hifBlink_4_A")
             {
-                Description = "Deal 15 damage to the Opposing enemy.\nApply 4 Shadow Hands to the Opposing enemy.",
+                Description = "Deal 17 damage to the Opposing enemy.\nApply 4 Shadow Hands to the Opposing enemy position.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedBlink"),
                 Cost = [Pigments.Red],
                 Visuals = Visuals.Crush,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 15, Targeting.Slot_Front),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 17, Targeting.Slot_Front),
                     Effects.GenerateEffect(ShadowHandsApply, 4, Targeting.Slot_Front),
                 ]
             };
-            blink3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
+            blink3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_16_20)]);
             blink3.AddIntentsToTarget(Targeting.Slot_Front, ["Field_ShadowHands"]);
 
             //invisible
@@ -135,22 +135,6 @@ namespace Hell_Island_Fell.Fools
 
             Ability invisible2 = new Ability("Outline Invisible", "Invisible_3_A")
             {
-                Description = "Apply 7 Shadow Hands split randomly between the Left, Right, and Opposing enemy positions\nApply 2 Ruptured to the Opposing enemy.",
-                AbilitySprite = ResourceLoader.LoadSprite("StareyedInvisible"),
-                Cost = [Pigments.Red, Pigments.Yellow],
-                Visuals = Visuals.Poke,
-                AnimationTarget = Targeting.Slot_FrontAndSides,
-                Effects =
-                [
-                    Effects.GenerateEffect(InvisibleApply, 7, Targeting.Slot_FrontAndSides),
-                    Effects.GenerateEffect(RupturedApply, 2, Targeting.Slot_Front),
-                ]
-            };
-            invisible2.AddIntentsToTarget(Targeting.Slot_FrontAndSides, ["Field_ShadowHands"]);
-            invisible2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
-
-            Ability invisible3 = new Ability("Touch Invisible", "Invisible_4_A")
-            {
                 Description = "Apply 8 Shadow Hands split randomly between the Left, Right, and Opposing enemy positions\nApply 2 Ruptured to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedInvisible"),
                 Cost = [Pigments.Red, Pigments.Yellow],
@@ -159,6 +143,22 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(InvisibleApply, 8, Targeting.Slot_FrontAndSides),
+                    Effects.GenerateEffect(RupturedApply, 2, Targeting.Slot_Front),
+                ]
+            };
+            invisible2.AddIntentsToTarget(Targeting.Slot_FrontAndSides, ["Field_ShadowHands"]);
+            invisible2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
+
+            Ability invisible3 = new Ability("Touch Invisible", "Invisible_4_A")
+            {
+                Description = "Apply 10 Shadow Hands split randomly between the Left, Right, and Opposing enemy positions\nApply 2 Ruptured to the Opposing enemy.",
+                AbilitySprite = ResourceLoader.LoadSprite("StareyedInvisible"),
+                Cost = [Pigments.Red, Pigments.Yellow],
+                Visuals = Visuals.Poke,
+                AnimationTarget = Targeting.Slot_FrontAndSides,
+                Effects =
+                [
+                    Effects.GenerateEffect(InvisibleApply, 10, Targeting.Slot_FrontAndSides),
                     Effects.GenerateEffect(RupturedApply, 2, Targeting.Slot_Front),
                 ]
             };
@@ -214,7 +214,7 @@ namespace Hell_Island_Fell.Fools
             margins2.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Status_Ruptured)]);
             margins2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability margins3 = new Ability("Background Margins", "Margins_4_A")
+            Ability margins3 = new Ability("Cosmic Margins", "Margins_4_A")
             {
                 Description = "Apply 4 Ruptured to all enemies.\nHeal this party member 3 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedMargins"),

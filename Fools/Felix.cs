@@ -67,13 +67,6 @@ namespace Hell_Island_Fell.Fools
             felix.GenerateMenuCharacter(ResourceLoader.LoadSprite("FelixMenu"), ResourceLoader.LoadSprite("FelixLocked"));
             felix.AddPassives([Passives.GetCustomPassive("Chaos_PA"), Passives.Delicate]);
 
-            IntentInfoBasic CostRerollIntent = new()
-            {
-                _color = Color.white,
-                _sprite = ResourceLoader.LoadSprite("IntentCostReroll")
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Reroll_Cost", CostRerollIntent);
-
             SetCasterExtraSpritesEffect ClockTicker = ScriptableObject.CreateInstance<SetCasterExtraSpritesEffect>();
             ClockTicker._ExtraSpriteID = "FelixSpritesSpecial";
 

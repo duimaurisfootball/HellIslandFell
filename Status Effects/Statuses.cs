@@ -1,11 +1,4 @@
-﻿using BrutalAPI;
-using Hell_Island_Fell;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using UnityEngine;
-
-namespace Hell_Island_Fell.Status_Effects
+﻿namespace Hell_Island_Fell.Status_Effects
 {
     public class Statuses
     {
@@ -79,6 +72,41 @@ namespace Hell_Island_Fell.Status_Effects
                     _sprite = ResourceLoader.LoadSprite("Salted")
                 };
                 LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Status_Salted", SaltedRemIntent);
+            }
+
+            if (!LoadedDBsHandler.StatusFieldDB.StatusEffects.ContainsKey("Nemesis_ID"))
+            {
+                StatusEffectInfoSO NemesisInfo = ScriptableObject.CreateInstance<StatusEffectInfoSO>();
+                NemesisInfo._statusName = "Nemesis";
+                NemesisInfo._description = "This is your nemesis.";
+                NemesisInfo.icon = ResourceLoader.LoadSprite("Nemesis");
+
+                LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Cursed_ID", out StatusEffect_SO cursed);
+                StatusEffectInfoSO baseinfo = cursed.EffectInfo;
+
+                NemesisInfo._applied_SE_Event = baseinfo._applied_SE_Event;
+                NemesisInfo._removed_SE_Event = baseinfo._removed_SE_Event;
+                NemesisInfo._updated_SE_Event = baseinfo._updated_SE_Event;
+
+                NemesisStatus nemesis = ScriptableObject.CreateInstance<NemesisStatus>();
+                nemesis._StatusID = "Nemesis_ID";
+                nemesis._EffectInfo = NemesisInfo;
+
+                LoadedDBsHandler.StatusFieldDB.AddNewStatusEffect(nemesis, true);
+
+                IntentInfoBasic NemesisIntent = new()
+                {
+                    _color = Color.white,
+                    _sprite = ResourceLoader.LoadSprite("Nemesis")
+                };
+                LoadedDBsHandler.IntentDB.AddNewBasicIntent("Status_Nemesis", NemesisIntent);
+
+                IntentInfoBasic NemesisRemIntent = new()
+                {
+                    _color = Color.gray,
+                    _sprite = ResourceLoader.LoadSprite("Nemesis")
+                };
+                LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Status_Nemesis", NemesisRemIntent);
             }
         }
     }

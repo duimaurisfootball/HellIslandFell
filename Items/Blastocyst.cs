@@ -10,23 +10,21 @@ namespace Hell_Island_Fell.Items
             ExtraPassiveAbility_Wearable_SMS baby = ScriptableObject.CreateInstance<ExtraPassiveAbility_Wearable_SMS>();
             baby._extraPassiveAbility = Passives.GetCustomPassive("UniInfantile_PA");
 
-            AllFrontSlots allFrontSlots = ScriptableObject.CreateInstance<AllFrontSlots>();
-
             Ability cuckoo = new Ability("Cuckoo", "HIFCuckoo_A")
             {
                 Description = "Heal the Opposing party member(s).",
                 Cost = [Pigments.Blue],
-                AnimationTarget = allFrontSlots,
+                AnimationTarget = Targeting.Slot_Front,
                 Visuals = Visuals.Innocence,
                 Effects =
                     [
                         Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1),
-                        Effects.GenerateEffect(ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 7, allFrontSlots),
+                        Effects.GenerateEffect(ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 7, Targeting.Slot_Front),
                     ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Slow,
             };
-            cuckoo.AddIntentsToTarget(allFrontSlots, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            cuckoo.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
             ExtraAbilityInfo babbyMove = new()
             {

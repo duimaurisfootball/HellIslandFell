@@ -40,7 +40,6 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(stabbingHomunculus.Item, new ItemModdedUnlockInfo("StabbingHomunculus_TW", ResourceLoader.LoadSprite("UnlockOsmanHoftstoldtLocked", null, 32, null), "HIF_Hoftstoldt_Witness_ACH"));
-        }
+            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(stabbingHomunculus.Item, new ItemModdedUnlockInfo("StabbingHomunculus_TW", ResourceLoader.LoadSprite("UnlockOsmanHoftstoldtLocked", null, 32, null), "HIF_Hoftstoldt_Witness_ACH"));        }
     }
 }

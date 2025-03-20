@@ -14,18 +14,12 @@ namespace Hell_Island_Fell.Encounters
             EnemyEncounter_API prolificMedium = new EnemyEncounter_API(0, "H_Zone03_ProlificNosestone_Medium_EnemyBundle", "ProlificNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
-                RoarEvent = "event:/Characters/Enemies/WrithingSpoggle/CHR_ENM_WrithingSpoggle_Roar",
+                RoarEvent = "event:/ProlificRoar",
             };
             prolificMedium.CreateNewEnemyEncounterData(
                 [
                     "ProlificNosestone_EN",
                     "ProlificNosestone_EN",
-                ], null);
-            prolificMedium.CreateNewEnemyEncounterData(
-                [
-                    "ProlificNosestone_EN",
-                    "ShiveringHomunculus_EN",
-                    "SkinningHomunculus_EN",
                 ], null);
             prolificMedium.CreateNewEnemyEncounterData(
                 [
@@ -37,7 +31,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "ProlificNosestone_EN",
                     "GigglingMinister_EN",
-                    "ChoirBoy_EN",
                 ], null);
             prolificMedium.CreateNewEnemyEncounterData(
                 [
@@ -53,14 +46,6 @@ namespace Hell_Island_Fell.Encounters
                     "NextOfKin_EN",
                     "NextOfKin_EN",
                     "NextOfKin_EN",
-                ], null);
-            prolificMedium.CreateNewEnemyEncounterData(
-                [
-                    "ProlificNosestone_EN",
-                    "NextOfKin_EN",
-                    "NextOfKin_EN",
-                    "NextOfKin_EN",
-                    "Inequity_EN",
                 ], null);
             prolificMedium.CreateNewEnemyEncounterData(
                 [
@@ -77,8 +62,8 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "ProlificNosestone_EN",
                     "StickingHomunculus_EN",
-                    "NextOfKin_EN",
-                    "NextOfKin_EN",
+                    "ShiveringHomunculus_EN",
+                    "ShiveringHomunculus_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -154,7 +139,7 @@ namespace Hell_Island_Fell.Encounters
             EnemyEncounter_API prolificHard = new EnemyEncounter_API(0, "H_Zone03_ProlificNosestone_Hard_EnemyBundle", "ProlificNosestone_Sign")
             {
                 MusicEvent = "event:/SniffStep",
-                RoarEvent = "event:/Characters/Enemies/WrithingSpoggle/CHR_ENM_WrithingSpoggle_Roar",
+                RoarEvent = "event:/ProlificRoar",
             };
             prolificHard.CreateNewEnemyEncounterData(
                 [
@@ -171,24 +156,6 @@ namespace Hell_Island_Fell.Encounters
             prolificHard.CreateNewEnemyEncounterData(
                 [
                     "ProlificNosestone_EN",
-                    "ProlificNosestone_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            prolificHard.CreateNewEnemyEncounterData(
-                [
-                    "ProlificNosestone_EN",
-                    "SweatingNosestone_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            prolificHard.CreateNewEnemyEncounterData(
-                [
-                    "ProlificNosestone_EN",
-                    "ScatterbrainedNosestone_EN",
-                    "SkinningHomunculus_EN",
-                ], null);
-            prolificHard.CreateNewEnemyEncounterData(
-                [
-                    "ProlificNosestone_EN",
                     "NextOfKin_EN",
                     "NextOfKin_EN",
                     "Inequity_EN",
@@ -222,7 +189,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "ProlificNosestone_EN",
                     "SkinningHomunculus_EN",
-                    "StickingHomunculus_EN",
                     "ShiveringHomunculus_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
@@ -231,13 +197,6 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "ProlificNosestone_EN",
                         "SkinningHomunculus_EN",
-                        "StickingHomunculus_EN",
-                        "ScreamingHomunculus_EN",
-                    ], null);
-                prolificHard.CreateNewEnemyEncounterData(
-                    [
-                        "ProlificNosestone_EN",
-                        "SkinningHomunculus_EN",
                         "ShiveringHomunculus_EN",
                         "ScreamingHomunculus_EN",
                     ], null);
@@ -250,10 +209,16 @@ namespace Hell_Island_Fell.Encounters
                     ], null);
                 prolificHard.CreateNewEnemyEncounterData(
                     [
-                        "ProlificNosestone_EN",
                         "ProlificNosestone_EN",
                         "Unterling_EN",
                         "ScreamingHomunculus_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Unterling_EN",
+                        "Unterling_EN",
+                        "Unterling_EN",
                     ], null);
                 prolificHard.CreateNewEnemyEncounterData(
                     [
@@ -267,22 +232,8 @@ namespace Hell_Island_Fell.Encounters
                 prolificHard.CreateNewEnemyEncounterData(
                     [
                         "ProlificNosestone_EN",
-                        "SkinningHomunculus_EN",
-                        "ShiveringHomunculus_EN",
-                        "EggKeeper_EN",
-                    ], null);
-                prolificHard.CreateNewEnemyEncounterData(
-                    [
-                        "ProlificNosestone_EN",
                         "StickingHomunculus_EN",
                         "ShiveringHomunculus_EN",
-                        "EggKeeper_EN",
-                    ], null);
-                prolificHard.CreateNewEnemyEncounterData(
-                    [
-                        "ProlificNosestone_EN",
-                        "StickingHomunculus_EN",
-                        "SkinningHomunculus_EN",
                         "EggKeeper_EN",
                     ], null);
                 prolificHard.CreateNewEnemyEncounterData(

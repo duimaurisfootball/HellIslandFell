@@ -12,16 +12,6 @@ namespace Hell_Island_Fell.Items
     {
         public static void Add()
         {
-
-            IntentInfoDamage Damage_Unbounded = new()
-            {
-                _color = Color.red,
-                _enemyColor = Color.magenta,
-                _sprite = ResourceLoader.LoadSprite("IntentUnboundDamage"),
-                _enemySprite = ResourceLoader.LoadSprite("IntentUnboundDamage"),
-            };
-            LoadedDBsHandler.IntentDB.AddNewDamageIntent("Damage_Unbounded", Damage_Unbounded);
-
             SetCasterExtraSpritesEffect ClockTicker = ScriptableObject.CreateInstance<SetCasterExtraSpritesEffect>();
             UnboundedDamageEffect UnboundedDamage = ScriptableObject.CreateInstance<UnboundedDamageEffect>();
             UnboundedDamage._repeatChance = 95;

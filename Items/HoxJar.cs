@@ -33,6 +33,7 @@ namespace Hell_Island_Fell.Items
                     Effects.GenerateEffect(FireApply, 4, Targeting.Slot_SelfSlot),
                 ],
             };
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(hoxJar.Item, new ItemModdedUnlockInfo("HoxJar_TW", ResourceLoader.LoadSprite("UnlockOsmanHillsLocked", null, 32, null), "HIF_Hills_Witness_ACH"));
         }
     }

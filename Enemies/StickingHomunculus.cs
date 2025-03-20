@@ -34,17 +34,9 @@ namespace Hell_Island_Fell.Enemies
             CheckCasterHealthColorEffect RedCheck = ScriptableObject.CreateInstance<CheckCasterHealthColorEffect>();
             RedCheck._color = Pigments.Red;
 
-            PreviousEffectCondition Fail = ScriptableObject.CreateInstance<PreviousEffectCondition>();
-            Fail.wasSuccessful = false;
-            Fail.previousAmount = 2;
-
             SpawnEnemyAnywhereEffect Scatter = ScriptableObject.CreateInstance<SpawnEnemyAnywhereEffect>();
             Scatter.enemy = LoadedAssetsHandler.GetEnemy("ScatteringHomunculus_EN");
             Scatter._spawnTypeID = CombatType_GameIDs.Spawn_Basic.ToString();
-
-            PercentageEffectCondition Chance0 = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            Chance0.percentage = 50;
-
 
             Ability gruesomeExcrement = new Ability("Gruesome Excrement", "GruesomeExcrement_A")
             {
@@ -57,7 +49,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 5, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(RedCheck, 1),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 6, Targeting.Unit_OtherAllies, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 11, Targeting.Slot_SelfSlot, Fail),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 11, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
                 ],
                 Rarity = CustomAbilityRarity.Weight(9, true),
                 Priority = Priority.VerySlow,
@@ -77,7 +69,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(RedCheck, 1),
                     Effects.GenerateEffect(ShieldApply, 5, Targeting.Unit_AllAllySlots, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(IndirectDamage, 2, Targeting.Unit_AllOpponents, Fail),
+                    Effects.GenerateEffect(IndirectDamage, 2, Targeting.Unit_AllOpponents, Effects.CheckPreviousEffectCondition(false, 2)),
                 ],
                 Rarity = CustomAbilityRarity.Weight(7, true),
                 Priority = Priority.VerySlow,
@@ -95,7 +87,7 @@ namespace Hell_Island_Fell.Enemies
                 Effects =
                 [
                     Effects.GenerateEffect(Scatter, 4),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_SelfSlot, Chance0),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Slow,

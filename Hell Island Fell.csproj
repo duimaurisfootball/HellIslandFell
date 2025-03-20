@@ -102,6 +102,9 @@
     <None Remove="Sprites\AlvinarMenu.png" />
     <None Remove="Sprites\AlvinarOverworld.png" />
     <None Remove="Sprites\AlvinarPrepare.png" />
+    <None Remove="Sprites\ARCDeadFlatback.png" />
+    <None Remove="Sprites\ARCTimelineFlatback.png" />
+    <None Remove="Sprites\ARCTimelineKekingdom.png" />
     <None Remove="Sprites\BolerDisruption.png" />
     <None Remove="Sprites\BoojumBilliard.png" />
     <None Remove="Sprites\BossBemagelIcon.png" />
@@ -498,6 +501,7 @@
     <None Remove="Sprites\NabaOverworld.png" />
     <None Remove="Sprites\NabaRevelation.png" />
     <None Remove="Sprites\NabaTwoPrayers.png" />
+    <None Remove="Sprites\Nemesis.png" />
     <None Remove="Sprites\NickArmed.png" />
     <None Remove="Sprites\NickBackLowered.png" />
     <None Remove="Sprites\NickBackRaised.png" />
@@ -516,7 +520,6 @@
     <None Remove="Sprites\PassiveAltAttacks.png" />
     <None Remove="Sprites\PassiveChaos.png" />
     <None Remove="Sprites\PassiveInvincible.png" />
-    <None Remove="Sprites\PassiveNemesis.png" />
     <None Remove="Sprites\PassiveRetortion.png" />
     <None Remove="Sprites\PassiveTwoFacedPG.png" />
     <None Remove="Sprites\PassiveTwoFacedRY.png" />
@@ -612,6 +615,7 @@
     <None Remove="Sprites\TimelineThunderdome.png" />
     <None Remove="Sprites\TimelineUninspiredNosestone.png" />
     <None Remove="Sprites\TimelineVus.png" />
+    <None Remove="Sprites\TreasureElectrumOre.png" />
     <None Remove="Sprites\TreasureFormidableDinners.png" />
     <None Remove="Sprites\TreasureFrankensteinsBarber.png" />
     <None Remove="Sprites\TreasureGroanbroad.png" />
@@ -821,6 +825,9 @@
     <EmbeddedResource Include="Sprites\AlvinarMenu.png" />
     <EmbeddedResource Include="Sprites\AlvinarOverworld.png" />
     <EmbeddedResource Include="Sprites\AlvinarPrepare.png" />
+    <EmbeddedResource Include="Sprites\ARCDeadFlatback.png" />
+    <EmbeddedResource Include="Sprites\ARCTimelineKekingdom.png" />
+    <EmbeddedResource Include="Sprites\ARCTimelineFlatback.png" />
     <EmbeddedResource Include="Sprites\BolerDisruption.png" />
     <EmbeddedResource Include="Sprites\BoojumBilliard.png" />
     <EmbeddedResource Include="Sprites\BossBemagelIcon.png" />
@@ -1152,7 +1159,7 @@
     <EmbeddedResource Include="Sprites\OverworldBoojum.png" />
     <EmbeddedResource Include="Sprites\OverworldHeehoo.png" />
     <EmbeddedResource Include="Sprites\OverworldInequity.png" />
-    <EmbeddedResource Include="Sprites\PassiveNemesis.png" />
+    <EmbeddedResource Include="Sprites\Nemesis.png" />
     <EmbeddedResource Include="Sprites\PassiveRetortion.png" />
     <EmbeddedResource Include="Sprites\PassiveTwoFacedPG.png" />
     <EmbeddedResource Include="Sprites\PassiveTwoFacedRY.png" />
@@ -1327,6 +1334,7 @@
     <EmbeddedResource Include="Sprites\TimelineThunderdome.png" />
     <EmbeddedResource Include="Sprites\TimelineUninspiredNosestone.png" />
     <EmbeddedResource Include="Sprites\TimelineVus.png" />
+    <EmbeddedResource Include="Sprites\TreasureElectrumOre.png" />
     <EmbeddedResource Include="Sprites\TreasureFormidableDinners.png" />
     <EmbeddedResource Include="Sprites\TreasureGroanbroad.png" />
     <EmbeddedResource Include="Sprites\TreasureShardOfHills.png" />

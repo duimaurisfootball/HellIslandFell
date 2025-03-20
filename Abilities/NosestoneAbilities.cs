@@ -12,24 +12,8 @@ namespace Hell_Island_Fell.Abilities
     {
         public static void Add()
         {
-            IntentInfoBasic CostModifyIntent = new()
-            {
-                _color = Color.white,
-                _sprite = ResourceLoader.LoadSprite("IntentCostModify")
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Modify_Cost", CostModifyIntent);
-
-            PercentageEffectCondition AddChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            AddChance.percentage = 50;
-
             AddCostByHealthColorEffect NosingAdd = ScriptableObject.CreateInstance<AddCostByHealthColorEffect>();
             NosingAdd.AddOverSix = false;
-
-            PreviousEffectCondition Fail = ScriptableObject.CreateInstance<PreviousEffectCondition>();
-            Fail.wasSuccessful = false;
-
-            PreviousEffectCondition Succeed = ScriptableObject.CreateInstance<PreviousEffectCondition>();
-            Succeed.previousAmount = 2;
 
             Ability nosing = new Ability("Nosing", "Nosing_A")
             {
@@ -39,9 +23,9 @@ namespace Hell_Island_Fell.Abilities
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, AddChance),
-                    Effects.GenerateEffect(NosingAdd, 1, Targeting.GenerateSlotTarget([-1, 0], false, false), Fail),
-                    Effects.GenerateEffect(NosingAdd, 1, Targeting.GenerateSlotTarget([0, 1], false, false), Succeed),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(NosingAdd, 1, Targeting.GenerateSlotTarget([-1, 0], false, false), Effects.CheckPreviousEffectCondition(false, 1)),
+                    Effects.GenerateEffect(NosingAdd, 1, Targeting.GenerateSlotTarget([0, 1], false, false), Effects.CheckPreviousEffectCondition(true, 2)),
                 ],
                 Rarity = CustomAbilityRarity.Weight(5, true),
                 Priority = Priority.Slow,
@@ -51,15 +35,15 @@ namespace Hell_Island_Fell.Abilities
 
             Ability stoning = new Ability("Stoning", "Stoning_A")
             {
-                Description = "Deal an agonizing amount of damage to the Left or Right party member.\nReroll the costs not of this enemy's health color in the Opposing party member's abilities.",
+                Description = "Deal an Agonizing amount of damage to the Left or Right party member.\nReroll the costs not of this enemy's health color in the Opposing party member's abilities.",
                 Cost = [Pigments.SplitPigment(Pigments.Red, Pigments.Blue, Pigments.Yellow, Pigments.Purple)],
                 Visuals = Visuals.StompLeft,
                 AnimationTarget = Targeting.Slot_OpponentSides,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, AddChance),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 8, Targeting.Slot_OpponentLeft, Fail),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 8, Targeting.Slot_OpponentRight, Succeed),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 8, Targeting.Slot_OpponentLeft, Effects.CheckPreviousEffectCondition(false, 1)),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 8, Targeting.Slot_OpponentRight, Effects.CheckPreviousEffectCondition(true, 2)),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<NoseReroll>(), 1, Targeting.Slot_Front)
                 ],
                 Rarity = CustomAbilityRarity.Weight(5, true),

@@ -15,23 +15,28 @@ global using BepInEx.Bootstrap;
 using HarmonyLib;
 using Hell_Island_Fell.Field_Effects;
 using Hell_Island_Fell.Custom_Stuff;
+using BepInEx.Configuration;
+using System.IO;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "2.0.1")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "2.1.2")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("AnimatedGlitch.GlitchsFreaks", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("AnimatedGlitch.Siren", BepInDependency.DependencyFlags.SoftDependency)]
     public class Hell_Island_Fell : BaseUnityPlugin
     {
         public static AssetBundle assetBundle;
+        public static ConfigEntry<bool> arachnophobiaMode;
         public static class CrossMod
         {
             public static bool Colophons = false;
             public static bool EnemyPack = false;
             public static bool EggKeeper = false;
             public static bool GlitchFreaks = false;
+            public static bool TheSiren = false;
             public static void Check()
             {
                 foreach (var plugin in Chainloader.PluginInfos)
@@ -42,6 +47,7 @@ namespace Hell_Island_Fell
                     if (metadata.GUID == "TairbazPeep.EnemyPack") { EnemyPack = true; }
                     if (metadata.GUID == "minichibis.eggkeeper") { EggKeeper = true; }
                     if (metadata.GUID == "AnimatedGlitch.GlitchsFreaks") { GlitchFreaks = true; }
+                    //if (metadata.GUID == "AnimatedGlitch.Siren") { TheSiren = true; }
                 }
             }
         }
@@ -51,12 +57,16 @@ namespace Hell_Island_Fell
 
             new Harmony("Dui_Mauris_Football.Hell_Island_Fell").PatchAll();
 
+            ConfigFile config = new ConfigFile(Path.Combine(Paths.ConfigPath, "HellIslandFell.cfg"), true);
+            arachnophobiaMode = config.Bind("Phobia", "Arachnophobia", false, "Changes the visuals of the following enemies: Flatback, Kekingdom");
+
             //Add AssetBundles
             assetBundle = AssetBundle.LoadFromMemory(ResourceLoader.ResourceBinary("hif_assetbundle"));
             CustomMusicParameters.Add();
 
-            //Add Damage Types
+            //Add First Stuff
             DisappearingDamage.Add();
+            CustomIntents.Add();
 
             //Add Field Effects
             Fields.Add();
@@ -65,7 +75,6 @@ namespace Hell_Island_Fell
             Statuses.Add();
 
             //Add Whatever else
-            NosestoneAbilities.Add();
             LoadedAssetsHandler.GetCharacter("Hans_CH").unitTypes.Add("FemaleID");
             LoadedAssetsHandler.GetCharacter("Pearl_CH").unitTypes.Add("FemaleID");
             LoadedAssetsHandler.GetCharacter("Rags_CH").unitTypes.Add("FemaleID");
@@ -73,6 +82,7 @@ namespace Hell_Island_Fell
             CrossMod.Check();
             DivineGlass.Add();
             Lookatme.Add();
+            NosestoneAbilities.Add();
 
             //Add Passives
             CustomPassives.Add();
@@ -93,6 +103,7 @@ namespace Hell_Island_Fell
             Melatonin.Add();
             Hotpot.Add();
             PaintedDie.Add();
+            ElectrumOre.Add();
 
             //Osman Unlocks
             SymbolOfPeace.Add();
@@ -195,6 +206,12 @@ namespace Hell_Island_Fell
             NumberMagnet.Add();
             SparklingFork.Add();
             FractionAbacus.Add();
+            MyNemesis.Add();
+            BloodyNemesis.Add();
+            BatteredNemesis.Add();
+            InvincibleNemesis.Add();
+            FatesBoundByNemesis.Add();
+            HornAndHandle.Add();
 
             //Add Characters
             Vandander.Add();
@@ -219,8 +236,8 @@ namespace Hell_Island_Fell
             Morrigan.Add();
             Nick.Add();
             Eras.Add();
-            HolesOfVandander.Add();
             Mudball.Add();
+            HolesOfVandander.Add();
 
             //Add Enemies
             SweatingNosestone.Add();
@@ -242,12 +259,15 @@ namespace Hell_Island_Fell
             Draugr.Add();
             Heehoo.Add();
             Thunderdome.Add();
-            //OneShooter.Add();
             //Tubert.Add();
             //Gotanga.Add();
             //Makado.Add();
             //Kreeber.Add();
             //FaceRipper.Add();
+            if (CrossMod.TheSiren)
+            {
+                OneShooter.Add();
+            }
 
             //Add Encounters
             CustomFarShoreEncounters.Add();
@@ -272,6 +292,12 @@ namespace Hell_Island_Fell
             HeehooEncounters.Add();
             ThunderdomeEncounters.Add();
             CrossoverEncounters.Add();
+            if (CrossMod.TheSiren)
+            {
+                OneShooterEncounters.Add();
+                CustomSirenEncounters.Add();
+            }
+
 
             //Add Achievements
             CustomAchievements.Add();

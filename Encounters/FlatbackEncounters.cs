@@ -10,7 +10,14 @@ namespace Hell_Island_Fell.Encounters
     {
         public static void Add()
         {
-            Portals.AddPortalSign("Flatback_Sign", ResourceLoader.LoadSprite("TimelineFlatback", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
+            if (Hell_Island_Fell.arachnophobiaMode.Value)
+            {
+                Portals.AddPortalSign("Flatback_Sign", ResourceLoader.LoadSprite("ARCTimelineFlatback", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
+            }
+            else
+            {
+                Portals.AddPortalSign("Flatback_Sign", ResourceLoader.LoadSprite("TimelineFlatback", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
+            }
             EnemyEncounter_API flatbackHard = new EnemyEncounter_API(0, "H_Zone01_Flatback_Hard_EnemyBundle", "Flatback_Sign")
             {
                 MusicEvent = "event:/Enormounclature",

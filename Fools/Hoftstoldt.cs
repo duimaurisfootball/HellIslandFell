@@ -262,9 +262,7 @@ namespace Hell_Island_Fell.Fools
             hoftstoldt.AddPassives([Passives.Unstable, Passives.GetCustomPassive("HConstruct_PA")]);
             hoftstoldt.SetMenuCharacterAsFullSupport();
 
-            int FaceOn = FaceSprites._frontSprite.Length;
-
-            RandomizeCasterExtraSpritesEffect FaceOff = ScriptableObject.CreateInstance<RandomizeCasterExtraSpritesEffect>();
+            SetCasterExtraSpritesEffect FaceOff = ScriptableObject.CreateInstance<SetCasterExtraSpritesEffect>();
             FaceOff._ExtraSpriteID = "HoftstoldtSpritesSpecial";
 
             ExtraPassiveAbility_Wearable_SMS UnstableWearable = ScriptableObject.CreateInstance<ExtraPassiveAbility_Wearable_SMS>();
@@ -310,7 +308,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HoftstoldtHealEffect>(), 2),
                     Effects.GenerateEffect(SpawnDoll, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             soul0.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
@@ -327,7 +325,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HoftstoldtHealEffect>(), 3),
                     Effects.GenerateEffect(SpawnDoll, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             soul1.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
@@ -344,7 +342,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HoftstoldtHealEffect>(), 4),
                     Effects.GenerateEffect(SpawnDoll, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             soul2.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
@@ -361,7 +359,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HoftstoldtHealEffect>(), 5),
                     Effects.GenerateEffect(SpawnDoll, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             soul3.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_5_10)]);
@@ -380,7 +378,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HoftstoldtDamageEffect>(), 4),
                     Effects.GenerateEffect(SpawnDoll, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             ofThePeople0.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_3_6)]);
@@ -397,7 +395,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HoftstoldtDamageEffect>(), 5),
                     Effects.GenerateEffect(SpawnDoll, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             ofThePeople1.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_3_6)]);
@@ -414,7 +412,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HoftstoldtDamageEffect>(), 6),
                     Effects.GenerateEffect(SpawnDoll, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             ofThePeople2.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_3_6)]);
@@ -432,7 +430,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HoftstoldtDamageEffect>(), 7),
                     Effects.GenerateEffect(SpawnDoll, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             ofThePeople3.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_7_10)]);
@@ -451,7 +449,7 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(IndirectDamage, 999, ScriptableObject.CreateInstance<DollTargeting>()),
                     Effects.GenerateEffect(PreviousHeal, 1, Targeting.Unit_AllAllies),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             assimilation0.AddIntentsToTarget(ScriptableObject.CreateInstance<DollTargeting>(), [nameof(IntentType_GameIDs.Damage_Death)]);
@@ -469,7 +467,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(IndirectDamage, 999, ScriptableObject.CreateInstance<DollTargeting>()),
                     Effects.GenerateEffect(PreviousHeal, 1, Targeting.Unit_AllAllies),
                     Effects.GenerateEffect(OilRemove, 1, Targeting.Unit_AllAllies),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             assimilation1.AddIntentsToTarget(ScriptableObject.CreateInstance<DollTargeting>(), [nameof(IntentType_GameIDs.Damage_Death)]);
@@ -489,7 +487,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(PreviousHeal, 1, Targeting.Unit_AllAllies),
                     Effects.GenerateEffect(OilRemove, 1, Targeting.Unit_AllAllies),
                     Effects.GenerateEffect(FrailRemove, 1, Targeting.Unit_AllAllies),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             assimilation2.AddIntentsToTarget(ScriptableObject.CreateInstance<DollTargeting>(), [nameof(IntentType_GameIDs.Damage_Death)]);
@@ -511,7 +509,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(OilRemove, 1, Targeting.Unit_AllAllies),
                     Effects.GenerateEffect(FrailRemove, 1, Targeting.Unit_AllAllies),
                     Effects.GenerateEffect(RupturedRemove, 1, Targeting.Unit_AllAllies),
-                    Effects.GenerateEffect(FaceOff, FaceOn, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(FaceOff),
                 ],
             };
             assimilation3.AddIntentsToTarget(ScriptableObject.CreateInstance<DollTargeting>(), [nameof(IntentType_GameIDs.Damage_Death)]);

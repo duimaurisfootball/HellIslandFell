@@ -1,7 +1,6 @@
 ﻿using BrutalAPI.Items;
-using System;
+using Hell_Island_Fell.Custom_Stuff;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Hell_Island_Fell.Items
 {
@@ -9,24 +8,34 @@ namespace Hell_Island_Fell.Items
     {
         public static void Add()
         {
-            StatusEffect_Apply_Effect RupturedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
-            RupturedApply._Status = StatusField.Ruptured;
+            LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Nemesis_ID", out StatusEffect_SO Nemesis);
+            StatusEffect_Apply_Effect NemesisApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
+            NemesisApply._Status = Nemesis;
+            NemesisApply._JustOneRandomTarget = true;
 
-            PerformEffect_Item nemesis = new PerformEffect_Item("Nemesis_ID", null)
+            ExtraLootOptionsEffect NextNemesis = ScriptableObject.CreateInstance<ExtraLootOptionsEffect>();
+            NextNemesis._itemName = "MyNemesis_NW";
+
+            Nemesis_Item nemesis = new Nemesis_Item("NemesisItem_ID", null)
             {
                 Item_ID = "Nemesis_TW",
                 Name = "Nemesis",
                 Flavour = "\"I need to hurt you, disgrace your existence.\"",
-                Description = "Apply 2 Ruptured to every enemy on turn start.",
+                Description = "One enemy each combat will be this party member's mortal enemy. Upon this party member killing their nemesis, consume this item.",
                 IsShopItem = false,
                 ShopPrice = 5,
-                DoesPopUpInfo = false,
+                DoesPopUpInfo = true,
                 StartsLocked = true,
                 Icon = ResourceLoader.LoadSprite("UnlockOsmanPinec"),
-                TriggerOn = TriggerCalls.OnTurnStart,
-                Effects =
+                TriggerOn = TriggerCalls.OnCombatStart,
+                NormalEffects =
                 [
-                    Effects.GenerateEffect(RupturedApply, 2, Targeting.Unit_AllOpponents)
+                    Effects.GenerateEffect(NemesisApply, 1, Targeting.Unit_AllOpponents),
+                ],
+                MurderEffects =
+                [
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(NextNemesis),
                 ],
             };
 

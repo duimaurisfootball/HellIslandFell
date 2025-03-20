@@ -18,9 +18,9 @@ namespace Hell_Island_Fell.Custom_Effects
 
         public bool _ignoreShield;
 
-        public bool _addHealthMana;
+        public bool _addHealthMana = true;
 
-        public bool _direct;
+        public bool _direct = true;
 
         public bool _returnKillAsSuccess;
 

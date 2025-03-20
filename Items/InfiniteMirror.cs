@@ -35,6 +35,7 @@ namespace Hell_Island_Fell.Items
                     Effects.GenerateEffect(IndirectDamage, 1, Targeting.Slot_SelfSlot, repeatChance),
                 ],
             };
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(infiniteMirror.Item, new ItemModdedUnlockInfo("InfiniteMirror_TW", ResourceLoader.LoadSprite("UnlockHeavenHillsLocked", null, 32, null), "HIF_Hills_Divine_ACH"));
         }
     }

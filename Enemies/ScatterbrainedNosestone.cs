@@ -22,11 +22,11 @@ namespace Hell_Island_Fell.Enemies
                 CombatSprite = ResourceLoader.LoadSprite("TimelineScatterbrainedNosestone", new Vector2(0.5f, 0f), 32),
                 OverworldDeadSprite = ResourceLoader.LoadSprite("DeadScatterbrainedNosestone", new Vector2(0.5f, 0f), 32),
                 OverworldAliveSprite = ResourceLoader.LoadSprite("TimelineScatterbrainedNosestone", new Vector2(0.5f, 0f), 32),
-                DamageSound = LoadedAssetsHandler.GetEnemy("Spoggle_Ruminating_EN").damageSound,
-                DeathSound = LoadedAssetsHandler.GetEnemy("Spoggle_Ruminating_EN").deathSound,
+                DamageSound = "event:/ScatterbrainedDamage",
+                DeathSound = "event:/ScatterbrainedDeath",
             };
             scatterbrainedNosestone.PrepareEnemyPrefab("Assets/ScatterbrainedNosestoneAssetBundle/ScatterbrainedNosestone.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ScatterbrainedNosestoneAssetBundle/ScatterbrainedGibs.prefab").GetComponent<ParticleSystem>());
-            scatterbrainedNosestone.AddPassives([Passives.Pure, Passives.GetCustomPassive("Grinding_PA"), CustomPassives.WartsGenerator(9)]);
+            scatterbrainedNosestone.AddPassives([Passives.Pure, Passives.GetCustomPassive("Grinding_PA")]);
 
             Ability printCut = new Ability("Print Cut", "PrintCut_A")
             {

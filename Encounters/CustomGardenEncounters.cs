@@ -172,26 +172,19 @@ namespace Hell_Island_Fell.Encounters
                 "GigglingMinister_EN",
                 "UninspiredNosestone_EN"
             ]),
-                new(
-            [
-                "Inequity_EN",
-                "GigglingMinister_EN",
-                "NextOfKin_EN",
-                "NextOfKin_EN",
-            ]),
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
                 gigglingMinisterEasy.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "Inequity_EN",
+                        "StickingHomunculus_EN",
                         "Unterling_EN",
                     ]));
                 gigglingMinisterEasy.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "Inequity_EN",
+                        "StickingHomunculus_EN",
                         "TitteringPeon_EN",
                     ]));
             }
@@ -200,7 +193,7 @@ namespace Hell_Island_Fell.Encounters
                 gigglingMinisterEasy.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "Inequity_EN",
+                        "StickingHomunculus_EN",
                         "EggKeeper_EN",
                     ]));
                 gigglingMinisterEasy.Add(new(
@@ -739,12 +732,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "GigglingMinister_EN",
-                "Inequity_EN",
-                "ChoirBoy_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
                 "StickingHomunculus_EN",
                 "ChoirBoy_EN",
             ]),
@@ -757,12 +744,6 @@ namespace Hell_Island_Fell.Encounters
             };
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
-                gigglingMinisterMedium.Add(new(
-                    [
-                        "GigglingMinister_EN",
-                        "Inequity_EN",
-                        "Unterling_EN",
-                    ]));
                 gigglingMinisterMedium.Add(new(
                     [
                         "GigglingMinister_EN",
@@ -790,19 +771,13 @@ namespace Hell_Island_Fell.Encounters
                         "StickingHomunculus_EN",
                         "EggKeeper_EN",
                     ]));
-                gigglingMinisterMedium.Add(new(
-                    [
-                        "GigglingMinister_EN",
-                        "Inequity_EN",
-                        "EggKeeper_EN",
-                    ]));
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
                 gigglingMinisterMedium.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "Inequity_EN",
+                        "MesmerizingNosestone_EN",
                         "Vagabond_EN",
                         "NextOfKin_EN",
                     ]));
@@ -1084,37 +1059,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "GigglingMinister_EN",
-                "Inequity_EN",
-                "NextOfKin_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
-                "GigglingMinister_EN",
-                "Inequity_EN",
-                "ChoirBoy_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
-                "Inequity_EN",
-                "SweatingNosestone_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
-                "Inequity_EN",
-                "MesmerizingNosestone_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
-                "Inequity_EN",
-                "SkinningHomunculus_EN",
-            ]),
-                new(
-            [
-                "GigglingMinister_EN",
                 "GigglingMinister_EN",
                 "StickingHomunculus_EN",
                 "StickingHomunculus_EN",
@@ -1178,13 +1122,6 @@ namespace Hell_Island_Fell.Encounters
                 gigglingMinisterHard.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "GigglingMinister_EN",
-                        "Inequity_EN",
-                        "Unterling_EN",
-                    ]));
-                gigglingMinisterHard.Add(new(
-                    [
-                        "GigglingMinister_EN",
                         "UninspiredNosestone_EN",
                         "Unterling_EN",
                     ]));
@@ -1211,25 +1148,19 @@ namespace Hell_Island_Fell.Encounters
                         "ScatterbrainedNosestone_EN",
                         "EggKeeper_EN",
                     ]));
-                gigglingMinisterHard.Add(new(
-                    [
-                        "GigglingMinister_EN",
-                        "Inequity_EN",
-                        "EggKeeper_EN",
-                    ]));
             }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
                 gigglingMinisterHard.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "Inequity_EN",
+                        "StickingHomunculus_EN",
                         "FrowningChancellor_EN",
                     ]));
                 gigglingMinisterHard.Add(new(
                     [
                         "GigglingMinister_EN",
-                        "Inequity_EN",
+                        "StickingHomunculus_EN",
                         "Vagabond_EN",
                     ]));
             }

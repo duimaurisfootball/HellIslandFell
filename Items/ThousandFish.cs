@@ -40,7 +40,7 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(symbolOfPeace.Item, new ItemModdedUnlockInfo("ThousandFish_TW", ResourceLoader.LoadSprite("UnlockHeavenVandanderLocked", null, 32, null), "HIF_Vandander_Divine_ACH"));
+                ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(symbolOfPeace.Item, new ItemModdedUnlockInfo("ThousandFish_TW", ResourceLoader.LoadSprite("UnlockHeavenVandanderLocked", null, 32, null), "HIF_Vandander_Divine_ACH"));
         }
     }
 }

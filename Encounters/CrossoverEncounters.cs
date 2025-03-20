@@ -1006,13 +1006,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Ophanim_EN",
                     "Boler_EN",
-                    "ManicMan_EN",
-                    "ManicMan_EN",
-                ]),
-                    new(
-                [
-                    "Ophanim_EN",
-                    "Boler_EN",
                     "Moone_EN",
                 ]),
                     new(
@@ -1020,18 +1013,6 @@ namespace Hell_Island_Fell.Encounters
                     "Ophanim_EN",
                     "Moone_EN",
                     "Moone_EN",
-                ]),
-                    new(
-                [
-                    "Ophanim_EN",
-                    "Moone_EN",
-                    "MusicMan_EN",
-                ]),
-                    new(
-                [
-                    "Ophanim_EN",
-                    "Moone_EN",
-                    "Seraphim_EN",
                 ]),
                     new(
                 [
@@ -2558,12 +2539,6 @@ namespace Hell_Island_Fell.Encounters
                     "StickingHomunculus_EN",
                     "ShiveringHomunculus_EN",
                     "ShiveringHomunculus_EN",
-                ]),
-                    new(
-                [
-                    "Vagabond_EN",
-                    "Inequity_EN",
-                    "GigglingMinister_EN",
                 ]),
                     new(
                 [

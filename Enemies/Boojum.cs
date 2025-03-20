@@ -142,16 +142,16 @@ namespace Hell_Island_Fell.Enemies
                 Description = "Apply 1 Disappearing to the Rightmost position, then triple the amount of Disappearing on them.\nMove to the Right and remove all Constricted from this position.\nIf the previous effect was successful, repeat this attack.",
                 Cost = [Pigments.Yellow, Pigments.Yellow, Pigments.Yellow, Pigments.Yellow],
                 Visuals = Visuals.Takedown,
-                AnimationTarget = ScriptableObject.CreateInstance<RightmostTargeting>(),
+                AnimationTarget = Targeting.GenerateGenericTarget([4], false),
                 Effects =
                 [
-                    Effects.GenerateEffect(BakerEffect, 1, ScriptableObject.CreateInstance<RightmostTargeting>()),
+                    Effects.GenerateEffect(BakerEffect, 1, Targeting.GenerateGenericTarget([4], false)),
                 ],
                 Rarity = CustomAbilityRarity.Weight(3, true),
                 Priority = Priority.Fast,
             };
-            baker.AddIntentsToTarget(ScriptableObject.CreateInstance<RightmostTargeting>(), ["Status_Disappearing"]);
-            baker.AddIntentsToTarget(ScriptableObject.CreateInstance<RightmostTargeting>(), ["Status_Disappearing"]);
+            baker.AddIntentsToTarget(Targeting.GenerateGenericTarget([4], false), ["Status_Disappearing"]);
+            baker.AddIntentsToTarget(Targeting.GenerateGenericTarget([4], false), ["Status_Disappearing"]);
             baker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Swap_Right)]);
             baker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Rem_Field_Constricted)]);
             baker.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);

@@ -131,7 +131,7 @@ namespace Hell_Island_Fell.Achievements
             UnlockWitnessMorrigan.AddUnlockData("Morrigan_CH", Unlocks.GenerateUnlockData("HIF_Morrigan_Witness_Unlock", "HIF_Morrigan_Witness_ACH", "", "", ["BlackPearl_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Morrigan_Witness_ACH", "BlackPearl_TW");
 
-            ModdedAchievements AchievementWitnessNick = new ModdedAchievements("Heartworm", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanNick", null, 32, null), "HIF_Nick_Witness_ACH");
+            ModdedAchievements AchievementWitnessNick = new ModdedAchievements("Blank Point Blank Point", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanNick", null, 32, null), "HIF_Nick_Witness_ACH");
             AchievementWitnessNick.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
             FinalBossCharUnlockCheck UnlockWitnessNick = Unlocks.GetUnlock_OsmanFinalBoss();
             UnlockWitnessNick.AddUnlockData("Nick_CH", Unlocks.GenerateUnlockData("HIF_Nick_Witness_Unlock", "HIF_Nick_Witness_ACH", "", "", ["BlankPointBlankPoint_SW"]));
@@ -141,7 +141,7 @@ namespace Hell_Island_Fell.Achievements
             AchievementWitnessEras.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
             FinalBossCharUnlockCheck UnlockWitnessEras = Unlocks.GetUnlock_OsmanFinalBoss();
             UnlockWitnessEras.AddUnlockData("Eras_CH", Unlocks.GenerateUnlockData("HIF_Eras_Witness_Unlock", "HIF_Eras_Witness_ACH", "", "", ["Heartworm_TW"]));
-            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Eras_Witness_ACH", "Black Pearl_TW");
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Eras_Witness_ACH", "Heartworm_TW");
 
 
             //Heaven Unlocks
@@ -336,6 +336,7 @@ namespace Hell_Island_Fell.Achievements
             VusDeath.specialDeathData = [];
             Unlocks.AddUnlock_EnemyDeath(VusDeath);
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Vus_Comedy_ACH", "FractionAbacus_SW");
+
 
             //Tragedy Unlocks
 

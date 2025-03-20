@@ -15,7 +15,7 @@ namespace Hell_Island_Fell.Enemies
         {
             Enemy maneater = new Enemy("Maneater", "Maneater_EN")
             {
-                Health = 65,
+                Health = 55,
                 HealthColor = Pigments.Red,
                 Size = 2,
                 CombatSprite = ResourceLoader.LoadSprite("TimelineManeater", new Vector2(0.5f, 0f), 32),
@@ -29,91 +29,6 @@ namespace Hell_Island_Fell.Enemies
                 ],
             };
             maneater.PrepareEnemyPrefab("Assets/ManeaterAssetBundle/Maneater.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ManeaterAssetBundle/ManeaterGibs.prefab").GetComponent<ParticleSystem>());
-            
-            //intents
-            IntentInfoBasic AnchoredIntent = new()
-            {
-                _color = Color.white,
-                _sprite = Passives.Anchored.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Anchored", AnchoredIntent);
-
-            IntentInfoBasic InfantileIntent = new()
-            {
-                _color = Color.white,
-                _sprite = Passives.Infantile.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Infantile", InfantileIntent);
-
-            IntentInfoBasic ObscureIntent = new()
-            {
-                _color = Color.white,
-                _sprite = Passives.Obscure.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Obscure", ObscureIntent);
-
-            IntentInfoBasic ImmortalIntent = new()
-            {
-                _color = Color.white,
-                _sprite = Passives.Immortal.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Immortal", ImmortalIntent);
-
-            IntentInfoBasic CatalystIntent = new()
-            {
-                _color = Color.white,
-                _sprite = Passives.Catalyst.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Catalyst", CatalystIntent);
-
-            IntentInfoBasic LeakyIntent = new()
-            {
-                _color = Color.white,
-                _sprite = Passives.Leaky1.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Leaky", LeakyIntent);
-
-            IntentInfoBasic RemAnchoredIntent = new()
-            {
-                _color = Color.grey,
-                _sprite = Passives.Anchored.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Anchored", RemAnchoredIntent);
-
-            IntentInfoBasic RemInfantileIntent = new()
-            {
-                _color = Color.grey,
-                _sprite = Passives.Infantile.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Infantile", RemInfantileIntent);
-
-            IntentInfoBasic RemObscureIntent = new()
-            {
-                _color = Color.grey,
-                _sprite = Passives.Obscure.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Obscure", RemObscureIntent);
-
-            IntentInfoBasic RemImmortalIntent = new()
-            {
-                _color = Color.grey,
-                _sprite = Passives.Immortal.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Immortal", RemImmortalIntent);
-
-            IntentInfoBasic RemCatalystIntent = new()
-            {
-                _color = Color.grey,
-                _sprite = Passives.Catalyst.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Catalyst", RemCatalystIntent);
-
-            IntentInfoBasic RemLeakyIntent = new()
-            {
-                _color = Color.grey,
-                _sprite = Passives.Leaky1.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Leaky", RemLeakyIntent);
 
             //checks
             CheckPassiveAbilityEffect AnchoredCheck = ScriptableObject.CreateInstance<CheckPassiveAbilityEffect>();
@@ -227,7 +142,7 @@ namespace Hell_Island_Fell.Enemies
                 Priority = Priority.Fast,
             };
             diamondDancer.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Rem_Passive_Anchored"]);
-            diamondDancer.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Passive_Anchored"]);
+            diamondDancer.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.PA_Anchored)]);
             diamondDancer.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.Field_Shield)]);
 
             Ability behavioralBiology = new Ability("Behavioral Biology", "BehavioralBiology_A")
@@ -247,7 +162,7 @@ namespace Hell_Island_Fell.Enemies
                 Priority = Priority.Fast,
             };
             behavioralBiology.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Rem_Passive_Infantile"]);
-            behavioralBiology.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Passive_Infantile"]);
+            behavioralBiology.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.PA_Infantile)]);
             behavioralBiology.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.Mana_Generate)]);
 
             Ability multidimensionalMateriality = new Ability("Multidimensional Materiality", "MultidimensionalMateriality_A")
@@ -255,19 +170,19 @@ namespace Hell_Island_Fell.Enemies
                 Description = "If this enemy is Obscured, reveal it and deal an Agonizing amount of damage to the Opposing party members.\nOtherwise, Obscure this enemy.",
                 Cost = [Pigments.Red, Pigments.Purple],
                 Visuals = Visuals.Poke,
-                AnimationTarget = Targeting.GenerateBigUnitSlotTarget([0, 1]),
+                AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
                     Effects.GenerateEffect(ObscureCheck, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ObscureRemove, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 9, Targeting.GenerateBigUnitSlotTarget([0, 1]), Has),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 10, Targeting.Slot_Front, Has),
                     Effects.GenerateEffect(ObscureAdd, 1, Targeting.Slot_SelfSlot, HasNot2),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Fast,
             };
             multidimensionalMateriality.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Rem_Passive_Obscure"]);
-            multidimensionalMateriality.AddIntentsToTarget(Targeting.GenerateBigUnitSlotTarget([0, 1]), [nameof(IntentType_GameIDs.Damage_7_10)]);
+            multidimensionalMateriality.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             multidimensionalMateriality.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Passive_Obscure"]);
 
             Ability squinchedStrengths = new Ability("Squinched Strengths", "SquinchedStrengths_A")
@@ -291,7 +206,7 @@ namespace Hell_Island_Fell.Enemies
                 Priority = Priority.Fast,
             };
             squinchedStrengths.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Rem_Passive_Immortal"]);
-            squinchedStrengths.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Passive_Immortal"]);
+            squinchedStrengths.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.PA_Immortal)]);
             squinchedStrengths.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.Swap_Sides)]);
             squinchedStrengths.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.Swap_Sides)]);
             squinchedStrengths.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.Swap_Sides)]);
@@ -316,11 +231,11 @@ namespace Hell_Island_Fell.Enemies
             };
             flummoxingFilaments.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Rem_Passive_Catalyst"]);
             flummoxingFilaments.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.Damage_16_20)]);
-            flummoxingFilaments.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Passive_Catalyst"]);
+            flummoxingFilaments.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.PA_Catalyst)]);
 
             Ability ontologicalOxygenation = new Ability("Ontological Oxygenation", "OntologicalOxygenation_A")
             {
-                Description = "If this enemy is Leaky, remove it and apply 3 Frail to the Opposing party members.\nOtherwise, apply Leaky to this enemy.",
+                Description = "If this enemy is Leaky, remove it and apply 6 Frail to the Opposing party members.\nOtherwise, apply Leaky to this enemy.",
                 Cost = [Pigments.Yellow, Pigments.BlueYellow],
                 Visuals = Visuals.UglyOnTheInside,
                 AnimationTarget = Targeting.GenerateBigUnitSlotTarget([0, 1]),
@@ -328,32 +243,32 @@ namespace Hell_Island_Fell.Enemies
                 [
                     Effects.GenerateEffect(LeakyCheck, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(LeakyRemove, 1, Targeting.Slot_SelfSlot, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(FrailApply, 3, Targeting.GenerateBigUnitSlotTarget([0, 1]), Has),
+                    Effects.GenerateEffect(FrailApply, 6, Targeting.Slot_Front, Has),
                     Effects.GenerateEffect(LeakyAdd, 1, Targeting.Slot_SelfSlot, HasNot2),
                 ],
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = Priority.Fast,
             };
             ontologicalOxygenation.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Rem_Passive_Leaky"]);
-            ontologicalOxygenation.AddIntentsToTarget(Targeting.GenerateBigUnitSlotTarget([0, 1]), [nameof(IntentType_GameIDs.Status_Frail)]);
-            ontologicalOxygenation.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Passive_Leaky"]);
+            ontologicalOxygenation.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
+            ontologicalOxygenation.AddIntentsToTarget(Targeting.Slot_SelfAll, [nameof(IntentType_GameIDs.PA_Leaky)]);
 
             ExtraAbilityInfo dances = new()
             {
                 ability = diamondDancer.GenerateEnemyAbility().ability,
-                rarity = CustomAbilityRarity.Weight(0, true),
+                rarity = CustomAbilityRarity.Weight(1, true),
             };
 
             ExtraAbilityInfo bio = new()
             {
                 ability = behavioralBiology.GenerateEnemyAbility().ability,
-                rarity = CustomAbilityRarity.Weight(0, true),
+                rarity = CustomAbilityRarity.Weight(1, true),
             };
             
             ExtraAbilityInfo multi = new()
             {
                 ability = multidimensionalMateriality.GenerateEnemyAbility().ability,
-                rarity = CustomAbilityRarity.Weight(0, true),
+                rarity = CustomAbilityRarity.Weight(1, true),
             };
 
             maneater.AddEnemyAbilities(

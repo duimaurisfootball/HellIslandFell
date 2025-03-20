@@ -43,7 +43,7 @@ namespace Hell_Island_Fell.Items
                     EnfeebledAdd,
                 ],
             };
-
+            
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(symbolOfPeace.Item, new ItemModdedUnlockInfo("SymbolOfPeace_TW", ResourceLoader.LoadSprite("UnlockOsmanVandanderLocked", null, 32, null), "HIF_Vandander_Witness_ACH"));
         }
     }

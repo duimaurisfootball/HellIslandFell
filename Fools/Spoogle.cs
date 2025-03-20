@@ -95,7 +95,7 @@ namespace Hell_Island_Fell.Fools
             ablate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
             ablate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
             ablate2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_16_20)]);
-            
+
             Ability ablate3 = new Ability("Fantasmagorically Ablate", "Ablate_4_A")
             {
                 Description = "Heal this party member 3 health.\nConsume all yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",

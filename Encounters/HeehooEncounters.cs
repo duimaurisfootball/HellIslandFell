@@ -63,12 +63,6 @@ namespace Hell_Island_Fell.Encounters
             HeehooMedium.CreateNewEnemyEncounterData(
                 [
                     "Heehoo_EN",
-                    "Heehoo_EN",
-                    "Thunderdome_EN",
-                ], null);
-            HeehooMedium.CreateNewEnemyEncounterData(
-                [
-                    "Heehoo_EN",
                     "Thunderdome_EN",
                     "Thunderdome_EN",
                 ], null);
@@ -181,13 +175,6 @@ namespace Hell_Island_Fell.Encounters
                     "Heehoo_EN",
                     "Heehoo_EN",
                     "Thunderdome_EN",
-                    "MusicMan_EN",
-                ], null);
-            HeehooHard.CreateNewEnemyEncounterData(
-                [
-                    "Heehoo_EN",
-                    "Thunderdome_EN",
-                    "MusicMan_EN",
                     "MusicMan_EN",
                 ], null);
             HeehooHard.CreateNewEnemyEncounterData(

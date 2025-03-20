@@ -45,14 +45,14 @@ namespace Hell_Island_Fell.Fools
             //forest
             Ability forest0 = new Ability("Tiny Forest", "Forest_1_A")
             {
-                Description = "Apply 8 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 1.",
+                Description = "Apply 5 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 1.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
                 Cost = [Pigments.Yellow],
                 Visuals = Visuals.Thorns,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ForestShield, 8, Targeting.Unit_AllAllies),
+                    Effects.GenerateEffect(ForestShield, 5, Targeting.Unit_AllAllies),
                     Effects.GenerateEffect(WartsUp, 1, Targeting.Slot_SelfSlot),
                 ],
             };
@@ -60,6 +60,22 @@ namespace Hell_Island_Fell.Fools
             forest0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
             Ability forest1 = new Ability("Black Forest", "Forest_2_A")
+            {
+                Description = "Apply 8 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 2.",
+                AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
+                Cost = [Pigments.Yellow],
+                Visuals = Visuals.Thorns,
+                AnimationTarget = Targeting.Slot_SelfSlot,
+                Effects =
+                [
+                    Effects.GenerateEffect(ForestShield, 8, Targeting.Unit_AllAllies),
+                    Effects.GenerateEffect(WartsUp, 2, Targeting.Slot_SelfSlot),
+                ],
+            };
+            forest1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Field_Shield)]);
+            forest1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
+
+            Ability forest2 = new Ability("Burning Forest", "Forest_3_A")
             {
                 Description = "Apply 10 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 2.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
@@ -72,35 +88,19 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(WartsUp, 2, Targeting.Slot_SelfSlot),
                 ],
             };
-            forest1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Field_Shield)]);
-            forest1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
-
-            Ability forest2 = new Ability("Burning Forest", "Forest_3_A")
-            {
-                Description = "Apply 13 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 2.",
-                AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
-                Cost = [Pigments.Yellow],
-                Visuals = Visuals.Thorns,
-                AnimationTarget = Targeting.Slot_SelfSlot,
-                Effects =
-                [
-                    Effects.GenerateEffect(ForestShield, 13, Targeting.Unit_AllAllies),
-                    Effects.GenerateEffect(WartsUp, 2, Targeting.Slot_SelfSlot),
-                ],
-            };
             forest2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Field_Shield)]);
             forest2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability forest3 = new Ability("Burning Forest", "Forest_4_A")
+            Ability forest3 = new Ability("Phoenix Forest", "Forest_4_A")
             {
-                Description = "Apply 17 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 3.",
+                Description = "Apply 12 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 3.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
                 Cost = [Pigments.Yellow],
                 Visuals = Visuals.Thorns,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ForestShield, 17, Targeting.Unit_AllAllies),
+                    Effects.GenerateEffect(ForestShield, 12, Targeting.Unit_AllAllies),
                     Effects.GenerateEffect(WartsUp, 3, Targeting.Slot_SelfSlot),
                 ],
             };

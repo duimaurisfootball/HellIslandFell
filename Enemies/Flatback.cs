@@ -24,6 +24,13 @@ namespace Hell_Island_Fell.Enemies
                 ],
             };
             flatback.PrepareEnemyPrefab("Assets/FlatbackAssetBundle/Flatback.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/FlatbackAssetBundle/FlatbackGibs.prefab").GetComponent<ParticleSystem>());
+            if (Hell_Island_Fell.arachnophobiaMode.Value)
+            {
+                flatback.CombatSprite = ResourceLoader.LoadSprite("ARCTimelineFlatback", new Vector2(0.5f, 0f), 32);
+                flatback.OverworldDeadSprite = ResourceLoader.LoadSprite("ARCDeadFlatback", new Vector2(0.5f, 0f), 32);
+                flatback.OverworldAliveSprite = ResourceLoader.LoadSprite("ARCTimelineFlatback", new Vector2(0.5f, 0f), 32);
+                flatback.PrepareEnemyPrefab("Assets/ARC_FlatbackAssetBundle/ARC_Flatback.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/ARC_FlatbackAssetBundle/ARC_FlatbackGibs.prefab").GetComponent<ParticleSystem>());
+            }
             flatback.AddPassives([Passives.MultiAttack2]);
 
             StatusEffect_Apply_Effect RuptureApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();

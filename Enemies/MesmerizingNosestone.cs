@@ -22,11 +22,11 @@ namespace Hell_Island_Fell.Enemies
                 CombatSprite = ResourceLoader.LoadSprite("TimelineMesmerizingNosestone", new Vector2(0.5f, 0f), 32),
                 OverworldDeadSprite = ResourceLoader.LoadSprite("DeadMesmerizingNosestone", new Vector2(0.5f, 0f), 32),
                 OverworldAliveSprite = ResourceLoader.LoadSprite("TimelineMesmerizingNosestone", new Vector2(0.5f, 0f), 32),
-                DamageSound = LoadedAssetsHandler.GetEnemy("Spoggle_Resonant_EN").damageSound,
-                DeathSound = LoadedAssetsHandler.GetEnemy("Spoggle_Resonant_EN").deathSound,
+                DamageSound = "event:/MesmerizingDamage",
+                DeathSound = "event:/MesmerizingDeath",
             };
             mesmerizingNosestone.PrepareEnemyPrefab("Assets/MesmerizingNosestoneAssetBundle/MesmerizingNosestone.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/MesmerizingNosestoneAssetBundle/MesmerizingGibs.prefab").GetComponent<ParticleSystem>());
-            mesmerizingNosestone.AddPassives([Passives.Pure, Passives.GetCustomPassive("Grinding_PA"), CustomPassives.WartsGenerator(9)]);
+            mesmerizingNosestone.AddPassives([Passives.Pure, Passives.GetCustomPassive("Grinding_PA")]);
 
             UnboundedDamageEffect enlightenedDamage = ScriptableObject.CreateInstance<UnboundedDamageEffect>();
             enlightenedDamage._repeatChance = 90;

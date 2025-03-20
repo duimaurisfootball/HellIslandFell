@@ -9,7 +9,7 @@ namespace Hell_Island_Fell.Encounters
         public static void Add()
         {
             Portals.AddPortalSign("Draugr_Sign", ResourceLoader.LoadSprite("TimelineDraugr", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
-            EnemyEncounter_API draugrEasy = new EnemyEncounter_API(0, "H_Zone01_Draugr_Hard_EnemyBundle", "Draugr_Sign")
+            EnemyEncounter_API draugrEasy = new EnemyEncounter_API(0, "H_Zone01_Draugr_Easy_EnemyBundle", "Draugr_Sign")
             {
                 MusicEvent = "event:/Music/Mx_Spoggle",
                 RoarEvent = "event:/Characters/Player/LongLiver/CHR_PLR_LongLiver_Dx",
@@ -129,7 +129,7 @@ namespace Hell_Island_Fell.Encounters
                     ], null);
             }
             draugrEasy.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Draugr_Hard_EnemyBundle", 5, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Easy);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Draugr_Easy_EnemyBundle", 5, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Easy);
         }
     }
 }

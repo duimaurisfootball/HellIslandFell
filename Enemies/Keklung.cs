@@ -17,13 +17,13 @@ namespace Hell_Island_Fell.Enemies
             ExtraAbilityInfo mandiblesExtra = new()
             {
                 ability = mandibles,
-                rarity = CustomAbilityRarity.Weight(0, true),
+                rarity = LoadedAssetsHandler.GetEnemy("Keko_EN").abilities[0].rarity,
             };
 
             ExtraAbilityInfo wormyNibbleExtra = new()
             {
                 ability = wormyNibble,
-                rarity = CustomAbilityRarity.Weight(0, true),
+                rarity = LoadedAssetsHandler.GetEnemy("Keko_EN").abilities[1].rarity,
             };
 
             Enemy keklung = new Enemy("Keklung", "Keklung_EN")

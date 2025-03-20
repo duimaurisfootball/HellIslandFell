@@ -131,7 +131,7 @@ namespace Hell_Island_Fell.Fools
             mercury.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
             mercury.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Constricted)]);
 
-            salad.AddLevelData(50, new Ability[] { copper, titanium, mercury});
+            salad.AddLevelData(50, new Ability[] { copper, titanium, mercury });
 
             salad.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Salad_Witness_ACH");
             salad.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Salad_Divine_ACH");

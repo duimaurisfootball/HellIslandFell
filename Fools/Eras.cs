@@ -10,23 +10,11 @@ namespace Hell_Island_Fell.Fools
     {
         public static void Add()
         {
-            ErasCharacterSO erasSO = ScriptableObject.CreateInstance<ErasCharacterSO>();
-            erasSO.name = "Eras_CH";
-            erasSO.entityID = "Eras_CH";
-            erasSO._characterName = "Eras";
-            erasSO.basicCharAbility = LoadedDBsHandler.AbilityDB.SlapAbility;
-            erasSO.unitTypes = [];
-            erasSO.m_BossAchData = [];
-            erasSO.passiveAbilities = [];
-            erasSO.rankedData = [];
-            erasSO.movesOnOverworld = true;
-
             Character eras = new Character("Eras", "Eras_CH")
             {
-                character = erasSO,
                 HealthColor = Pigments.Purple,
                 UsesBasicAbility = false,
-                UsesAllAbilities = false,
+                UsesAllAbilities = true,
                 MovesOnOverworld = true,
                 FrontSprite = ResourceLoader.LoadSprite("ErasFront", new Vector2(0.5f, 0f), 32),
                 BackSprite = ResourceLoader.LoadSprite("ErasBack", new Vector2(0.5f, 0f), 32),
@@ -50,14 +38,11 @@ namespace Hell_Island_Fell.Fools
             CasterStoreValueCheckOverThresholdEffect ChargeCheck = ScriptableObject.CreateInstance<CasterStoreValueCheckOverThresholdEffect>();
             ChargeCheck.m_unitStoredDataID = "ErasChargeStoredValue";
 
-            CasterStoreValueSetterEffect ChargeSetZero = ScriptableObject.CreateInstance<CasterStoreValueSetterEffect>();
-            ChargeSetZero.m_unitStoredDataID = "ErasChargeStoredValue";
-
             CasterStoreValuedPercentageChangeEffect ChargeChange = ScriptableObject.CreateInstance<CasterStoreValuedPercentageChangeEffect>();
             ChargeChange.m_unitStoredDataID = "ErasChargeStoredValue";
 
             CasterStoredValueDecreaseRandomlyEffect ChargeReduce = ScriptableObject.CreateInstance<CasterStoredValueDecreaseRandomlyEffect>();
-            ChargeChange.m_unitStoredDataID = "ErasChargeStoredValue";
+            ChargeReduce.m_unitStoredDataID = "ErasChargeStoredValue";
 
             CasterStoreValueSetRandomBetweenExitEffect ChargePercentageChange = ScriptableObject.CreateInstance<CasterStoreValueSetRandomBetweenExitEffect>();
             ChargePercentageChange.m_unitStoredDataID = "ErasChargeStoredValue";
@@ -74,57 +59,39 @@ namespace Hell_Island_Fell.Fools
             BeatDamage._repeatChance = 20;
             BeatDamage._cycles = 1;
             BeatDamage.usePreviousExitValue = true;
-
+            
             //pulse
             Ability pulse = new Ability("Pulse", "HIFPulse_A")
             {
-                Description = "Heal this and the Left ally an amount equal to at least the amount of Charge.\nReduce Charge by a random amount.",
+                Description = "Reduce Charge by 50%.\nHeal this and the Left ally an amount equal to at least the amount of Charge.",
                 AbilitySprite = ResourceLoader.LoadSprite("ErasPulse"),
-                Cost = [Pigments.RedBlue, Pigments.RedBlue],
-                Visuals = Visuals.Innocence,
-                AnimationTarget = Targeting.Slot_SelfSlot,
-                Effects =
-                [
-                    Effects.GenerateEffect(ChargeCheck, 1),
-                    Effects.GenerateEffect(PrevHeal, 1, Targeting.Slot_SelfAll_AndLeft),
-                    Effects.GenerateEffect(ChargeReduce),
-                ],
-                UnitStoreData = charge,
-            };
-            pulse.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_11_20)]);
-            pulse.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
-
-            //pump
-            Ability pump = new Ability("Pump", "HIFPump_A")
-            {
-                Description = "Reduce Charge by 50%.\nHeal the Left and Right allies an equivalent amount.",
-                AbilitySprite = ResourceLoader.LoadSprite("ErasPump"),
-                Cost = [Pigments.Blue, Pigments.Red],
+                Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Genesis,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
                     Effects.GenerateEffect(ChargeChange, 50),
-                    Effects.GenerateEffect(PrevHeal, 1, Targeting.Slot_AllySides),
+                    Effects.GenerateEffect(ChargeCheck, 1),
+                    Effects.GenerateEffect(PumpHeal, 1, Targeting.Slot_AllySides),
                 ],
                 UnitStoreData = charge,
             };
-            pump.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
-            pump.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Heal_11_20)]);
+            pulse.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
+            pulse.AddIntentsToTarget(Targeting.Slot_AllySides, ["Heal_Unbounded"]);
 
             //beat
             Ability beat = new Ability("Beat", "HIFBeat_A")
             {
-                Description = "Deal an amount of damage to the Opposing equal to at least the amount of Charge.\nReduce Charge by a random amount.",
+                Description = "Reduce Charge by 50%.\nDeal an amount of damage to the Opposing equal to at least the amount of Charge.",
                 AbilitySprite = ResourceLoader.LoadSprite("ErasBeat"),
                 Cost = [Pigments.Red, Pigments.Red, Pigments.Red],
                 Visuals = Visuals.HeartBreaker,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
+                    Effects.GenerateEffect(ChargeChange, 50),
                     Effects.GenerateEffect(ChargeCheck, 1),
                     Effects.GenerateEffect(BeatDamage, 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ChargeReduce),
                 ],
                 UnitStoreData = charge,
             };
@@ -133,6 +100,24 @@ namespace Hell_Island_Fell.Fools
 
             //electricity
             Ability electricity0 = new Ability("Weak Electricity", "Electricity_1_A")
+            {
+                Description = "Deal 1 damage to the Opposing enemy.\nSet this party member's Charge to a random number between 1-5.",
+                AbilitySprite = ResourceLoader.LoadSprite("ErasElectricity"),
+                Cost = [Pigments.Yellow],
+                Visuals = Visuals.Slap,
+                AnimationTarget = Targeting.Slot_Front,
+                Effects =
+                [
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_Front),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1),
+                    Effects.GenerateEffect(ChargePercentageChange, 5),
+                ],
+                UnitStoreData = charge,
+            };
+            electricity0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_1_2)]);
+            electricity0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
+
+            Ability electricity1 = new Ability("Short Electricity", "Electricity_2_A")
             {
                 Description = "Deal 1 damage to the Opposing enemy.\nSet this party member's Charge to a random number between 1-8.",
                 AbilitySprite = ResourceLoader.LoadSprite("ErasElectricity"),
@@ -147,10 +132,10 @@ namespace Hell_Island_Fell.Fools
                 ],
                 UnitStoreData = charge,
             };
-            electricity0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_1_2)]);
-            electricity0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
+            electricity1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_1_2)]);
+            electricity1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability electricity1 = new Ability("Short Electricity", "Electricity_2_A")
+            Ability electricity2 = new Ability("Polar Electricity", "Electricity_3_A")
             {
                 Description = "Deal 1 damage to the Opposing enemy.\nSet this party member's Charge to a random number between 1-13.",
                 AbilitySprite = ResourceLoader.LoadSprite("ErasElectricity"),
@@ -165,10 +150,10 @@ namespace Hell_Island_Fell.Fools
                 ],
                 UnitStoreData = charge,
             };
-            electricity1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_1_2)]);
-            electricity1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
+            electricity2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_1_2)]);
+            electricity2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability electricity2 = new Ability("Polar Electricity", "Electricity_3_A")
+            Ability electricity3 = new Ability("Direct Electricity", "Electricity_4_A")
             {
                 Description = "Deal 1 damage to the Opposing enemy.\nSet this party member's Charge to a random number between 1-17.",
                 AbilitySprite = ResourceLoader.LoadSprite("ErasElectricity"),
@@ -183,35 +168,17 @@ namespace Hell_Island_Fell.Fools
                 ],
                 UnitStoreData = charge,
             };
-            electricity2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_1_2)]);
-            electricity2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
-
-            Ability electricity3 = new Ability("Direct Electricity", "Electricity_4_A")
-            {
-                Description = "Deal 1 damage to the Opposing enemy.\nSet this party member's Charge to a random number between 1-20.",
-                AbilitySprite = ResourceLoader.LoadSprite("ErasElectricity"),
-                Cost = [Pigments.Yellow],
-                Visuals = Visuals.Slap,
-                AnimationTarget = Targeting.Slot_Front,
-                Effects =
-                [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1),
-                    Effects.GenerateEffect(ChargePercentageChange, 20),
-                ],
-                UnitStoreData = charge,
-            };
             electricity3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_1_2)]);
             electricity3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            eras.AddLevelData(8, new Ability[] { pulse, pump, beat, electricity0 });
-            eras.AddLevelData(11, new Ability[] { pulse, pump, beat, electricity1 });
-            eras.AddLevelData(14, new Ability[] { pulse, pump, beat, electricity2 });
-            eras.AddLevelData(17, new Ability[] { pulse, pump, beat, electricity3 });
+            eras.AddLevelData(8, new Ability[] { electricity0, pulse, beat });
+            eras.AddLevelData(11, new Ability[] { electricity1, pulse, beat });
+            eras.AddLevelData(14, new Ability[] { electricity2, pulse, beat });
+            eras.AddLevelData(17, new Ability[] { electricity3, pulse, beat });
 
             eras.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Eras_Witness_ACH");
             eras.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Eras_Divine_ACH");
-            eras.AddCharacter(true, true);
+            eras.AddCharacter(true, false);
         }
     }
 }

@@ -290,14 +290,6 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Keko_EN",
                 "Keko_EN",
-                "Keko_EN",
-                "Keko_EN",
-                "VanishingHands_EN",
-            ]),
-                new(
-            [
-                "Keko_EN",
-                "Keko_EN",
                 "Keklung_EN",
             ]),
                 new(
@@ -570,11 +562,6 @@ namespace Hell_Island_Fell.Encounters
 
             List<RandomEnemyGroup> kekastleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Kekastle_Hard_EnemyBundle"))._enemyBundles)
             {
-                new(
-            [
-                "Kekastle_EN",
-                "VanishingHands_EN",
-            ]),
                 new(
             [
                 "Kekastle_EN",

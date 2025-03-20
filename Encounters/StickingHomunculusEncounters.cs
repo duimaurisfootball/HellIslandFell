@@ -21,25 +21,6 @@ namespace Hell_Island_Fell.Encounters
                     "StickingHomunculus_EN",
                     "StickingHomunculus_EN",
                     "ShiveringHomunculus_EN",
-                ], null);
-            StickingMedium.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "ShiveringHomunculus_EN",
-                    "ShiveringHomunculus_EN",
-                ], null);
-            StickingMedium.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "StickingHomunculus_EN",
-                    "ShiveringHomunculus_EN",
-                    "ShiveringHomunculus_EN",
-                ], null);
-            StickingMedium.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "ShiveringHomunculus_EN",
-                    "ShiveringHomunculus_EN",
                     "ShiveringHomunculus_EN",
                 ], null);
             StickingMedium.CreateNewEnemyEncounterData(
@@ -106,12 +87,6 @@ namespace Hell_Island_Fell.Encounters
                     "StickingHomunculus_EN",
                     "StickingHomunculus_EN",
                     "SkinningHomunculus_EN",
-                ], null);
-            StickingHard.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "StickingHomunculus_EN",
-                    "SkinningHomunculus_EN",
                     "ShiveringHomunculus_EN",
                 ], null);
             StickingHard.CreateNewEnemyEncounterData(
@@ -135,18 +110,6 @@ namespace Hell_Island_Fell.Encounters
             StickingHard.CreateNewEnemyEncounterData(
                 [
                     "StickingHomunculus_EN",
-                    "SkinningHomunculus_EN",
-                    "ChoirBoy_EN",
-                ], null);
-            StickingHard.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "SkinningHomunculus_EN",
-                    "Inequity_EN",
-                ], null);
-            StickingHard.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
                     "StickingHomunculus_EN",
                     "InHisImage_EN",
                     "InHerImage_EN",
@@ -162,26 +125,6 @@ namespace Hell_Island_Fell.Encounters
                     "StickingHomunculus_EN",
                     "ProlificNosestone_EN",
                     "SweatingNosestone_EN",
-                ], null);
-            StickingHard.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "StickingHomunculus_EN",
-                    "ProlificNosestone_EN",
-                ], null);
-            StickingHard.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "StickingHomunculus_EN",
-                    "SweatingNosestone_EN",
-                ], null);
-            StickingHard.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "SweatingNosestone_EN",
-                    "ShiveringHomunculus_EN",
-                    "ShiveringHomunculus_EN",
-                    "ShiveringHomunculus_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {

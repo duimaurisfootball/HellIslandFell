@@ -26,15 +26,21 @@ namespace Hell_Island_Fell.Enemies
             inequity.PrepareEnemyPrefab("Assets/InequityAssetBundle/Inequity.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/InequityAssetBundle/InequityGibs.prefab").GetComponent<ParticleSystem>());
             inequity.AddPassives([Passives.Withering, Passives.Inanimate, Passives.Formless]);
 
-            IntentInfoBasic InanimateIntent = new()
+            IntentInfoBasic RemoveInanimateIntent = new()
             {
-                _color = Color.white,
+                _color = Color.grey,
                 _sprite = Passives.Inanimate.passiveIcon,
             };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Inanimate", InanimateIntent);
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Inanimate", RemoveInanimateIntent);
 
-            AddPassiveToWeakestEffect InequityInanimate = ScriptableObject.CreateInstance<AddPassiveToWeakestEffect>();
-            InequityInanimate._passiveToAdd = Passives.Inanimate;
+            AddPassiveToWeakestEffect InanimateAdd = ScriptableObject.CreateInstance<AddPassiveToWeakestEffect>();
+            InanimateAdd._passiveToAdd = Passives.Inanimate;
+
+            CheckAllHavePassiveAbilityEffect InanimateCheck = ScriptableObject.CreateInstance<CheckAllHavePassiveAbilityEffect>();
+            InanimateCheck.m_PassiveID = Passives.Inanimate.m_PassiveID;
+
+            RemovePassiveEffect InanimateRemove = ScriptableObject.CreateInstance<RemovePassiveEffect>();
+            InanimateRemove.m_PassiveID = Passives.Inanimate.m_PassiveID;
 
             StatusEffect_Apply_Effect RupturedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             RupturedApply._Status = StatusField.Ruptured;
@@ -51,16 +57,19 @@ namespace Hell_Island_Fell.Enemies
 
             Ability statusQuo = new Ability("Status Quo", "StatusQuo_A")
             {
-                Description = "Add Inanimate as a passive to the party member(s) with the lowest health. Ignores already Inanimate party members.",
+                Description = "If all party members are Inanimate, remove Inanimate from all party members.\nOtherwise, add Inanimate as a passive to the party member(s) with the lowest health.\nIgnores already Inanimate party members.",
                 Cost = [Pigments.Purple, Pigments.Yellow],
                 Effects =
                 [
-                    Effects.GenerateEffect(InequityInanimate, 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(InanimateCheck, 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(InanimateRemove, 1, Targeting.Unit_AllOpponents, Effects.CheckPreviousEffectCondition(true, 1)),
+                    Effects.GenerateEffect(InanimateAdd, 1, Targeting.Unit_AllOpponents, Effects.CheckPreviousEffectCondition(false, 1)),
                 ],
                 Rarity = CustomAbilityRarity.Weight(5, true),
                 Priority = Priority.ExtremelySlow,
             };
-            statusQuo.AddIntentsToTarget(Targeting.Unit_AllOpponents, ["Passive_Inanimate"]);
+            statusQuo.AddIntentsToTarget(Targeting.Unit_AllOpponents, ["Rem_Passive_Inanimate"]);
+            statusQuo.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.PA_Inanimate)]);
 
             Ability leadThem = new Ability("Lead Them", "LeadThem_A")
             {

@@ -49,7 +49,7 @@ namespace Hell_Island_Fell.Fools
             //stones
             Ability stones0 = new Ability("Stones of Protein", "Stones_1_A")
             {
-                Description = "Consume all stored yellow pigment.\nApply an equivalent amount of Shield to Self.",
+                Description = "Consume all stored yellow pigment.\nApply 2 Shield to Self for each pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("ChimStones"),
                 Cost = [],
                 Visuals = Visuals.Shield,
@@ -57,7 +57,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(YellowConsume),
-                    Effects.GenerateEffect(ShieldApply, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(ShieldApply, 2, Targeting.Slot_SelfSlot),
                 ]
             };
             stones0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
@@ -65,7 +65,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability stones1 = new Ability("Stones of Milk", "Stones_2_A")
             {
-                Description = "Consume all stored yellow pigment.\nApply an equivalent amount of Shield to the Left and Right allies and Self.",
+                Description = "Consume all stored yellow pigment.\nApply 2 Shield to the Left and Right allies and Self for each pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("ChimStones"),
                 Cost = [],
                 Visuals = Visuals.Shield,
@@ -73,7 +73,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(YellowConsume),
-                    Effects.GenerateEffect(ShieldApply, 1, Targeting.Slot_SelfAll_AndSides),
+                    Effects.GenerateEffect(ShieldApply, 2, Targeting.Slot_SelfAll_AndSides),
                 ]
             };
             stones1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
@@ -81,7 +81,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability stones2 = new Ability("Stones of Fear", "Stones_3_A")
             {
-                Description = "Consume all stored yellow pigment.\nApply an equivalent amount of Shield to the Far Left, Left, Right, and Far Right allies and Self.",
+                Description = "Consume all stored yellow pigment.\nApply 2 Shield to the Far Left, Left, Right, and Far Right allies and Self for each pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("ChimStones"),
                 Cost = [],
                 Visuals = Visuals.Shield,
@@ -89,7 +89,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(YellowConsume),
-                    Effects.GenerateEffect(ShieldApply, 1, Targeting.Slot_SelfAll_AndSidesAndFarSides),
+                    Effects.GenerateEffect(ShieldApply, 2, Targeting.Slot_SelfAll_AndSidesAndFarSides),
                 ]
             };
             stones2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
@@ -97,7 +97,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability stones3 = new Ability("Stones of Bile", "Stones_4_A")
             {
-                Description = "Consume all stored yellow pigment.\nApply an equivalent amount of Shield to the Very Far Left, Far Left, Left, Right, Far Right, and Very Far Right allies and Self.",
+                Description = "Consume all stored yellow pigment.\nApply 2 Shield to the Very Far Left, Far Left, Left, Right, Far Right, and Very Far Right allies and Self for each pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("ChimStones"),
                 Cost = [],
                 Visuals = Visuals.Shield,
@@ -105,7 +105,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(YellowConsume),
-                    Effects.GenerateEffect(ShieldApply, 1, Targeting.GenerateSlotTarget([-3, -2, -1, 0, 1, 2, 3], true, true)),
+                    Effects.GenerateEffect(ShieldApply, 2, Targeting.GenerateSlotTarget([-3, -2, -1, 0, 1, 2, 3], true, true)),
                 ]
             };
             stones3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
@@ -181,7 +181,7 @@ namespace Hell_Island_Fell.Fools
             //metabolism
             Ability metabolism0 = new Ability("Raging Metabolism", "Metabolism_1_A")
             {
-                Description = "Consume all stored purple pigment.\nIncrease the Right ally's max health by an equivalent amount.",
+                Description = "Consume all stored purple pigment.\nIncrease the Right ally's max health by 2 times the amount consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("ChimMetabolism"),
                 Cost = [],
                 Visuals = Visuals.Torched,
@@ -189,7 +189,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(PurpleConsume),
-                    Effects.GenerateEffect(PurpleMax, 1, Targeting.Slot_AllyRight),
+                    Effects.GenerateEffect(PurpleMax, 2, Targeting.Slot_AllyRight),
                 ]
             };
             metabolism0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
@@ -197,7 +197,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability metabolism1 = new Ability("Stinking Metabolism", "Metabolism_2_A")
             {
-                Description = "Consume all stored purple pigment.\nIncrease the Right and Left allies' max health by an equivalent amount.",
+                Description = "Consume all stored purple pigment.\nIncrease the Right and Left allies' max health by 2 times the amount consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("ChimMetabolism"),
                 Cost = [],
                 Visuals = Visuals.Torched,
@@ -205,7 +205,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(PurpleConsume),
-                    Effects.GenerateEffect(PurpleMax, 1, Targeting.Slot_AllySides),
+                    Effects.GenerateEffect(PurpleMax, 2, Targeting.Slot_AllySides),
                 ]
             };
             metabolism1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
@@ -213,7 +213,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability metabolism2 = new Ability("Resting Metabolism", "Metabolism_3_A")
             {
-                Description = "Consume all stored purple pigment.\nIncrease the Right, Left, and Far Left allies' max health by an equivalent amount.",
+                Description = "Consume all stored purple pigment.\nIncrease the Right, Left, and Far Left allies' max health by 2 times the amount consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("ChimMetabolism"),
                 Cost = [],
                 Visuals = Visuals.Torched,
@@ -221,7 +221,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(PurpleConsume),
-                    Effects.GenerateEffect(PurpleMax, 1, Targeting.GenerateSlotTarget([-2, -1, 1], true, true)),
+                    Effects.GenerateEffect(PurpleMax, 2, Targeting.GenerateSlotTarget([-2, -1, 1], true, true)),
                 ]
             };
             metabolism2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
@@ -229,7 +229,7 @@ namespace Hell_Island_Fell.Fools
 
             Ability metabolism3 = new Ability("Laughing Metabolism", "Metabolism_4_A")
             {
-                Description = "Consume all stored purple pigment.\nIncrease the Far Right, Right, Left, and Far Left allies' max health by an equivalent amount.",
+                Description = "Consume all stored purple pigment.\nIncrease the Far Right, Right, Left, and Far Left allies' max health by 2 times the amount consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("ChimMetabolism"),
                 Cost = [],
                 Visuals = Visuals.Torched,
@@ -237,7 +237,7 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(PurpleConsume),
-                    Effects.GenerateEffect(PurpleMax, 1, Targeting.Slot_AllySidesAndFarSides),
+                    Effects.GenerateEffect(PurpleMax, 2, Targeting.Slot_AllySidesAndFarSides),
                 ]
             };
             metabolism3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);

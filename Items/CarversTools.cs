@@ -36,6 +36,7 @@ namespace Hell_Island_Fell.Items
                 IndirectDmgPercentageToModify = 25,
                 DoesIncreaseIndirectDamage = false,
             };
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(carversTools.Item, new ItemModdedUnlockInfo("CarversTools_SW", ResourceLoader.LoadSprite("UnlockOsmanMalebolgeLocked", null, 32, null), "HIF_Malebolge_Witness_ACH"));
         }
     }

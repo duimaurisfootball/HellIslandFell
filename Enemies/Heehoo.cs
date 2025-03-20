@@ -69,7 +69,7 @@ namespace Hell_Island_Fell.Enemies
                     Effects.GenerateEffect(ConsumeRandom, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(PrevDamage, 1, Targeting.Slot_Front),
                 ],
-                Rarity = CustomAbilityRarity.Weight(4, true),
+                Rarity = CustomAbilityRarity.Weight(5, true),
                 Priority = Priority.Normal,
             };
             semanticDrip.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);

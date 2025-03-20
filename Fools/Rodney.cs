@@ -37,7 +37,7 @@ namespace Hell_Island_Fell.Fools
 
             Character rodney = new Character("Rodney", "Rodney_CH")
             {
-                HealthColor = Pigments.Purple,
+                HealthColor = Pigments.Blue,
                 UsesBasicAbility = true,
                 MovesOnOverworld = true,
                 FrontSprite = ResourceLoader.LoadSprite("RodneyFront", new Vector2(0.5f, 0f), 32),
@@ -58,40 +58,25 @@ namespace Hell_Island_Fell.Fools
             RemoveStatusEffectEffect CursedRemove = ScriptableObject.CreateInstance<RemoveStatusEffectEffect>();
             CursedRemove._status = StatusField.Cursed;
 
-            PreviousEffectCondition RestoreCondition = ScriptableObject.CreateInstance<PreviousEffectCondition>();
-            RestoreCondition.previousAmount = 2;
-
             RefreshAbilityUsageByStatusEffectEffect RotationRefresh0 = ScriptableObject.CreateInstance<RefreshAbilityUsageByStatusEffectEffect>();
-            RotationRefresh0._chance = 20;
+            RotationRefresh0._chance = 40;
             RotationRefresh0._status = StatusField.Cursed;
 
             RefreshAbilityUsageByStatusEffectEffect RotationRefresh1 = ScriptableObject.CreateInstance<RefreshAbilityUsageByStatusEffectEffect>();
-            RotationRefresh1._chance = 30;
+            RotationRefresh1._chance = 50;
             RotationRefresh1._status = StatusField.Cursed;
 
             RefreshAbilityUsageByStatusEffectEffect RotationRefresh2 = ScriptableObject.CreateInstance<RefreshAbilityUsageByStatusEffectEffect>();
-            RotationRefresh2._chance = 40;
+            RotationRefresh2._chance = 60;
             RotationRefresh2._status = StatusField.Cursed;
 
             RefreshAbilityUsageByStatusEffectEffect RotationRefresh3 = ScriptableObject.CreateInstance<RefreshAbilityUsageByStatusEffectEffect>();
-            RotationRefresh3._chance = 50;
+            RotationRefresh3._chance = 70;
             RotationRefresh3._status = StatusField.Cursed;
 
-            RestoreSwapUseByStatusEffectEffect RotationRestore0 = ScriptableObject.CreateInstance<RestoreSwapUseByStatusEffectEffect>();
-            RotationRestore0._chance = 50;
-            RotationRestore0._status = StatusField.Cursed;
-
-            RestoreSwapUseByStatusEffectEffect RotationRestore1 = ScriptableObject.CreateInstance<RestoreSwapUseByStatusEffectEffect>();
-            RotationRestore1._chance = 60;
-            RotationRestore1._status = StatusField.Cursed;
-
-            RestoreSwapUseByStatusEffectEffect RotationRestore2 = ScriptableObject.CreateInstance<RestoreSwapUseByStatusEffectEffect>();
-            RotationRestore2._chance = 70;
-            RotationRestore2._status = StatusField.Cursed;
-
-            RestoreSwapUseByStatusEffectEffect RotationRestore3 = ScriptableObject.CreateInstance<RestoreSwapUseByStatusEffectEffect>();
-            RotationRestore3._chance = 80;
-            RotationRestore3._status = StatusField.Cursed;
+            RestoreSwapUseByStatusEffectEffect RotationRestore = ScriptableObject.CreateInstance<RestoreSwapUseByStatusEffectEffect>();
+            RotationRestore._chance = 100;
+            RotationRestore._status = StatusField.Cursed;
 
             StatusEffect_Apply_Effect CursedApplyAlt = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             CursedApplyAlt._Status = StatusField.Cursed;
@@ -110,7 +95,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 2, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(CursedCheck, 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_AllyRight, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllyRight, RestoreCondition),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllyRight, Effects.CheckPreviousEffectCondition(true, 2)),
                 ]
             };
             veneration0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
@@ -128,7 +113,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(CursedCheck, 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_AllyRight, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllyRight, RestoreCondition),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllyRight, Effects.CheckPreviousEffectCondition(true, 2)),
                 ]
             };
             veneration1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
@@ -146,7 +131,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 4, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(CursedCheck, 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_AllyRight, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllyRight, RestoreCondition),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllyRight, Effects.CheckPreviousEffectCondition(true, 2)),
                 ]
             };
             veneration2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
@@ -164,7 +149,7 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 6, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(CursedCheck, 1, Targeting.Slot_AllyRight),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_AllyRight, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllyRight, RestoreCondition),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, Targeting.Slot_AllyRight, Effects.CheckPreviousEffectCondition(true, 2)),
                 ]
             };
             veneration3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
@@ -240,7 +225,7 @@ namespace Hell_Island_Fell.Fools
             //rotation
             Ability rotation0 = new Ability("Sick Rotation", "Rotation_1_A")
             {
-                Description = "Inflict Curse to a random ally.\n20% chance to refresh each Cursed ally's ability use.\n50% chance to restore each Cursed ally's movement.",
+                Description = "Inflict Curse to a random ally.\n40% chance to refresh each Cursed party member's ability use.\nRestore each Cursed party member's movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyRotation"),
                 Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Connection,
@@ -248,16 +233,16 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(CursedApplyAlt, 1, Targeting.Unit_OtherAllies),
-                    Effects.GenerateEffect(RotationRefresh0, 1, Targeting.Unit_OtherAllies),
-                    Effects.GenerateEffect(RotationRestore0, 1, Targeting.Unit_OtherAllies),
+                    Effects.GenerateEffect(RotationRefresh0, 1, Targeting.Unit_AllAllies),
+                    Effects.GenerateEffect(RotationRestore, 1, Targeting.Unit_AllAllies),
                 ]
             };
-            rotation0.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
-            rotation0.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
+            rotation0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
+            rotation0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             Ability rotation1 = new Ability("Blight Rotation", "Rotation_2_A")
             {
-                Description = "Inflict Curse to a random ally.\n30% chance to refresh each Cursed ally's ability use.\n60% chance to restore each Cursed ally's movement.",
+                Description = "Inflict Curse to a random ally.\n50% chance to refresh each Cursed party member's ability use.\nRestore each Cursed party member's movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyRotation"),
                 Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Connection,
@@ -265,16 +250,16 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(CursedApplyAlt, 1, Targeting.Unit_OtherAllies),
-                    Effects.GenerateEffect(RotationRefresh1, 1, Targeting.Unit_OtherAllies),
-                    Effects.GenerateEffect(RotationRestore1, 1, Targeting.Unit_OtherAllies),
+                    Effects.GenerateEffect(RotationRefresh1, 1, Targeting.Unit_AllAllies),
+                    Effects.GenerateEffect(RotationRestore, 1, Targeting.Unit_AllAllies),
                 ]
             };
-            rotation1.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
-            rotation1.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
+            rotation1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
+            rotation1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             Ability rotation2 = new Ability("Dead Rotation", "Rotation_3_A")
             {
-                Description = "Inflict Curse to a random ally.\n40% chance to refresh each Cursed ally's ability use.\n70% chance to restore each Cursed ally's movement.",
+                Description = "Inflict Curse to a random ally.\n60% chance to refresh each Cursed party member's ability use.\nRestore each Cursed party member's movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyRotation"),
                 Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Connection,
@@ -282,16 +267,16 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(CursedApplyAlt, 1, Targeting.Unit_OtherAllies),
-                    Effects.GenerateEffect(RotationRefresh2, 1, Targeting.Unit_OtherAllies),
-                    Effects.GenerateEffect(RotationRestore2, 1, Targeting.Unit_OtherAllies),
+                    Effects.GenerateEffect(RotationRefresh2, 1, Targeting.Unit_AllAllies),
+                    Effects.GenerateEffect(RotationRestore, 1, Targeting.Unit_AllAllies),
                 ]
             };
-            rotation2.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
-            rotation2.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
+            rotation2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
+            rotation2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             Ability rotation3 = new Ability("Skeletal Rotation", "Rotation_4_A")
             {
-                Description = "Inflict Curse to a random ally.\n50% chance to refresh each Cursed ally's ability use.\n80% chance to restore each Cursed ally's movement.",
+                Description = "Inflict Curse to a random ally.\n70% chance to refresh each Cursed party member's ability use.\nRestore each Cursed party member's movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyRotation"),
                 Cost = [Pigments.Blue, Pigments.Blue],
                 Visuals = Visuals.Connection,
@@ -299,12 +284,12 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(CursedApplyAlt, 1, Targeting.Unit_OtherAllies),
-                    Effects.GenerateEffect(RotationRefresh3, 1, Targeting.Unit_OtherAllies),
-                    Effects.GenerateEffect(RotationRestore3, 1, Targeting.Unit_OtherAllies),
+                    Effects.GenerateEffect(RotationRefresh3, 1, Targeting.Unit_AllAllies),
+                    Effects.GenerateEffect(RotationRestore, 1, Targeting.Unit_AllAllies),
                 ]
             };
-            rotation3.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
-            rotation3.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
+            rotation3.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
+            rotation3.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
 
             rodney.AddLevelData(30, new Ability[] { veneration0, tribulation0, rotation0 });

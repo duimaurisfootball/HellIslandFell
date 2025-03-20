@@ -22,11 +22,11 @@ namespace Hell_Island_Fell.Enemies
                 CombatSprite = ResourceLoader.LoadSprite("TimelineUninspiredNosestone", new Vector2(0.5f, 0f), 32),
                 OverworldDeadSprite = ResourceLoader.LoadSprite("DeadUninspiredNosestone", new Vector2(0.5f, 0f), 32),
                 OverworldAliveSprite = ResourceLoader.LoadSprite("TimelineUninspiredNosestone", new Vector2(0.5f, 0f), 32),
-                DamageSound = LoadedAssetsHandler.GetEnemy("Zeitgeist_EN").damageSound,
-                DeathSound = LoadedAssetsHandler.GetEnemy("Zeitgeist_EN").deathSound,
+                DamageSound = "event:/UninspiredDamage",
+                DeathSound = "event:/UninspiredDeath",
             };
             uninspiredNosestone.PrepareEnemyPrefab("Assets/UninspiredNosestoneAssetBundle/UninspiredNosestone.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/UninspiredNosestoneAssetBundle/UninspiredGibs.prefab").GetComponent<ParticleSystem>());
-            uninspiredNosestone.AddPassives([Passives.Pure, Passives.GetCustomPassive("Grinding_PA"), CustomPassives.WartsGenerator(9), Passives.Forgetful]);
+            uninspiredNosestone.AddPassives([Passives.Pure, Passives.GetCustomPassive("Grinding_PA"), Passives.Forgetful]);
 
             Ability waxandWater = new Ability("Wax and Water", "WaxAndWater_A")
             {
