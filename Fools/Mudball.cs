@@ -21,13 +21,17 @@ namespace Hell_Island_Fell.Fools
                 DamageSound = LoadedAssetsHandler.GetEnemy("SilverSuckle_EN").damageSound,
                 DeathSound = LoadedAssetsHandler.GetEnemy("SilverSuckle_EN").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetEnemy("SilverSuckle_EN").damageSound,
+                UnitTypes =
+                [
+                    "Sandwich_Silly",
+                ],
             };
             mudball.AddPassives([Passives.Withering, Passives.Inanimate]);
 
             DamageEffect IndirectDamage = ScriptableObject.CreateInstance<DamageEffect>();
             IndirectDamage._indirect = true;
 
-            Ability dry = new Ability("Dry Out", "DryOut_A")
+            Ability dry = new Ability("Dry Out", "HIF_DryOut_A")
             {
                 Description = "Deal 1 indirect damage to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("MudballDry"),
@@ -39,7 +43,7 @@ namespace Hell_Island_Fell.Fools
             };
             dry.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_1_2)]);
 
-            mudball.AddLevelData(1000, new Ability[] { dry });
+            mudball.AddLevelData(1000, [dry]);
             mudball.AddCharacter();
         }
     }

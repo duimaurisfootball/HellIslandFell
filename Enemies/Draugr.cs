@@ -52,7 +52,7 @@ namespace Hell_Island_Fell.Enemies
                 [
                     Effects.GenerateEffect(SaltedApply, 3, Targeting.Unit_AllOpponents),
                 ],
-                Rarity = CustomAbilityRarity.Weight(8, true),
+                Rarity = CustomAbilityRarity.Weight(12, true),
                 Priority = Priority.Normal,
             };
             ashes.AddIntentsToTarget(Targeting.Unit_AllOpponents, ["Status_Salted"]);
@@ -89,18 +89,33 @@ namespace Hell_Island_Fell.Enemies
 
             Ability stones = new Ability("Stones", "HIFStones_A")
             {
-                Description = "Apply 1 Frail to the Opposing party members.",
+                Description = "Apply 2 Frail to the Opposing party members.",
                 Cost = [Pigments.Yellow],
                 Visuals = Visuals.RendRight,
                 AnimationTarget = Targeting.GenerateBigUnitSlotTarget([0, 1]),
                 Effects =
                 [
-                    Effects.GenerateEffect(FrailApply, 1, Targeting.GenerateBigUnitSlotTarget([0, 1])),
+                    Effects.GenerateEffect(FrailApply, 2, Targeting.GenerateBigUnitSlotTarget([0, 1])),
                 ],
                 Rarity = CustomAbilityRarity.Weight(4, true),
                 Priority = Priority.Normal,
             };
             stones.AddIntentsToTarget(Targeting.GenerateBigUnitSlotTarget([0, 1]), [nameof(IntentType_GameIDs.Status_Frail)]);
+
+            Ability peterEddy = new Ability("Peter and Eddy", "HIFPeterAndEddy_A")
+            {
+                Description = "Deal a little damage to the Left and Right party members.",
+                Cost = [Pigments.Yellow],
+                Visuals = Visuals.MotherlyLove,
+                AnimationTarget = Targeting.Slot_OpponentSides,
+                Effects =
+                [
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 2, Targeting.Slot_OpponentSides),
+                ],
+                Rarity = CustomAbilityRarity.Weight(4, true),
+                Priority = Priority.Normal,
+            };
+            peterEddy.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_1_2)]);
 
             draugr.AddEnemyAbilities(
                 [
@@ -108,6 +123,7 @@ namespace Hell_Island_Fell.Enemies
                     hexes,
                     blades,
                     stones,
+                    peterEddy,
                 ]);
             draugr.AddEnemy(true, true, false);
         }

@@ -69,6 +69,28 @@ namespace Hell_Island_Fell.Encounters
                         "Vagabond_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "Git_EN",
+                        "Git_EN",
+                    ], null);
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ProlificNosestone_EN",
+                        "Romantic_EN",
+                    ], null);
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "Attrition_EN",
+                    ], null);
+            }
             StickingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_StickingHomunculus_Medium_EnemyBundle", 8, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
             EnemyEncounter_API StickingHard = new EnemyEncounter_API(0, "H_Zone03_StickingHomunculus_Hard_EnemyBundle", "StickingHomunculus_Sign")
@@ -113,12 +135,6 @@ namespace Hell_Island_Fell.Encounters
                     "StickingHomunculus_EN",
                     "InHisImage_EN",
                     "InHerImage_EN",
-                ], null);
-            StickingHard.CreateNewEnemyEncounterData(
-                [
-                    "StickingHomunculus_EN",
-                    "StickingHomunculus_EN",
-                    "Maneater_EN",
                 ], null);
             StickingHard.CreateNewEnemyEncounterData(
                 [
@@ -267,6 +283,21 @@ namespace Hell_Island_Fell.Encounters
                         "StickingHomunculus_EN",
                         "MesmerizingNosestone_EN",
                         "Vagabond_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "Inequity_EN",
+                        "Romantic_EN",
+                    ], null);
+                StickingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "StickingHomunculus_EN",
+                        "Surrogate_EN",
+                        "Surrogate_EN",
                     ], null);
             }
             StickingHard.AddEncounterToDataBases();

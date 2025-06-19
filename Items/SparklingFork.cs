@@ -42,6 +42,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            sparklingFork.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Knife.ToString(),
+                ];
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(sparklingFork.Item, new ItemModdedUnlockInfo("SparklingFork_SW", ResourceLoader.LoadSprite("ShopSparklingForkLocked", null, 32, null), "HIF_Boojum_Comedy_ACH"));
         }
     }

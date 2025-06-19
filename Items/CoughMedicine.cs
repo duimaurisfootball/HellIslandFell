@@ -33,7 +33,12 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(coughMedicine.Item);
+            coughMedicine.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(coughMedicine.Item, new ItemModdedUnlockInfo(coughMedicine.Item_ID, ResourceLoader.LoadSprite("ShopCoughMedicine")));
         }
     }
 }

@@ -36,6 +36,12 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            infiniteMirror.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Face.ToString(),
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(infiniteMirror.Item, new ItemModdedUnlockInfo("InfiniteMirror_TW", ResourceLoader.LoadSprite("UnlockHeavenHillsLocked", null, 32, null), "HIF_Hills_Divine_ACH"));
         }
     }

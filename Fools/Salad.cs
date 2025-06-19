@@ -24,6 +24,10 @@ namespace Hell_Island_Fell.Fools
                 DamageSound = LoadedAssetsHandler.GetCharacter("SmokeStacks_CH").damageSound,
                 DeathSound = LoadedAssetsHandler.GetCharacter("SmokeStacks_CH").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetCharacter("SmokeStacks_CH").dxSound,
+                UnitTypes =
+                [
+                    "Sandwich_Robot",
+                ],
             };
             salad.GenerateMenuCharacter(ResourceLoader.LoadSprite("SaladMenu"), ResourceLoader.LoadSprite("SaladLocked"));
             salad.AddPassives([Passives.GetCustomPassive("Metallurgy_PA")]);
@@ -68,7 +72,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //copper
-            Ability copper = new Ability("Copper and Rhodium", "Copper_1_A")
+            Ability copper = new Ability("Copper and Rhodium", "HIF_Copper_1_A")
             {
                 Description = "Deal damage equal to 1/3 of Metallurgy to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("SaladCopper"),
@@ -87,7 +91,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //titanium
-            Ability titanium = new Ability("Titanium and Iridium", "Titanium_1_A")
+            Ability titanium = new Ability("Titanium and Iridium", "HIF_Titanium_1_A")
             {
                 Description = "Deal damage equal to 1/4 of Metallurgy to the Left and Right enemies.\nApply an amount of Shield equal to 1/3 of Metallurgy to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("SaladTitanium"),
@@ -110,7 +114,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //mercury
-            Ability mercury = new Ability("Mercury and Technetium", "Mercury_1_A")
+            Ability mercury = new Ability("Mercury and Technetium", "HIF_Mercury_1_A")
             {
                 Description = "Heal this party member an amount equal to 1/5 of Metallurgy.\nApply an amount of Constricted equal to 1/10 of Metallurgy to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("SaladMercury"),
@@ -131,7 +135,7 @@ namespace Hell_Island_Fell.Fools
             mercury.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
             mercury.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Constricted)]);
 
-            salad.AddLevelData(50, new Ability[] { copper, titanium, mercury });
+            salad.AddLevelData(25, [titanium, copper, mercury]);
 
             salad.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Salad_Witness_ACH");
             salad.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Salad_Divine_ACH");

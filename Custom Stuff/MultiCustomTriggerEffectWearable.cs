@@ -31,6 +31,23 @@ namespace Hell_Island_Fell.Custom_Stuff
             }
         }
 
+        public override void CustomOnTriggerDettached(IWearableEffector caller)
+        {
+            if (triggerEffects != null)
+            {
+                for (var i = 0; i < triggerEffects.Length; i++)
+                {
+                    var te = triggerEffects[i];
+                    var strings = te.TriggerStrings();
+
+                    foreach (var str in strings)
+                    {
+                        CombatManager.Instance.RemoveObserver(GetEffectMethod(i), str, caller);
+                    }
+                }
+            }
+        }
+
         public Action<object, object> GetEffectMethod(int i)
         {
             if (effectMethods.TryGetValue(i, out var existing))

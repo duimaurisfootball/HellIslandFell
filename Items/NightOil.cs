@@ -1,4 +1,5 @@
 ﻿using BrutalAPI.Items;
+using Hell_Island_Fell.Custom_Effects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Hell_Island_Fell.Items
                 Flavour = "\"Little stars dance in the blackness.\"",
                 Description = "The yellow pigment generator now generates purple pigment. Attempt to revive one party member on combat end.",
                 IsShopItem = true,
-                ShopPrice = 3,
+                ShopPrice = 2,
                 DoesPopUpInfo = true,
                 StartsLocked = true,
                 TriggerOn = TriggerCalls.OnCombatStart,
@@ -34,7 +35,7 @@ namespace Hell_Island_Fell.Items
                 ],
                 SecondaryEffects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ResurrectEffect>(), 1, Targeting.Slot_AllyAllSlots),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ResurrectNotMainCharacterEffect>(), 1, Targeting.Slot_AllyAllSlots),
                 ],
             };
 

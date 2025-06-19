@@ -542,13 +542,6 @@ namespace Hell_Island_Fell.Encounters
                     "Thunderdome_EN",
                     "Moone_EN",
                 ]),
-                    new(
-                [
-                    "Gizo_EN",
-                    "SingingStone_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
-                ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoMedium"))._enemyBundles = gizoMedium;
 
@@ -606,20 +599,6 @@ namespace Hell_Island_Fell.Encounters
                     new(
                 [
                     "Gizo_EN",
-                    "Gizo_EN",
-                    "Moone_EN",
-                    "JumbleGuts_Waning_EN",
-                ]),
-                    new(
-                [
-                    "Gizo_EN",
-                    "Gizo_EN",
-                    "Moone_EN",
-                    "JumbleGuts_Clotted_EN",
-                ]),
-                    new(
-                [
-                    "Gizo_EN",
                     "NakedGizo_EN",
                     "Moone_EN",
                     "Spoggle_Writhing_EN",
@@ -630,20 +609,6 @@ namespace Hell_Island_Fell.Encounters
                     "NakedGizo_EN",
                     "Moone_EN",
                     "Spoggle_Resonant_EN",
-                ]),
-                    new(
-                [
-                    "Gizo_EN",
-                    "Gizo_EN",
-                    "Moone_EN",
-                    "Spoggle_Spitfire_EN",
-                ]),
-                    new(
-                [
-                    "Gizo_EN",
-                    "Gizo_EN",
-                    "Moone_EN",
-                    "Spoggle_Ruminating_EN",
                 ]),
                     new(
                 [
@@ -696,62 +661,6 @@ namespace Hell_Island_Fell.Encounters
                 ]),
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GizoHard"))._enemyBundles = gizoHard;
-
-                List<RandomEnemyGroup> greyJumbleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GreyJumbleMedium"))._enemyBundles)
-                {
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
-                    "DesiccatingJumbleguts_EN",
-                    "Heehoo_EN",
-                ]),
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
-                    "Moone_EN",
-                    "Moone_EN",
-                ]),
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
-                    "Moone_EN",
-                    "MusicMan_EN",
-                ]),
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
-                    "Moone_EN",
-                    "Chapman_EN",
-                    "Chapman_EN",
-                ]),
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
-                    "JumbleGuts_Flummoxing_EN",
-                    "Moone_EN",
-                ]),
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
-                    "JumbleGuts_Hollowing_EN",
-                    "Moone_EN",
-                ]),
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
-                    "JumbleGuts_Hollowing_EN",
-                    "Thunderdome_EN",
-                ]),
-                    new(
-                [
-                    "DesiccatingJumbleguts_EN",
-                    "JumbleGuts_Flummoxing_EN",
-                    "SingingStone_EN",
-                    "SingingStone_EN",
-                    "VanishingHands_EN",
-                ]),
-                };
-                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("GreyJumbleMedium"))._enemyBundles = greyJumbleMedium;
 
                 List<RandomEnemyGroup> metatronHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("MetatronHard"))._enemyBundles)
                 {
@@ -867,12 +776,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "NeoplasmHeap_EN",
                     "Gizo_EN",
-                    "Moone_EN",
-                ]),
-                    new(
-                [
-                    "NeoplasmHeap_EN",
-                    "DesiccatingJumbleguts_EN",
                     "Moone_EN",
                 ]),
                     new(
@@ -1196,7 +1099,7 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "RevoltingRevola_EN",
                     "Heehoo_EN",
-                    "Moone_EN",
+                    "Heehoo_EN",
                 ]),
                     new(
                 [
@@ -1215,24 +1118,6 @@ namespace Hell_Island_Fell.Encounters
                     "RevoltingRevola_EN",
                     "Gizo_EN",
                     "Moone_EN",
-                ]),
-                    new(
-                [
-                    "RevoltingRevola_EN",
-                    "DesiccatingJumbleguts_EN",
-                    "Moone_EN",
-                ]),
-                    new(
-                [
-                    "RevoltingRevola_EN",
-                    "Heehoo_EN",
-                    "Moone_EN",
-                ]),
-                    new(
-                [
-                    "RevoltingRevola_EN",
-                    "Heehoo_EN",
-                    "Scrungie_EN",
                 ]),
                     new(
                 [
@@ -1405,7 +1290,6 @@ namespace Hell_Island_Fell.Encounters
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("ZygoteHard"))._enemyBundles = zygoteHard;
             }
-            
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
                 List<RandomEnemyGroup> swineEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("SwineEasy"))._enemyBundles)
@@ -2555,7 +2439,276 @@ namespace Hell_Island_Fell.Encounters
                 };
                 ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("VagabondHard"))._enemyBundles = vagabondHard;
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                List<RandomEnemyGroup> snaurceEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Snaurce_Easy_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Snaurce_EN",
+                    "Snaurce_EN",
+                    "Draugr_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Snaurce_Easy_Bundle"))._enemyBundles = snaurceEasy;
 
+                List<RandomEnemyGroup> snaurceMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Snaurce_Medium_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Snaurce_EN",
+                    "Snaurce_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "Snaurce_EN",
+                    "Keko_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "Snaurce_EN",
+                    "Surimi_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Snaurce_EN",
+                    "Snaurce_EN",
+                    "VanishingHands_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Snaurce_Medium_Bundle"))._enemyBundles = snaurceMedium;
+
+                List<RandomEnemyGroup> surimiEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Surimi_Easy_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Surimi_EN",
+                    "MudLung_EN",
+                    "Draugr_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Surimi_Easy_Bundle"))._enemyBundles = surimiEasy;
+
+                List<RandomEnemyGroup> surimiMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Surimi_Medium_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Surimi_EN",
+                    "Surimi_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Surimi_EN",
+                    "Surimi_EN",
+                    "Keklung_EN",
+                ]),
+                    new(
+                [
+                    "Surimi_EN",
+                    "Surimi_EN",
+                    "Wringle_EN",
+                    "Draugr_EN",
+                ]),
+                    new(
+                [
+                    "Surimi_EN",
+                    "Surimi_EN",
+                    "VanishingHands_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Surimi_Medium_Bundle"))._enemyBundles = surimiMedium;
+
+                List<RandomEnemyGroup> errantMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Errant_Medium_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Errant_EN",
+                    "Heehoo_EN",
+                    "Heehoo_EN",
+                ]),
+                    new(
+                [
+                    "Errant_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                ]),
+                    new(
+                [
+                    "Errant_EN",
+                    "Moone_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Errant_Medium_Bundle"))._enemyBundles = errantMedium;
+
+                List<RandomEnemyGroup> errantHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Errant_Hard_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Errant_EN",
+                    "Heehoo_EN",
+                    "MusicMan_EN",
+                    "MusicMan_EN",
+                ]),
+                    new(
+                [
+                    "Errant_EN",
+                    "Heehoo_EN",
+                    "Surrogate_EN",
+                ]),
+                    new(
+                [
+                    "Errant_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Errant_EN",
+                    "Thunderdome_EN",
+                    "Thunderdome_EN",
+                    "Gungrot_EN",
+                ]),
+                    new(
+                [
+                    "Errant_EN",
+                    "Thunderdome_EN",
+                    "Moone_EN",
+                ]),
+                    new(
+                [
+                    "Errant_EN",
+                    "SingingStone_EN",
+                    "VanishingHands_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Errant_Hard_Bundle"))._enemyBundles = errantHard;
+
+                List<RandomEnemyGroup> attritionEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Attrition_Easy_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Attrition_EN",
+                    "Attrition_EN",
+                    "ProlificNosestone_EN",
+                ]),
+                    new(
+                [
+                    "Attrition_EN",
+                    "Attrition_EN",
+                    "SweatingNosestone_EN",
+                ]),
+                    new(
+                [
+                    "Attrition_EN",
+                    "Attrition_EN",
+                    "ScatterbrainedNosestone_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Attrition_Easy_Bundle"))._enemyBundles = attritionEasy;
+
+                List<RandomEnemyGroup> attritionMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Attrition_Medium_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Attrition_EN",
+                    "Attrition_EN",
+                    "ProlificNosestone_EN",
+                    "ScatterbrainedNosestone_EN",
+                ]),
+                    new(
+                [
+                    "Attrition_EN",
+                    "Attrition_EN",
+                    "MesmerizingNosestone_EN",
+                ]),
+                    new(
+                [
+                    "Attrition_EN",
+                    "Attrition_EN",
+                    "StickingHomunculus_EN",
+                    "ShiveringHomunculus_EN",
+                ]),
+                    new(
+                [
+                    "Attrition_EN",
+                    "NextOfKin_EN",
+                    "NextOfKin_EN",
+                    "Inequity_EN",
+                ]),
+                    new(
+                [
+                    "Attrition_EN",
+                    "Attrition_EN",
+                    "Maneater_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Attrition_Medium_Bundle"))._enemyBundles = attritionMedium;
+
+                List<RandomEnemyGroup> gitEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Git_Easy_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Git_EN",
+                    "ProlificNosestone_EN",
+                    "ScatterbrainedNosestone_EN",
+                ]),
+                    new(
+                [
+                    "Git_EN",
+                    "Git_EN",
+                    "ProlificNosestone_EN",
+                ]),
+                    new(
+                [
+                    "Git_EN",
+                    "Git_EN",
+                    "SweatingNosestone_EN",
+                ]),
+                    new(
+                [
+                    "Git_EN",
+                    "ShiveringHomunculus_EN",
+                    "StickingHomunculus_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Git_Easy_Bundle"))._enemyBundles = gitEasy;
+
+                List<RandomEnemyGroup> gitMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Git_Medium_Bundle"))._enemyBundles)
+                {
+                    new(
+                [
+                    "Git_EN",
+                    "Git_EN",
+                    "MesmerizingNosestone_EN",
+                ]),
+                    new(
+                [
+                    "Git_EN",
+                    "Git_EN",
+                    "Maneater_EN",
+                ]),
+                    new(
+                [
+                    "Git_EN",
+                    "Git_EN",
+                    "Surrogate_EN",
+                    "Inequity_EN",
+                ]),
+                    new(
+                [
+                    "Git_EN",
+                    "Git_EN",
+                    "Surrogate_EN",
+                    "UninspiredNosestone_EN",
+                ]),
+                };
+                ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("Marmo_Git_Medium_Bundle"))._enemyBundles = gitMedium;
+            }
             //multi crossovers
             if (Hell_Island_Fell.CrossMod.EnemyPack && Hell_Island_Fell.CrossMod.Colophons)
             {

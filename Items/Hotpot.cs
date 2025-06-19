@@ -60,7 +60,7 @@ namespace Hell_Island_Fell.Items
                 fireBreather
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(hotpot.Item);
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(hotpot.Item, new ItemModdedUnlockInfo(hotpot.Item_ID, ResourceLoader.LoadSprite("ShopHotPot")));
         }
     }
 }

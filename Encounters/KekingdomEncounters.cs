@@ -96,6 +96,19 @@ namespace Hell_Island_Fell.Encounters
                         "Enno_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                kekingdomHard.CreateNewEnemyEncounterData(
+                    [
+                        "Kekingdom_EN",
+                        "Snaurce_EN",
+                    ], null);
+                kekingdomHard.CreateNewEnemyEncounterData(
+                    [
+                        "Kekingdom_EN",
+                        "Surimi_EN",
+                    ], null);
+            }
             kekingdomHard.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Kekingdom_Hard_EnemyBundle", 20, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Hard);
         }

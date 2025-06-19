@@ -61,11 +61,14 @@ namespace Hell_Island_Fell.Fools
             StatusEffect_Apply_Effect RuptureApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             RuptureApply._Status = StatusField.Ruptured;
 
+            FieldEffect_Apply_Effect FireApply = ScriptableObject.CreateInstance<FieldEffect_Apply_Effect>();
+            FireApply._Field = StatusField.OnFire;
+
             ChangeToRandomHealthColorEffect YellowHealth = ScriptableObject.CreateInstance<ChangeToRandomHealthColorEffect>();
             YellowHealth._healthColors = [Pigments.Yellow];
 
             //dessicate
-            Ability desiccate0 = new Ability("Desiccate Quietly", "Desiccate_1_A")
+            Ability desiccate0 = new Ability("Desiccate Quietly", "HIF_Desiccate_1_A")
             {
                 Description = "Consume all stored blue pigment.\nHeal All party members and enemies with yellow health an equivalent amount.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieDesiccate"),
@@ -82,7 +85,7 @@ namespace Hell_Island_Fell.Fools
             desiccate0.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Heal_5_10)]);
             desiccate0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
-            Ability desiccate1 = new Ability("Desiccate Slyly", "Desiccate_2_A")
+            Ability desiccate1 = new Ability("Desiccate Slyly", "HIF_Desiccate_2_A")
             {
                 Description = "Consume all stored blue pigment.\nHeal All party members and enemies with yellow health an equivalent amount + 1.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieDesiccate"),
@@ -99,7 +102,7 @@ namespace Hell_Island_Fell.Fools
             desiccate1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_11_20)]);
             desiccate1.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Heal_11_20)]);
 
-            Ability desiccate2 = new Ability("Desiccate Carefully", "Desiccate_3_A")
+            Ability desiccate2 = new Ability("Desiccate Carefully", "HIF_Desiccate_3_A")
             {
                 Description = "Consume all stored blue pigment.\nHeal All party members and enemies with yellow health an equivalent amount + 2.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieDesiccate"),
@@ -116,7 +119,7 @@ namespace Hell_Island_Fell.Fools
             desiccate2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_11_20)]);
             desiccate2.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Heal_11_20)]);
 
-            Ability desiccate3 = new Ability("Desiccate Instantly", "Desiccate_4_A")
+            Ability desiccate3 = new Ability("Desiccate Instantly", "HIF_Desiccate_4_A")
             {
                 Description = "Consume all stored blue pigment.\nHeal All party members and enemies with yellow health an equivalent amount + 3.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieDesiccate"),
@@ -135,73 +138,81 @@ namespace Hell_Island_Fell.Fools
 
 
             //singing
-            Ability singing0 = new Ability("Singing Wind", "Singing_1_A")
+            Ability singing0 = new Ability("Singing Wind", "HIF_Singing_1_A")
             {
-                Description = "Apply 3 Ruptured to the Opposing enemy.\nChange the Left ally's health color to yellow.",
+                Description = "Apply 3 Ruptured to the Left and Right enemies.\nApply 1 Fire to the Opposing position.\nChange the Left ally's health color to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSinging"),
                 Cost = [Pigments.YellowBlue, Pigments.YellowBlue],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(RuptureApply, 3, Targeting.Slot_Front),
+                    Effects.GenerateEffect(RuptureApply, 3, Targeting.Slot_OpponentSides),
+                    Effects.GenerateEffect(FireApply, 1, Targeting.Slot_Front),
                     Effects.GenerateEffect(YellowHealth, 1, Targeting.Slot_AllyLeft),
                 ]
             };
-            singing0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
+            singing0.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Status_Ruptured)]);
+            singing0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Field_Fire)]);
             singing0.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Mana_Randomize)]);
 
-            Ability singing1 = new Ability("Singing Sand", "Singing_2_A")
+            Ability singing1 = new Ability("Singing Sand", "HIF_Singing_2_A")
             {
-                Description = "Apply 5 Ruptured to the Opposing enemy.\nChange the Left ally's health color to yellow.",
+                Description = "Apply 5 Ruptured to the Left and Right enemies.\nApply 1 Fire to the Opposing position.\nChange the Left ally's health color to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSinging"),
                 Cost = [Pigments.YellowBlue, Pigments.YellowBlue],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(RuptureApply, 5, Targeting.Slot_Front),
+                    Effects.GenerateEffect(RuptureApply, 5, Targeting.Slot_OpponentSides),
+                    Effects.GenerateEffect(FireApply, 1, Targeting.Slot_Front),
                     Effects.GenerateEffect(YellowHealth, 1, Targeting.Slot_AllyLeft),
                 ]
             };
-            singing1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
+            singing1.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Status_Ruptured)]);
+            singing1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Field_Fire)]);
             singing1.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Mana_Randomize)]);
 
-            Ability singing2 = new Ability("Singing Night", "Singing_3_A")
+            Ability singing2 = new Ability("Singing Night", "HIF_Singing_3_A")
             {
-                Description = "Apply 6 Ruptured to the Left and Opposing enemies.\nChange the Left ally's health color to yellow.",
+                Description = "Apply 6 Ruptured to the Left and Right enemies.\nApply 1 Fire to the Opposing position.\nChange the Left ally's health color to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSinging"),
                 Cost = [Pigments.YellowBlue, Pigments.YellowBlue],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(RuptureApply, 6, Targeting.GenerateSlotTarget([0, 1], false, false)),
+                    Effects.GenerateEffect(RuptureApply, 6, Targeting.Slot_OpponentSides),
+                    Effects.GenerateEffect(FireApply, 1, Targeting.Slot_Front),
                     Effects.GenerateEffect(YellowHealth, 1, Targeting.Slot_AllyLeft),
                 ]
             };
-            singing2.AddIntentsToTarget(Targeting.GenerateSlotTarget([0, 1], false, false), [nameof(IntentType_GameIDs.Status_Ruptured)]);
+            singing2.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Status_Ruptured)]);
+            singing2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Field_Fire)]);
             singing2.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Mana_Randomize)]);
 
-            Ability singing3 = new Ability("Singing Sun", "Singing_4_A")
+            Ability singing3 = new Ability("Singing Sun", "HIF_Singing_4_A")
             {
-                Description = "Apply 6 Ruptured to the Left, Right, and Opposing enemies.\nChange the Left ally's health color to yellow.",
+                Description = "Apply 6 Ruptured to the Left and Right enemies.\nApply 2 Fire to the Opposing position.\nChange the Left ally's health color to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSinging"),
                 Cost = [Pigments.YellowBlue, Pigments.YellowBlue],
                 Visuals = Visuals.Torched,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(RuptureApply, 6, Targeting.Slot_FrontAndSides),
+                    Effects.GenerateEffect(RuptureApply, 6, Targeting.Slot_OpponentSides),
+                    Effects.GenerateEffect(FireApply, 2, Targeting.Slot_Front),
                     Effects.GenerateEffect(YellowHealth, 1, Targeting.Slot_AllyLeft),
                 ]
             };
-            singing3.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Status_Ruptured)]);
+            singing3.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Status_Ruptured)]);
+            singing3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Field_Fire)]);
             singing3.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Mana_Randomize)]);
 
 
             //sand
-            Ability sand0 = new Ability("Sand Throw", "Sand_1_A")
+            Ability sand0 = new Ability("Sand Throw", "HIF_Sand_1_A")
             {
                 Description = "Deal 5 indirect damage to the Opposing enemy.\nRandomly move the Left, Right, and Opposing enemies.\nDeal 5 indirect damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSands"),
@@ -219,7 +230,7 @@ namespace Hell_Island_Fell.Fools
             sand0.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Swap_Mass)]);
             sand0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
 
-            Ability sand1 = new Ability("Sand Dunes", "Sand_2_A")
+            Ability sand1 = new Ability("Sand Dunes", "HIF_Sand_2_A")
             {
                 Description = "Deal 7 indirect damage to the Opposing enemy.\nRandomly move the Left, Right, and Opposing enemies.\nDeal 7 indirect damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSands"),
@@ -237,7 +248,7 @@ namespace Hell_Island_Fell.Fools
             sand1.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Swap_Mass)]);
             sand1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
-            Ability sand2 = new Ability("Sand Storm", "Sand_3_A")
+            Ability sand2 = new Ability("Sand Storm", "HIF_Sand_3_A")
             {
                 Description = "Deal 9 indirect damage to the Opposing enemy.\nRandomly move the Left, Right, and Opposing enemies.\nDeal 9 indirect damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSands"),
@@ -255,7 +266,7 @@ namespace Hell_Island_Fell.Fools
             sand2.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Swap_Mass)]);
             sand2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
-            Ability sand3 = new Ability("Sand of Time", "Sand_4_A")
+            Ability sand3 = new Ability("Sand of Time", "HIF_Sand_4_A")
             {
                 Description = "Deal 11 indirect damage to the Opposing enemy.\nRandomly move the Left, Right, and Opposing enemies.\nDeal 11 indirect damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AelieSands"),
@@ -273,10 +284,10 @@ namespace Hell_Island_Fell.Fools
             sand3.AddIntentsToTarget(Targeting.Slot_FrontAndSides, [nameof(IntentType_GameIDs.Swap_Mass)]);
             sand3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
 
-            aelie.AddLevelData(8, new Ability[] { desiccate0, singing0, sand0 });
-            aelie.AddLevelData(11, new Ability[] { desiccate1, singing1, sand1 });
-            aelie.AddLevelData(14, new Ability[] { desiccate2, singing2, sand2 });
-            aelie.AddLevelData(17, new Ability[] { desiccate3, singing3, sand3 });
+            aelie.AddLevelData(8, [desiccate0, singing0, sand0]);
+            aelie.AddLevelData(11, [desiccate1, singing1, sand1]);
+            aelie.AddLevelData(14, [desiccate2, singing2, sand2]);
+            aelie.AddLevelData(17, [desiccate3, singing3, sand3]);
 
             aelie.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Aelie_Witness_ACH");
             aelie.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Aelie_Divine_ACH");

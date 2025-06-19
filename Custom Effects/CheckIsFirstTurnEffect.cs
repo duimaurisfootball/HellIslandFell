@@ -10,7 +10,6 @@ namespace Hell_Island_Fell.Custom_Effects
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
             exitAmount = 0;
-            Debug.Log(stats.TurnsPassed + " turns passed.");
             return stats.TurnsPassed == 0;
         }
     }

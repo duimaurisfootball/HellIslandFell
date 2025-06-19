@@ -62,7 +62,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability nightVomit = new Ability("Night Vomit", "NightVomit_A")
             {
-                Description = "Apply 2 Oil Slicked to every party member.\nDeal almost no damage to the Opposing party member.",
+                Description = "Apply 2 Oil Slicked to every party member.\nDeal a little damage to the Opposing party member.",
                 Cost = [Pigments.Yellow],
                 Visuals = Visuals.Puke,
                 AnimationTarget = Targeting.Slot_SelfSlot,
@@ -79,7 +79,7 @@ namespace Hell_Island_Fell.Enemies
 
             Ability hellsClaxon = new Ability("Hell's Claxon", "HellsClaxon_A")
             {
-                Description = "Deal almost no indirect damage to the Left and Right party members.\nAttract another Moone.",
+                Description = "Deal a little indirect damage to the Left and Right party members.\nAttract another Moone.",
                 Cost = [Pigments.Yellow],
                 Visuals = Visuals.Scream,
                 AnimationTarget = Targeting.Slot_Front,

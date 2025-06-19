@@ -37,7 +37,12 @@ namespace Hell_Island_Fell.Items
                 ]
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(alumSalt.Item);
+            alumSalt.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(alumSalt.Item, new ItemModdedUnlockInfo(alumSalt.Item_ID, ResourceLoader.LoadSprite("ShopAlumSalt")));
         }
     }
 }

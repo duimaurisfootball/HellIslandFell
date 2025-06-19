@@ -74,6 +74,14 @@ namespace Hell_Island_Fell.Encounters
                         "Vagabond_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                sweatingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "Attrition_EN",
+                    ], null);
+            }
             sweatingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_SweatingNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -210,6 +218,21 @@ namespace Hell_Island_Fell.Encounters
                         "SweatingNosestone_EN",
                         "SweatingNosestone_EN",
                         "Vagabond_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "SweatingNosestone_EN",
+                        "Attrition_EN",
+                    ], null);
+                sweatingHard.CreateNewEnemyEncounterData(
+                    [
+                        "SweatingNosestone_EN",
+                        "Git_EN",
+                        "Git_EN",
                     ], null);
             }
             sweatingHard.AddEncounterToDataBases();

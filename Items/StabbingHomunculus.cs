@@ -40,6 +40,12 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            stabbingHomunculus.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Knife.ToString(),
+                    ItemType_GameIDs.Heart.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(stabbingHomunculus.Item, new ItemModdedUnlockInfo("StabbingHomunculus_TW", ResourceLoader.LoadSprite("UnlockOsmanHoftstoldtLocked", null, 32, null), "HIF_Hoftstoldt_Witness_ACH"));        }
     }
 }

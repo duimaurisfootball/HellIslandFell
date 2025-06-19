@@ -37,7 +37,12 @@ namespace Hell_Island_Fell.Items
                 ]
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(sauerkraut.Item);
+            sauerkraut.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(sauerkraut.Item, new ItemModdedUnlockInfo(sauerkraut.Item_ID, ResourceLoader.LoadSprite("ShopSauerkraut")));
         }
     }
 }

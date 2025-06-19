@@ -26,6 +26,7 @@ namespace Hell_Island_Fell.Fools
                 UnitTypes =
                 [
                     "FemaleID",
+                    "Sandwich_Pigment",
                 ],
             };
             farah.GenerateMenuCharacter(ResourceLoader.LoadSprite("FarahMenu"), ResourceLoader.LoadSprite("FarahLocked"));
@@ -37,7 +38,7 @@ namespace Hell_Island_Fell.Fools
             ConstrictedApply._Field = StatusField.Constricted;
 
             AddPassiveEffect MutualismAdd = ScriptableObject.CreateInstance<AddPassiveEffect>();
-            MutualismAdd._passiveToAdd = Passives.ParasiteMutualism;
+            MutualismAdd._passiveToAdd = Passives.ParasiteMutualismTapeWormPills;
 
             CasterStoredValueChangeEffect MutualismEffect = ScriptableObject.CreateInstance<CasterStoredValueChangeEffect>();
             MutualismEffect.m_unitStoredDataID = UnitStoredValueNames_GameIDs.ParasiteCurrentHealthPA.ToString();
@@ -58,11 +59,11 @@ namespace Hell_Island_Fell.Fools
             SumpGray._mana = Pigments.Grey;
 
             //bilge
-            Ability bilge0 = new Ability("Nasty Bilge", "Bilge_1_A")
+            Ability bilge0 = new Ability("Nasty Bilge", "HIF_Bilge_1_A")
             {
                 Description = "Add 2 empty Mutualism to this party member.\nApply 2 Salted to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahBilge"),
-                Cost = [Pigments.Green, Pigments.Blue],
+                Cost = [Pigments.Yellow, Pigments.Blue],
                 Visuals = Visuals.OilSlicked,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
@@ -75,11 +76,11 @@ namespace Hell_Island_Fell.Fools
             bilge0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.PA_Mutualism)]);
             bilge0.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Salted"]);
 
-            Ability bilge1 = new Ability("Infectious Bilge", "Bilge_2_A")
+            Ability bilge1 = new Ability("Infectious Bilge", "HIF_Bilge_2_A")
             {
                 Description = "Add 4 empty Mutualism to this party member.\nApply 2 Salted to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahBilge"),
-                Cost = [Pigments.Green, Pigments.Blue],
+                Cost = [Pigments.Yellow, Pigments.Blue],
                 Visuals = Visuals.OilSlicked,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
@@ -92,11 +93,11 @@ namespace Hell_Island_Fell.Fools
             bilge1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.PA_Mutualism)]);
             bilge1.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Salted"]);
 
-            Ability bilge2 = new Ability("Mutating Bilge", "Bilge_3_A")
+            Ability bilge2 = new Ability("Mutating Bilge", "HIF_Bilge_3_A")
             {
                 Description = "Add 5 empty Mutualism to this party member.\nApply 2 Salted to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahBilge"),
-                Cost = [Pigments.Green, Pigments.Blue],
+                Cost = [Pigments.Yellow, Pigments.Blue],
                 Visuals = Visuals.OilSlicked,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
@@ -109,11 +110,11 @@ namespace Hell_Island_Fell.Fools
             bilge2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.PA_Mutualism)]);
             bilge2.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Salted"]);
 
-            Ability bilge3 = new Ability("Unimaginable Bilge", "Bilge_4_A")
+            Ability bilge3 = new Ability("Unimaginable Bilge", "HIF_Bilge_4_A")
             {
                 Description = "Add 6 empty Mutualism to this party member.\nApply 2 Salted to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahBilge"),
-                Cost = [Pigments.Green, Pigments.Blue],
+                Cost = [Pigments.Yellow, Pigments.Blue],
                 Visuals = Visuals.OilSlicked,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
@@ -128,11 +129,11 @@ namespace Hell_Island_Fell.Fools
 
 
             //film
-            Ability film0 = new Ability("Horrid Film", "Film_1_A")
+            Ability film0 = new Ability("Horrid Film", "HIF_Film_1_A")
             {
-                Description = "Apply 5 shield to this position.\n30% chance to remove an ability from the Opposing enemy.",
+                Description = "Apply 5 Shield to this position.\n30% chance to remove an ability from the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahFilm"),
-                Cost = [Pigments.Green, Pigments.Red],
+                Cost = [Pigments.Yellow, Pigments.Red],
                 Visuals = Visuals.MotherlyLove,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -145,11 +146,11 @@ namespace Hell_Island_Fell.Fools
             film0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Other_Exhaust)]);
 
 
-            Ability film1 = new Ability("Loathsome Film", "Film_2_A")
+            Ability film1 = new Ability("Loathsome Film", "HIF_Film_2_A")
             {
-                Description = "Apply 7 shield to this position.\n30% chance to remove an ability from the Opposing enemy.",
+                Description = "Apply 7 Shield to this position.\n30% chance to remove an ability from the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahFilm"),
-                Cost = [Pigments.Green, Pigments.Red],
+                Cost = [Pigments.Yellow, Pigments.Red],
                 Visuals = Visuals.MotherlyLove,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -162,11 +163,11 @@ namespace Hell_Island_Fell.Fools
             film1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Other_Exhaust)]);
 
 
-            Ability film2 = new Ability("Verminous Film", "Film_3_A")
+            Ability film2 = new Ability("Verminous Film", "HIF_Film_3_A")
             {
-                Description = "Apply 9 shield to this position.\n30% chance to remove an ability from the Opposing enemy.",
+                Description = "Apply 9 Shield to this position.\n30% chance to remove an ability from the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahFilm"),
-                Cost = [Pigments.Green, Pigments.Red],
+                Cost = [Pigments.Yellow, Pigments.Red],
                 Visuals = Visuals.MotherlyLove,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -179,11 +180,11 @@ namespace Hell_Island_Fell.Fools
             film2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Other_Exhaust)]);
 
 
-            Ability film3 = new Ability("Revolting Film", "Film_4_A")
+            Ability film3 = new Ability("Revolting Film", "HIF_Film_4_A")
             {
-                Description = "Apply 11 shield to this position.\n30% chance to remove an ability from the Opposing enemy.",
+                Description = "Apply 11 Shield to this position.\n30% chance to remove an ability from the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahFilm"),
-                Cost = [Pigments.Green, Pigments.Red],
+                Cost = [Pigments.Yellow, Pigments.Red],
                 Visuals = Visuals.MotherlyLove,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -197,11 +198,11 @@ namespace Hell_Island_Fell.Fools
 
 
             //sump
-            Ability sump0 = new Ability("Dizzying Sump", "Sump_1_A")
+            Ability sump0 = new Ability("Dizzying Sump", "HIF_Sump_1_A")
             {
-                Description = "Heal this party member 3 health.\nChange 1 pigment to gray.",
+                Description = "Heal this party member 3 health.\nChange 1 stored pigment to gray.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahSump"),
-                Cost = [Pigments.Green, Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)],
+                Cost = [Pigments.Yellow, Pigments.Purple],
                 Visuals = Visuals.WrigglingWrath,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -213,11 +214,11 @@ namespace Hell_Island_Fell.Fools
             sump0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
             sump0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
 
-            Ability sump1 = new Ability("Cloying Sump", "Sump_2_A")
+            Ability sump1 = new Ability("Cloying Sump", "HIF_Sump_2_A")
             {
-                Description = "Heal this party member 4 health.\nChange 1 pigment to gray.",
+                Description = "Heal this party member 4 health.\nChange 1 stored pigment to gray.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahSump"),
-                Cost = [Pigments.Green, Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)],
+                Cost = [Pigments.Yellow, Pigments.Purple],
                 Visuals = Visuals.WrigglingWrath,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -229,11 +230,11 @@ namespace Hell_Island_Fell.Fools
             sump1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
             sump1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
 
-            Ability sump2 = new Ability("Noxious Sump", "Sump_3_A")
+            Ability sump2 = new Ability("Noxious Sump", "HIF_Sump_3_A")
             {
-                Description = "Heal this party member 5 health.\nChange 1 pigment to gray.",
+                Description = "Heal this party member 5 health.\nChange 1 stored pigment to gray.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahSump"),
-                Cost = [Pigments.Green, Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)],
+                Cost = [Pigments.Yellow, Pigments.Purple],
                 Visuals = Visuals.WrigglingWrath,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -245,11 +246,11 @@ namespace Hell_Island_Fell.Fools
             sump2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_5_10)]);
             sump2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
 
-            Ability sump3 = new Ability("Morbid Sump", "Sump_4_A")
+            Ability sump3 = new Ability("Morbid Sump", "HIF_Sump_4_A")
             {
-                Description = "Heal this party member 6 health.\nChange 2 pigment to gray.",
+                Description = "Heal this party member 6 health.\nChange 2 stored pigment to gray.",
                 AbilitySprite = ResourceLoader.LoadSprite("FarahSump"),
-                Cost = [Pigments.Green, Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)],
+                Cost = [Pigments.Yellow, Pigments.Purple],
                 Visuals = Visuals.WrigglingWrath,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
@@ -261,10 +262,10 @@ namespace Hell_Island_Fell.Fools
             sump3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_5_10)]);
             sump3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
 
-            farah.AddLevelData(11, new Ability[] { bilge0, film0, sump0 });
-            farah.AddLevelData(12, new Ability[] { bilge1, film1, sump1 });
-            farah.AddLevelData(13, new Ability[] { bilge2, film2, sump2 });
-            farah.AddLevelData(14, new Ability[] { bilge3, film3, sump3 });
+            farah.AddLevelData(11, [bilge0, film0, sump0]);
+            farah.AddLevelData(12, [bilge1, film1, sump1]);
+            farah.AddLevelData(13, [bilge2, film2, sump2]);
+            farah.AddLevelData(14, [bilge3, film3, sump3]);
 
             farah.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Farah_Witness_ACH");
             farah.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Farah_Divine_ACH");

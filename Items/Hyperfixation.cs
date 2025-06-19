@@ -11,15 +11,12 @@ namespace Hell_Island_Fell.Items
     {
         public static void Add()
         {
-            PercentageEffectCondition DestructionChance = ScriptableObject.CreateInstance<PercentageEffectCondition>();
-            DestructionChance.percentage = 4;
-
             PerformEffect_Item hyperfixation = new PerformEffect_Item("Hyperfixation_ID", null, false)
             {
                 Item_ID = "Hyperfixation_TW",
                 Name = "Hyperfixation",
                 Flavour = "\"We're looking into it further.\"",
-                Description = "Gain 2 coins every time an enemy dies. 4% chance to be destroyed on use.",
+                Description = "Gain 2 coins every time an enemy dies. 10% chance to be destroyed on use.",
                 IsShopItem = false,
                 ShopPrice = 5,
                 DoesPopUpInfo = true,
@@ -29,7 +26,7 @@ namespace Hell_Island_Fell.Items
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<GainPlayerCurrencyEffect>(), 2, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot, DestructionChance),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(10)),
                 ],
             };
 

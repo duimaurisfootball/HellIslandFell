@@ -42,6 +42,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            parchedScroll.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Fabric.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(parchedScroll.Item, new ItemModdedUnlockInfo("ParchedScroll_TW", ResourceLoader.LoadSprite("UnlockOsmanAelieLocked", null, 32, null), "HIF_Aelie_Witness_ACH"));
         }
     }

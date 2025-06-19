@@ -116,6 +116,41 @@ namespace Hell_Island_Fell.Encounters
                         "Enno_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                keklungMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Keklung_EN",
+                        "Surimi_EN",
+                        "Surimi_EN",
+                    ], null);
+                keklungMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Keklung_EN",
+                        "Keklung_EN",
+                        "Surimi_EN",
+                    ], null);
+                keklungMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Keklung_EN",
+                        "Keklung_EN",
+                        "Snaurce_EN",
+                        "Snaurce_EN",
+                    ], null);
+                keklungMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Keklung_EN",
+                        "Keko_EN",
+                        "Snaurce_EN",
+                    ], null);
+                keklungMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Keklung_EN",
+                        "Keko_EN",
+                        "Wringle_EN",
+                        "Surimi_EN",
+                    ], null);
+            }
             keklungMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone01_Keklung_Medium_EnemyBundle", 12, ZoneType_GameIDs.FarShore_Hard, BundleDifficulty.Medium);
         }

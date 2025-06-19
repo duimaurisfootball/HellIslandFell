@@ -20,9 +20,17 @@ namespace Hell_Island_Fell.Enemies
                 OverworldAliveSprite = ResourceLoader.LoadSprite("TimelineOneShooter", new Vector2(0.5f, 0f), 32),
                 DamageSound = LoadedAssetsHandler.GetCharacter("LongLiver_CH").damageSound,
                 DeathSound = LoadedAssetsHandler.GetCharacter("LongLiver_CH").deathSound,
+                UnitTypes =
+                [
+                    UnitType_GameIDs.Fish.ToString(),
+                ],
             };
             oneShooter.PrepareEnemyPrefab("Assets/OneShooterAssetBundle/OneShooter.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/OneShooterAssetBundle/OneShooterGibs.prefab").GetComponent<ParticleSystem>());
             oneShooter.AddPassives([Passives.Dying, Passives.Obscure, Passives.Anchored]);
+
+            DamageEffect Damage = ScriptableObject.CreateInstance<DamageEffect>();
+
+            AlliesWithInanimate InanimateTargeting = ScriptableObject.CreateInstance<AlliesWithInanimate>();
 
             RandomizeAllColorPigmentEffect YellowToRed = ScriptableObject.CreateInstance<RandomizeAllColorPigmentEffect>();
             YellowToRed._colorToRandomize = Pigments.Yellow;
@@ -40,13 +48,13 @@ namespace Hell_Island_Fell.Enemies
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumePigmentChangeHealthColorByGreatestEffect>(), 1, ScriptableObject.CreateInstance<AlliesWithInanimate>()),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumePigmentChangeHealthColorByGreatestEffect>(), 1, InanimateTargeting),
                 ],
                 Rarity = CustomAbilityRarity.Weight(5, true),
                 Priority = Priority.VeryFast,
             };
             filterFeed.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
-            filterFeed.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesWithInanimate>(), [nameof(IntentType_GameIDs.Mana_Randomize)]);
+            filterFeed.AddIntentsToTarget(InanimateTargeting, [nameof(IntentType_GameIDs.Mana_Randomize)]);
 
             Ability hyphaticSystem = new Ability("Hyphatic System", "HyphaticSystem_A")
             {
@@ -56,14 +64,14 @@ namespace Hell_Island_Fell.Enemies
                 AnimationTarget = ScriptableObject.CreateInstance<AlliesWithInanimate>(),
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 4, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<EqualizeHealthUpEffect>(), 4, ScriptableObject.CreateInstance<AlliesWithInanimate>()),
+                    Effects.GenerateEffect(Damage, 4, Targeting.Slot_Front),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<EqualizeHealthUpEffect>(), 4, InanimateTargeting),
                 ],
                 Rarity = CustomAbilityRarity.Weight(5, true),
                 Priority = Priority.VeryFast,
             };
             hyphaticSystem.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            hyphaticSystem.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesWithInanimate>(), [nameof(IntentType_GameIDs.Heal_21)]);
+            hyphaticSystem.AddIntentsToTarget(InanimateTargeting, [nameof(IntentType_GameIDs.Heal_21)]);
 
             Ability cyanoglobin = new Ability("Cyanoglobin", "Cyanoglobin_A")
             {
@@ -75,9 +83,9 @@ namespace Hell_Island_Fell.Enemies
                 [
                     Effects.GenerateEffect(YellowToRed),
                     Effects.GenerateEffect(PurpleToBlue),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 2, Targeting.Slot_OpponentSides),
+                    Effects.GenerateEffect(Damage, 2, Targeting.Slot_OpponentSides),
                 ],
-                Rarity = CustomAbilityRarity.Weight(2, true),
+                Rarity = CustomAbilityRarity.Weight(4, true),
                 Priority = Priority.Slow,
             };
             cyanoglobin.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);

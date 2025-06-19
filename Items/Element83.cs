@@ -48,6 +48,12 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            element83.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                    ItemType_GameIDs.Heart.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(element83.Item, new ItemModdedUnlockInfo("Element83_TW", ResourceLoader.LoadSprite("UnlockOsmanSaladLocked", null, 32, null), "HIF_Salad_Witness_ACH"));
         }
     }

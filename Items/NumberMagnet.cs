@@ -32,6 +32,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            numberMagnet.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Heart.ToString(),
+                ];
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(numberMagnet.Item, new ItemModdedUnlockInfo("NumberMagnet_SW", ResourceLoader.LoadSprite("ItemNumberMagnetLocked", null, 32, null), "HIF_Boler_Comedy_ACH"));
         }
     }

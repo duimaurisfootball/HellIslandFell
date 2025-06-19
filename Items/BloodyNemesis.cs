@@ -23,6 +23,9 @@ namespace Hell_Island_Fell.Items
             ExtraLootOptionsEffect NextNemesis = ScriptableObject.CreateInstance<ExtraLootOptionsEffect>();
             NextNemesis._itemName = "BatteredNemesis_NW";
 
+            StatusEffect_Apply_Effect RupturedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
+            RupturedApply._Status = StatusField.Ruptured;
+
             Nemesis_Item bloodyNemesis = new Nemesis_Item("BloodyNemesisItem_ID", null)
             {
                 Item_ID = "BloodyNemesis_NW",
@@ -38,6 +41,7 @@ namespace Hell_Island_Fell.Items
                 NormalEffects =
                 [
                     Effects.GenerateEffect(NemesisApply, 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(RupturedApply, 10, Targeting.Slot_SelfSlot),
                 ],
                 MurderEffects =
                 [
@@ -50,6 +54,11 @@ namespace Hell_Island_Fell.Items
                     flowery,
                 ],
             };
+
+            bloodyNemesis.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
 
             ItemUtils.JustAddItemSoItCanBeLoaded(bloodyNemesis.item);
         }

@@ -20,11 +20,12 @@ using System.IO;
 
 namespace Hell_Island_Fell
 {
-    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "2.1.2")]
+    [BepInPlugin("Dui_Mauris_Football.Hell_Island_Fell", "Hell Island Fell", "2.2.0")]
     [BepInDependency("Tairbaz.ColophonConundrum", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Tairbaz.EnemyPack", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("minichibis.eggkeeper", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("AnimatedGlitch.GlitchsFreaks", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("Marmo.MarmoEnemies", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("AnimatedGlitch.Siren", BepInDependency.DependencyFlags.SoftDependency)]
     public class Hell_Island_Fell : BaseUnityPlugin
     {
@@ -36,6 +37,7 @@ namespace Hell_Island_Fell
             public static bool EnemyPack = false;
             public static bool EggKeeper = false;
             public static bool GlitchFreaks = false;
+            public static bool BoxOfBeasts = false;
             public static bool TheSiren = false;
             public static void Check()
             {
@@ -47,7 +49,8 @@ namespace Hell_Island_Fell
                     if (metadata.GUID == "TairbazPeep.EnemyPack") { EnemyPack = true; }
                     if (metadata.GUID == "minichibis.eggkeeper") { EggKeeper = true; }
                     if (metadata.GUID == "AnimatedGlitch.GlitchsFreaks") { GlitchFreaks = true; }
-                    //if (metadata.GUID == "AnimatedGlitch.Siren") { TheSiren = true; }
+                    if (metadata.GUID == "Marmo.MarmoEnemies") { BoxOfBeasts = true; }
+                    if (metadata.GUID == "AnimatedGlitch.Siren") { TheSiren = true; }
                 }
             }
         }
@@ -58,7 +61,7 @@ namespace Hell_Island_Fell
             new Harmony("Dui_Mauris_Football.Hell_Island_Fell").PatchAll();
 
             ConfigFile config = new ConfigFile(Path.Combine(Paths.ConfigPath, "HellIslandFell.cfg"), true);
-            arachnophobiaMode = config.Bind("Phobia", "Arachnophobia", false, "Changes the visuals of the following enemies: Flatback, Kekingdom");
+            arachnophobiaMode = config.Bind("Phobia", "Arachnophobia", true, "Changes the visuals of the following enemies: Flatback, Kekingdom");
 
             //Add AssetBundles
             assetBundle = AssetBundle.LoadFromMemory(ResourceLoader.ResourceBinary("hif_assetbundle"));
@@ -79,6 +82,36 @@ namespace Hell_Island_Fell
             LoadedAssetsHandler.GetCharacter("Pearl_CH").unitTypes.Add("FemaleID");
             LoadedAssetsHandler.GetCharacter("Rags_CH").unitTypes.Add("FemaleID");
             LoadedAssetsHandler.GetCharacter("Bimini_CH").unitTypes.Add("FemaleID");
+            LoadedAssetsHandler.GetWearable("BalticBrine_SW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("CanOfWorms_SW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("MysteryRation_SW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("VyacheslavsLastSip_SW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("BloodBottle_SW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("MedicalLeeches_SW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("LilHomunculus_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("FunnyMushrooms_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("LumpOfLamb_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("MommaNooty_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("RuntyRotter_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("TaintedApple_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("AGift_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("AsceticEgg_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("Bananas_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("DivineMud_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("EggOfIncubus_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("GamifiedSquid_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("HarvestandPlenty_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("HolyChalice_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("LustPudding_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("MeatreWorm_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("OpulentEgg_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("SeedsOfTheConsumed_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("SkinnedSkate_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("StarvingApples_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("StrangeFruit_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("TheApple_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("TheFirstBorn_TW").AddItemType("FoodID");
+            LoadedAssetsHandler.GetWearable("LilOrro_TW").AddItemType("FoodID");
             CrossMod.Check();
             DivineGlass.Add();
             Lookatme.Add();
@@ -87,23 +120,66 @@ namespace Hell_Island_Fell
             //Add Passives
             CustomPassives.Add();
 
-            //Add Items
+            //Add Treasure Items
             VanishingJar.Add();
             UngroundedElectrode.Add();
             Groanbroad.Add();
             FormidableDinners.Add();
-            CurlingFinger.Add();
+            ElectrumOre.Add();
+            NeptunesCrown.Add();
+            LilDraugr.Add();
+            WakingScream.Add();
+            BundleOfFingers.Add();
+            CatastropheStick.Add();
+            GunGun.Add();
+            OrbOfFreedom.Add();
+            //TheDrawOfPower.Add();
+            //FriendlyFace.Add();
+            //AngryBox.Add();
+            //IceFlies.Add();
+            //DeadSeatedHead.Add();
+            //BlueBook.Add();
+            AFlower.Add();
+            //LabyrinthDevice.Add();
+            //AlienChunk.Add();
+            //PhlegmSuckingWorm.Add();
+            //IdeaOfRot.Add();
+            //DeathHex.Add();
+            //CancerCancer.Add();
+            //PhoenixForest.Add();
+            //Erosion.Add();
+            //TheEntireMoon.Add();
+            //Warmth.Add();
+            //PeoplePower.Add();
+            //RealizationOfMortality.Add();
+            //PatternMass.Add();
+            //CrackedDirt.Add();
+            //FecalInnoculation.Add();
+            //ShockingMachine.Add();
+            //301.Add();
+
+            //Add Shop Items
             PickledBeets.Add();
             Sauerkraut.Add();
             AppleCiderVinegar.Add();
             AlumSalt.Add();
             BloodThinners.Add();
-            CoughMedicine.Add();
+            CoughMedicine.Add(); 
             Retinol.Add();
             Melatonin.Add();
             Hotpot.Add();
             PaintedDie.Add();
-            ElectrumOre.Add();
+            //Airhorn.Add();
+            //BubbleShield.Add();
+            //CursedDoll.Add();
+            //PlatinumDisc.Add();
+            //FissureTelescope.Add();
+            //VomitBrick.Add();
+            Deflation.Add();
+            //ThingsFinder.Add();
+            Sundial.Add();
+            //IronChair.Add();
+            SurrealMannequinHead.Add();
 
             //Osman Unlocks
             SymbolOfPeace.Add();
@@ -128,8 +204,9 @@ namespace Hell_Island_Fell
             BlackPearl.Add();
             BlankPointBlankPoint.Add();
             Heartworm.Add();
+            ElusiveTrinket.Add();
 
-            //Heaven 
+            //Heaven Unlocks
             ThousandFish.Add();
             IridescentCrystal.Add();
             SyrupOfIpecac.Add();
@@ -152,60 +229,16 @@ namespace Hell_Island_Fell
             Trinitite.Add();
             EnamelSandpaper.Add();
             Blastocyst.Add();
-
-            //Doula Unlocks
-            //CatastropheStick.Add();
-            //Airhorn.Add();
-            //MosaLina.Add();
-            //OrbOfFreedom.Add();
-            //TheDrawOfPower.Add();
-            //ShockingMachine.Add();
-            //FriendlyFace.Add();
-            //ElusiveTrinket.Add();
-            //AngryBox.Add();
-            //IceFlies.Add();
-            //BubbleShield.Add();
-            //CursedDoll.Add();
-            //BrokenAltimeter.Add();
-            //DeadSeatedHead.Add();
-            //RedBook.Add();
-            //AFlower.Add();
-            //TerrifyingMortarRounds.Add();
-            //LabyrinthDevice.Add();
-            //PlatinumDisc.Add();
-            //ReactorCell.Add();
-            //AlienChunk.Add();
-            //FissureTelescope.Add();
-
-            //March Unlocks
-            //PhlegmSuckingWorm.Add();
-            //VomitBrick.Add();
-            //IdeaOfRot.Add();
-            //Deflation.Add();
-            //DeathHex.Add();
-            //CancerCancer.Add();
-            //PhoenixForest.Add();
-            //301.Add();
-            //ThingsFinder.Add();
-            //ShipOfTheseus.Add();
-            //Erosion.Add();
-            //FingernailOfGlory.Add();
-            //TheEntireMoon.Add();
-            //
-            //PeoplePower.Add();
-            //RealizationOfMortality.Add();
-            //Sundial.Add();
-            //PatternMass.Add();
-            //CrackedDirt.Add();
-            //
-            //
+            FingernailOfGlory.Add();
 
             //Bemagel Unlocks
 
             //Other Unlocks
+            CurlingFinger.Add();
             NumberMagnet.Add();
             SparklingFork.Add();
             FractionAbacus.Add();
+            AmbulantMonolith.Add();
             MyNemesis.Add();
             BloodyNemesis.Add();
             BatteredNemesis.Add();
@@ -236,6 +269,7 @@ namespace Hell_Island_Fell
             Morrigan.Add();
             Nick.Add();
             Eras.Add();
+            NukePits.Add();
             Mudball.Add();
             HolesOfVandander.Add();
 
@@ -259,19 +293,34 @@ namespace Hell_Island_Fell
             Draugr.Add();
             Heehoo.Add();
             Thunderdome.Add();
-            //Tubert.Add();
-            //Gotanga.Add();
-            //Makado.Add();
-            //Kreeber.Add();
-            //FaceRipper.Add();
+            Nevermore.Add();
             if (CrossMod.TheSiren)
             {
                 OneShooter.Add();
             }
+            Waxman.Add();
+            Kagla.Add();
+            //Wellenoch.Add();
+            GreaterTobana.Add();
+            VanishingPillar.Add();
+            //Nyctohatze.Add();
+            //BemagelRoyches.Add();
+            //LostPotential.Add();
 
             //Add Encounters
             CustomFarShoreEncounters.Add();
+            FlatbackEncounters.Add();
+            KekingdomEncounters.Add();
+            KeklungEncounters.Add();
+            DraugrEncounters.Add();
+            VusEncounter.Add();
+
             CustomOrpheumEncounters.Add();
+            MooneEncounters.Add();
+            HeehooEncounters.Add();
+            ThunderdomeEncounters.Add();
+            BolerEncounters.Add();
+
             CustomGardenEncounters.Add();
             SweatingEncounters.Add();
             MesmerizingEncounters.Add();
@@ -282,15 +331,10 @@ namespace Hell_Island_Fell
             ManeaterEncounters.Add();
             StickingHomunculusEncounters.Add();
             BoojumEncounter.Add();
-            BolerEncounters.Add();
-            MooneEncounters.Add();
-            FlatbackEncounters.Add();
-            KekingdomEncounters.Add();
-            KeklungEncounters.Add();
-            VusEncounter.Add();
-            DraugrEncounters.Add();
-            HeehooEncounters.Add();
-            ThunderdomeEncounters.Add();
+            NevermoreEncounters.Add();
+
+            TestEncounters.Add();
+
             CrossoverEncounters.Add();
             if (CrossMod.TheSiren)
             {
@@ -298,9 +342,15 @@ namespace Hell_Island_Fell
                 CustomSirenEncounters.Add();
             }
 
-
             //Add Achievements
             CustomAchievements.Add();
+        }
+    }
+    public static class AddItemTypes
+    {
+        public static void AddItemType(this BaseWearableSO wearable, string itemType)
+        {
+            wearable._ItemTypeIDs = wearable._ItemTypeIDs.AddToArray(itemType);
         }
     }
 }

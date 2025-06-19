@@ -23,6 +23,9 @@ namespace Hell_Island_Fell.Items
             ExtraLootOptionsEffect NextNemesis = ScriptableObject.CreateInstance<ExtraLootOptionsEffect>();
             NextNemesis._itemName = "InvincibleNemesis_NW";
 
+            StatusEffect_Apply_Effect CursedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
+            CursedApply._Status = StatusField.Cursed;
+
             Nemesis_Item batteredNemesis = new Nemesis_Item("BatteredNemesisItem_ID", null)
             {
                 Item_ID = "BatteredNemesis_NW",
@@ -38,6 +41,7 @@ namespace Hell_Island_Fell.Items
                 NormalEffects =
                 [
                     Effects.GenerateEffect(NemesisApply, 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(CursedApply, 1, Targeting.Slot_SelfSlot),
                 ],
                 MurderEffects =
                 [
@@ -50,6 +54,11 @@ namespace Hell_Island_Fell.Items
                     feebly,
                 ],
             };
+            
+            batteredNemesis.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
 
             ItemUtils.JustAddItemSoItCanBeLoaded(batteredNemesis.item);
         }

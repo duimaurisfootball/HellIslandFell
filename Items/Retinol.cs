@@ -33,7 +33,7 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(retinol.Item);
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(retinol.Item, new ItemModdedUnlockInfo(retinol.Item_ID, ResourceLoader.LoadSprite("ShopRetinol")));
         }
     }
 }

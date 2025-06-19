@@ -39,6 +39,11 @@ namespace Hell_Island_Fell.Items
                 ]
             };
 
+            doversPowder.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(doversPowder.Item, new ItemModdedUnlockInfo("DoversPowder_SW", ResourceLoader.LoadSprite("UnlockOsmanFarahLocked", null, 32, null), "HIF_Farah_Witness_ACH"));
         }
     }

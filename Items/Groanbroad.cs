@@ -64,7 +64,12 @@ namespace Hell_Island_Fell.Items
                 oilyCutter
             };
 
-            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(groanbroad.Item);
+            groanbroad.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Knife.ToString(),
+                ];
+
+            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(groanbroad.Item, new ItemModdedUnlockInfo(groanbroad.Item_ID, ResourceLoader.LoadSprite("TreasureGroanbroad")));
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Hell_Island_Fell.Items
                 Item_ID = "CarversTools_SW",
                 Name = "Carver's Tools",
                 Flavour = "\"It will never be perfect.\"",
-                Description = "Reduce all incoming damage by 25%. Upon taking any damage, change the Opposing enemy's health to gray",
+                Description = "Reduce all incoming damage by 25%. Upon taking any damage, change the Opposing enemy's health to gray.",
                 IsShopItem = true,
                 ShopPrice = 8,
                 DoesPopUpInfo = true,
@@ -36,6 +36,11 @@ namespace Hell_Island_Fell.Items
                 IndirectDmgPercentageToModify = 25,
                 DoesIncreaseIndirectDamage = false,
             };
+
+            carversTools.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Knife.ToString(),
+                ];
 
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(carversTools.Item, new ItemModdedUnlockInfo("CarversTools_SW", ResourceLoader.LoadSprite("UnlockOsmanMalebolgeLocked", null, 32, null), "HIF_Malebolge_Witness_ACH"));
         }

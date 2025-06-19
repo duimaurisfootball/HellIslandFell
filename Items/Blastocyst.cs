@@ -57,6 +57,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            blastocyst.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Heart.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(blastocyst.Item, new ItemModdedUnlockInfo("Blastocyst_TW", ResourceLoader.LoadSprite("UnlockHeavenErasLocked", null, 32, null), "HIF_Eras_Divine_ACH"));
         }
     }

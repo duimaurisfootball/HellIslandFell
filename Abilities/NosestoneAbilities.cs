@@ -30,8 +30,8 @@ namespace Hell_Island_Fell.Abilities
                 Rarity = CustomAbilityRarity.Weight(5, true),
                 Priority = Priority.Slow,
             };
-            nosing.AddIntentsToTarget(Targeting.GenerateSlotTarget([-1, 0], false, false), ["Modify_Cost"]);
-            nosing.AddIntentsToTarget(Targeting.GenerateSlotTarget([0, 1], false, false), ["Modify_Cost"]);
+            nosing.AddIntentsToTarget(Targeting.Slot_Front, ["Modify_Cost"]);
+            nosing.AddIntentsToTarget(Targeting.Slot_OpponentSides, ["Modify_Cost"]);
 
             Ability stoning = new Ability("Stoning", "Stoning_A")
             {

@@ -12,7 +12,7 @@ namespace Hell_Island_Fell.Encounters
 
             EnemyEncounter_API ThunderdomeMedium = new EnemyEncounter_API(0, "H_Zone02_Thunderdome_Medium_EnemyBundle", "Thunderdome_Sign")
             {
-                MusicEvent = "event:/Music/Mx_Hickory",
+                MusicEvent = "event:/CorposantCorpulent",
                 RoarEvent = "event:/Characters/Enemies/WrigglingSacrifice/CHR_ENM_WrigglingSacrifice_Roar",
             };
             ThunderdomeMedium.CreateNewEnemyEncounterData(
@@ -107,8 +107,17 @@ namespace Hell_Island_Fell.Encounters
                         "PrimitiveGizo_Calm_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                ThunderdomeMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Thunderdome_EN",
+                        "Thunderdome_EN",
+                        "Gungrot_EN",
+                    ], null);
+            }
             ThunderdomeMedium.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Thunderdome_Medium_EnemyBundle", 15, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Medium);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Thunderdome_Medium_EnemyBundle", 9, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Medium);
 
             EnemyEncounter_API ThunderdomeHard = new EnemyEncounter_API(0, "H_Zone02_Thunderdome_Hard_EnemyBundle", "Thunderdome_Sign")
             {
@@ -228,8 +237,39 @@ namespace Hell_Island_Fell.Encounters
                         "Jansuli_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                ThunderdomeHard.CreateNewEnemyEncounterData(
+                    [
+                        "Thunderdome_EN",
+                        "Thunderdome_EN",
+                        "Thunderdome_EN",
+                        "Surrogate_EN",
+                    ], null);
+                ThunderdomeHard.CreateNewEnemyEncounterData(
+                    [
+                        "Thunderdome_EN",
+                        "Thunderdome_EN",
+                        "Thunderdome_EN",
+                        "Gungrot_EN",
+                    ], null);
+                ThunderdomeHard.CreateNewEnemyEncounterData(
+                    [
+                        "Thunderdome_EN",
+                        "Thunderdome_EN",
+                        "Gungrot_EN",
+                        "Gungrot_EN",
+                    ], null);
+                ThunderdomeHard.CreateNewEnemyEncounterData(
+                    [
+                        "Thunderdome_EN",
+                        "Thunderdome_EN",
+                        "Moone_EN",
+                        "Gungrot_EN",
+                    ], null);
+            }
             ThunderdomeHard.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Thunderdome_Hard_EnemyBundle", 17, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Thunderdome_Hard_EnemyBundle", 15, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
         }
     }
 }

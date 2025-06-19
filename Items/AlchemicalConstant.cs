@@ -31,6 +31,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            alchemicalConstant.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(alchemicalConstant.Item, new ItemModdedUnlockInfo("AlchemicalConstant_TW", ResourceLoader.LoadSprite("UnlockHeavenMaecenasLocked", null, 32, null), "HIF_Maecenas_Divine_ACH"));
         }
     }

@@ -47,6 +47,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            hornAndHandle.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Heart.ToString(),
+                ];
+
             ItemUtils.JustAddItemSoItCanBeLoaded(hornAndHandle.item);
         }
     }

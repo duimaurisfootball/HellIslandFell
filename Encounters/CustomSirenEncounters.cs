@@ -16,6 +16,12 @@ namespace Hell_Island_Fell.Encounters
                 "Boiler_EN",
                 "OneShooter_EN",
             ]),
+                new(
+            [
+                "Boiler_EN",
+                "Boiler_EN",
+                "Moone_EN",
+            ]),
             };
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BoilerEasy"))._enemyBundles = boilerEasy;
 
@@ -28,6 +34,19 @@ namespace Hell_Island_Fell.Encounters
                 "BirdBath_EN",
                 "OneShooter_EN",
             ]),
+                new(
+            [
+                "Boiler_EN",
+                "Boiler_EN",
+                "Moone_EN",
+                "Moone_EN",
+            ]),
+                new(
+            [
+                "Boiler_EN",
+                "Boiler_EN",
+                "VanishingHands_EN",
+            ]),
             };
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("BoilerMed"))._enemyBundles = boilerMedium;
 
@@ -37,6 +56,11 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Tassnn_EN",
                 "OneShooter_EN",
+            ]),
+                new(
+            [
+                "Tassnn_EN",
+                "Moone_EN",
             ]),
             };
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("TassnnEasy"))._enemyBundles = tassnnEasy;
@@ -56,6 +80,18 @@ namespace Hell_Island_Fell.Encounters
                 "BirdBath_EN",
                 "OneShooter_EN",
             ]),
+                new(
+            [
+                "Tassnn_EN",
+                "Tassnn_EN",
+                "Moone_EN",
+            ]),
+                new(
+            [
+                "Tassnn_EN",
+                "Tassnn_EN",
+                "VanishingHands_EN",
+            ]),
             };
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("TassnnMed"))._enemyBundles = tassnnMedium;
 
@@ -65,6 +101,18 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Olmic_EN",
                 "BirdBath_EN",
+                "OneShooter_EN",
+            ]),
+                new(
+            [
+                "Olmic_EN",
+                "Tumult_EN",
+                "OneShooter_EN",
+            ]),
+                new(
+            [
+                "Olmic_EN",
+                "Moone_EN",
                 "OneShooter_EN",
             ]),
             };
@@ -92,6 +140,19 @@ namespace Hell_Island_Fell.Encounters
                 "Boiler_EN",
                 "OneShooter_EN",
             ]),
+                new(
+            [
+                "Olmic_EN",
+                "Tumult_EN",
+                "TumultShell_EN",
+                "OneShooter_EN",
+            ]),
+                new(
+            [
+                "Olmic_EN",
+                "Tassnn_EN",
+                "VanishingHands_EN",
+            ]),
             };
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("OlmicHard"))._enemyBundles = olmicHard;
 
@@ -115,8 +176,96 @@ namespace Hell_Island_Fell.Encounters
                 "Tassnn_EN",
                 "OneShooter_EN",
             ]),
+                new(
+            [
+                "LivingPiscina_EN",
+                "Moone_EN",
+                "Moone_EN",
+            ]),
+                new(
+            [
+                "LivingPiscina_EN",
+                "Boiler_EN",
+                "VanishingHands_EN",
+            ]),
             };
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PiscinaHard"))._enemyBundles = piscinaHard;
+
+            List<RandomEnemyGroup> tumultEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("TumultEasy"))._enemyBundles)
+            {
+                new(
+            [
+                "Tumult_EN",
+                "Tumult_EN",
+                "OneShooter_EN",
+            ]),
+                new(
+            [
+                "Tumult_EN",
+                "Tumult_EN",
+                "Moone_EN",
+            ]),
+            };
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("TumultEasy"))._enemyBundles = tumultEasy;
+
+            List<RandomEnemyGroup> tumultMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("TumultMed"))._enemyBundles)
+            {
+                new(
+            [
+                "Tumult_EN",
+                "TumultShell_EN",
+                "TumultShell_EN",
+                "OneShooter_EN",
+            ]),
+                new(
+            [
+                "Tumult_EN",
+                "Tumult_EN",
+                "Moone_EN",
+                "Moone_EN",
+            ]),
+                new(
+            [
+                "Tumult_EN",
+                "Tumult_EN",
+                "TumultShell_EN",
+                "TumultShell_EN",
+                "VanishingHands_EN",
+            ]),
+            };
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("TumultMed"))._enemyBundles = tumultMedium;
+
+            List<RandomEnemyGroup> phalarisHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PhalarisHard"))._enemyBundles)
+            {
+                new(
+            [
+                "GreatPhalaris_EN",
+                "Boiler_EN",
+                "OneShooter_EN",
+            ]),
+                new(
+            [
+                "GreatPhalaris_EN",
+                "Moone_EN",
+                "Moone_EN",
+                "OneShooter_EN",
+            ]),
+                new(
+            [
+                "GreatPhalaris_EN",
+                "Tumult_EN",
+                "TumultShell_EN",
+                "OneShooter_EN",
+            ]),
+                new(
+            [
+                "GreatPhalaris_EN",
+                "Tassnn_EN",
+                "OneShooter_EN",
+                "VanishingHands_EN",
+            ]),
+            };
+            ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("PhalarisHard"))._enemyBundles = phalarisHard;
         }
     }
 }

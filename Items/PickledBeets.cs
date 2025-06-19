@@ -38,7 +38,12 @@ namespace Hell_Island_Fell.Items
                 ]
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(pickledBeets.Item);
+            pickledBeets.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(pickledBeets.Item, new ItemModdedUnlockInfo(pickledBeets.Item_ID, ResourceLoader.LoadSprite("ShopPickledBeets")));
         }
     }
 }

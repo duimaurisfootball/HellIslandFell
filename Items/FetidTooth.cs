@@ -28,6 +28,11 @@ namespace Hell_Island_Fell.Items
                 DamageReveivedAddition = 15,
             };
 
+            fetidTooth.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(fetidTooth.Item, new ItemModdedUnlockInfo("FetidTooth_TW", ResourceLoader.LoadSprite("UnlockOsmanExambryLocked", null, 32, null), "HIF_Exambry_Witness_ACH"));
         }
     }

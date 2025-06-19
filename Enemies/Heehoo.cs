@@ -25,7 +25,7 @@ namespace Hell_Island_Fell.Enemies
                 ],
             };
             heehoo.PrepareEnemyPrefab("Assets/HeehooAssetBundle/Heehoo.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/HeehooAssetBundle/HeehooGibs.prefab").GetComponent<ParticleSystem>());
-            heehoo.AddPassives([Passives.Unstable, Passives.Leaky1, CustomPassives.RetortionGenerator(7)]);
+            heehoo.AddPassives([Passives.Unstable, Passives.Leaky1, CustomPassives.RetortionGenerator(5)]);
 
             LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Disappearing_ID", out StatusEffect_SO Disappearing);
             StatusEffect_Apply_Effect DisappearingApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
@@ -50,7 +50,7 @@ namespace Hell_Island_Fell.Enemies
                 Effects =
                 [
                     Effects.GenerateEffect(DisappearingApply, 10, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 5, Targeting.Slot_SelfSlot)
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 10, Targeting.Slot_SelfSlot)
                 ],
                 Rarity = CustomAbilityRarity.Weight(2, true),
                 Priority = Priority.Normal,
@@ -60,35 +60,37 @@ namespace Hell_Island_Fell.Enemies
 
             Ability semanticDrip = new Ability("Semantic Drip", "SemanticDrip_A")
             {
-                Description = "Consume all of a random pigment.\nDeal an equivalent amount of damage to the Opposing party member.",
+                Description = "Consume all of a random pigment.\nDeal an equivalent amount of damage to the Left and Right party members.",
                 Cost = [Pigments.Yellow, Pigments.RedPurple],
                 Visuals = Visuals.Gnaw,
-                AnimationTarget = Targeting.Slot_Front,
+                AnimationTarget = Targeting.Slot_OpponentSides,
                 Effects =
                 [
                     Effects.GenerateEffect(ConsumeRandom, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(PrevDamage, 1, Targeting.Slot_Front),
+                    Effects.GenerateEffect(PrevDamage, 1, Targeting.Slot_OpponentSides),
                 ],
                 Rarity = CustomAbilityRarity.Weight(5, true),
                 Priority = Priority.Normal,
             };
             semanticDrip.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
-            semanticDrip.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
+            semanticDrip.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
             Ability curtainCall = new Ability("Curtain Call", "CurtainCall_A")
             {
-                Description = "Apply 2 Shadow Hands to the Left, Right, and Opposing party members.",
+                Description = "Apply 2 Shadow Hands to the Left, Right, and Opposing party members.\nApply 3 Shadow Hands to this enemy's position.",
                 Cost = [Pigments.Purple, Pigments.YellowBlue],
                 Visuals = Visuals.Scream,
                 AnimationTarget = Targeting.Slot_Front,
                 Effects =
                 [
                     Effects.GenerateEffect(ShadowHandsApply, 2, Targeting.Slot_FrontAndSides),
+                    Effects.GenerateEffect(ShadowHandsApply, 3, Targeting.Slot_SelfAll),
                 ],
                 Rarity = CustomAbilityRarity.Weight(2, true),
                 Priority = Priority.Normal,
             };
             curtainCall.AddIntentsToTarget(Targeting.Slot_FrontAndSides, ["Field_ShadowHands"]);
+            curtainCall.AddIntentsToTarget(Targeting.Slot_SelfAll, ["Field_ShadowHands"]);
 
             heehoo.AddEnemyAbilities(
                 [

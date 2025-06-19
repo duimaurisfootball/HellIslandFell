@@ -32,11 +32,15 @@ namespace Hell_Island_Fell.Custom_Passives
         public List<IUnit> GetAffectedUnits(IUnit owner)
         {
             if (owner == null)
+            {
                 return [];
+            }
 
             owner.TryGetStoredData(affectedUnitsStoredValue._UnitStoreDataID, out var hold);
             if (hold.m_ObjectData is not List<IUnit> l)
+            {
                 hold.m_ObjectData = l = [];
+            }
 
             return l;
         }
@@ -49,7 +53,9 @@ namespace Hell_Island_Fell.Custom_Passives
         public override void TriggerPassive(object sender, object args)
         {
             if (sender is not IUnit caster || args is not AnyoneMovedNotificationInfo notifinfo || notifinfo.unit == null)
+            {
                 return;
+            }
 
             CombatManager.Instance.ProcessImmediateAction(new TargetedStatusEffectMoveAction(caster, targeting, GetAffectedUnits(caster), status));
         }
@@ -69,7 +75,9 @@ namespace Hell_Island_Fell.Custom_Passives
                 : stats.EnemiesOnField.ContainsKey(caster.ID) && stats.EnemiesOnField[caster.ID] == caster;
 
             if (!valid)
+            {
                 yield break;
+            }
 
             var showPassiveInformation = new ShowPassiveInformationUIAction(caster.ID, caster.IsUnitCharacter, passive._passiveName, passive.passiveIcon);
             yield return showPassiveInformation.Execute(stats);
@@ -78,10 +86,14 @@ namespace Hell_Island_Fell.Custom_Passives
             foreach (var t in targets)
             {
                 if (t == null || !t.HasUnit)
+                {
                     continue;
+                }
 
                 if (affectedUnits.Contains(t.Unit))
+                {
                     continue;
+                }
 
                 t.Unit.ApplyStatusEffect(status, 0, 1);
                 affectedUnits.Add(t.Unit);
@@ -96,7 +108,9 @@ namespace Hell_Island_Fell.Custom_Passives
             foreach (var u in affectedUnits)
             {
                 if (u == null)
+                {
                     continue;
+                }
 
                 u.DettachStatusRestrictor(status.StatusID);
             }
@@ -117,7 +131,9 @@ namespace Hell_Island_Fell.Custom_Passives
                 var u = affectedUnits[i];
 
                 if (targets.Any(x => x != null && x.Unit == u))
+                {
                     continue;
+                }
 
                 u.DettachStatusRestrictor(status.StatusID);
                 affectedUnits.RemoveAt(i);
@@ -127,12 +143,16 @@ namespace Hell_Island_Fell.Custom_Passives
             foreach (var t in targets)
             {
                 if (t == null || !t.HasUnit)
+                {
                     continue;
+                }
 
                 var u = t.Unit;
 
                 if (affectedUnits.Contains(u))
+                {
                     continue;
+                }
 
                 u.ApplyStatusEffect(status, 0, 1);
                 affectedUnits.Add(u);

@@ -188,6 +188,15 @@ namespace Hell_Island_Fell.Encounters
                         "Thunderdome_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                musicManMedium.Add(new(
+                    [
+                        "MusicMan_EN",
+                        "Gungrot_EN",
+                        "Thunderdome_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_MusicMan_Medium_EnemyBundle"))._enemyBundles = musicManMedium;
 
             List<RandomEnemyGroup> spoggleRedMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_Spoggle_Writhing_Medium_EnemyBundle"))._enemyBundles)
@@ -342,6 +351,21 @@ namespace Hell_Island_Fell.Encounters
                         "Jansuli_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                conductorMedium.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Moone_EN",
+                        "Gungrot_EN",
+                    ]));
+                conductorMedium.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Heehoo_EN",
+                        "Surrogate_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_Conductor_Medium_EnemyBundle"))._enemyBundles = conductorMedium;
 
             List<RandomEnemyGroup> revolaHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_Revola_Hard_EnemyBundle"))._enemyBundles)
@@ -471,6 +495,28 @@ namespace Hell_Island_Fell.Encounters
                         "Footshroom_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                revolaHard.Add(new(
+                    [
+                        "Revola_EN",
+                        "Thunderdome_EN",
+                        "Surrogate_EN",
+                    ]));
+                revolaHard.Add(new(
+                    [
+                        "Revola_EN",
+                        "Heehoo_EN",
+                        "Gungrot_EN",
+                    ]));
+                revolaHard.Add(new(
+                    [
+                        "Revola_EN",
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Gungrot_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_Revola_Hard_EnemyBundle"))._enemyBundles = revolaHard;
 
             List<RandomEnemyGroup> wrigglingSacrificeHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_WrigglingSacrifice_Hard_EnemyBundle"))._enemyBundles)
@@ -515,9 +561,6 @@ namespace Hell_Island_Fell.Encounters
                 "Thunderdome_EN",
             ]),
             };
-            if (Hell_Island_Fell.CrossMod.EnemyPack)
-            {
-            }
             if (Hell_Island_Fell.CrossMod.GlitchFreaks)
             {
                 wrigglingSacrificeHard.Add(new(
@@ -699,6 +742,31 @@ namespace Hell_Island_Fell.Encounters
                         "Conductor_EN",
                         "Heehoo_EN",
                         "Jansuli_EN",
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                conductorHard.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Heehoo_EN",
+                        "Gungrot_EN",
+                        "Gungrot_EN",
+                    ]));
+                conductorHard.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Thunderdome_EN",
+                        "Thunderdome_EN",
+                        "Gungrot_EN",
+                        "Gungrot_EN",
+                    ]));
+                conductorHard.Add(new(
+                    [
+                        "Conductor_EN",
+                        "Moone_EN",
+                        "Moone_EN",
+                        "Romantic_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone02_Conductor_Hard_EnemyBundle"))._enemyBundles = conductorHard;

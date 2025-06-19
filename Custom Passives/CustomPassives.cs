@@ -8,6 +8,7 @@ using System.Text;
 using TMPro;
 using UnityEngine;
 using static Hell_Island_Fell.Custom_Passives.InterpolatedPassiveAbility;
+using static Hell_Island_Fell.Custom_Passives.OtherworldlyPassiveAbility;
 
 namespace Hell_Island_Fell.Custom_Passives
 {
@@ -59,6 +60,7 @@ namespace Hell_Island_Fell.Custom_Passives
             metallurgy.passiveIcon = ResourceLoader.LoadSprite("SaladMetallurgy");
             metallurgy._characterDescription = "This party member scales based on how much money you have at the start of combat.";
             metallurgy._enemyDescription = "This enemy scales based on how much money you have at the start of combat.";
+            metallurgy.immediateEffect = false;
             metallurgy.connectionEffects =
                 [
                     Effects.GenerateEffect(CurrencyCount, 100, Targeting.Slot_SelfSlot),
@@ -80,18 +82,23 @@ namespace Hell_Island_Fell.Custom_Passives
             StatusEffect_Apply_Effect CursedApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             CursedApply._Status = StatusField.Cursed;
 
-            PerformEffectPassiveAbility sacrilege = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
+            Connection_PerformEffectPassiveAbility sacrilege = ScriptableObject.CreateInstance<Connection_PerformEffectPassiveAbility>();
             sacrilege.m_PassiveID = "Sacrilege";
             sacrilege.passiveIcon = ResourceLoader.LoadSprite("RodneySacrilege");
             sacrilege._characterDescription = "This party member is Cursed.";
             sacrilege._enemyDescription = "This enemy is Cursed.";
-            sacrilege.effects =
+            sacrilege.immediateEffect = false;
+            sacrilege.connectionEffects =
                 [
                     Effects.GenerateEffect(CursedApply, 1, Targeting.Slot_SelfSlot),
                 ];
+            sacrilege.disconnectionEffects =
+                [
+
+                ];
             sacrilege._triggerOn =
                 [
-                    TriggerCalls.OnCombatStart,
+
                 ];
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -116,21 +123,21 @@ namespace Hell_Island_Fell.Custom_Passives
             CheckCasterNotHealthColorsEffect CheckGrey = ScriptableObject.CreateInstance<CheckCasterNotHealthColorsEffect>();
             CheckGrey._colors = [Pigments.Red, Pigments.Blue, Pigments.Yellow, Pigments.Purple];
 
-            PerformDoubleEffectPassiveAbility humorous = ScriptableObject.CreateInstance<PerformDoubleEffectPassiveAbility>();
-            humorous.m_PassiveID = "Humorous";
-            humorous.passiveIcon = ResourceLoader.LoadSprite("VatHumorous");
-            humorous._characterDescription = "Upon taking damage, this party member's health will change to red.";
-            humorous._enemyDescription = "Upon taking damage, this enemy's health will change to red.";
-            humorous._secondDoesPerformPopUp = false;
-            humorous.effects =
+            PerformDoubleEffectPassiveAbility humorousV = ScriptableObject.CreateInstance<PerformDoubleEffectPassiveAbility>();
+            humorousV.m_PassiveID = "Humorous";
+            humorousV.passiveIcon = ResourceLoader.LoadSprite("VatHumorous");
+            humorousV._characterDescription = "Upon taking damage, this party member's health will change to red.";
+            humorousV._enemyDescription = "Upon taking damage, this enemy's health will change to red.";
+            humorousV._secondDoesPerformPopUp = false;
+            humorousV.effects =
                 [
                     Effects.GenerateEffect(RedHealth, 1, Targeting.Slot_SelfSlot)
                 ];
-            humorous._triggerOn =
+            humorousV._triggerOn =
                 [
                     TriggerCalls.OnDirectDamaged,
                 ];
-            humorous._secondEffects =
+            humorousV._secondEffects =
                 [
                     Effects.GenerateEffect(ResetSprite, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(CheckYellow, 1, Targeting.Slot_SelfSlot),
@@ -153,10 +160,25 @@ namespace Hell_Island_Fell.Custom_Passives
                     Effects.GenerateEffect(CycleSprite, 1, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(true, 1)),
 
                 ];
-            humorous._secondTriggerOn =
+            humorousV._secondTriggerOn =
                 [
                     TriggerCalls.OnHealthColorChanged,
                     TriggerCalls.OnBeforeCombatStart
+                ];
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            PerformEffectPassiveAbility humorous = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
+            humorous.m_PassiveID = "Humorous";
+            humorous.passiveIcon = ResourceLoader.LoadSprite("VatHumorous");
+            humorous._characterDescription = "Upon taking damage, this party member's health will change to red.";
+            humorous._enemyDescription = "Upon taking damage, this enemy's health will change to red.";
+            humorous.effects =
+                [
+                    Effects.GenerateEffect(RedHealth, 1, Targeting.Slot_SelfSlot)
+                ];
+            humorous._triggerOn =
+                [
+                    TriggerCalls.OnDirectDamaged,
                 ];
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -186,8 +208,8 @@ namespace Hell_Island_Fell.Custom_Passives
             ConnoisseurPassiveAbility connoisseur = ScriptableObject.CreateInstance<ConnoisseurPassiveAbility>();
             connoisseur.m_PassiveID = "Connoisseur";
             connoisseur.passiveIcon = ResourceLoader.LoadSprite("AlvinarConnoisseur");
-            connoisseur._characterDescription = "This party member deals 1/3 extra damage for each status effect on targets.";
-            connoisseur._enemyDescription = "This party member deals 1/3 extra damage for each status effect on targets.";
+            connoisseur._characterDescription = "This party member deals an additional 33% damage for each status effect on targets.";
+            connoisseur._enemyDescription = "This party member deals an additional 33% damage for each status effect on targets.";
             connoisseur._triggerOn =
                 [
                     TriggerCalls.OnWillApplyDamage,
@@ -227,8 +249,8 @@ namespace Hell_Island_Fell.Custom_Passives
             PerformEffectPassiveAbility grinding = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
             grinding.m_PassiveID = "Grinding";
             grinding.passiveIcon = ResourceLoader.LoadSprite("NosestoneGrinding");
-            grinding._characterDescription = "Upon dying, add 1 cost of this enemy's health color to every party member ability.\nWill not add to \"Slap\".";
-            grinding._enemyDescription = "Upon dying, add 1 cost of this party member's health color to every party member ability.\nWill not add to \"Slap\".";
+            grinding._characterDescription = "Upon dying, add 1 cost of this party member's health color to every party member ability.\nWill not add to \"Slap\".";
+            grinding._enemyDescription = "Upon dying, add 1 cost of this enemy's health color to every party member ability.\nWill not add to \"Slap\".";
             grinding.effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<AddCostByHealthColorEffect>(), 1, Targeting.AllUnits),
@@ -255,7 +277,6 @@ namespace Hell_Island_Fell.Custom_Passives
                 [
                     TriggerCalls.OnWillReceiveCostDamage,
                 ];
-
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             Connection_PerformEffectPassiveAbility disruption = ScriptableObject.CreateInstance<Connection_PerformEffectPassiveAbility>();
@@ -434,9 +455,88 @@ namespace Hell_Island_Fell.Custom_Passives
                 ];
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            OtherworldlyPassiveAbility otherworldly = ScriptableObject.CreateInstance<OtherworldlyPassiveAbility>();
+            otherworldly.m_PassiveID = "Otherworldly";
+            otherworldly.passiveIcon = Passives.Overexert1.passiveIcon;
+            otherworldly._characterDescription = "Not intended for party members.";
+            otherworldly._enemyDescription = "Upon taking damage, create a clone of this enemy with health equal to the amount of damage dealt. If there is no space, add the health of the clone to the lowest health enemy.";
+            otherworldly._triggerOn =
+                [
+                    TriggerCalls.OnBeingDamaged,
+                ];
+            otherworldly.conditions =
+                [
+                    ScriptableObject.CreateInstance<OtherworldlyCondition>(),
+                ];
+            otherworldly.doesPassiveTriggerInformationPanel = false;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ChangeCasterHealthColorBetweenColorsEffect PurpleGray = ScriptableObject.CreateInstance<ChangeCasterHealthColorBetweenColorsEffect>();
+            PurpleGray._color1 = Pigments.Purple;
+            PurpleGray._color2 = Pigments.Grey;
+
+            PerformEffectPassiveAbility TwoFacedPurpleGray = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
+            TwoFacedPurpleGray.m_PassiveID = Passives.TwoFaced.m_PassiveID;
+            TwoFacedPurpleGray.passiveIcon = ResourceLoader.LoadSprite("PassiveTwoFacedPG");
+            TwoFacedPurpleGray._characterDescription = "Upon receiving direct damage this party member will change its health colour from purple to grey or vice versa.";
+            TwoFacedPurpleGray._enemyDescription = "Upon receiving direct damage this enemy will change its health colour from purple to grey or vice versa.";
+            TwoFacedPurpleGray.effects =
+                [
+                    Effects.GenerateEffect(PurpleGray, 1, Targeting.Slot_SelfSlot),
+                ];
+            TwoFacedPurpleGray._triggerOn =
+                [
+                    TriggerCalls.OnDirectDamaged,
+                ];
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ChangeCasterHealthColorBetweenColorsEffect PurpleRed = ScriptableObject.CreateInstance<ChangeCasterHealthColorBetweenColorsEffect>();
+            PurpleRed._color1 = Pigments.Purple;
+            PurpleRed._color2 = Pigments.Red;
+
+            PerformEffectPassiveAbility TwoFacedPurpleRed = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
+            TwoFacedPurpleRed.m_PassiveID = Passives.TwoFaced.m_PassiveID;
+            TwoFacedPurpleRed.passiveIcon = ResourceLoader.LoadSprite("PassiveTwoFacedPR");
+            TwoFacedPurpleRed._characterDescription = "Upon receiving direct damage this party member will change its health colour from purple to grey or vice versa.";
+            TwoFacedPurpleRed._enemyDescription = "Upon receiving direct damage this enemy will change its health colour from purple to grey or vice versa.";
+            TwoFacedPurpleRed.effects =
+                [
+                    Effects.GenerateEffect(PurpleRed, 1, Targeting.Slot_SelfSlot),
+                ];
+            TwoFacedPurpleRed._triggerOn =
+                [
+                    TriggerCalls.OnDirectDamaged,
+                ];
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            BonnetPassiveAbility Bonnet = ScriptableObject.CreateInstance<BonnetPassiveAbility>();
+            Bonnet.m_PassiveID = "HIF_Bonnet";
+            Bonnet.passiveIcon = ResourceLoader.LoadSprite("BoojumBonnet");
+            Bonnet._characterDescription = "Not meant for party members.";
+            Bonnet._enemyDescription = "This enemy hides the timeline unless they are in the Leftmost position.";
+            Bonnet._triggerOn =
+                [
+                    TriggerCalls.OnMoved,
+                ];
+            Bonnet.doesPassiveTriggerInformationPanel = false;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            BootPassiveAbility Boot = ScriptableObject.CreateInstance<BootPassiveAbility>();
+            Boot.m_PassiveID = "HIF_Boot";
+            Boot.passiveIcon = ResourceLoader.LoadSprite("BoojumBoot");
+            Boot._characterDescription = "Not meant for party members.";
+            Boot._enemyDescription = "This enemy will not perform the same ability twice in a row.";
+            Boot._triggerOn =
+                [
+                    TriggerCalls.OnAbilityWillBeUsed,
+                ];
+            Boot.doesPassiveTriggerInformationPanel = false;
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             Passives.AddCustomPassiveToPool("Impunity_PA", "Impunity", impunity);
             Passives.AddCustomPassiveToPool("Metallurgy_PA", "Metallurgy", metallurgy);
             Passives.AddCustomPassiveToPool("Sacrilege_PA", "Sacrilege", sacrilege);
+            Passives.AddCustomPassiveToPool("HumorousV_PA", "Humorous", humorousV);
             Passives.AddCustomPassiveToPool("Humorous_PA", "Humorous", humorous);
             Passives.AddCustomPassiveToPool("Chaos_PA", "Chaos", chaos);
             Passives.AddCustomPassiveToPool("Connoisseur_PA", "Connoisseur", connoisseur);
@@ -453,9 +553,14 @@ namespace Hell_Island_Fell.Custom_Passives
             Passives.AddCustomPassiveToPool("Conviction_PA", "Conviction", conviction);
             Passives.AddCustomPassiveToPool("Armed_PA", "Armed", armed);
             Passives.AddCustomPassiveToPool("UniInfantile_PA", "Infantile", universalInfantile);
+            Passives.AddCustomPassiveToPool("Otherworldly_PA", "Otherworldly", otherworldly);
+            Passives.AddCustomPassiveToPool("TwoFacedPG_PA", "Two Faced", TwoFacedPurpleGray);
+            Passives.AddCustomPassiveToPool("TwoFacedPR_PA", "Two Faced", TwoFacedPurpleRed);
+            Passives.AddCustomPassiveToPool("Bonnet_PA", "Bonnet", Bonnet);
+            Passives.AddCustomPassiveToPool("Boot_PA", "Boot", Boot);
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             GlossaryPassives ImpunityInfo = new GlossaryPassives("Impunity", "The yellow pigment generator now generates gray pigment instead.", ResourceLoader.LoadSprite("FarahImpunity"));
-            GlossaryPassives MetallurgyInfo = new GlossaryPassives("Metallurgy", "This party member/enemy scales based on how much money you have at the start of combat.", ResourceLoader.LoadSprite("SaladMetallurgy"));
+            GlossaryPassives MetallurgyInfo = new GlossaryPassives("Metallurgy", "This party member/enemy scales based on how much money you have at the start of combat. An amount of Disappearing equal to half the amount of money is applied to this party member/enemy on combat start.", ResourceLoader.LoadSprite("SaladMetallurgy"));
             GlossaryPassives SacrilegeInfo = new GlossaryPassives("Sacrilege", "This party member/enemy is Cursed.", ResourceLoader.LoadSprite("RodneySacrilege"));
             GlossaryPassives HumorousInfo = new GlossaryPassives("Humorous", "Upon taking damage, this party member/enemy's health will change to red.", ResourceLoader.LoadSprite("VatHumorous"));
             GlossaryPassives ChaosInfo = new GlossaryPassives("Chaos", "This party member's health color and costs are randomized at the start of combat.", ResourceLoader.LoadSprite("PassiveChaos"));
@@ -467,10 +572,12 @@ namespace Hell_Island_Fell.Custom_Passives
             GlossaryPassives AltAttacksInfo = new GlossaryPassives("Alt Attacks", "This enemy will perform an additional ability each turn, this ability is randomly selected from a given set", ResourceLoader.LoadSprite("PassiveAltAttacks"));
             GlossaryPassives InvincibleInfo = new GlossaryPassives("Invincible", "Prevent all incoming damage that is less than or equal to this party member/enemy's level of Invincible.", ResourceLoader.LoadSprite("PassiveInvincible"));
             GlossaryPassives ThornyInfo = new GlossaryPassives("Thorny", "If the wrong pigment is used while performing an ability apply 1 Scar to this party member.", ResourceLoader.LoadSprite("PinecThorny"));
-            GlossaryPassives DisruptionInfo = new GlossaryPassives("Disruption", "Randomize and reduce all party member ability costs.", ResourceLoader.LoadSprite("BolerDisruption"));
+            //GlossaryPassives DisruptionInfo = new GlossaryPassives("Disruption", "Randomize and reduce all party member ability costs.", ResourceLoader.LoadSprite("BolerDisruption"));
             GlossaryPassives BilliardInfo = new GlossaryPassives("Billiard", "Upon recieving direct damage, remove Constricted from this party member/enemy's position and move to the left.", ResourceLoader.LoadSprite("BoojumBilliard"));
             GlossaryPassives MirageInfo = new GlossaryPassives("Mirage", "This party member will apply 1 Shadow Hands to their current position at the beginning of each turn.", ResourceLoader.LoadSprite("StareyedMirage"));
             GlossaryPassives ConvictionInfo = new GlossaryPassives("Conviction", "The Left and Right allies are Divinely Protected.", ResourceLoader.LoadSprite("NabaConviction"));
+            GlossaryPassives BonnetInfo = new GlossaryPassives("Bonnet", "This enemy hides the timeline unless they are in the Leftmost position.", ResourceLoader.LoadSprite("BoojumBonnet"));
+            GlossaryPassives BootInfo = new GlossaryPassives("Boot", "This enemy will not perform the same ability twice in a row.", ResourceLoader.LoadSprite("BoojumBoot"));
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             LoadedDBsHandler.GlossaryDB.AddNewPassive(ImpunityInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(MetallurgyInfo);
@@ -485,10 +592,12 @@ namespace Hell_Island_Fell.Custom_Passives
             LoadedDBsHandler.GlossaryDB.AddNewPassive(AltAttacksInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(InvincibleInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(ThornyInfo);
-            LoadedDBsHandler.GlossaryDB.AddNewPassive(DisruptionInfo);
+            //LoadedDBsHandler.GlossaryDB.AddNewPassive(DisruptionInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(BilliardInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(MirageInfo);
             LoadedDBsHandler.GlossaryDB.AddNewPassive(ConvictionInfo);
+            LoadedDBsHandler.GlossaryDB.AddNewPassive(BonnetInfo);
+            LoadedDBsHandler.GlossaryDB.AddNewPassive(BootInfo);
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             UnitStoreData_ModIntSO wartiness = ScriptableObject.CreateInstance<UnitStoreData_ModIntSO>();
             wartiness.m_Text = "Warts: +{0}";
@@ -505,6 +614,14 @@ namespace Hell_Island_Fell.Custom_Passives
             consistentFleetiness.m_CompareDataToThis = 0;
             consistentFleetiness.m_ShowIfDataIsOver = false;
             LoadedDBsHandler.MiscDB.AddNewUnitStoreData("ConsistentFleetingStoredValue", consistentFleetiness);
+
+            UnitStoreData_ModIntSO waxmanSplitter = ScriptableObject.CreateInstance<UnitStoreData_ModIntSO>();
+            waxmanSplitter.m_Text = "";
+            waxmanSplitter._UnitStoreDataID = "WaxmanStoredValue";
+            waxmanSplitter.m_TextColor = Color.clear;
+            waxmanSplitter.m_CompareDataToThis = 0;
+            waxmanSplitter.m_ShowIfDataIsOver = false;
+            LoadedDBsHandler.MiscDB.AddNewUnitStoreData("WaxmanStoredValue", waxmanSplitter);
         }
 
         private static readonly Dictionary<int, BasePassiveAbilitySO> GeneratedWarts = [];
@@ -582,7 +699,8 @@ namespace Hell_Island_Fell.Custom_Passives
             altAttacksPassiveAbility.conditions = [];
             altAttacksPassiveAbility.doesPassiveTriggerInformationPanel = false;
             altAttacksPassiveAbility.specialStoredData = null;
-            altAttacksPassiveAbility._altAbilities = weights;
+            altAttacksPassiveAbility._altAbilities = bonusAbilities;
+            altAttacksPassiveAbility._weights = weights;
             return altAttacksPassiveAbility;
         }
 

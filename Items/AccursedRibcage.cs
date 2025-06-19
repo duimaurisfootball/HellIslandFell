@@ -63,6 +63,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            accursedRibcage.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(accursedRibcage.Item, new ItemModdedUnlockInfo("AccursedRibcage_TW", ResourceLoader.LoadSprite("UnlockOsmanRodneyLocked", null, 32, null), "HIF_Rodney_Witness_ACH"));
         }
     }

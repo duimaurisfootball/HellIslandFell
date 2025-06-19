@@ -109,8 +109,29 @@ namespace Hell_Island_Fell.Encounters
                         "SilverSuckle_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Surrogate_EN",
+                        "Surrogate_EN",
+                    ], null);
+                BolerMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Gungrot_EN",
+                        "Gungrot_EN",
+                    ], null);
+            }
             BolerMedium.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Medium_EnemyBundle", 4, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Medium);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Medium_EnemyBundle", 2, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Medium);
 
             EnemyEncounter_API BolerHard = new EnemyEncounter_API(0, "H_Zone02_Boler_Hard_EnemyBundle", "Boler_Sign")
             {
@@ -335,8 +356,25 @@ namespace Hell_Island_Fell.Encounters
                         "Jansuli_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Surrogate_EN",
+                        "Gungrot_EN",
+                        "Romantic_EN",
+                    ], null);
+                BolerHard.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Errant_EN",
+                        "SilverSuckle_EN",
+                        "SilverSuckle_EN",
+                    ], null);
+            }
             BolerHard.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Hard_EnemyBundle", 5, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_Boler_Hard_EnemyBundle", 10, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
 
             EnemyEncounter_API Boler2 = new EnemyEncounter_API(0, "H_Zone02_DoubleBoler_EnemyBundle", "Boler_Sign")
             {
@@ -510,8 +548,32 @@ namespace Hell_Island_Fell.Encounters
                         "ExternalIncubator_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Gungrot_EN",
+                        "Gungrot_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
+                    ], null);
+                Boler2.CreateNewEnemyEncounterData(
+                    [
+                        "Boler_EN",
+                        "Boler_EN",
+                        "Errant_EN",
+                    ], null);
+            }
             Boler2.AddEncounterToDataBases();
-            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_DoubleBoler_EnemyBundle", 1, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
+            EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone02_DoubleBoler_EnemyBundle", 3, ZoneType_GameIDs.Orpheum_Hard, BundleDifficulty.Hard);
         }
     }
 }

@@ -37,6 +37,10 @@ namespace Hell_Island_Fell.Custom_Effects
                         amount = caster.WillApplyDamage(amount, targetSlotInfo.Unit);
                         damageInfo = targetSlotInfo.Unit.Damage(amount, caster, "Basic", targetSlotOffset, addHealthMana: true, directDamage: true);
                     }
+                    if (damageInfo.damageAmount > 0)
+                    {
+                        caster.DidApplyDamage(damageInfo.damageAmount);
+                    }
 
                     exitAmount += damageInfo.damageAmount;
                 }

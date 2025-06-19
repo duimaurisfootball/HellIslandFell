@@ -1,4 +1,5 @@
 ﻿using BrutalAPI;
+using Hell_Island_Fell.Custom_Effects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,10 +22,20 @@ namespace Hell_Island_Fell.Fools
                 DamageSound = LoadedAssetsHandler.GetCharacter("Kleiver_CH").deathSound,
                 DeathSound = LoadedAssetsHandler.GetEnemy("TaintedYolk_EN").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetCharacter("Kleiver_CH").deathSound,
+                UnitTypes =
+                [
+                    "Sandwich_Pigment",
+                ],
             };
             spoogle.GenerateMenuCharacter(ResourceLoader.LoadSprite("SpoogleMenu"), ResourceLoader.LoadSprite("SpoogleLocked"));
             spoogle.AddPassives([Passives.Leaky3]);
             spoogle.SetMenuCharacterAsFullDPS();
+
+            DamageEffect Damage = ScriptableObject.CreateInstance<DamageEffect>();
+
+            HealEffect Heal = ScriptableObject.CreateInstance<HealEffect>();
+
+            RefreshAbilityUseEffect Refresh = ScriptableObject.CreateInstance<RefreshAbilityUseEffect>();
 
             ConsumeColorManaEffect YellowEater1 = ScriptableObject.CreateInstance<ConsumeColorManaEffect>();
             YellowEater1.mana = Pigments.Yellow;
@@ -38,11 +49,14 @@ namespace Hell_Island_Fell.Fools
             HealEffect ConcatHeal = ScriptableObject.CreateInstance<HealEffect>();
             ConcatHeal.usePreviousExitValue = true;
 
+            RerollNumberPigmentEffect RerollYellow = ScriptableObject.CreateInstance<RerollNumberPigmentEffect>();
+            RerollYellow._mana = Pigments.Yellow;
+
             DamageEffect IndirectDamage = ScriptableObject.CreateInstance<DamageEffect>();
             IndirectDamage._indirect = true;
 
             //ablate
-            Ability ablate0 = new Ability("Feebly Ablate", "Ablate_1_A")
+            Ability ablate0 = new Ability("Feebly Ablate", "HIF_Ablate_1_A")
             {
                 Description = "Heal this party member 2 health.\nConsume up to 4 yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleAblate"),
@@ -51,7 +65,7 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(Heal, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(YellowEater1, 4, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(AblateDamage, 2, Targeting.Slot_Front),
                 ]
@@ -60,7 +74,7 @@ namespace Hell_Island_Fell.Fools
             ablate0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
             ablate0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
-            Ability ablate1 = new Ability("Fiercely Ablate", "Ablate_2_A")
+            Ability ablate1 = new Ability("Fiercely Ablate", "HIF_Ablate_2_A")
             {
                 Description = "Heal this party member 2 health.\nConsume up to 6 yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleAblate"),
@@ -69,7 +83,7 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(Heal, 2, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(YellowEater1, 6, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(AblateDamage, 2, Targeting.Slot_Front),
                 ]
@@ -78,7 +92,7 @@ namespace Hell_Island_Fell.Fools
             ablate1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
             ablate1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
 
-            Ability ablate2 = new Ability("Frightfully Ablate", "Ablate_3_A")
+            Ability ablate2 = new Ability("Frightfully Ablate", "HIF_Ablate_3_A")
             {
                 Description = "Heal this party member 3 health.\nConsume up to 8 yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleAblate"),
@@ -87,7 +101,7 @@ namespace Hell_Island_Fell.Fools
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(Heal, 3, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(YellowEater1, 8, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(AblateDamage, 2, Targeting.Slot_Front),
                 ]
@@ -96,17 +110,17 @@ namespace Hell_Island_Fell.Fools
             ablate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
             ablate2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_16_20)]);
 
-            Ability ablate3 = new Ability("Fantasmagorically Ablate", "Ablate_4_A")
+            Ability ablate3 = new Ability("Fantasmagorically Ablate", "HIF_Ablate_4_A")
             {
-                Description = "Heal this party member 3 health.\nConsume all yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
+                Description = "Heal this party member 3 health.\nConsume up to 10 yellow pigment from the pigment bar.\nDeal 2 damage to the Opposing enemy for every pigment consumed.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleAblate"),
                 Cost = [Pigments.Yellow, Pigments.Yellow],
                 Visuals = Visuals.Bosch,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 3, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(YellowEater2, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(Heal, 3, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(YellowEater1, 10, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(AblateDamage, 2, Targeting.Slot_Front),
                 ]
             };
@@ -116,9 +130,9 @@ namespace Hell_Island_Fell.Fools
 
 
             //concatenate
-            Ability concatenate0 = new Ability("Reduction Concatenation", "Concatenation_1_A")
+            Ability concatenate0 = new Ability("Reduction Concatenation", "HIF_Concatenation_1_A")
             {
-                Description = "Consume all yellow pigment from the pigment bar.\nHeal this party member 2 health for every pigment consumed.\nDeal 4 damage to this party member.",
+                Description = "Consume all yellow pigment from the pigment bar.\nHeal this party member 2 health for every pigment consumed.\nTransform 2 stored pigment to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleConcatenate"),
                 Cost = [Pigments.Yellow, Pigments.Yellow, Pigments.Yellow],
                 Visuals = Visuals.Melt,
@@ -127,16 +141,14 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(YellowEater2, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ConcatHeal, 2, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 4, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(RerollYellow, 2, Targeting.Slot_SelfSlot),
                 ]
             };
-            concatenate0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
-            concatenate0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_11_20)]);
-            concatenate0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
+            concatenate0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume), nameof(IntentType_GameIDs.Heal_11_20), nameof(IntentType_GameIDs.Mana_Modify)]);
 
-            Ability concatenate1 = new Ability("Oxidation Concatenation", "Concatenation_2_A")
+            Ability concatenate1 = new Ability("Oxidation Concatenation", "HIF_Concatenation_2_A")
             {
-                Description = "Consume all yellow pigment from the pigment bar.\nHeal this party member 2 health for every pigment consumed.\nDeal 3 damage to this party member.",
+                Description = "Consume all yellow pigment from the pigment bar.\nHeal this party member 2 health for every pigment consumed.\nTransform 3 stored pigment to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleConcatenate"),
                 Cost = [Pigments.Yellow, Pigments.Yellow, Pigments.Yellow],
                 Visuals = Visuals.Melt,
@@ -145,16 +157,14 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(YellowEater2, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ConcatHeal, 2, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 3, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(RerollYellow, 3, Targeting.Slot_SelfSlot),
                 ]
             };
-            concatenate1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
-            concatenate1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_11_20)]);
-            concatenate1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
+            concatenate1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume), nameof(IntentType_GameIDs.Heal_11_20), nameof(IntentType_GameIDs.Mana_Modify)]);
 
-            Ability concatenate2 = new Ability("Coagulation Concatenation", "Concatenation_3_A")
+            Ability concatenate2 = new Ability("Coagulation Concatenation", "HIF_Concatenation_3_A")
             {
-                Description = "Consume all yellow pigment from the pigment bar.\nHeal this party member 2 health for every pigment consumed.\nDeal 2 damage to this party member.",
+                Description = "Consume all yellow pigment from the pigment bar.\nHeal this party member 2 health for every pigment consumed.\nTransform 4 stored pigment to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleConcatenate"),
                 Cost = [Pigments.Yellow, Pigments.Yellow, Pigments.Yellow],
                 Visuals = Visuals.Melt,
@@ -163,16 +173,14 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(YellowEater2, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ConcatHeal, 2, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 2, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(RerollYellow, 4, Targeting.Slot_SelfSlot),
                 ]
             };
-            concatenate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
-            concatenate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_11_20)]);
-            concatenate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_1_2)]);
+            concatenate2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume), nameof(IntentType_GameIDs.Heal_11_20), nameof(IntentType_GameIDs.Mana_Modify)]);
 
-            Ability concatenate3 = new Ability("Imagination Concatenation", "Concatenation_4_A")
+            Ability concatenate3 = new Ability("Imagination Concatenation", "HIF_Concatenation_4_A")
             {
-                Description = "Consume all yellow pigment from the pigment bar.\nHeal this party member 2 health for every pigment consumed.\nDeal 1 damage to this party member.",
+                Description = "Consume all yellow pigment from the pigment bar.\nHeal this party member 2 health for every pigment consumed.\nTransform 5 stored pigment to yellow.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleConcatenate"),
                 Cost = [Pigments.Yellow, Pigments.Yellow, Pigments.Yellow],
                 Visuals = Visuals.Melt,
@@ -181,16 +189,14 @@ namespace Hell_Island_Fell.Fools
                 [
                     Effects.GenerateEffect(YellowEater2, 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ConcatHeal, 2, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(RerollYellow, 5, Targeting.Slot_SelfSlot),
                 ]
             };
-            concatenate3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume)]);
-            concatenate3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_11_20)]);
-            concatenate3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_1_2)]);
+            concatenate3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Consume), nameof(IntentType_GameIDs.Heal_11_20), nameof(IntentType_GameIDs.Mana_Modify)]);
 
 
             //vomit
-            Ability vomit0 = new Ability("Vomit up Dinner", "Vomit_1_A")
+            Ability vomit0 = new Ability("Vomit up Dinner", "HIF_Vomit_1_A")
             {
                 Description = "Deal 3 indirect damage to the Opposing enemy.\nDeal 1 damage to this party member.\n75% chance to refresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleVomit"),
@@ -200,15 +206,15 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(IndirectDamage, 3, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
+                    Effects.GenerateEffect(Damage, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(Refresh, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
                 ]
             };
             vomit0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
             vomit0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_1_2)]);
             vomit0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability vomit1 = new Ability("Vomit up Lunch", "Vomit_2_A")
+            Ability vomit1 = new Ability("Vomit up Lunch", "HIF_Vomit_2_A")
             {
                 Description = "Deal 5 indirect damage to the Opposing enemy.\nDeal 1 damage to this party member.\n75% chance to refresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleVomit"),
@@ -218,15 +224,15 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(IndirectDamage, 5, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
+                    Effects.GenerateEffect(Damage, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(Refresh, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
                 ]
             };
             vomit1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
             vomit1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_1_2)]);
             vomit1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability vomit2 = new Ability("Vomit up Breakfast", "Vomit_3_A")
+            Ability vomit2 = new Ability("Vomit up Breakfast", "HIF_Vomit_3_A")
             {
                 Description = "Deal 6 indirect damage to the Opposing enemy.\nDeal 1 damage to this party member.\n75% chance to refresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleVomit"),
@@ -236,15 +242,15 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(IndirectDamage, 6, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
+                    Effects.GenerateEffect(Damage, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(Refresh, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
                 ]
             };
             vomit2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
             vomit2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_1_2)]);
             vomit2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability vomit3 = new Ability("Vomit up Yesterday's Dinner", "Vomit_4_A")
+            Ability vomit3 = new Ability("Vomit up Yesterday's Dinner", "HIF_Vomit_4_A")
             {
                 Description = "Deal 7 indirect damage to the Opposing enemy.\nDeal 1 damage to this party member.\n75% chance to refresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("SpoogleVomit"),
@@ -254,18 +260,18 @@ namespace Hell_Island_Fell.Fools
                 Effects =
                 [
                     Effects.GenerateEffect(IndirectDamage, 7, Targeting.Slot_Front),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
+                    Effects.GenerateEffect(Damage, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(Refresh, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(75))
                 ]
             };
             vomit3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             vomit3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_1_2)]);
             vomit3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            spoogle.AddLevelData(12, new Ability[] { ablate0, concatenate0, vomit0 });
-            spoogle.AddLevelData(15, new Ability[] { ablate1, concatenate1, vomit1 });
-            spoogle.AddLevelData(17, new Ability[] { ablate2, concatenate2, vomit2 });
-            spoogle.AddLevelData(18, new Ability[] { ablate3, concatenate3, vomit3 });
+            spoogle.AddLevelData(12, [concatenate0, ablate0, vomit0]);
+            spoogle.AddLevelData(15, [concatenate1, ablate1, vomit1]);
+            spoogle.AddLevelData(17, [concatenate2, ablate2, vomit2]);
+            spoogle.AddLevelData(18, [concatenate3, ablate3, vomit3]);
 
             spoogle.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Spoogle_Witness_ACH");
             spoogle.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Spoogle_Divine_ACH");

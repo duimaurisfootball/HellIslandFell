@@ -143,6 +143,12 @@ namespace Hell_Island_Fell.Achievements
             UnlockWitnessEras.AddUnlockData("Eras_CH", Unlocks.GenerateUnlockData("HIF_Eras_Witness_Unlock", "HIF_Eras_Witness_ACH", "", "", ["Heartworm_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Eras_Witness_ACH", "Heartworm_TW");
 
+            ModdedAchievements AchievementWitnessNukePits = new ModdedAchievements("Elusive Trinket", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementOsmanNukePits", null, 32, null), "HIF_NukePits_Witness_ACH");
+            AchievementWitnessNukePits.AddNewAchievementToInGameCategory((AchievementCategoryIDs)4);
+            FinalBossCharUnlockCheck UnlockWitnessNukePits = Unlocks.GetUnlock_OsmanFinalBoss();
+            UnlockWitnessNukePits.AddUnlockData("NukePits_CH", Unlocks.GenerateUnlockData("HIF_NukePits_Witness_Unlock", "HIF_NukePits_Witness_ACH", "", "", ["ElusiveTrinket_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_NukePits_Witness_ACH", "ElusiveTrinket_TW");
+
 
             //Heaven Unlocks
             ModdedAchievements AchievementDivineVandander = new ModdedAchievements("Thousand Fish", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenVandander", null, 32, null), "HIF_Vandander_Divine_ACH");
@@ -278,13 +284,32 @@ namespace Hell_Island_Fell.Achievements
             UnlockDivineEras.AddUnlockData("Eras_CH", Unlocks.GenerateUnlockData("HIF_Eras_Divine_Unlock", "HIF_Eras_Divine_ACH", "", "", ["Blastocyst_TW"]));
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Eras_Divine_ACH", "Blastocyst_TW");
 
-            //Doula Unlocks
-
-            //March Unlocks
+            ModdedAchievements AchievementDivineNukePits = new ModdedAchievements("Fingernail of Glory", "Unlocked a new item.", ResourceLoader.LoadSprite("AchievementHeavenNukePits", null, 32, null), "HIF_NukePits_Divine_ACH");
+            AchievementDivineNukePits.AddNewAchievementToInGameCategory((AchievementCategoryIDs)5);
+            FinalBossCharUnlockCheck UnlockDivineNukePits = Unlocks.GetUnlock_HeavenFinalBoss();
+            UnlockDivineNukePits.AddUnlockData("NukePits_CH", Unlocks.GenerateUnlockData("HIF_NukePits_Divine_Unlock", "HIF_NukePits_Divine_ACH", "", "", ["FingernailOfGlory_TW"]));
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_NukePits_Divine_ACH", "FingernailOfGlory_TW");
 
             //Bemagel Unlocks
 
             //Comedy Unlocks
+
+            ModdedAchievements AchievementVusDefeat = new ModdedAchievements("The Predicate Demon", "Pluck a Vus.", ResourceLoader.LoadSprite("AchievementComedyVus", null, 32, null), "HIF_Vus_Comedy_ACH");
+            AchievementVusDefeat.AddNewAchievementToInGameCategory((AchievementCategoryIDs)8);
+            UnlockableModData VusDefeatAchievement = new UnlockableModData("Vus_EN")
+            {
+                hasModdedAchievementUnlock = true,
+                moddedAchievementID = "HIF_Vus_Comedy_ACH",
+                hasItemUnlock = true,
+                items = ["FractionAbacus_SW"]
+            };
+            EnemyDeathUnlockCheck VusDeath = ScriptableObject.CreateInstance<EnemyDeathUnlockCheck>();
+            VusDeath.usesSimpleDeathData = true;
+            VusDeath.enemyID = "Vus_EN";
+            VusDeath.simpleDeathData = VusDefeatAchievement;
+            VusDeath.specialDeathData = [];
+            Unlocks.AddUnlock_EnemyDeath(VusDeath);
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Vus_Comedy_ACH", "FractionAbacus_SW");
 
             ModdedAchievements AchievementBolerDefeat = new ModdedAchievements("Signals through the Noise", "Disrupt a Boler.", ResourceLoader.LoadSprite("AchievementComedyBoler", null, 32, null), "HIF_Boler_Comedy_ACH");
             AchievementBolerDefeat.AddNewAchievementToInGameCategory((AchievementCategoryIDs)8);
@@ -320,23 +345,34 @@ namespace Hell_Island_Fell.Achievements
             Unlocks.AddUnlock_EnemyDeath(BoojumDeath);
             BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Boojum_Comedy_ACH", "SparklingFork_SW");
 
-            ModdedAchievements AchievementVusDefeat = new ModdedAchievements("The Predicate Demon", "Pluck a Vus.", ResourceLoader.LoadSprite("AchievementComedyVus", null, 32, null), "HIF_Vus_Comedy_ACH");
-            AchievementVusDefeat.AddNewAchievementToInGameCategory((AchievementCategoryIDs)8);
-            UnlockableModData VusDefeatAchievement = new UnlockableModData("Vus_EN")
+            ModdedAchievements AchievementNevermoreDefeat = new ModdedAchievements("Eternal Life", "Visit a Nevermore.", ResourceLoader.LoadSprite("AchievementComedyNevermore", null, 32, null), "HIF_Nevermore_Comedy_ACH");
+            AchievementNevermoreDefeat.AddNewAchievementToInGameCategory((AchievementCategoryIDs)8);
+            UnlockableModData NevermoreDefeatAchievement = new UnlockableModData("Nevermore_EN")
             {
                 hasModdedAchievementUnlock = true,
-                moddedAchievementID = "HIF_Vus_Comedy_ACH",
+                moddedAchievementID = "HIF_Nevermore_Comedy_ACH",
                 hasItemUnlock = true,
-                items = ["FractionAbacus_SW"]
+                items = ["AmbulantMonolith_TW"]
             };
-            EnemyDeathUnlockCheck VusDeath = ScriptableObject.CreateInstance<EnemyDeathUnlockCheck>();
-            VusDeath.usesSimpleDeathData = true;
-            VusDeath.enemyID = "Vus_EN";
-            VusDeath.simpleDeathData = VusDefeatAchievement;
-            VusDeath.specialDeathData = [];
-            Unlocks.AddUnlock_EnemyDeath(VusDeath);
-            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Vus_Comedy_ACH", "FractionAbacus_SW");
-
+            EnemyDeathUnlockCheck SmallNevermoreDeath = ScriptableObject.CreateInstance<EnemyDeathUnlockCheck>();
+            SmallNevermoreDeath.usesSimpleDeathData = true;
+            SmallNevermoreDeath.enemyID = "Nevermore_Small_EN";
+            SmallNevermoreDeath.simpleDeathData = NevermoreDefeatAchievement;
+            SmallNevermoreDeath.specialDeathData = [];
+            Unlocks.AddUnlock_EnemyDeath(SmallNevermoreDeath);
+            EnemyDeathUnlockCheck MediumNevermoreDeath = ScriptableObject.CreateInstance<EnemyDeathUnlockCheck>();
+            MediumNevermoreDeath.usesSimpleDeathData = true;
+            MediumNevermoreDeath.enemyID = "Nevermore_Medium_EN";
+            MediumNevermoreDeath.simpleDeathData = NevermoreDefeatAchievement;
+            MediumNevermoreDeath.specialDeathData = [];
+            Unlocks.AddUnlock_EnemyDeath(MediumNevermoreDeath);
+            EnemyDeathUnlockCheck HugeNevermoreDeath = ScriptableObject.CreateInstance<EnemyDeathUnlockCheck>();
+            HugeNevermoreDeath.usesSimpleDeathData = true;
+            HugeNevermoreDeath.enemyID = "Nevermore_Huge_EN";
+            HugeNevermoreDeath.simpleDeathData = NevermoreDefeatAchievement;
+            HugeNevermoreDeath.specialDeathData = [];
+            Unlocks.AddUnlock_EnemyDeath(HugeNevermoreDeath);
+            BackwardsUnlockCompatibility.TryLockItemBehindAchievement("HIF_Nevermore_Comedy_ACH", "AmbulantMonolith_TW");
 
             //Tragedy Unlocks
 

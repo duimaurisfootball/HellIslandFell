@@ -13,19 +13,6 @@ namespace Hell_Island_Fell.Encounters
             {
                 new(
             [
-                "Maneater_EN",
-                "InHerImage_EN",
-                "InHisImage_EN",
-            ]),
-                new(
-            [
-                "Maneater_EN",
-                "InHerImage_EN",
-                "NextOfKin_EN",
-                "NextOfKin_EN",
-            ]),
-                new(
-            [
                 "ScatterbrainedNosestone_EN",
                 "InHerImage_EN",
                 "NextOfKin_EN",
@@ -76,30 +63,19 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                herImageEasy.Add(new(
+                    [
+                        "InHerImage_EN",
+                        "Inequity_EN",
+                        "Surrogate_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHerImage_Easy_EnemyBundle"))._enemyBundles = herImageEasy;
 
             List<RandomEnemyGroup> hisImageEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHisImage_Easy_EnemyBundle"))._enemyBundles)
             {
-                new(
-            [
-                "Maneater_EN",
-                "InHisImage_EN",
-                "InHisImage_EN",
-            ]),
-                new(
-            [
-                "Maneater_EN",
-                "InHerImage_EN",
-                "InHisImage_EN",
-                "NextOfKin_EN",
-            ]),
-                new(
-            [
-                "Maneater_EN",
-                "InHisImage_EN",
-                "NextOfKin_EN",
-                "NextOfKin_EN",
-            ]),
                 new(
             [
                 "ProlificNosestone_EN",
@@ -146,6 +122,15 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                hisImageEasy.Add(new(
+                    [
+                        "InHisImage_EN",
+                        "ProlificNosestone_EN",
+                        "Romantic_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHisImage_Easy_EnemyBundle"))._enemyBundles = hisImageEasy;
 
             List<RandomEnemyGroup> gigglingMinisterEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Easy_EnemyBundle"))._enemyBundles)
@@ -154,13 +139,6 @@ namespace Hell_Island_Fell.Encounters
             [
                 "Maneater_EN",
                 "GigglingMinister_EN",
-            ]),
-                new(
-            [
-                "Maneater_EN",
-                "GigglingMinister_EN",
-                "NextOfKin_EN",
-                "NextOfKin_EN",
             ]),
                 new(
             [
@@ -212,6 +190,15 @@ namespace Hell_Island_Fell.Encounters
                         "Vagabond_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                gigglingMinisterEasy.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "StickingHomunculus_EN",
+                        "Git_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Easy_EnemyBundle"))._enemyBundles = gigglingMinisterEasy;
 
             List<RandomEnemyGroup> choirBoyEasy = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_ChoirBoy_Easy_EnemyBundle"))._enemyBundles)
@@ -226,12 +213,6 @@ namespace Hell_Island_Fell.Encounters
                 new(
             [
                 "ProlificNosestone_EN",
-                "ChoirBoy_EN",
-                "ChoirBoy_EN",
-            ]),
-                new(
-            [
-                "Maneater_EN",
                 "ChoirBoy_EN",
                 "ChoirBoy_EN",
             ]),
@@ -286,28 +267,19 @@ namespace Hell_Island_Fell.Encounters
                         "FrowningChancellor_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                choirBoyEasy.Add(new(
+                    [
+                        "ChoirBoy_EN",
+                        "ProlificNosestone_EN",
+                        "Git_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_ChoirBoy_Easy_EnemyBundle"))._enemyBundles = choirBoyEasy;
 
             List<RandomEnemyGroup> skinningHomunculusMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_SkinningHomunculus_Medium_EnemyBundle"))._enemyBundles)
             {
-                new(
-            [
-                "Maneater_EN",
-                "SkinningHomunculus_EN",
-            ]),
-                new(
-            [
-                "Maneater_EN",
-                "SkinningHomunculus_EN",
-                "ChoirBoy_EN",
-            ]),
-                new(
-            [
-                "Maneater_EN",
-                "SkinningHomunculus_EN",
-                "NextOfKin_EN",
-                "NextOfKin_EN",
-            ]),
                 new(
             [
                 "Maneater_EN",
@@ -388,6 +360,27 @@ namespace Hell_Island_Fell.Encounters
                         "SkinningHomunculus_EN",
                         "Maneater_EN",
                         "FrowningChancellor_EN"
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                skinningHomunculusMedium.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "Maneater_EN",
+                        "Surrogate_EN"
+                    ]));
+                skinningHomunculusMedium.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "Surrogate_EN"
+                    ]));
+                skinningHomunculusMedium.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "ProlificNosestone_EN",
+                        "Attrition_EN"
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_SkinningHomunculus_Medium_EnemyBundle"))._enemyBundles = skinningHomunculusMedium;
@@ -599,6 +592,23 @@ namespace Hell_Island_Fell.Encounters
                         "Vagabond_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                hisImageMedium.Add(new(
+                    [
+                        "InHisImage_EN",
+                        "InHisImage_EN",
+                        "Maneater_EN",
+                        "Git_EN",
+                    ]));
+                hisImageMedium.Add(new(
+                    [
+                        "InHisImage_EN",
+                        "InHerImage_EN",
+                        "Maneater_EN",
+                        "Attrition_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHisImage_Medium_EnemyBundle"))._enemyBundles = hisImageMedium;
 
             List<RandomEnemyGroup> herImageMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHerImage_Medium_EnemyBundle"))._enemyBundles)
@@ -703,6 +713,23 @@ namespace Hell_Island_Fell.Encounters
                         "FrowningChancellor_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                herImageMedium.Add(new(
+                    [
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "ScatterbrainedNosestone_EN",
+                        "Surrogate_EN",
+                    ]));
+                herImageMedium.Add(new(
+                    [
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "ScatterbrainedNosestone_EN",
+                        "Git_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_InHerImage_Medium_EnemyBundle"))._enemyBundles = herImageMedium;
 
             List<RandomEnemyGroup> gigglingMinisterMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Medium_EnemyBundle"))._enemyBundles)
@@ -780,6 +807,30 @@ namespace Hell_Island_Fell.Encounters
                         "MesmerizingNosestone_EN",
                         "Vagabond_EN",
                         "NextOfKin_EN",
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                gigglingMinisterMedium.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "MesmerizingNosestone_EN",
+                        "Git_EN",
+                        "Git_EN",
+                    ]));
+                gigglingMinisterMedium.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "MesmerizingNosestone_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
+                    ]));
+                gigglingMinisterMedium.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "MesmerizingNosestone_EN",
+                        "Surrogate_EN",
+                        "Surrogate_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Medium_EnemyBundle"))._enemyBundles = gigglingMinisterMedium;
@@ -1021,6 +1072,38 @@ namespace Hell_Island_Fell.Encounters
                         "FrowningChancellor_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                skinningHomunculusHard.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "SkinningHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "Romantic_EN",
+                    ]));
+                skinningHomunculusHard.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "Attrition_EN",
+                    ]));
+                skinningHomunculusHard.Add(new(
+                    [
+                        "SkinningHomunculus_EN",
+                        "StickingHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "Surrogate_EN",
+                    ]));
+                skinningHomunculusHard.Add(new(
+                    [
+                        "Attrition_EN",
+                        "Attrition_EN",
+                        "SkinningHomunculus_EN",
+                        "StickingHomunculus_EN",
+                    ]));
+
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_SkinningHomunculus_Hard_EnemyBundle"))._enemyBundles = skinningHomunculusHard;
 
             List<RandomEnemyGroup> gigglingMinisterHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Hard_EnemyBundle"))._enemyBundles)
@@ -1162,6 +1245,24 @@ namespace Hell_Island_Fell.Encounters
                         "GigglingMinister_EN",
                         "StickingHomunculus_EN",
                         "Vagabond_EN",
+                    ]));
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                gigglingMinisterHard.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "MesmerizingNosestone_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
+                    ]));
+                gigglingMinisterHard.Add(new(
+                    [
+                        "GigglingMinister_EN",
+                        "MesmerizingNosestone_EN",
+                        "Attrition_EN",
+                        "Attrition_EN",
                     ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone03_GigglingMinister_Hard_EnemyBundle"))._enemyBundles = gigglingMinisterHard;

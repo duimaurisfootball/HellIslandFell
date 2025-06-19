@@ -144,7 +144,7 @@ namespace Hell_Island_Fell.Enemies
                 Rarity = CustomAbilityRarity.Weight(1, true),
                 Priority = LoadedAssetsHandler.GetEnemyAbility("MakeAnExample_A").priority,
             };
-            makeAnExample.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_21)]);
+            makeAnExample.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Damage_21)]);
 
             inequity.AddEnemyAbilities(
                 [

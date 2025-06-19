@@ -84,6 +84,25 @@ namespace Hell_Island_Fell.Encounters
                         "FrowningChancellor_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                ManeaterEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Git_EN",
+                    ], null);
+                ManeaterEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Attrition_EN",
+                    ], null);
+                ManeaterEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "InHerImage_EN",
+                        "Romantic_EN",
+                    ], null);
+            }
             ManeaterEasy.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_Maneater_Easy_EnemyBundle", 5, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -119,12 +138,6 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "Maneater_EN",
                     "ChoirBoy_EN",
-                    "ChoirBoy_EN",
-                ], null);
-            ManeaterMedium.CreateNewEnemyEncounterData(
-                [
-                    "Maneater_EN",
-                    "Maneater_EN",
                     "ChoirBoy_EN",
                 ], null);
             ManeaterMedium.CreateNewEnemyEncounterData(
@@ -229,6 +242,21 @@ namespace Hell_Island_Fell.Encounters
                         "StickingHomunculus_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                ManeaterMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "StickingHomunculus_EN",
+                        "Git_EN",
+                    ], null);
+                ManeaterMedium.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Surrogate_EN",
+                        "Surrogate_EN",
+                    ], null);
+            }
             ManeaterMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_Maneater_Medium_EnemyBundle", 4, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -306,13 +334,6 @@ namespace Hell_Island_Fell.Encounters
                         "ScreamingHomunculus_EN",
                         "ScreamingHomunculus_EN",
                     ], null);
-                ManeaterHard.CreateNewEnemyEncounterData(
-                    [
-                        "Maneater_EN",
-                        "StickingHomunculus_EN",
-                        "StickingHomunculus_EN",
-                        "ScreamingHomunculus_EN",
-                    ], null);
             }
             if (Hell_Island_Fell.CrossMod.EggKeeper)
             {
@@ -369,6 +390,28 @@ namespace Hell_Island_Fell.Encounters
                         "Maneater_EN",
                         "Maneater_EN",
                         "Vagabond_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Maneater_EN",
+                        "Attrition_EN",
+                    ], null);
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "Attrition_EN",
+                        "Attrition_EN",
+                        "Attrition_EN",
+                    ], null);
+                ManeaterHard.CreateNewEnemyEncounterData(
+                    [
+                        "Maneater_EN",
+                        "SkinningHomunculus_EN",
+                        "Git_EN",
                     ], null);
             }
             ManeaterHard.AddEncounterToDataBases();

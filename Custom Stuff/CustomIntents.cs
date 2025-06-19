@@ -4,10 +4,12 @@
     {
         public static void Add()
         {
+            LoadedDBsHandler.IntentDB.m_IntentDamagePool.TryGetValue("Damage_1_2", out IntentInfoDamage intentInfoDamage);
+
             IntentInfoDamage Damage_Unbounded = new()
             {
-                _color = Color.magenta,
-                _enemyColor = Color.red,
+                _color = intentInfoDamage._color,
+                _enemyColor = intentInfoDamage._enemyColor,
                 _sprite = ResourceLoader.LoadSprite("IntentUnboundDamage"),
                 _enemySprite = ResourceLoader.LoadSprite("IntentUnboundDamage"),
             };
@@ -34,26 +36,54 @@
             };
             LoadedDBsHandler.IntentDB.AddNewBasicIntent("Modify_Cost", CostModifyIntent);
 
+            IntentInfoBasic AltAttacksIntent = new()
+            {
+                _color = Color.white,
+                _sprite = ResourceLoader.LoadSprite("PassiveAltAttacks"),
+            };
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_AltAttacks", AltAttacksIntent);
+
+            IntentInfoBasic RemAltAttacksIntent = new()
+            {
+                _color = Color.grey,
+                _sprite = ResourceLoader.LoadSprite("PassiveAltAttacks"),
+            };
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_AltAttacks", RemAltAttacksIntent);
+
+            IntentInfoBasic InterpolatedIntent = new()
+            {
+                _color = Color.white,
+                _sprite = ResourceLoader.LoadSprite("ExambryInterpolated"),
+            };
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Interpolated", InterpolatedIntent);
+
+            IntentInfoBasic RemInterpolatedIntent = new()
+            {
+                _color = Color.grey,
+                _sprite = ResourceLoader.LoadSprite("ExambryInterpolated"),
+            };
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Interpolated", RemInterpolatedIntent);
+
+            IntentInfoBasic WartsIntent = new()
+            {
+                _color = Color.white,
+                _sprite = ResourceLoader.LoadSprite("PassiveWarts"),
+            };
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Warts", WartsIntent);
+
+            IntentInfoBasic RemWartsIntent = new()
+            {
+                _color = Color.grey,
+                _sprite = ResourceLoader.LoadSprite("PassiveWarts"),
+            };
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Warts", RemWartsIntent);
+
             IntentInfoBasic ObscureIntent = new()
             {
                 _color = Color.white,
                 _sprite = Passives.Obscure.passiveIcon,
             };
             LoadedDBsHandler.IntentDB.AddNewBasicIntent("Passive_Obscure", ObscureIntent);
-
-            IntentInfoBasic RemAnchoredIntent = new()
-            {
-                _color = Color.grey,
-                _sprite = Passives.Anchored.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Anchored", RemAnchoredIntent);
-
-            IntentInfoBasic RemInfantileIntent = new()
-            {
-                _color = Color.grey,
-                _sprite = Passives.Infantile.passiveIcon,
-            };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Infantile", RemInfantileIntent);
 
             IntentInfoBasic RemObscureIntent = new()
             {
@@ -62,26 +92,33 @@
             };
             LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Obscure", RemObscureIntent);
 
-            IntentInfoBasic RemImmortalIntent = new()
+            IntentInfoBasic RemFormlessIntent = new()
             {
                 _color = Color.grey,
-                _sprite = Passives.Immortal.passiveIcon,
+                _sprite = Passives.Formless.passiveIcon,
             };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Immortal", RemImmortalIntent);
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Formless", RemFormlessIntent);
 
-            IntentInfoBasic RemCatalystIntent = new()
+            IntentInfoBasic RemForgetfulIntent = new()
             {
                 _color = Color.grey,
-                _sprite = Passives.Catalyst.passiveIcon,
+                _sprite = Passives.Forgetful.passiveIcon,
             };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Catalyst", RemCatalystIntent);
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Forgetful", RemForgetfulIntent);
 
-            IntentInfoBasic RemLeakyIntent = new()
+            IntentInfoBasic RemAnchoredIntent = new()
             {
                 _color = Color.grey,
-                _sprite = Passives.Leaky1.passiveIcon,
+                _sprite = Passives.Anchored.passiveIcon,
             };
-            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Leaky", RemLeakyIntent);
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Anchored", RemAnchoredIntent);
+
+            IntentInfoBasic RemSlipperyIntent = new()
+            {
+                _color = Color.grey,
+                _sprite = Passives.Slippery.passiveIcon,
+            };
+            LoadedDBsHandler.IntentDB.AddNewBasicIntent("Rem_Passive_Slippery", RemSlipperyIntent);
         }
     }
 }

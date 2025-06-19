@@ -11,7 +11,7 @@ namespace Hell_Island_Fell.Encounters
             Portals.AddPortalSign("Draugr_Sign", ResourceLoader.LoadSprite("TimelineDraugr", new Vector2(0.5f, 0f), 32), Portals.EnemyIDColor);
             EnemyEncounter_API draugrEasy = new EnemyEncounter_API(0, "H_Zone01_Draugr_Easy_EnemyBundle", "Draugr_Sign")
             {
-                MusicEvent = "event:/Music/Mx_Spoggle",
+                MusicEvent = "event:/Uncrustworthy",
                 RoarEvent = "event:/Characters/Player/LongLiver/CHR_PLR_LongLiver_Dx",
             };
             draugrEasy.CreateNewEnemyEncounterData(
@@ -126,6 +126,27 @@ namespace Hell_Island_Fell.Encounters
                         "Draugr_EN",
                         "DryBait_EN",
                         "UnculturedSwine_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                draugrEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Draugr_EN",
+                        "Draugr_EN",
+                        "Snaurce_EN",
+                    ], null);
+                draugrEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Draugr_EN",
+                        "Surimi_EN",
+                        "Surimi_EN",
+                    ], null);
+                draugrEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Draugr_EN",
+                        "MudLung_EN",
+                        "Snaurce_EN",
                     ], null);
             }
             draugrEasy.AddEncounterToDataBases();

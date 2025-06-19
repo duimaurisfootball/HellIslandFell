@@ -133,6 +133,27 @@ namespace Hell_Island_Fell.Encounters
                         "MarbleMaw_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "Attrition_EN",
+                    ], null);
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Surrogate_EN",
+                        "Surrogate_EN",
+                    ], null);
+                prolificMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
+                    ], null);
+            }
             prolificMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_ProlificNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -336,6 +357,36 @@ namespace Hell_Island_Fell.Encounters
                         "ProlificNosestone_EN",
                         "SkinningHomunculus_EN",
                         "Vagabond_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "Git_EN",
+                        "Git_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "Attrition_EN",
+                        "Attrition_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "ProlificNosestone_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
+                    ], null);
+                prolificHard.CreateNewEnemyEncounterData(
+                    [
+                        "ProlificNosestone_EN",
+                        "Surrogate_EN",
+                        "Maneater_EN",
                     ], null);
             }
             prolificHard.AddEncounterToDataBases();

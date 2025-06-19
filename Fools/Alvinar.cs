@@ -18,7 +18,7 @@ namespace Hell_Island_Fell.Fools
             SaltedApply._Status = Salted;
 
             //prepare
-            Ability prepare = new Ability("Prepare", "Prepare_A")
+            Ability prepare = new Ability("Prepare", "HIF_Prepare_A")
             {
                 Description = "Deal 1 damage to the Opposing enemy.\nApply 2 Salted to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarPrepare"),
@@ -46,6 +46,10 @@ namespace Hell_Island_Fell.Fools
                 DeathSound = LoadedAssetsHandler.GetCharacter("Boyle_CH").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetCharacter("Boyle_CH").dxSound,
                 BasicAbility = prepare,
+                UnitTypes =
+                [
+                    "Sandwich_Silly"
+                ],
             };
             alvinar.GenerateMenuCharacter(ResourceLoader.LoadSprite("AlvinarMenu"), ResourceLoader.LoadSprite("AlvinarLocked"));
             alvinar.AddPassives([Passives.GetCustomPassive("Connoisseur_PA")]);
@@ -66,7 +70,7 @@ namespace Hell_Island_Fell.Fools
             OilSlickedApply._Status = StatusField.OilSlicked;
 
             //frenzied
-            Ability frenzied0 = new Ability("Frenzied Chewing", "Frenzied_1_A")
+            Ability frenzied0 = new Ability("Frenzied Chewing", "HIF_Frenzied_1_A")
             {
                 Description = "Deal 3 damage to the Opposing enemy twice.\nApply 1 Frail to the Opposing enemy.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarFrenzy"),
@@ -84,7 +88,7 @@ namespace Hell_Island_Fell.Fools
             frenzied0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
             frenzied0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
 
-            Ability frenzied1 = new Ability("Frenzied Gnawing", "Frenzied_2_A")
+            Ability frenzied1 = new Ability("Frenzied Gnawing", "HIF_Frenzied_2_A")
             {
                 Description = "Deal 5 damage to the Opposing enemy twice.\nApply 1 Frail to the Opposing enemy.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarFrenzy"),
@@ -102,7 +106,7 @@ namespace Hell_Island_Fell.Fools
             frenzied1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
             frenzied1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
 
-            Ability frenzied2 = new Ability("Frenzied Wounding", "Frenzied_3_A")
+            Ability frenzied2 = new Ability("Frenzied Wounding", "HIF_Frenzied_3_A")
             {
                 Description = "Deal 6 damage to the Opposing enemy twice.\nApply 1 Frail to the Opposing enemy.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarFrenzy"),
@@ -120,7 +124,7 @@ namespace Hell_Island_Fell.Fools
             frenzied2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
             frenzied2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
 
-            Ability frenzied3 = new Ability("Frenzied Mastication", "Frenzied_4_A")
+            Ability frenzied3 = new Ability("Frenzied Mastication", "HIF_Frenzied_4_A")
             {
                 Description = "Deal 7 damage to the Opposing enemy twice.\nApply 1 Frail to the Opposing enemy.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarFrenzy"),
@@ -140,7 +144,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //feast
-            Ability feast0 = new Ability("Small Feast", "aFeast_1_A")
+            Ability feast0 = new Ability("Small Feast", "HIF_Feast_1_A")
             {
                 Description = "Deal 4 damage to the Left and Right enemies.\nApply 3 Oil Slicked to the Left and Right enemies.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarFeast"),
@@ -156,7 +160,7 @@ namespace Hell_Island_Fell.Fools
             feast0.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_3_6)]);
             feast0.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Status_OilSlicked)]);
 
-            Ability feast1 = new Ability("Hearty Feast", "aFeast_2_A")
+            Ability feast1 = new Ability("Hearty Feast", "HIF_Feast_2_A")
             {
                 Description = "Deal 6 damage to the Left and Right enemies.\nApply 3 Oil Slicked to the Left and Right enemies.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarFeast"),
@@ -172,7 +176,7 @@ namespace Hell_Island_Fell.Fools
             feast1.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_3_6)]);
             feast1.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Status_OilSlicked)]);
 
-            Ability feast2 = new Ability("Stuffing Feast", "aFeast_3_A")
+            Ability feast2 = new Ability("Stuffing Feast", "HIF_Feast_3_A")
             {
                 Description = "Deal 8 damage to the Left and Right enemies.\nApply 3 Oil Slicked to the Left and Right enemies.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarFeast"),
@@ -188,7 +192,7 @@ namespace Hell_Island_Fell.Fools
             feast2.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_7_10)]);
             feast2.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Status_OilSlicked)]);
 
-            Ability feast3 = new Ability("Family Feast", "aFeast_4_A")
+            Ability feast3 = new Ability("Family Feast", "HIF_Feast_4_A")
             {
                 Description = "Deal 9 damage to the Left and Right enemies.\nApply 3 Oil Slicked to the Left and Right enemies.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarFeast"),
@@ -206,7 +210,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //breaker
-            Ability breaker0 = new Ability("Face Breaker", "Breaker_1_A")
+            Ability breaker0 = new Ability("Face Breaker", "HIF_Breaker_1_A")
             {
                 Description = "Deal 5 damage to the Opposing enemy.\nApply 4 Ruptured to the Opposing enemy.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarBreaker"),
@@ -222,7 +226,7 @@ namespace Hell_Island_Fell.Fools
             breaker0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
             breaker0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
 
-            Ability breaker1 = new Ability("Skull Breaker", "Breaker_2_A")
+            Ability breaker1 = new Ability("Skull Breaker", "HIF_Breaker_2_A")
             {
                 Description = "Deal 7 damage to the Opposing enemy.\nApply 4 Ruptured to the Opposing enemy.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarBreaker"),
@@ -238,7 +242,7 @@ namespace Hell_Island_Fell.Fools
             breaker1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             breaker1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
 
-            Ability breaker2 = new Ability("Chest Breaker", "Breaker_3_A")
+            Ability breaker2 = new Ability("Chest Breaker", "HIF_Breaker_3_A")
             {
                 Description = "Deal 9 damage to the Opposing enemy.\nApply 4 Ruptured to the Opposing enemy.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarBreaker"),
@@ -254,7 +258,7 @@ namespace Hell_Island_Fell.Fools
             breaker2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             breaker2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
             
-            Ability breaker3 = new Ability("Body Breaker", "Breaker_4_A")
+            Ability breaker3 = new Ability("Body Breaker", "HIF_Breaker_4_A")
             {
                 Description = "Deal 11 damage to the Opposing enemy.\nApply 4 Ruptured to the Opposing enemy.\nThis ability is blocked by shield.",
                 AbilitySprite = ResourceLoader.LoadSprite("AlvinarBreaker"),

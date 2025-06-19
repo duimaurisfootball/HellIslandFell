@@ -12,7 +12,7 @@ namespace Hell_Island_Fell.Fools
             StatusEffect_Apply_Effect DivineApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             DivineApply._Status = StatusField.DivineProtection;
 
-            Ability contrition = new Ability("Contrition", "Contrition_A")
+            Ability contrition = new Ability("Contrition", "HIF_Contrition_A")
             {
                 Description = "Deal 1 damage to the Opposing enemy.\nApply 2 Divine Protection to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaContrition"),
@@ -43,6 +43,7 @@ namespace Hell_Island_Fell.Fools
                 UnitTypes =
                 [
                     "FemaleID",
+                    "Sandwich_Spirit",
                 ],
             };
             naba.GenerateMenuCharacter(ResourceLoader.LoadSprite("NabaMenu"), ResourceLoader.LoadSprite("NabaLocked"));
@@ -53,7 +54,7 @@ namespace Hell_Island_Fell.Fools
             FocusedApply._Status = StatusField.Focused;
 
             //crown
-            Ability crown0 = new Ability("Crown of Pins", "Crown_1_A")
+            Ability crown0 = new Ability("Crown of Pins", "HIF_Crown_1_A")
             {
                 Description = "Heal 10 health split randomly between all party members.\nDeal 8 damage split randomly between the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaCrown"),
@@ -69,7 +70,7 @@ namespace Hell_Island_Fell.Fools
             crown0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_11_20)]);
             crown0.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
-            Ability crown1 = new Ability("Crown of Stakes", "Crown_2_A")
+            Ability crown1 = new Ability("Crown of Stakes", "HIF_Crown_2_A")
             {
                 Description = "Heal 15 health split randomly between all party members.\nDeal 8 damage split randomly between the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaCrown"),
@@ -85,7 +86,7 @@ namespace Hell_Island_Fell.Fools
             crown1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_11_20)]);
             crown1.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
-            Ability crown2 = new Ability("Crown of Thorns", "Crown_3_A")
+            Ability crown2 = new Ability("Crown of Thorns", "HIF_Crown_3_A")
             {
                 Description = "Heal 20 health split randomly between all party members.\nDeal 8 damage split randomly between the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaCrown"),
@@ -101,7 +102,7 @@ namespace Hell_Island_Fell.Fools
             crown2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_11_20)]);
             crown2.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
-            Ability crown3 = new Ability("Crown of Crowns", "Crown_4_A")
+            Ability crown3 = new Ability("Crown of Crowns", "HIF_Crown_4_A")
             {
                 Description = "Heal 30 health split randomly between all party members.\nDeal 8 damage split randomly between the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaCrown"),
@@ -118,7 +119,7 @@ namespace Hell_Island_Fell.Fools
             crown3.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
             //revelation
-            Ability revelation0 = new Ability("A Revelation", "Revelation_1_A")
+            Ability revelation0 = new Ability("A Revelation", "HIF_Revelation_1_A")
             {
                 Description = "Deal 8 damage to the Right ally.\nHeal the Left ally 3 health.\nRefresh the Left and Right allies and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaRevelation"),
@@ -137,7 +138,7 @@ namespace Hell_Island_Fell.Fools
             revelation0.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
             revelation0.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability revelation1 = new Ability("The Revelation", "Revelation_2_A")
+            Ability revelation1 = new Ability("The Revelation", "HIF_Revelation_2_A")
             {
                 Description = "Deal 7 damage to the Right ally.\nHeal the Left ally 3 health.\nRefresh the Left and Right allies and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaRevelation"),
@@ -156,7 +157,7 @@ namespace Hell_Island_Fell.Fools
             revelation1.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
             revelation1.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability revelation2 = new Ability("And Revelation", "Revelation_3_A")
+            Ability revelation2 = new Ability("And Revelation", "HIF_Revelation_3_A")
             {
                 Description = "Deal 6 damage to the Right ally.\nHeal the Left ally 3 health.\nRefresh the Left and Right allies and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaRevelation"),
@@ -175,7 +176,7 @@ namespace Hell_Island_Fell.Fools
             revelation2.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
             revelation2.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability revelation3 = new Ability("Revelations", "Revelation_4_A")
+            Ability revelation3 = new Ability("Revelations", "HIF_Revelation_4_A")
             {
                 Description = "Deal 5 damage to the Right ally.\nHeal the Left ally 3 health.\nRefresh the Left and Right allies and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaRevelation"),
@@ -195,7 +196,7 @@ namespace Hell_Island_Fell.Fools
             revelation3.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
             //two prayers
-            Ability twoPrayers0 = new Ability("Two Prayers for the Ill", "TwoPrayers_1_A")
+            Ability twoPrayers0 = new Ability("Two Prayers for the Ill", "HIF_TwoPrayers_1_A")
             {
                 Description = "Deal 8 damage to the Left ally.\nHeal the Right ally 3 health.\nApply Focused to the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaTwoPrayers"),
@@ -213,7 +214,7 @@ namespace Hell_Island_Fell.Fools
             twoPrayers0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             twoPrayers0.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_Focused)]);
 
-            Ability twoPrayers1 = new Ability("Two Prayers for the Poor", "TwoPrayers_2_A")
+            Ability twoPrayers1 = new Ability("Two Prayers for the Poor", "HIF_TwoPrayers_2_A")
             {
                 Description = "Deal 7 damage to the Left ally.\nHeal the Right ally 3 health.\nApply Focused to the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaTwoPrayers"),
@@ -231,7 +232,7 @@ namespace Hell_Island_Fell.Fools
             twoPrayers1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             twoPrayers1.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_Focused)]);
 
-            Ability twoPrayers2 = new Ability("Two Prayers for the Wicked", "TwoPrayers_3_A")
+            Ability twoPrayers2 = new Ability("Two Prayers for the Wicked", "HIF_TwoPrayers_3_A")
             {
                 Description = "Deal 6 damage to the Left ally.\nHeal the Right ally 3 health.\nApply Focused to the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaTwoPrayers"),
@@ -249,7 +250,7 @@ namespace Hell_Island_Fell.Fools
             twoPrayers2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             twoPrayers2.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_Focused)]);
 
-            Ability twoPrayers3 = new Ability("Two Prayers for the Wicked", "TwoPrayers_4_A")
+            Ability twoPrayers3 = new Ability("Two Prayers for the Wicked", "HIF_TwoPrayers_4_A")
             {
                 Description = "Deal 5 damage to the Left ally.\nHeal the Right ally 3 health.\nApply Focused to the Left and Right allies.",
                 AbilitySprite = ResourceLoader.LoadSprite("NabaTwoPrayers"),
@@ -268,10 +269,10 @@ namespace Hell_Island_Fell.Fools
             twoPrayers3.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_Focused)]);
 
 
-            naba.AddLevelData(19, [crown0, revelation0, twoPrayers0]);
-            naba.AddLevelData(21, [crown1, revelation1, twoPrayers1]);
-            naba.AddLevelData(25, [crown2, revelation2, twoPrayers2]);
-            naba.AddLevelData(27, [crown3, revelation3, twoPrayers3]);
+            naba.AddLevelData(19, [twoPrayers0, revelation0, crown0]);
+            naba.AddLevelData(21, [twoPrayers1, revelation1, crown1]);
+            naba.AddLevelData(25, [twoPrayers2, revelation2, crown2]);
+            naba.AddLevelData(27, [twoPrayers3, revelation3, crown3]);
 
             naba.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Naba_Witness_ACH");
             naba.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Naba_Divine_ACH");

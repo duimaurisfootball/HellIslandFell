@@ -40,10 +40,14 @@ namespace Hell_Island_Fell.Custom_Stuff
         private static void AnyoneMoved_PostNotification(IUnit unit, int oldsid)
         {
             foreach (var kvp in CombatManager.Instance._stats.EnemiesOnField)
+            {
                 CombatManager.Instance.PostNotification(ANYONE_MOVED, kvp.Value, new AnyoneMovedNotificationInfo(unit, oldsid));
+            }
 
             foreach (var kvp in CombatManager.Instance._stats.CharactersOnField)
+            {
                 CombatManager.Instance.PostNotification(ANYONE_MOVED, kvp.Value, new AnyoneMovedNotificationInfo(unit, oldsid));
+            }
         }
 
         private static MethodInfo am_pn = AccessTools.Method(typeof(AnyoneMovedPatch), nameof(AnyoneMoved_PostNotification));

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Hell_Island_Fell.Custom_Effects
@@ -12,17 +14,42 @@ namespace Hell_Island_Fell.Custom_Effects
             JumpAnimationInformation jumpInfo = stats.GenerateUnitJumpInformation(caster.ID, caster.IsUnitCharacter);
             string manaConsumedSound = stats.audioController.manaConsumedSound;
             ManaColorSO blood = Pigments.Grey;
-            List<ManaColorSO> bloods = [];
+            Dictionary<ManaColorSO, int> bloods = [];
             foreach (ManaBarSlot mana in stats.MainManaBar.ManaBarSlots)
             {
                 if (!mana.IsEmpty)
                 {
-                    bloods.Add(mana.ManaColor);
+                    if (!bloods.ContainsKey(mana.ManaColor))
+                    {
+                        bloods[mana.ManaColor] = 0;
+                    }
+                    else
+                    {
+                        bloods[mana.ManaColor]++;
+                    }
                 }
             }
-            if (bloods.Count > 0)
+
+            int num = 0;
+            List<ManaColorSO> bloodList = [];
+            foreach (KeyValuePair<ManaColorSO, int> kvp in bloods)
             {
-                blood = bloods.GroupBy(color => color).OrderByDescending(count => count.Count()).FirstOrDefault().Key;
+                if (kvp.Value == num)
+                {
+                    bloodList.Add(kvp.Key);
+                    num = kvp.Value;
+                }
+                if (kvp.Value > num)
+                {
+                    bloodList.Clear();
+                    bloodList.Add(kvp.Key);
+                    num = kvp.Value;
+                }
+            }
+
+            if (bloodList.Count > 0)
+            {
+                blood = bloodList[UnityEngine.Random.Range(0, bloodList.Count)];
             }
 
             exitAmount = stats.MainManaBar.ConsumeAllMana(jumpInfo, manaConsumedSound);
@@ -34,15 +61,9 @@ namespace Hell_Island_Fell.Custom_Effects
                     continue;
                 }
 
-                bool flag = false;
-                bool flag2 = false;
-                while (!flag2)
+                if (blood != targetSlotInfo.Unit.HealthColor)
                 {
-                    if (blood != targetSlotInfo.Unit.HealthColor)
-                    {
-                        flag = targetSlotInfo.Unit.ChangeHealthColor(blood);
-                        flag2 = true;
-                    }
+                    targetSlotInfo.Unit.ChangeHealthColor(blood);
                 }
             }
 

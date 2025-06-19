@@ -1,4 +1,5 @@
-﻿using Hell_Island_Fell.Custom_Stuff;
+﻿using BrutalAPI.Items;
+using Hell_Island_Fell.Custom_Stuff;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -43,6 +44,7 @@ namespace Hell_Island_Fell.Items
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(NextNemesis),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 1, Targeting.Slot_SelfSlot),
                 ],
                 EquippedModifiers =
                 [
@@ -50,6 +52,11 @@ namespace Hell_Island_Fell.Items
                     slippy,
                 ],
             };
+
+            myNemesis.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
 
             ItemUtils.JustAddItemSoItCanBeLoaded(myNemesis.item);
         }

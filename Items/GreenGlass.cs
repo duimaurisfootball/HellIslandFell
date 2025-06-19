@@ -36,6 +36,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            greenGlass.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(greenGlass.Item, new ItemModdedUnlockInfo("GreenGlass_SW", ResourceLoader.LoadSprite("UnlockOsmanStareyedLocked", null, 32, null), "HIF_Stareyed_Witness_ACH"));
         }
     }

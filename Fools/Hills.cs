@@ -22,6 +22,10 @@ namespace Hell_Island_Fell.Fools
                 DamageSound = LoadedAssetsHandler.GetEnemy("Visage_Siblings_EN").deathSound,
                 DeathSound = LoadedAssetsHandler.GetEnemy("Visage_Siblings_EN").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetEnemy("Visage_Siblings_EN").deathSound,
+                UnitTypes =
+                [
+                    "Sandwich_War",
+                ],
             };
             hills.GenerateMenuCharacter(ResourceLoader.LoadSprite("HillsMenu"), ResourceLoader.LoadSprite("HillsLocked"));
             hills.SetMenuCharacterAsFullDPS();
@@ -33,7 +37,7 @@ namespace Hell_Island_Fell.Fools
             maniaEffect._repeatChance = 80;
 
             //mania
-            Ability mania0 = new Ability("Rolling Mania", "Mania_1_A")
+            Ability mania0 = new Ability("Rolling Mania", "HIF_Mania_1_A")
             {
                 Description = "Deal 3 damage to the Opposing enemy.\nMove this party member to the Left or Right.\n80% chance to repeat this ability.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsMania"),
@@ -49,7 +53,7 @@ namespace Hell_Island_Fell.Fools
             mania0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Swap_Sides)]);
             mania0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability mania1 = new Ability("Twisting Mania", "Mania_2_A")
+            Ability mania1 = new Ability("Twisting Mania", "HIF_Mania_2_A")
             {
                 Description = "Deal 4 damage to the Opposing enemy.\nMove this party member to the Left or Right.\n80% chance to repeat this ability.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsMania"),
@@ -65,7 +69,7 @@ namespace Hell_Island_Fell.Fools
             mania1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Swap_Sides)]);
             mania1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability mania2 = new Ability("Spiraling Mania", "Mania_3_A")
+            Ability mania2 = new Ability("Spiraling Mania", "HIF_Mania_3_A")
             {
                 Description = "Deal 5 damage to the Opposing enemy.\nMove this party member to the Left or Right.\n80% chance to repeat this ability.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsMania"),
@@ -81,7 +85,7 @@ namespace Hell_Island_Fell.Fools
             mania2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Swap_Sides)]);
             mania2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability mania3 = new Ability("Endless Mania", "Mania_4_A")
+            Ability mania3 = new Ability("Endless Mania", "HIF_Mania_4_A")
             {
                 Description = "Deal 6 damage to the Opposing enemy.\nMove this party member to the Left or Right.\n80% chance to repeat this ability.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsMania"),
@@ -99,7 +103,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //bellow
-            Ability bellow0 = new Ability("Clay Bellow", "Bellow_1_A")
+            Ability bellow0 = new Ability("Clay Bellow", "HIF_Bellow_1_A")
             {
                 Description = "Deal 2 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
@@ -117,7 +121,7 @@ namespace Hell_Island_Fell.Fools
             bellow0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
             bellow0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability bellow1 = new Ability("Painted Bellow", "Bellow_2_A")
+            Ability bellow1 = new Ability("Painted Bellow", "HIF_Bellow_2_A")
             {
                 Description = "Deal 4 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
@@ -135,7 +139,7 @@ namespace Hell_Island_Fell.Fools
             bellow1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
             bellow1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability bellow2 = new Ability("Ancient Bellow", "Bellow_3_A")
+            Ability bellow2 = new Ability("Ancient Bellow", "HIF_Bellow_3_A")
             {
                 Description = "Deal 5 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
@@ -153,7 +157,7 @@ namespace Hell_Island_Fell.Fools
             bellow2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
             bellow2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability bellow3 = new Ability("Cursed Bellow", "Bellow_4_A")
+            Ability bellow3 = new Ability("Cursed Bellow", "HIF_Bellow_4_A")
             {
                 Description = "Deal 6 indirect damage to the Left, Right, and Opposing enemies.\nDeal 3 damage to this party member.\nRefresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsBellow"),
@@ -173,7 +177,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //a shatter
-            Ability shatter0 = new Ability("A Stupid Shatter", "AShatter_1_A")
+            Ability shatter0 = new Ability("A Stupid Shatter", "HIF_AShatter_1_A")
             {
                 Description = "Deal 1-10 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsShatter"),
@@ -189,7 +193,7 @@ namespace Hell_Island_Fell.Fools
             shatter0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             shatter0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability shatter1 = new Ability("A Loud Shatter", "AShatter_2_A")
+            Ability shatter1 = new Ability("A Loud Shatter", "HIF_AShatter_2_A")
             {
                 Description = "Deal 3-12 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsShatter"),
@@ -205,7 +209,7 @@ namespace Hell_Island_Fell.Fools
             shatter1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
             shatter1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability shatter2 = new Ability("A Resounding Shatter", "AShatter_3_A")
+            Ability shatter2 = new Ability("A Resounding Shatter", "HIF_AShatter_3_A")
             {
                 Description = "Deal 5-14 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsShatter"),
@@ -221,7 +225,7 @@ namespace Hell_Island_Fell.Fools
             shatter2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
             shatter2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
             
-            Ability shatter3 = new Ability("A Thunderous Shatter", "AShatter_4_A")
+            Ability shatter3 = new Ability("A Thunderous Shatter", "HIF_AShatter_4_A")
             {
                 Description = "Deal 7-16 damage to the Opposing enemy.\nIf this attack hits shield, repeat it.",
                 AbilitySprite = ResourceLoader.LoadSprite("HillsShatter"),
@@ -237,10 +241,10 @@ namespace Hell_Island_Fell.Fools
             shatter3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_16_20)]);
             shatter3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            hills.AddLevelData(12, new Ability[] { mania0, bellow0, shatter0 });
-            hills.AddLevelData(17, new Ability[] { mania1, bellow1, shatter1 });
-            hills.AddLevelData(22, new Ability[] { mania2, bellow2, shatter2 });
-            hills.AddLevelData(27, new Ability[] { mania3, bellow3, shatter3 });
+            hills.AddLevelData(12, [bellow0, mania0, shatter0]);
+            hills.AddLevelData(17, [bellow1, mania1, shatter1]);
+            hills.AddLevelData(22, [bellow2, mania2, shatter2]);
+            hills.AddLevelData(27, [bellow3, mania3, shatter3]);
 
             hills.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Hills_Witness_ACH");
             hills.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Hills_Divine_ACH");

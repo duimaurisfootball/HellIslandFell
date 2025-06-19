@@ -22,8 +22,8 @@ namespace Hell_Island_Fell.Fools
                 DamageSound = LoadedAssetsHandler.GetCharacter("MiniMordrake_CH").damageSound,
                 DeathSound = LoadedAssetsHandler.GetCharacter("MiniMordrake_CH").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetCharacter("Mordrake_CH").dxSound,
-                IgnoredAbilitiesForDPSBuilds = [2],
-                IgnoredAbilitiesForSupportBuilds = [0],
+                IgnoredAbilitiesForDPSBuilds = [0],
+                IgnoredAbilitiesForSupportBuilds = [1],
                 UnitTypes =
                 [
                     "HellishID",
@@ -60,7 +60,7 @@ namespace Hell_Island_Fell.Fools
             PreviousDamage3._baseDamage = 8;
 
             //melter
-            Ability melter0 = new Ability("Hand Melter", "Melter_1_A")
+            Ability melter0 = new Ability("Hand Melter", "HIF_Melter_1_A")
             {
                 Description = "Apply 18 Disappearing to the Opposing enemy.\nApply 1 Shield to this position.\nApply 2 Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryMelter"),
@@ -78,7 +78,7 @@ namespace Hell_Island_Fell.Fools
             melter0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Shield)]);
             melter0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
-            Ability melter1 = new Ability("Heart Melter", "Melter_2_A")
+            Ability melter1 = new Ability("Heart Melter", "HIF_Melter_2_A")
             {
                 Description = "Apply 22 Disappearing to the Opposing enemy.\nApply 2 Shield to this position.\nApply 2 Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryMelter"),
@@ -96,7 +96,7 @@ namespace Hell_Island_Fell.Fools
             melter1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Shield)]);
             melter1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
-            Ability melter2 = new Ability("Mind Melter", "Melter_3_A")
+            Ability melter2 = new Ability("Mind Melter", "HIF_Melter_3_A")
             {
                 Description = "Apply 26 Disappearing to the Opposing enemy.\nApply 2 Shield to this position.\nApply 2 Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryMelter"),
@@ -114,7 +114,7 @@ namespace Hell_Island_Fell.Fools
             melter2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Field_Shield)]);
             melter2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Status_Frail)]);
 
-            Ability melter3 = new Ability("Life Melter", "Melter_4_A")
+            Ability melter3 = new Ability("Life Melter", "HIF_Melter_4_A")
             {
                 Description = "Apply 30 Disappearing to the Opposing enemy.\nApply 3 Shield to this position.\nApply 2 Frail to this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryMelter"),
@@ -134,7 +134,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //resolution
-            Ability resolution0 = new Ability("Minimum Resolution", "Resolution_1_A")
+            Ability resolution0 = new Ability("Minimum Resolution", "HIF_Resolution_1_A")
             {
                 Description = "Remove 1/2 of Disappearing from this party member.\nDeal an equivalent amount of damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryResolution"),
@@ -150,7 +150,7 @@ namespace Hell_Island_Fell.Fools
             resolution0.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Rem_Status_Disappearing"]);
             resolution0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_1_2)]);
 
-            Ability resolution1 = new Ability("Average Resolution", "Resolution_2_A")
+            Ability resolution1 = new Ability("Average Resolution", "HIF_Resolution_2_A")
             {
                 Description = "Remove 1/2 of Disappearing from this party member.\nDeal an equivalent amount of damage + 3 to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryResolution"),
@@ -166,7 +166,7 @@ namespace Hell_Island_Fell.Fools
             resolution1.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Rem_Status_Disappearing"]);
             resolution1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
 
-            Ability resolution2 = new Ability("Superb Resolution", "Resolution_3_A")
+            Ability resolution2 = new Ability("Superb Resolution", "HIF_Resolution_3_A")
             {
                 Description = "Remove 1/2 of Disappearing from this party member.\nDeal an equivalent amount of damage + 6 to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryResolution"),
@@ -182,7 +182,7 @@ namespace Hell_Island_Fell.Fools
             resolution2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Rem_Status_Disappearing"]);
             resolution2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
 
-            Ability resolution3 = new Ability("Immaculate Resolution", "Resolution_4_A")
+            Ability resolution3 = new Ability("Immaculate Resolution", "HIF_Resolution_4_A")
             {
                 Description = "Remove 1/2 of Disappearing from this party member.\nDeal an equivalent amount of damage + 8 to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryResolution"),
@@ -200,7 +200,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //material
-            Ability material0 = new Ability("Dusty Material", "Material_1_A")
+            Ability material0 = new Ability("Dusty Material", "HIF_Material_1_A")
             {
                 Description = "Heal the Left and Far Left allies 4 health.\nApply 2 Disappearing to the Left and Far Left allies.\nHeal this party member 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryMaterial"),
@@ -217,7 +217,8 @@ namespace Hell_Island_Fell.Fools
             material0.AddIntentsToTarget(Targeting.GenerateSlotTarget([-1, -2], true), [nameof(IntentType_GameIDs.Heal_1_4)]);
             material0.AddIntentsToTarget(Targeting.GenerateSlotTarget([-1, -2], true), ["Status_Disappearing"]);
             material0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
-            Ability material1 = new Ability("Dusty Material", "Material_2_A")
+
+            Ability material1 = new Ability("Particulate Material", "HIF_Material_2_A")
             {
                 Description = "Heal the Left and Far Left allies 6 health.\nApply 2 Disappearing to the Left and Far Left allies.\nHeal this party member 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryMaterial"),
@@ -235,7 +236,7 @@ namespace Hell_Island_Fell.Fools
             material1.AddIntentsToTarget(Targeting.GenerateSlotTarget([-1, -2], true), ["Status_Disappearing"]);
             material1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability material2 = new Ability("Bony Material", "Material_3_A")
+            Ability material2 = new Ability("Bony Material", "HIF_Material_3_A")
             {
                 Description = "Heal the Left and Far Left allies 8 health.\nApply 3 Disappearing to the Left and Far Left allies.\nHeal this party member 3 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryMaterial"),
@@ -253,7 +254,7 @@ namespace Hell_Island_Fell.Fools
             material2.AddIntentsToTarget(Targeting.GenerateSlotTarget([-1, -2], true), ["Status_Disappearing"]);
             material2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability material3 = new Ability("Fleshy Material", "Material_4_A")
+            Ability material3 = new Ability("Fleshy Material", "HIF_Material_4_A")
             {
                 Description = "Heal the Left and Far Left allies 10 health.\nApply 3 Disappearing to the Left and Far Left allies.\nHeal this party member 3 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("ExambryMaterial"),
@@ -271,10 +272,10 @@ namespace Hell_Island_Fell.Fools
             material3.AddIntentsToTarget(Targeting.GenerateSlotTarget([-1, -2], true), ["Status_Disappearing"]);
             material3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            exambry.AddLevelData(22, new Ability[] { melter0, resolution0, material0 });
-            exambry.AddLevelData(23, new Ability[] { melter1, resolution1, material1 });
-            exambry.AddLevelData(25, new Ability[] { melter2, resolution2, material2 });
-            exambry.AddLevelData(28, new Ability[] { melter3, resolution3, material3 });
+            exambry.AddLevelData(22, [material0, melter0, resolution0]);
+            exambry.AddLevelData(23, [material1, melter1, resolution1]);
+            exambry.AddLevelData(25, [material2, melter2, resolution2]);
+            exambry.AddLevelData(28, [material3, melter3, resolution3]);
 
             exambry.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Exambry_Witness_ACH");
             exambry.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Exambry_Divine_ACH");

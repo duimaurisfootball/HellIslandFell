@@ -17,6 +17,7 @@ namespace Hell_Island_Fell.Items
             FireHead._selfCast = true;
             FireHead._ignoreShield = true;
             FireHead._direct = false;
+            FireHead._willApplyDamage = true;
             FireHead._damageType = CombatType_GameIDs.Dmg_Fire.ToString();
 
             UnitStoreData_ModIntSO severedHead = ScriptableObject.CreateInstance<UnitStoreData_ModIntSO>();
@@ -55,6 +56,11 @@ namespace Hell_Island_Fell.Items
                     Effects.GenerateEffect(HeadAdd, 1, Targeting.Slot_SelfSlot, HeadChance),
                 ],
             };
+
+            malebolgesSeveredHead.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Face.ToString(),
+                ];
 
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(malebolgesSeveredHead.Item, new ItemModdedUnlockInfo("MalebolgesSeveredHead_TW", ResourceLoader.LoadSprite("UnlockHeavenMalebolgeLocked", null, 32, null), "HIF_Malebolge_Divine_ACH"));
         }

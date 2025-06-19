@@ -32,7 +32,7 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(electrumOre.Item);
+            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(electrumOre.Item, new ItemModdedUnlockInfo(electrumOre.Item_ID, ResourceLoader.LoadSprite("TreasureElectrumOre")));
         }
     }
 }

@@ -57,7 +57,7 @@ namespace Hell_Island_Fell.Fools
             FocusedApply._Status = StatusField.Focused;
 
             //stance
-            Ability stance0 = new Ability("Worrying Stance", "HIFStance_1_A")
+            Ability stance0 = new Ability("Worrying Stance", "HIF_Stance_1_A")
             {
                 Description = "If the hammer is raised, lower it and apply Focused to this party member.\nIf the hammer is lowered, raise it and reroll one of the Opposing enemy's abilities.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickStance"),
@@ -80,7 +80,7 @@ namespace Hell_Island_Fell.Fools
             stance0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             stance0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability stance1 = new Ability("Threatening Stance", "HIFStance_2_A")
+            Ability stance1 = new Ability("Threatening Stance", "HIF_Stance_2_A")
             {
                 Description = "If the hammer is raised, lower it and apply Focused to this party member.\nIf the hammer is lowered, raise it and reroll one of the Opposing enemy's abilities.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickStance"),
@@ -103,7 +103,7 @@ namespace Hell_Island_Fell.Fools
             stance1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             stance1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability stance2 = new Ability("Frightening Stance", "HIFStance_3_A")
+            Ability stance2 = new Ability("Frightening Stance", "HIF_Stance_3_A")
             {
                 Description = "If the hammer is raised, lower it and apply Focused to this party member.\nIf the hammer is lowered, raise it and reroll one of the Opposing enemy's abilities.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickStance"),
@@ -126,7 +126,7 @@ namespace Hell_Island_Fell.Fools
             stance2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             stance2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability stance3 = new Ability("Intimidating Stance", "HIFStance_4_A")
+            Ability stance3 = new Ability("Intimidating Stance", "HIF_Stance_4_A")
             {
                 Description = "If the hammer is raised, lower it and apply Focused to this party member.\nIf the hammer is lowered, raise it and reroll one of the Opposing enemy's abilities.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickStance"),
@@ -150,7 +150,7 @@ namespace Hell_Island_Fell.Fools
             stance3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Misc)]);
 
             //flex
-            Ability flex0 = new Ability("Shaky Flex", "HIFFlex_1_A")
+            Ability flex0 = new Ability("Shaky Flex", "HIF_Flex_1_A")
             {
                 Description = "If the hammer is raised, lower it and deal 4 damage to the Opposing enemy.\nIf the hammer is lowered, raise it and heal this party member and the Left ally 5 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickFlex"),
@@ -173,7 +173,7 @@ namespace Hell_Island_Fell.Fools
             flex0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             flex0.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
-            Ability flex1 = new Ability("Weak Flex", "HIFFlex_2_A")
+            Ability flex1 = new Ability("Weak Flex", "HIF_Flex_2_A")
             {
                 Description = "If the hammer is raised, lower it and deal 4 damage to the Opposing enemy.\nIf the hammer is lowered, raise it and heal this party member and the Left ally 7 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickFlex"),
@@ -196,7 +196,7 @@ namespace Hell_Island_Fell.Fools
             flex1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             flex1.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
-            Ability flex2 = new Ability("Powerful Flex", "HIFFlex_3_A")
+            Ability flex2 = new Ability("Powerful Flex", "HIF_Flex_3_A")
             {
                 Description = "If the hammer is raised, lower it and deal 4 damage to the Opposing enemy.\nIf the hammer is lowered, raise it and heal this party member and the Left ally 9 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickFlex"),
@@ -219,7 +219,7 @@ namespace Hell_Island_Fell.Fools
             flex2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             flex2.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
-            Ability flex3 = new Ability("Rippling Flex", "HIFFlex_4_A")
+            Ability flex3 = new Ability("Rippling Flex", "HIF_Flex_4_A")
             {
                 Description = "If the hammer is raised, lower it and deal 4 damage to the Opposing enemy.\nIf the hammer is lowered, raise it and heal this party member and the Left ally 11 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickFlex"),
@@ -243,7 +243,7 @@ namespace Hell_Island_Fell.Fools
             flex3.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_11_20)]);
 
             //slam
-            Ability slam0 = new Ability("Soft Slam", "HIFSlam_1_A")
+            Ability slam0 = new Ability("Soft Slam", "HIF_Slam_1_A")
             {
                 Description = "If the hammer is raised, lower it and deal 8 damage to the Opposing enemy.\nIf the hammer is lowered, raise it and heal this party member and the Left ally 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickSlam"),
@@ -266,7 +266,7 @@ namespace Hell_Island_Fell.Fools
             slam0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             slam0.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability slam1 = new Ability("Iron Slam", "HIFSlam_2_A")
+            Ability slam1 = new Ability("Iron Slam", "HIF_Slam_2_A")
             {
                 Description = "If the hammer is raised, lower it and deal 12 damage to the Opposing enemy.\nIf the hammer is lowered, raise it and heal this party member and the Left ally 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickSlam"),
@@ -289,7 +289,7 @@ namespace Hell_Island_Fell.Fools
             slam1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             slam1.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability slam2 = new Ability("Heavy Slam", "HIFSlam_3_A")
+            Ability slam2 = new Ability("Heavy Slam", "HIF_Slam_3_A")
             {
                 Description = "If the hammer is raised, lower it and deal 16 damage to the Opposing enemy.\nIf the hammer is lowered, raise it and heal this party member and the Left ally 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickSlam"),
@@ -312,7 +312,7 @@ namespace Hell_Island_Fell.Fools
             slam2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             slam2.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability slam3 = new Ability("Heavy Slam", "HIFSlam_4_A")
+            Ability slam3 = new Ability("Gravitational Slam", "HIF_Slam_4_A")
             {
                 Description = "If the hammer is raised, lower it and deal 20 damage to the Opposing enemy.\nIf the hammer is lowered, raise it and heal this party member and the Left ally 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("NickSlam"),
@@ -335,10 +335,10 @@ namespace Hell_Island_Fell.Fools
             slam3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc_State_Stand)]);
             slam3.AddIntentsToTarget(Targeting.Slot_SelfAll_AndLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            nick.AddLevelData(13, new Ability[] { stance0, flex0, slam0 });
-            nick.AddLevelData(17, new Ability[] { stance1, flex1, slam1 });
-            nick.AddLevelData(20, new Ability[] { stance2, flex2, slam2 });
-            nick.AddLevelData(23, new Ability[] { stance3, flex3, slam3 });
+            nick.AddLevelData(13, [stance0, flex0, slam0]);
+            nick.AddLevelData(17, [stance1, flex1, slam1]);
+            nick.AddLevelData(20, [stance2, flex2, slam2]);
+            nick.AddLevelData(23, [stance3, flex3, slam3]);
 
             nick.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Nick_Witness_ACH");
             nick.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Nick_Divine_ACH");

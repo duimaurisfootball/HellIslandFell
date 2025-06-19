@@ -55,14 +55,14 @@ namespace Hell_Island_Fell.Enemies
                 Effects =
                 [
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<SwapToSidesEffect>(), 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(MagnetDamage, 4, ScriptableObject.CreateInstance<AllUnitsAndOpposing>()),
+                    Effects.GenerateEffect(MagnetDamage, 4, Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4], false, false)),
                 ],
                 Rarity = CustomAbilityRarity.Weight(3, true),
                 Priority = Priority.VeryFast,
             };
             magnetism.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Swap_Sides)]);
             magnetism.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
-            magnetism.AddIntentsToTarget(ScriptableObject.CreateInstance<AllOpponentsButFront>(), [nameof(IntentType_GameIDs.Damage_1_2)]);
+            magnetism.AddIntentsToTarget(Targeting.GenerateSlotTarget([0, 1, -1, 2, -2, 3, -3, 4, -4], false, false), [nameof(IntentType_GameIDs.Damage_1_2)]);
 
             Ability electrons = new Ability("Electrons", "Electrons_A")
             {

@@ -257,6 +257,10 @@ namespace Hell_Island_Fell.Fools
                 DeathSound = "event:/HoftstoldtDeath",
                 DialogueSound = "event:/HoftstoldtDx",
                 ExtraSprites = FaceSprites,
+                UnitTypes =
+                [
+                    "Sandwich_Robot",
+                ],
             };
             hoftstoldt.GenerateMenuCharacter(ResourceLoader.LoadSprite("HoftstoldtMenu"), ResourceLoader.LoadSprite("HoftstoldtLocked"));
             hoftstoldt.AddPassives([Passives.Unstable, Passives.GetCustomPassive("HConstruct_PA")]);
@@ -297,7 +301,7 @@ namespace Hell_Island_Fell.Fools
             RupturedRemove._status = StatusField.Ruptured;
 
             //soul
-            Ability soul0 = new Ability("Soul Bean", "Soul_1_A")
+            Ability soul0 = new Ability("Soul Bean", "HIF_Soul_1_A")
             {
                 Description = "Heal all allies to the Left and Right of a party member with Construct 2 health.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtSoul"),
@@ -314,7 +318,7 @@ namespace Hell_Island_Fell.Fools
             soul0.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
             soul0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
-            Ability soul1 = new Ability("Soul Stone", "Soul_2_A")
+            Ability soul1 = new Ability("Soul Stone", "HIF_Soul_2_A")
             {
                 Description = "Heal all allies to the Left and Right of a party member with Construct 3 health.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtSoul"),
@@ -331,7 +335,7 @@ namespace Hell_Island_Fell.Fools
             soul1.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
             soul1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
-            Ability soul2 = new Ability("Soul Prison", "Soul_3_A")
+            Ability soul2 = new Ability("Soul Prison", "HIF_Soul_3_A")
             {
                 Description = "Heal all allies to the Left and Right of a party member with Construct 4 health.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtSoul"),
@@ -348,7 +352,7 @@ namespace Hell_Island_Fell.Fools
             soul2.AddIntentsToTarget(ScriptableObject.CreateInstance<AlliesToSidesOfConstruct>(), [nameof(IntentType_GameIDs.Heal_1_4)]);
             soul2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
-            Ability soul3 = new Ability("Soul Screen", "Soul_4_A")
+            Ability soul3 = new Ability("Soul Screen", "HIF_Soul_4_A")
             {
                 Description = "Heal all allies to the Left and Right of a party member with Construct 5 health.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtSoul"),
@@ -367,7 +371,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //ofThePeople
-            Ability ofThePeople0 = new Ability("Faces of the People", "OfThePeople_1_A")
+            Ability ofThePeople0 = new Ability("Faces of the People", "HIF_OfThePeople_1_A")
             {
                 Description = "Deal 4 damage to all enemies Opposing a party member with Construct.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtOfThePeople"),
@@ -384,7 +388,7 @@ namespace Hell_Island_Fell.Fools
             ofThePeople0.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_3_6)]);
             ofThePeople0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
-            Ability ofThePeople1 = new Ability("Bodies of the People", "OfThePeople_2_A")
+            Ability ofThePeople1 = new Ability("Bodies of the People", "HIF_OfThePeople_2_A")
             {
                 Description = "Deal 5 damage to all enemies Opposing a party member with Construct.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtOfThePeople"),
@@ -401,7 +405,7 @@ namespace Hell_Island_Fell.Fools
             ofThePeople1.AddIntentsToTarget(ScriptableObject.CreateInstance<EnemiesOpposingConstruct>(), [nameof(IntentType_GameIDs.Damage_3_6)]);
             ofThePeople1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
-            Ability ofThePeople2 = new Ability("Minds of the People", "OfThePeople_3_A")
+            Ability ofThePeople2 = new Ability("Minds of the People", "HIF_OfThePeople_3_A")
             {
                 Description = "Deal 6 damage to all enemies Opposing a party member with Construct.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtOfThePeople"),
@@ -419,7 +423,7 @@ namespace Hell_Island_Fell.Fools
             ofThePeople2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Randomize)]);
             ofThePeople2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
 
-            Ability ofThePeople3 = new Ability("Lives of the People", "OfThePeople_4_A")
+            Ability ofThePeople3 = new Ability("Lives of the People", "HIF_OfThePeople_4_A")
             {
                 Description = "Deal 7 damage to all enemies Opposing a party member with Construct.\nSpawn a friendly Unstable doll.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtOfThePeople"),
@@ -438,7 +442,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //assimilation
-            Ability assimilation0 = new Ability("Digital Assimilation", "Assimilation_1_A")
+            Ability assimilation0 = new Ability("Digital Assimilation", "HIF_Assimilation_1_A")
             {
                 Description = "Kill all friendly dolls.\nHeal all party members for the damage dealt.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtAssimilation"),
@@ -455,7 +459,7 @@ namespace Hell_Island_Fell.Fools
             assimilation0.AddIntentsToTarget(ScriptableObject.CreateInstance<DollTargeting>(), [nameof(IntentType_GameIDs.Damage_Death)]);
             assimilation0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_11_20)]);
 
-            Ability assimilation1 = new Ability("Personal Assimilation", "Assimilation_2_A")
+            Ability assimilation1 = new Ability("Personal Assimilation", "HIF_Assimilation_2_A")
             {
                 Description = "Kill all friendly dolls.\nHeal all party members for the damage dealt.\nRemove Oil Slicked from all party members.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtAssimilation"),
@@ -474,7 +478,7 @@ namespace Hell_Island_Fell.Fools
             assimilation1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_11_20)]);
             assimilation1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Rem_Status_OilSlicked)]);
 
-            Ability assimilation2 = new Ability("Civilian Assimilation", "Assimilation_3_A")
+            Ability assimilation2 = new Ability("Civilian Assimilation", "HIF_Assimilation_3_A")
             {
                 Description = "Kill all friendly dolls.\nHeal all party members for the damage dealt.\nRemove Oil Slicked and Frail from all party members.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtAssimilation"),
@@ -495,7 +499,7 @@ namespace Hell_Island_Fell.Fools
             assimilation2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Rem_Status_OilSlicked)]);
             assimilation2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Rem_Status_Frail)]);
 
-            Ability assimilation3 = new Ability("Military Assimilation", "Assimilation_4_A")
+            Ability assimilation3 = new Ability("Military Assimilation", "HIF_Assimilation_4_A")
             {
                 Description = "Kill all friendly dolls.\nHeal all party members for the damage dealt.\nRemove Oil Slicked, Frail, and Ruptured from all party members.",
                 AbilitySprite = ResourceLoader.LoadSprite("HoftstoldtAssimilation"),
@@ -518,10 +522,10 @@ namespace Hell_Island_Fell.Fools
             assimilation3.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Rem_Status_Frail)]);
             assimilation3.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Rem_Status_Ruptured)]);
 
-            hoftstoldt.AddLevelData(15, new Ability[] { soul0, ofThePeople0, assimilation0 });
-            hoftstoldt.AddLevelData(15, new Ability[] { soul1, ofThePeople1, assimilation1 });
-            hoftstoldt.AddLevelData(15, new Ability[] { soul2, ofThePeople2, assimilation2 });
-            hoftstoldt.AddLevelData(15, new Ability[] { soul3, ofThePeople3, assimilation3 });
+            hoftstoldt.AddLevelData(15, [soul0, ofThePeople0, assimilation0]);
+            hoftstoldt.AddLevelData(15, [soul1, ofThePeople1, assimilation1]);
+            hoftstoldt.AddLevelData(15, [soul2, ofThePeople2, assimilation2]);
+            hoftstoldt.AddLevelData(15, [soul3, ofThePeople3, assimilation3]);
 
             hoftstoldt.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Hoftstoldt_Witness_ACH");
             hoftstoldt.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Hoftstoldt_Divine_ACH");

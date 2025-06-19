@@ -7,8 +7,14 @@ namespace Hell_Island_Fell.Custom_Effects
 {
     public class PerformRandomEffectsEffect : EffectSO
     {
+        public bool randomBetweenPrevious = false;
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
+            int num = entryVariable;
+            if (randomBetweenPrevious)
+            {
+                num = UnityEngine.Random.Range(num, PreviousExitValue);
+            }
             exitAmount = entryVariable;
 
             CombatManager.Instance.AddSubAction(new EffectAction(GetRandomCharacterEffects(entryVariable), caster));
@@ -43,5 +49,4 @@ namespace Hell_Island_Fell.Custom_Effects
             return outEffects;
         }
     }
-
 }

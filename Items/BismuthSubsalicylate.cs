@@ -30,6 +30,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            bismuthSubsalicylate.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(bismuthSubsalicylate.Item, new ItemModdedUnlockInfo("BismuthSubsalicylate_SW", ResourceLoader.LoadSprite("UnlockOsmanSpoogleLocked", null, 32, null), "HIF_Spoogle_Witness_ACH"));
         }
     }

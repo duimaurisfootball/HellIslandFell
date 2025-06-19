@@ -37,7 +37,7 @@ namespace Hell_Island_Fell.Items
                 ]
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(paintedDie.Item);
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(paintedDie.Item, new ItemModdedUnlockInfo(paintedDie.Item_ID, ResourceLoader.LoadSprite("ShopPaintedDie")));
         }
     }
 }

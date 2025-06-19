@@ -23,8 +23,34 @@
     <None Remove="Sprites\AchievementHeavenSpoogle.png" />
     <None Remove="Sprites\AchievementHeavenVandander.png" />
     <None Remove="Sprites\AchievementHeavenVat.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterAelie.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterAlvinar.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterChim.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterEras.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterExambry.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterFarah.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterFelix.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterGomma.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterHills.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterHoftstoldt.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterHolesOfVandander.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterMaecenas.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterMalebolge.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterMorrigan.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterMudball.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterNaba.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterNick.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterNukePits.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterPinec.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterRodney.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterSalad.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterSpoogle.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterStareyed.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterVandander.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementCharacterVat.png" />
     <None Remove="Sprites\AchievementIcons\AchievementComedyBoler.png" />
     <None Remove="Sprites\AchievementIcons\AchievementComedyBoojum.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementComedyNevermore.png" />
     <None Remove="Sprites\AchievementIcons\AchievementComedyVus.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenAelie.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenAlvinar.png" />
@@ -41,6 +67,7 @@
     <None Remove="Sprites\AchievementIcons\AchievementHeavenMorrigan.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenNaba.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenNick.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementHeavenNukePits.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenPinec.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenRodney.png" />
     <None Remove="Sprites\AchievementIcons\AchievementHeavenSalad.png" />
@@ -63,6 +90,7 @@
     <None Remove="Sprites\AchievementIcons\AchievementOsmanMorrigan.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanNaba.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanNick.png" />
+    <None Remove="Sprites\AchievementIcons\AchievementOsmanNukePits.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanPinec.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanRodney.png" />
     <None Remove="Sprites\AchievementIcons\AchievementOsmanSalad.png" />
@@ -107,6 +135,8 @@
     <None Remove="Sprites\ARCTimelineKekingdom.png" />
     <None Remove="Sprites\BolerDisruption.png" />
     <None Remove="Sprites\BoojumBilliard.png" />
+    <None Remove="Sprites\BoojumBonnet.png" />
+    <None Remove="Sprites\BoojumBoot.png" />
     <None Remove="Sprites\BossBemagelIcon.png" />
     <None Remove="Sprites\BossKaglaIcon.png" />
     <None Remove="Sprites\BossLostPotentialIcon.png" />
@@ -485,6 +515,17 @@
     <None Remove="Sprites\MorriganMud.png" />
     <None Remove="Sprites\MorriganOverworld.png" />
     <None Remove="Sprites\MorriganPearls.png" />
+    <None Remove="Sprites\MosaBamboo.png" />
+    <None Remove="Sprites\MosaBox.png" />
+    <None Remove="Sprites\MosaCamera.png" />
+    <None Remove="Sprites\MosaDelete.png" />
+    <None Remove="Sprites\MosaFish.png" />
+    <None Remove="Sprites\MosaInstabox.png" />
+    <None Remove="Sprites\MosaLadder.png" />
+    <None Remove="Sprites\MosaMobilise.png" />
+    <None Remove="Sprites\MosaPomegranate.png" />
+    <None Remove="Sprites\MosaSpear.png" />
+    <None Remove="Sprites\MosaVaporise.png" />
     <None Remove="Sprites\MudballBack.png" />
     <None Remove="Sprites\MudballDry.png" />
     <None Remove="Sprites\MudballFront.png" />
@@ -514,6 +555,14 @@
     <None Remove="Sprites\NickSlam.png" />
     <None Remove="Sprites\NickStance.png" />
     <None Remove="Sprites\NosestoneGrinding.png" />
+    <None Remove="Sprites\NukePitsBack.png" />
+    <None Remove="Sprites\NukePitsBeam.png" />
+    <None Remove="Sprites\NukePitsFront.png" />
+    <None Remove="Sprites\NukePitsFuel.png" />
+    <None Remove="Sprites\NukePitsLocked.png" />
+    <None Remove="Sprites\NukePitsMenu.png" />
+    <None Remove="Sprites\NukePitsOverworld.png" />
+    <None Remove="Sprites\NukePitsSalt.png" />
     <None Remove="Sprites\OverworldBoojum.png" />
     <None Remove="Sprites\OverworldHeehoo.png" />
     <None Remove="Sprites\OverworldInequity.png" />
@@ -522,6 +571,7 @@
     <None Remove="Sprites\PassiveInvincible.png" />
     <None Remove="Sprites\PassiveRetortion.png" />
     <None Remove="Sprites\PassiveTwoFacedPG.png" />
+    <None Remove="Sprites\PassiveTwoFacedPR.png" />
     <None Remove="Sprites\PassiveTwoFacedRY.png" />
     <None Remove="Sprites\PassiveWarts.png" />
     <None Remove="Sprites\PinecBack.png" />
@@ -529,6 +579,7 @@
     <None Remove="Sprites\PinecFront.png" />
     <None Remove="Sprites\PinecLocked.png" />
     <None Remove="Sprites\PinecMeat.png" />
+    <None Remove="Sprites\PinecMeltdown.png" />
     <None Remove="Sprites\PinecMenu.png" />
     <None Remove="Sprites\PinecOverworld.png" />
     <None Remove="Sprites\PinecSpikes.png" />
@@ -558,6 +609,7 @@
     <None Remove="Sprites\SaladOverworld.png" />
     <None Remove="Sprites\SaladTitanium.png" />
     <None Remove="Sprites\Salted.png" />
+    <None Remove="Sprites\Secrets.png" />
     <None Remove="Sprites\ShadowHands.png" />
     <None Remove="Sprites\ShopAlumSalt.png" />
     <None Remove="Sprites\ShopAppleCiderVinegar.png" />
@@ -565,6 +617,7 @@
     <None Remove="Sprites\ShopBloodThinnersLocked.png" />
     <None Remove="Sprites\ShopCoughMedicine.png" />
     <None Remove="Sprites\ShopCoughMedicineLocked.png" />
+    <None Remove="Sprites\ShopDeflation.png" />
     <None Remove="Sprites\ShopFractionAbacus.png" />
     <None Remove="Sprites\ShopFractionAbacusLocked.png" />
     <None Remove="Sprites\ShopHotPot.png" />
@@ -576,6 +629,8 @@
     <None Remove="Sprites\ShopSauerkraut.png" />
     <None Remove="Sprites\ShopSparklingFork.png" />
     <None Remove="Sprites\ShopSparklingForkLocked.png" />
+    <None Remove="Sprites\ShopSundial.png" />
+    <None Remove="Sprites\ShopSurrealMannequinHead.png" />
     <None Remove="Sprites\SpoogleAblate.png" />
     <None Remove="Sprites\SpoogleBack.png" />
     <None Remove="Sprites\SpoogleConcatenate.png" />
@@ -607,6 +662,9 @@
     <None Remove="Sprites\TimelineManeater.png" />
     <None Remove="Sprites\TimelineMesmerizingNosestone.png" />
     <None Remove="Sprites\TimelineMoone.png" />
+    <None Remove="Sprites\TimelineNevermoreHuge.png" />
+    <None Remove="Sprites\TimelineNevermoreMedium.png" />
+    <None Remove="Sprites\TimelineNevermoreSmall.png" />
     <None Remove="Sprites\TimelineOneShooter.png" />
     <None Remove="Sprites\TimelineProlificNosestone.png" />
     <None Remove="Sprites\TimelineScatterbrainedNosestone.png" />
@@ -615,13 +673,25 @@
     <None Remove="Sprites\TimelineThunderdome.png" />
     <None Remove="Sprites\TimelineUninspiredNosestone.png" />
     <None Remove="Sprites\TimelineVus.png" />
+    <None Remove="Sprites\TreasureAFlower.png" />
+    <None Remove="Sprites\TreasureAmbulantMonolith.png" />
+    <None Remove="Sprites\TreasureAmbulantMonolithLocked.png" />
+    <None Remove="Sprites\TreasureBundleOfFingers.png" />
+    <None Remove="Sprites\TreasureCatastropheStick.png" />
     <None Remove="Sprites\TreasureElectrumOre.png" />
+    <None Remove="Sprites\TreasureElusiveTrinket.png" />
+    <None Remove="Sprites\TreasureFingernailOfGlory.png" />
     <None Remove="Sprites\TreasureFormidableDinners.png" />
     <None Remove="Sprites\TreasureFrankensteinsBarber.png" />
     <None Remove="Sprites\TreasureGroanbroad.png" />
+    <None Remove="Sprites\TreasureGunGun.png" />
+    <None Remove="Sprites\TreasureLilDraugr.png" />
+    <None Remove="Sprites\TreasureNeptunesCrown.png" />
+    <None Remove="Sprites\TreasureOrbOfFreedom.png" />
     <None Remove="Sprites\TreasureShardOfHills.png" />
     <None Remove="Sprites\TreasureUngroundedElectrode.png" />
     <None Remove="Sprites\TreasureVanishingJar.png" />
+    <None Remove="Sprites\TreasureWakingScream.png" />
     <None Remove="Sprites\TreaureUngroundedElectrode.png" />
     <None Remove="Sprites\UnboundDamageIntent.png" />
     <None Remove="Sprites\UnlockDoulaHoftstoldt.png" />
@@ -656,6 +726,8 @@
     <None Remove="Sprites\UnlockHeavenNabaLocked.png" />
     <None Remove="Sprites\UnlockHeavenNick.png" />
     <None Remove="Sprites\UnlockHeavenNickLocked.png" />
+    <None Remove="Sprites\UnlockHeavenNukePits.png" />
+    <None Remove="Sprites\UnlockHeavenNukePitsLocked.png" />
     <None Remove="Sprites\UnlockHeavenPinec.png" />
     <None Remove="Sprites\UnlockHeavenPinecLocked.png" />
     <None Remove="Sprites\UnlockHeavenRodney.png" />
@@ -700,6 +772,8 @@
     <None Remove="Sprites\UnlockOsmanNabaLocked.png" />
     <None Remove="Sprites\UnlockOsmanNick.png" />
     <None Remove="Sprites\UnlockOsmanNickLocked.png" />
+    <None Remove="Sprites\UnlockOsmanNukePits.png" />
+    <None Remove="Sprites\UnlockOsmanNukePitsLocked.png" />
     <None Remove="Sprites\UnlockOsmanPinec.png" />
     <None Remove="Sprites\UnlockOsmanPinecLocked.png" />
     <None Remove="Sprites\UnlockOsmanRodney.png" />
@@ -758,8 +832,34 @@
     <EmbeddedResource Include="AssetBundles\hif_assetbundle" />
     <EmbeddedResource Include="AssetBundles\hif_assetbundle.meta" />
     <EmbeddedResource Include="Sprites\aaa111aaa111aaa111__lookatme_lookatme.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterAelie.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterAlvinar.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterChim.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterEras.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterExambry.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterFarah.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterFelix.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterGomma.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterHills.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterHoftstoldt.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterHolesOfVandander.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterMaecenas.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterMalebolge.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterMorrigan.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterMudball.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterNaba.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterNick.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterNukePits.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterPinec.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterRodney.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterSalad.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterSpoogle.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterStareyed.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterVandander.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementCharacterVat.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyBoler.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyBoojum.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyNevermore.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementComedyVus.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenAelie.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenAlvinar.png" />
@@ -776,6 +876,7 @@
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenMorrigan.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenNaba.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenNick.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenNukePits.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenPinec.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenRodney.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementHeavenSalad.png" />
@@ -798,6 +899,7 @@
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanMorrigan.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanNaba.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanNick.png" />
+    <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanNukePits.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanPinec.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanRodney.png" />
     <EmbeddedResource Include="Sprites\AchievementIcons\AchievementOsmanSalad.png" />
@@ -830,6 +932,8 @@
     <EmbeddedResource Include="Sprites\ARCTimelineFlatback.png" />
     <EmbeddedResource Include="Sprites\BolerDisruption.png" />
     <EmbeddedResource Include="Sprites\BoojumBilliard.png" />
+    <EmbeddedResource Include="Sprites\BoojumBonnet.png" />
+    <EmbeddedResource Include="Sprites\BoojumBoot.png" />
     <EmbeddedResource Include="Sprites\BossBemagelIcon.png" />
     <EmbeddedResource Include="Sprites\BossKaglaIcon.png" />
     <EmbeddedResource Include="Sprites\BossLostPotentialIcon.png" />
@@ -1129,6 +1233,17 @@
     <EmbeddedResource Include="Sprites\MorriganMud.png" />
     <EmbeddedResource Include="Sprites\MorriganOverworld.png" />
     <EmbeddedResource Include="Sprites\MorriganPearls.png" />
+    <EmbeddedResource Include="Sprites\MosaBamboo.png" />
+    <EmbeddedResource Include="Sprites\MosaBox.png" />
+    <EmbeddedResource Include="Sprites\MosaCamera.png" />
+    <EmbeddedResource Include="Sprites\MosaDelete.png" />
+    <EmbeddedResource Include="Sprites\MosaFish.png" />
+    <EmbeddedResource Include="Sprites\MosaInstabox.png" />
+    <EmbeddedResource Include="Sprites\MosaLadder.png" />
+    <EmbeddedResource Include="Sprites\MosaMobilise.png" />
+    <EmbeddedResource Include="Sprites\MosaPomegranate.png" />
+    <EmbeddedResource Include="Sprites\MosaSpear.png" />
+    <EmbeddedResource Include="Sprites\MosaVaporise.png" />
     <EmbeddedResource Include="Sprites\MudballBack.png" />
     <EmbeddedResource Include="Sprites\MudballDry.png" />
     <EmbeddedResource Include="Sprites\MudballFront.png" />
@@ -1156,18 +1271,31 @@
     <EmbeddedResource Include="Sprites\NickOverworld.png" />
     <EmbeddedResource Include="Sprites\NickSlam.png" />
     <EmbeddedResource Include="Sprites\NickStance.png" />
+    <EmbeddedResource Include="Sprites\NukePitsBack.png" />
+    <EmbeddedResource Include="Sprites\NukePitsBeam.png" />
+    <EmbeddedResource Include="Sprites\NukePitsFront.png" />
+    <EmbeddedResource Include="Sprites\NukePitsFuel.png" />
+    <EmbeddedResource Include="Sprites\NukePitsLocked.png" />
+    <EmbeddedResource Include="Sprites\NukePitsMenu.png" />
+    <EmbeddedResource Include="Sprites\NukePitsOverworld.png" />
+    <EmbeddedResource Include="Sprites\NukePitsSalt.png" />
     <EmbeddedResource Include="Sprites\OverworldBoojum.png" />
     <EmbeddedResource Include="Sprites\OverworldHeehoo.png" />
     <EmbeddedResource Include="Sprites\OverworldInequity.png" />
     <EmbeddedResource Include="Sprites\Nemesis.png" />
     <EmbeddedResource Include="Sprites\PassiveRetortion.png" />
     <EmbeddedResource Include="Sprites\PassiveTwoFacedPG.png" />
+    <EmbeddedResource Include="Sprites\PassiveTwoFacedPR.png" />
     <EmbeddedResource Include="Sprites\PassiveTwoFacedRY.png" />
+    <EmbeddedResource Include="Sprites\PinecMeltdown.png" />
+    <EmbeddedResource Include="Sprites\Secrets.png" />
     <EmbeddedResource Include="Sprites\ShadowHands.png" />
     <EmbeddedResource Include="Sprites\ShopFractionAbacus.png" />
     <EmbeddedResource Include="Sprites\ShopFractionAbacusLocked.png" />
     <EmbeddedResource Include="Sprites\ShopPaintedDie.png" />
     <EmbeddedResource Include="Sprites\ShopSparklingForkLocked.png" />
+    <EmbeddedResource Include="Sprites\ShopSundial.png" />
+    <EmbeddedResource Include="Sprites\ShopSurrealMannequinHead.png" />
     <EmbeddedResource Include="Sprites\StareyedBack.png" />
     <EmbeddedResource Include="Sprites\StareyedBlink.png" />
     <EmbeddedResource Include="Sprites\StareyedFront.png" />
@@ -1326,6 +1454,9 @@
     <EmbeddedResource Include="Sprites\TimelineManeater.png" />
     <EmbeddedResource Include="Sprites\TimelineMesmerizingNosestone.png" />
     <EmbeddedResource Include="Sprites\TimelineMoone.png" />
+    <EmbeddedResource Include="Sprites\TimelineNevermoreHuge.png" />
+    <EmbeddedResource Include="Sprites\TimelineNevermoreMedium.png" />
+    <EmbeddedResource Include="Sprites\TimelineNevermoreSmall.png" />
     <EmbeddedResource Include="Sprites\TimelineOneShooter.png" />
     <EmbeddedResource Include="Sprites\TimelineProlificNosestone.png" />
     <EmbeddedResource Include="Sprites\TimelineScatterbrainedNosestone.png" />
@@ -1334,12 +1465,21 @@
     <EmbeddedResource Include="Sprites\TimelineThunderdome.png" />
     <EmbeddedResource Include="Sprites\TimelineUninspiredNosestone.png" />
     <EmbeddedResource Include="Sprites\TimelineVus.png" />
+    <EmbeddedResource Include="Sprites\TreasureAFlower.png" />
+    <EmbeddedResource Include="Sprites\TreasureAmbulantMonolith.png" />
+    <EmbeddedResource Include="Sprites\TreasureAmbulantMonolithLocked.png" />
+    <EmbeddedResource Include="Sprites\TreasureBundleOfFingers.png" />
+    <EmbeddedResource Include="Sprites\TreasureCatastropheStick.png" />
+    <EmbeddedResource Include="Sprites\ShopDeflation.png" />
     <EmbeddedResource Include="Sprites\TreasureElectrumOre.png" />
     <EmbeddedResource Include="Sprites\TreasureFormidableDinners.png" />
     <EmbeddedResource Include="Sprites\TreasureGroanbroad.png" />
+    <EmbeddedResource Include="Sprites\TreasureGunGun.png" />
+    <EmbeddedResource Include="Sprites\TreasureLilDraugr.png" />
+    <EmbeddedResource Include="Sprites\TreasureNeptunesCrown.png" />
+    <EmbeddedResource Include="Sprites\TreasureOrbOfFreedom.png" />
     <EmbeddedResource Include="Sprites\TreasureShardOfHills.png" />
-    <EmbeddedResource Include="Sprites\UnlockDoulaHoftstoldt.png" />
-    <EmbeddedResource Include="Sprites\UnlockDoulaVandander.png" />
+    <EmbeddedResource Include="Sprites\TreasureWakingScream.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenChim.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenChimLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenEras.png" />
@@ -1356,6 +1496,8 @@
     <EmbeddedResource Include="Sprites\UnlockHeavenNabaLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenNick.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenNickLocked.png" />
+    <EmbeddedResource Include="Sprites\UnlockHeavenNukePits.png" />
+    <EmbeddedResource Include="Sprites\UnlockHeavenNukePitsLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenPinec.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenPinecLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockHeavenStareyed.png" />
@@ -1416,6 +1558,8 @@
     <EmbeddedResource Include="Sprites\UnlockOsmanNabaLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanNick.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanNickLocked.png" />
+    <EmbeddedResource Include="Sprites\UnlockOsmanNukePits.png" />
+    <EmbeddedResource Include="Sprites\UnlockOsmanNukePitsLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanPinec.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanPinecLocked.png" />
     <EmbeddedResource Include="Sprites\UnlockOsmanRodney.png" />
@@ -1472,58 +1616,58 @@
 
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\BepInEx.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="BrutalAPI">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\BrutalAPI.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Brutal Orchestra\BrutalOrchestra_Data\StreamingAssets\mods\BrutalAPI\plugins\BrutalAPI.dll</HintPath>
     </Reference>
     <Reference Include="FMODUnity">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\FMODUnity.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\FMODUnity.dll</HintPath>
     </Reference>
     <Reference Include="Marosi.SerializableCollections">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\Marosi.SerializableCollections.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\Marosi.SerializableCollections.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\Mono.Cecil.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="MonoMod.RuntimeDetour">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\MonoMod.RuntimeDetour.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\MonoMod.RuntimeDetour.dll</HintPath>
     </Reference>
     <Reference Include="MonoMod.Utils">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\MonoMod.Utils.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\MonoMod.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Brutal Orchestra\BepInEx\utils\PUBLIC-Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\UnityEngine.ParticleSystemModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\Desktop\BOModdingRefs\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\..\OneDrive\Desktop\BOModdingRefs\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
 

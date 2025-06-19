@@ -21,6 +21,7 @@ namespace Hell_Island_Fell.Encounters
                     "UninspiredNosestone_EN",
                     "UninspiredNosestone_EN",
                     "ChoirBoy_EN",
+                    "ShiveringHomunculus_EN",
                 ], null);
             uninspiredMedium.CreateNewEnemyEncounterData(
                 [
@@ -68,6 +69,14 @@ namespace Hell_Island_Fell.Encounters
                         "EggKeeper_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                uninspiredMedium.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "Attrition_EN",
+                    ], null);
+            }
             uninspiredMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_UninspiredNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -106,12 +115,6 @@ namespace Hell_Island_Fell.Encounters
                     "UninspiredNosestone_EN",
                     "UninspiredNosestone_EN",
                     "Maneater_EN",
-                ], null);
-            uninspiredHard.CreateNewEnemyEncounterData(
-                [
-                    "UninspiredNosestone_EN",
-                    "ChoirBoy_EN",
-                    "Inequity_EN",
                 ], null);
             if (Hell_Island_Fell.CrossMod.EnemyPack)
             {
@@ -182,6 +185,30 @@ namespace Hell_Island_Fell.Encounters
                         "UninspiredNosestone_EN",
                         "UninspiredNosestone_EN",
                         "GodsChalice_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                uninspiredHard.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "UninspiredNosestone_EN",
+                        "Attrition_EN",
+                        "Attrition_EN",
+                    ], null);
+                uninspiredHard.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "UninspiredNosestone_EN",
+                        "Git_EN",
+                        "Git_EN",
+                    ], null);
+                uninspiredHard.CreateNewEnemyEncounterData(
+                    [
+                        "UninspiredNosestone_EN",
+                        "UninspiredNosestone_EN",
+                        "Romantic_EN",
+                        "Romantic_EN",
                     ], null);
             }
             uninspiredHard.AddEncounterToDataBases();

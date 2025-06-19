@@ -68,6 +68,14 @@ namespace Hell_Island_Fell.Encounters
                         "FrowningChancellor_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                mesmerizingMedium.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "Attrition_EN",
+                    ], null);
+            }
             mesmerizingMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_MesmerizingNosestone_Medium_EnemyBundle", 2, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -191,6 +199,27 @@ namespace Hell_Island_Fell.Encounters
                         "MesmerizingNosestone_EN",
                         "Vagabond_EN",
                         "Maneater_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "Romantic_EN",
+                        "Maneater_EN",
+                    ], null);
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "Surrogate_EN",
+                        "Surrogate_EN",
+                    ], null);
+                mesmerizingHard.CreateNewEnemyEncounterData(
+                    [
+                        "MesmerizingNosestone_EN",
+                        "Surrogate_EN",
+                        "Attrition_EN",
                     ], null);
             }
             mesmerizingHard.AddEncounterToDataBases();

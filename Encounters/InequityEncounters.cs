@@ -20,6 +20,7 @@ namespace Hell_Island_Fell.Encounters
                     "Inequity_EN",
                     "Inequity_EN",
                     "NextOfKin_EN",
+                    "NextOfKin_EN",
                 ]);
             inequityEasy.CreateNewEnemyEncounterData(
                 [
@@ -27,16 +28,19 @@ namespace Hell_Island_Fell.Encounters
                     "Inequity_EN",
                     "Inequity_EN",
                     "ShiveringHomunculus_EN",
+                    "ShiveringHomunculus_EN",
                 ]);
             inequityEasy.CreateNewEnemyEncounterData(
                 [
                     "Inequity_EN",
                     "ShiveringHomunculus_EN",
                     "ShiveringHomunculus_EN",
+                    "ShiveringHomunculus_EN",
                 ]);
             inequityEasy.CreateNewEnemyEncounterData(
                 [
                     "Inequity_EN",
+                    "NextOfKin_EN",
                     "NextOfKin_EN",
                     "NextOfKin_EN",
                     "NextOfKin_EN",
@@ -47,6 +51,7 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Inequity_EN",
                         "Inequity_EN",
+                        "Unterling_EN",
                         "Unterling_EN",
                     ]);
                 inequityEasy.CreateNewEnemyEncounterData(
@@ -63,8 +68,20 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Inequity_EN",
                         "Inequity_EN",
-                        "Inequity_EN",
+                        "ShiveringHomunculus_EN",
                         "EggKeeper_EN",
+                    ]);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+
+                inequityEasy.CreateNewEnemyEncounterData(
+                    [
+                        "Inequity_EN",
+                        "Romantic_EN",
+                        "ShiveringHomunculus_EN",
+                        "ShiveringHomunculus_EN",
+                        "ShiveringHomunculus_EN",
                     ]);
             }
             inequityEasy.AddEncounterToDataBases();
@@ -80,6 +97,7 @@ namespace Hell_Island_Fell.Encounters
                     "Inequity_EN",
                     "Inequity_EN",
                     "InHerImage_EN",
+                    "InHerImage_EN",
                 ]);
             inequityHard.CreateNewEnemyEncounterData(
                 [
@@ -90,6 +108,7 @@ namespace Hell_Island_Fell.Encounters
             inequityHard.CreateNewEnemyEncounterData(
                 [
                     "Inequity_EN",
+                    "NextOfKin_EN",
                     "ChoirBoy_EN",
                 ]);
             inequityHard.CreateNewEnemyEncounterData(
@@ -149,6 +168,33 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Inequity_EN",
                         "MarbleMaw_EN",
+                    ]);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                inequityHard.CreateNewEnemyEncounterData(
+                    [
+                        "Inequity_EN",
+                        "Attrition_EN",
+                        "MesmerizingNosestone_EN",
+                    ]);
+                inequityHard.CreateNewEnemyEncounterData(
+                    [
+                        "Inequity_EN",
+                        "Attrition_EN",
+                        "SweatingNosestone_EN",
+                    ]);
+                inequityHard.CreateNewEnemyEncounterData(
+                    [
+                        "Inequity_EN",
+                        "Surrogate_EN",
+                        "Surrogate_EN",
+                    ]);
+                inequityHard.CreateNewEnemyEncounterData(
+                    [
+                        "Inequity_EN",
+                        "Git_EN",
+                        "Git_EN",
                     ]);
             }
             inequityHard.AddEncounterToDataBases();

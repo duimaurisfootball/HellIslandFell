@@ -27,6 +27,7 @@ namespace Hell_Island_Fell.Fools
                 UnitTypes =
                 [
                     "FemaleID",
+                    "Sandwich_Fire",
                 ],
             };
             malebolge.GenerateMenuCharacter(ResourceLoader.LoadSprite("MalebolgeMenu"), ResourceLoader.LoadSprite("MalebolgeLocked"));
@@ -75,7 +76,7 @@ namespace Hell_Island_Fell.Fools
             LinkedApply._Status = StatusField.Linked;
 
             //glorify
-            Ability glorify = new Ability("Glorify", "Glorify_1_A")
+            Ability glorify = new Ability("Glorify", "HIF_Glorify_1_A")
             {
                 Description = "Apply 2 Scars, Ruptured, Frail, Oil Slicked, and Linked to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("MalebolgeGlorify"),
@@ -98,7 +99,7 @@ namespace Hell_Island_Fell.Fools
             glorify.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Linked)]);
 
             //combust
-            Ability combust = new Ability("Combust", "Combust_1_A")
+            Ability combust = new Ability("Combust", "HIF_Combust_1_A")
             {
                 Description = "Deal 8 fire damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("MalebolgeCombust"),
@@ -113,7 +114,7 @@ namespace Hell_Island_Fell.Fools
             combust.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
             //accelerate
-            Ability accelerate = new Ability("Accelerate Time", "AccelerateTime_1_A")
+            Ability accelerate = new Ability("Accelerate Time", "HIF_AccelerateTime_1_A")
             {
                 Description = "Deal 1 indirect damage to all enemies.\nIncrease the damage dealt by this attack by 1-2.",
                 AbilitySprite = ResourceLoader.LoadSprite("MalebolgeAccelerate"),

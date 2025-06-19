@@ -34,6 +34,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            hoxJar.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Face.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(hoxJar.Item, new ItemModdedUnlockInfo("HoxJar_TW", ResourceLoader.LoadSprite("UnlockOsmanHillsLocked", null, 32, null), "HIF_Hills_Witness_ACH"));
         }
     }

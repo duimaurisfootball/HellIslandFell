@@ -10,7 +10,7 @@ namespace Hell_Island_Fell.Fools
     {
         public static void Add()
         {
-            Ability apoptosis = new Ability("Microapoptosis", "Apoptosis_A")
+            Ability apoptosis = new Ability("Microapoptosis", "HIF_Apoptosis_A")
             {
                 Description = "Deal 4 or 9 damage to this party member.\nHeal all other allies 5 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VatVesicle"),
@@ -65,11 +65,12 @@ namespace Hell_Island_Fell.Fools
                 ExtraSprites = ColorsShifting,
                 UnitTypes =
                 [
-                    "HellishID"
+                    "HellishID",
+                    "Sandwich_Gore",
                 ],
             };
             vat.GenerateMenuCharacter(ResourceLoader.LoadSprite("VatMenu"), ResourceLoader.LoadSprite("VatLocked"));
-            vat.AddPassives([Passives.LeakyGenerator(2), Passives.GetCustomPassive("Humorous_PA")]);
+            vat.AddPassives([Passives.LeakyGenerator(2), Passives.GetCustomPassive("HumorousV_PA")]);
             vat.SetMenuCharacterAsFullSupport();
 
             ChangeToRandomHealthColorEffect BlueHealth = ScriptableObject.CreateInstance<ChangeToRandomHealthColorEffect>();
@@ -82,9 +83,9 @@ namespace Hell_Island_Fell.Fools
             YellowHealth._healthColors = [Pigments.Yellow];
 
             //golgi
-            Ability golgi = new Ability("Golgi Body", "GolgiBody_A")
+            Ability golgi = new Ability("Golgi Body", "HIF_GolgiBody_A")
             {
-                Description = "Change this party member's health to blue.\nIf successful, heal 7.",
+                Description = "Change this party member's health to blue.\nIf successful, heal this party member 7 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VatGolgi"),
                 Cost = [Pigments.Red],
                 Visuals = Visuals.UglyOnTheInside,
@@ -99,9 +100,9 @@ namespace Hell_Island_Fell.Fools
             golgi.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
             //nucleolus
-            Ability nucleolus = new Ability("Nucleolus", "Nucleolus_A")
+            Ability nucleolus = new Ability("Nucleolus", "HIF_Nucleolus_A")
             {
-                Description = "Change this party member's health to purple.\nIf successful, heal 7.",
+                Description = "Change this party member's health to purple.\nIf successful, heal this party member 7 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VatNucleolus"),
                 Cost = [Pigments.Red],
                 Visuals = Visuals.UglyOnTheInside,
@@ -116,9 +117,9 @@ namespace Hell_Island_Fell.Fools
             nucleolus.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
             //DNA
-            Ability DNA = new Ability("Deoxyribonucleic Acid", "DNA_A")
+            Ability DNA = new Ability("Deoxyribonucleic Acid", "HIF_DNA_A")
             {
-                Description = "Change this party member's health to yellow.\nIf successful, heal 7.",
+                Description = "Change this party member's health to yellow.\nIf successful, heal this party member 7 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VatDNA"),
                 Cost = [Pigments.Red],
                 Visuals = Visuals.UglyOnTheInside,
@@ -132,7 +133,7 @@ namespace Hell_Island_Fell.Fools
             DNA.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
             DNA.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
-            vat.AddLevelData(40, new Ability[] { golgi, nucleolus, DNA });
+            vat.AddLevelData(40, [DNA, golgi, nucleolus]);
 
             vat.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Vat_Witness_ACH");
             vat.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Vat_Divine_ACH");

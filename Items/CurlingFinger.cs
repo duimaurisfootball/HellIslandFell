@@ -32,6 +32,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            curlingFinger.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
+
             ItemUtils.JustAddItemSoItCanBeLoaded(curlingFinger.item);
         }
     }

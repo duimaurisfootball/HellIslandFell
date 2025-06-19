@@ -23,8 +23,8 @@ namespace Hell_Island_Fell.Encounters
             oneShooterMedium.CreateNewEnemyEncounterData(
                 [
                     "OneShooter_EN",
+                    "OneShooter_EN",
                     "Tassnn_EN",
-                    "Boiler_EN",
                 ]);
             oneShooterMedium.CreateNewEnemyEncounterData(
                 [
@@ -37,6 +37,13 @@ namespace Hell_Island_Fell.Encounters
                 [
                     "OneShooter_EN",
                     "Boiler_EN",
+                    "BirdBath_EN",
+                    "BirdBath_EN",
+                ]);
+            oneShooterMedium.CreateNewEnemyEncounterData(
+                [
+                    "OneShooter_EN",
+                    "Moone_EN",
                     "BirdBath_EN",
                     "BirdBath_EN",
                 ]);

@@ -37,6 +37,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            bavarianPretzel.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(bavarianPretzel.Item, new ItemModdedUnlockInfo("BavarianPretzel_SW", ResourceLoader.LoadSprite("UnlockHeavenAlvinarLocked", null, 32, null), "HIF_Alvinar_Divine_ACH"));
         }
     }

@@ -73,7 +73,7 @@ namespace Hell_Island_Fell.Fools
             CursedRemove._status = StatusField.Cursed;
 
             //vow
-            Ability vow0 = new Ability("Vaguely Vow", "Vow_1_A")
+            Ability vow0 = new Ability("Vaguely Vow", "HIF_Vow_1_A")
             {
                 Description = "Apply 2 Linked to the Opposing enemy.\nApply 8 Disappearing to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 8 Disappearing to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVow"),
@@ -94,7 +94,7 @@ namespace Hell_Island_Fell.Fools
             vow0.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Misc)]);
             vow0.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
 
-            Ability vow1 = new Ability("Vicariously Vow", "Vow_2_A")
+            Ability vow1 = new Ability("Vicariously Vow", "HIF_Vow_2_A")
             {
                 Description = "Apply 2 Linked to the Opposing enemy.\nApply 12 Disappearing to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 12 Disappearing to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVow"),
@@ -115,7 +115,7 @@ namespace Hell_Island_Fell.Fools
             vow1.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Misc)]);
             vow1.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
 
-            Ability vow2 = new Ability("Voraciously Vow", "Vow_3_A")
+            Ability vow2 = new Ability("Voraciously Vow", "HIF_Vow_3_A")
             {
                 Description = "Apply 2 Linked to the Opposing enemy.\nApply 14 Disappearing to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 14 Disappearing to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVow"),
@@ -136,7 +136,7 @@ namespace Hell_Island_Fell.Fools
             vow2.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Misc)]);
             vow2.AddIntentsToTarget(Targeting.Slot_Front, ["Status_Disappearing"]);
 
-            Ability vow3 = new Ability("Viciously Vow", "Vow_4_A")
+            Ability vow3 = new Ability("Viciously Vow", "HIF_Vow_4_A")
             {
                 Description = "Apply 2 Linked to the Opposing enemy.\nApply 16 Disappearing to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 16 Disappearing to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVow"),
@@ -159,7 +159,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //vent
-            Ability vent0 = new Ability("Viewing Ventilations", "Vent_1_A")
+            Ability vent0 = new Ability("Viewing Ventilations", "HIF_Vent_1_A")
             {
                 Description = "Apply 1 Frail to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 1 Frail to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVent"),
@@ -178,7 +178,7 @@ namespace Hell_Island_Fell.Fools
             vent0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
             vent0.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability vent1 = new Ability("Vigilant Ventilations", "Vent_2_A")
+            Ability vent1 = new Ability("Vigilant Ventilations", "HIF_Vent_2_A")
             {
                 Description = "Apply 1 Frail to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 1 Frail to the Opposing enemy.\nHeal this party member 1 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVent"),
@@ -199,7 +199,7 @@ namespace Hell_Island_Fell.Fools
             vent1.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Misc)]);
             vent1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability vent2 = new Ability("Virulent Ventilations", "Vent_3_A")
+            Ability vent2 = new Ability("Virulent Ventilations", "HIF_Vent_3_A")
             {
                 Description = "Apply 2 Frail to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 1 Frail to the Opposing enemy.\nHeal this party member 1 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVent"),
@@ -220,7 +220,7 @@ namespace Hell_Island_Fell.Fools
             vent2.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Misc)]);
             vent2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability vent3 = new Ability("Vivid Ventilations", "Vent_4_A")
+            Ability vent3 = new Ability("Vivid Ventilations", "HIF_Vent_4_A")
             {
                 Description = "Apply 2 Frail to the Opposing enemy.\nIf the Left ally is below half health, apply an additional 1 Frail to the Opposing enemy.\nHeal this party member 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVent"),
@@ -242,7 +242,27 @@ namespace Hell_Island_Fell.Fools
             vent3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
             //vandala
-            Ability vandala0 = new Ability("Vandala Effect, Vacantly", "Vandala_1_A")
+            Ability vandala0 = new Ability("Vandala Effect, Vacantly", "HIF_Vandala_1_A")
+            {
+                Description = "Randomize this party member's and the Right ally's health.\nAttempt to resurrect a party member in the Right ally position.\nHeal this party member and the Right ally 1/5 their individual max health.",
+                AbilitySprite = ResourceLoader.LoadSprite("VandanderVandalaEffect"),
+                Cost = [Pigments.Purple, Pigments.Blue],
+                Visuals = Visuals.Miracle,
+                AnimationTarget = Targeting.Slot_SelfSlot,
+                Effects =
+                [
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RandomizeHealthEffect>(), 1, Targeting.Slot_SelfAndRight),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ResurrectEffect>(), 1, Targeting.Slot_AllyRight),
+                    Effects.GenerateEffect(HealMax, 20, Targeting.Slot_SelfAndRight),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
+                ]
+            };
+            vandala0.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
+            vandala0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Resurrect)]);
+            vandala0.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
+
+            Ability vandala1 = new Ability("Vandala Effect, Variously", "HIF_Vandala_2_A")
             {
                 Description = "Randomize this party member's and the Right ally's health.\nAttempt to resurrect a party member in the Right ally position.\nHeal this party member and the Right ally 1/4 their individual max health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVandalaEffect"),
@@ -258,11 +278,11 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
-            vandala0.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
-            vandala0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Resurrect)]);
-            vandala0.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
+            vandala1.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
+            vandala1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Resurrect)]);
+            vandala1.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
-            Ability vandala1 = new Ability("Vandala Effect, Variously", "Vandala_2_A")
+            Ability vandala2 = new Ability("Vandala Effect, Virtuously", "HIF_Vandala_3_A")
             {
                 Description = "Randomize this party member's and the Right ally's health.\nAttempt to resurrect a party member in the Right ally position.\nHeal this party member and the Right ally 1/3 their individual max health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVandalaEffect"),
@@ -278,11 +298,11 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
-            vandala1.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
-            vandala1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Resurrect)]);
-            vandala1.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
+            vandala2.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
+            vandala2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Resurrect)]);
+            vandala2.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_11_20)]);
 
-            Ability vandala2 = new Ability("Vandala Effect, Virtuously", "Vandala_3_A")
+            Ability vandala3 = new Ability("Vandala Effect, Visibly", "HIF_Vandala_4_A")
             {
                 Description = "Randomize this party member's and the Right ally's health.\nAttempt to resurrect a party member in the Right ally position.\nHeal this party member and the Right ally 1/2 their individual max health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderVandalaEffect"),
@@ -298,36 +318,14 @@ namespace Hell_Island_Fell.Fools
                     Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
                 ]
             };
-            vandala2.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
-            vandala2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Resurrect)]);
-            vandala2.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_11_20)]);
-
-            Ability vandala3 = new Ability("Vandala Effect, Visibly", "Vandala_4_A")
-            {
-                Description = "Randomize this party member's and the Right ally's health.\nAttempt to resurrect a party member in the Right ally position.\nHeal this party member and the Right ally 1/2 their individual max health.\nRemove Cursed from the Right ally.",
-                AbilitySprite = ResourceLoader.LoadSprite("VandanderVandalaEffect"),
-                Cost = [Pigments.Purple, Pigments.Blue],
-                Visuals = Visuals.Miracle,
-                AnimationTarget = Targeting.Slot_SelfSlot,
-                Effects =
-                [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<RandomizeHealthEffect>(), 1, Targeting.Slot_SelfAndRight),
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ResurrectEffect>(), 1, Targeting.Slot_AllyRight),
-                    Effects.GenerateEffect(HealMax, 50, Targeting.Slot_SelfAndRight),
-                    Effects.GenerateEffect(CursedRemove, 1, Targeting.Slot_AllyRight),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot),
-                    Effects.GenerateEffect(BoilEffect, 1, Targeting.Slot_SelfSlot, Effects.ChanceCondition(50)),
-                ]
-            };
             vandala3.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Other_MaxHealth)]);
             vandala3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Resurrect)]);
             vandala3.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_11_20)]);
-            vandala3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Rem_Status_Cursed)]);
 
-            vandander.AddLevelData(15, new Ability[] { vow0, vent0, vandala0 });
-            vandander.AddLevelData(19, new Ability[] { vow1, vent1, vandala1 });
-            vandander.AddLevelData(24, new Ability[] { vow2, vent2, vandala2 });
-            vandander.AddLevelData(28, new Ability[] { vow3, vent3, vandala3 });
+            vandander.AddLevelData(15, [vent0, vow0, vandala0]);
+            vandander.AddLevelData(19, [vent1, vow1, vandala1]);
+            vandander.AddLevelData(24, [vent2, vow2, vandala2]);
+            vandander.AddLevelData(28, [vent3, vow3, vandala3]);
 
             vandander.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Vandander_Witness_ACH");
             vandander.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Vandander_Divine_ACH");

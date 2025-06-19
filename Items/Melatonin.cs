@@ -33,7 +33,12 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(melatonin.Item);
+            melatonin.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(melatonin.Item, new ItemModdedUnlockInfo(melatonin.Item_ID, ResourceLoader.LoadSprite("ShopMelatonin")));
         }
     }
 }

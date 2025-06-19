@@ -83,6 +83,15 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            theDeal.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Face.ToString(),
+                    ItemType_GameIDs.Fabric.ToString(),
+                    ItemType_GameIDs.Knife.ToString(),
+                    ItemType_GameIDs.Magic.ToString(),
+                    ItemType_GameIDs.Heart.ToString(),
+                ];
+
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(theDeal.Item, new ItemModdedUnlockInfo("TheDeal_SW", ResourceLoader.LoadSprite("UnlockHeavenStareyedLocked", null, 32, null), "HIF_Stareyed_Divine_ACH"));
         }
     }

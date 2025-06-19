@@ -8,7 +8,7 @@ namespace Hell_Island_Fell.Fools
     {
         public static void Add()
         {
-            Ability slap2 = new Ability("Slap", "AltSlap_A")
+            Ability slap2 = new Ability("Slap", "HIF_AltSlap_A")
             {
                 Description = "Deal 1-2 damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixSlap"),
@@ -63,6 +63,10 @@ namespace Hell_Island_Fell.Fools
                 BasicAbility = slap2,
                 IgnoredAbilitiesForDPSBuilds = [2],
                 IgnoredAbilitiesForSupportBuilds = [1],
+                UnitTypes =
+                [
+                    "Sandwich_Gambling"
+                ],
             };
             felix.GenerateMenuCharacter(ResourceLoader.LoadSprite("FelixMenu"), ResourceLoader.LoadSprite("FelixLocked"));
             felix.AddPassives([Passives.GetCustomPassive("Chaos_PA"), Passives.Delicate]);
@@ -128,7 +132,7 @@ namespace Hell_Island_Fell.Fools
             butterflyHeal._valueNameBottom = "ButterflyDownStoredValue";
 
             //determinism
-            Ability determinism0 = new Ability("Fast Determinism", "Determinism_1_A")
+            Ability determinism0 = new Ability("Fast Determinism", "HIF_Determinism_1_A")
             {
                 Description = "Reroll this party member's costs. Increase butterfly max healing by 0-2. Increase pendulum max damage by 0-2.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixDeterminism"),
@@ -150,7 +154,7 @@ namespace Hell_Island_Fell.Fools
             determinism0.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Reroll_Cost"]);
             determinism0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability determinism1 = new Ability("Broken Determinism", "Determinism_2_A")
+            Ability determinism1 = new Ability("Broken Determinism", "HIF_Determinism_2_A")
             {
                 Description = "Reroll this party member's costs. Increase butterfly max healing by 0-3. Increase pendulum max damage by 0-3.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixDeterminism"),
@@ -172,7 +176,7 @@ namespace Hell_Island_Fell.Fools
             determinism1.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Reroll_Cost"]);
             determinism1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability determinism2 = new Ability("Slow Determinism", "Determinism_3_A")
+            Ability determinism2 = new Ability("Slow Determinism", "HIF_Determinism_3_A")
             {
                 Description = "Reroll this party member's costs. Increase butterfly max healing by 0-4. Increase pendulum max damage by 0-4.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixDeterminism"),
@@ -194,7 +198,7 @@ namespace Hell_Island_Fell.Fools
             determinism2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Reroll_Cost"]);
             determinism2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability determinism3 = new Ability("Stopped Determinism", "Determinism_4_A")
+            Ability determinism3 = new Ability("Stopped Determinism", "HIF_Determinism_4_A")
             {
                 Description = "Reroll this party member's costs. Increase butterfly max healing by 1-4. Increase pendulum max damage by 1-4.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixDeterminism"),
@@ -217,7 +221,7 @@ namespace Hell_Island_Fell.Fools
             determinism3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
             //pendulum
-            Ability pendulum0 = new Ability("Grandfather Pendulum", "Pendulum_1_A")
+            Ability pendulum0 = new Ability("Grandfather Pendulum", "HIF_Pendulum_1_A")
             {
                 Description = "Deal 6-7 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixPendulum"),
@@ -238,7 +242,7 @@ namespace Hell_Island_Fell.Fools
             pendulum0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             pendulum0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability pendulum1 = new Ability("Foucalt Pendulum", "Pendulum_2_A")
+            Ability pendulum1 = new Ability("Foucalt Pendulum", "HIF_Pendulum_2_A")
             {
                 Description = "Deal 9-10 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixPendulum"),
@@ -259,7 +263,7 @@ namespace Hell_Island_Fell.Fools
             pendulum1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             pendulum1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability pendulum2 = new Ability("Damped Pendulum", "Pendulum_3_A")
+            Ability pendulum2 = new Ability("Damped Pendulum", "HIF_Pendulum_3_A")
             {
                 Description = "Deal 12-13 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixPendulum"),
@@ -280,7 +284,7 @@ namespace Hell_Island_Fell.Fools
             pendulum2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
             pendulum2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability pendulum3 = new Ability("Double Pendulum", "Pendulum_4_A")
+            Ability pendulum3 = new Ability("Double Pendulum", "HIF_Pendulum_4_A")
             {
                 Description = "Deal 15-16 damage to the Opposing enemy.\nDecrease this ability's minimum damage by 2-3.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixPendulum"),
@@ -302,7 +306,7 @@ namespace Hell_Island_Fell.Fools
             pendulum3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
             //butterfly
-            Ability butterfly0 = new Ability("Tummy Butterfly", "Butterfly_1_A")
+            Ability butterfly0 = new Ability("Tummy Butterfly", "HIF_Butterfly_1_A")
             {
                 Description = "Heal this party member and the Right ally 3-4 health.\nDecrease this ability's minimum healing by 1-2.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixButterflies"),
@@ -323,7 +327,7 @@ namespace Hell_Island_Fell.Fools
             butterfly0.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             butterfly0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability butterfly1 = new Ability("Incense Butterfly", "Butterfly_2_A")
+            Ability butterfly1 = new Ability("Incense Butterfly", "HIF_Butterfly_2_A")
             {
                 Description = "Heal this party member and the Right ally 5-6 health.\nDecrease this ability's minimum healing by 1-2.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixButterflies"),
@@ -344,7 +348,7 @@ namespace Hell_Island_Fell.Fools
             butterfly1.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
             butterfly1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability butterfly2 = new Ability("Monarch Butterfly", "Butterfly_3_A")
+            Ability butterfly2 = new Ability("Monarch Butterfly", "HIF_Butterfly_3_A")
             {
                 Description = "Heal this party member and the Right ally 7-8 health.\nDecrease this ability's minimum healing by 1-2.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixButterflies"),
@@ -365,7 +369,7 @@ namespace Hell_Island_Fell.Fools
             butterfly2.AddIntentsToTarget(Targeting.Slot_SelfAndRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
             butterfly2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability butterfly3 = new Ability("The Butterfly Effect", "Butterfly_4_A")
+            Ability butterfly3 = new Ability("The Butterfly Effect", "HIF_Butterfly_4_A")
             {
                 Description = "Heal this party member and the Right ally 9-10 health.\nDecrease this ability's minimum healing by 1-2.",
                 AbilitySprite = ResourceLoader.LoadSprite("FelixButterflies"),

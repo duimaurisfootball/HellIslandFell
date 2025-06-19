@@ -59,7 +59,12 @@ namespace Hell_Island_Fell.Items
                 soulParticles
             };
 
-            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(vanishingJar.Item);
+            vanishingJar.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
+
+            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(vanishingJar.Item, new ItemModdedUnlockInfo(vanishingJar.Item_ID, ResourceLoader.LoadSprite("TreasureVanishingJar")));
         }
     }
 }

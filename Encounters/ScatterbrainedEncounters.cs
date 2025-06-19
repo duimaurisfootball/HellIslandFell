@@ -70,6 +70,15 @@ namespace Hell_Island_Fell.Encounters
                         "FrowningChancellor_EN",
                     ], null);
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                scatterbrainedMedium.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
+                        "Attrition_EN",
+                    ], null);
+            }
             scatterbrainedMedium.AddEncounterToDataBases();
             EnemyEncounterUtils.AddEncounterToZoneSelector("H_Zone03_ScatterbrainedNosestone_Medium_EnemyBundle", 3, ZoneType_GameIDs.Garden_Hard, BundleDifficulty.Medium);
 
@@ -175,6 +184,29 @@ namespace Hell_Island_Fell.Encounters
                         "InHerImage_EN",
                         "InHerImage_EN",
                         "FrowningChancellor_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                scatterbrainedHard.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
+                        "Attrition_EN",
+                        "GigglingMinister_EN",
+                    ], null);
+                scatterbrainedHard.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "Git_EN",
+                        "Git_EN",
+                    ], null);
+                scatterbrainedHard.CreateNewEnemyEncounterData(
+                    [
+                        "ScatterbrainedNosestone_EN",
+                        "InHerImage_EN",
+                        "InHerImage_EN",
+                        "Romantic_EN",
                     ], null);
             }
             scatterbrainedHard.AddEncounterToDataBases();

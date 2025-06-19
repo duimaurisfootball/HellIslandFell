@@ -22,11 +22,12 @@ namespace Hell_Island_Fell.Enemies
                 DeathSound = LoadedAssetsHandler.GetEnemy("TaMaGoa_EN").deathSound,
                 CombatExitEffects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<GainLootRandomCharacterEffect>(), 2),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 70),
+                    Effects.GenerateEffect(ScriptableObject.CreateInstance<GainPlayerCurrencyRandomBetweenEffect>(), 40),
                 ],
             };
             boojum.PrepareEnemyPrefab("Assets/BoojumAssetBundle/Boojum.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/BoojumAssetBundle/BoojumGibs.prefab").GetComponent<ParticleSystem>());
-            boojum.AddPassives([Passives.Confusion, Passives.GetCustomPassive("Billiard_PA")]);
+            boojum.AddPassives([Passives.GetCustomPassive("Bonnet_PA"), Passives.GetCustomPassive("Boot_PA"), Passives.GetCustomPassive("Billiard_PA")]);
 
             BoojumStatusEffectEffect BellmanEffect = ScriptableObject.CreateInstance<BoojumStatusEffectEffect>();
             BellmanEffect._Status = StatusField.DivineProtection;

@@ -20,6 +20,10 @@ namespace Hell_Island_Fell.Fools
                 DamageSound = LoadedAssetsHandler.GetCharacter("Burnout_CH").damageSound,
                 DeathSound = LoadedAssetsHandler.GetCharacter("Burnout_CH").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetCharacter("Burnout_CH").dxSound,
+                UnitTypes =
+                [
+                    "Sandwich_BDSM",
+                ],
             };
             stareyed.GenerateMenuCharacter(ResourceLoader.LoadSprite("StareyedMenu"), ResourceLoader.LoadSprite("StareyedLocked"));
             stareyed.AddPassives([Passives.GetCustomPassive("Mirage_PA")]);
@@ -36,7 +40,7 @@ namespace Hell_Island_Fell.Fools
             RupturedApply._Status = StatusField.Ruptured;
 
             //blink
-            Ability blink0 = new Ability("Blink Low", "hifBlink_1_A")
+            Ability blink0 = new Ability("Blink Low", "HIF_Blink_1_A")
             {
                 Description = "Deal 7 damage to the Opposing enemy.\nApply 3 Shadow Hands to the Opposing enemy position.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedBlink"),
@@ -52,7 +56,7 @@ namespace Hell_Island_Fell.Fools
             blink0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             blink0.AddIntentsToTarget(Targeting.Slot_Front, ["Field_ShadowHands"]);
 
-            Ability blink1 = new Ability("Blink Terse", "hifBlink_2_A")
+            Ability blink1 = new Ability("Blink Terse", "HIF_Blink_2_A")
             {
                 Description = "Deal 10 damage to the Opposing enemy.\nApply 3 Shadow Hands to the Opposing enemy position.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedBlink"),
@@ -68,7 +72,7 @@ namespace Hell_Island_Fell.Fools
             blink1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
             blink1.AddIntentsToTarget(Targeting.Slot_Front, ["Field_ShadowHands"]);
 
-            Ability blink2 = new Ability("Blink Sharp", "hifBlink_3_A")
+            Ability blink2 = new Ability("Blink Sharp", "HIF_Blink_3_A")
             {
                 Description = "Deal 13 damage to the Opposing enemy.\nApply 4 Shadow Hands to the Opposing enemy position.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedBlink"),
@@ -84,7 +88,7 @@ namespace Hell_Island_Fell.Fools
             blink2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_11_15)]);
             blink2.AddIntentsToTarget(Targeting.Slot_Front, ["Field_ShadowHands"]);
 
-            Ability blink3 = new Ability("Blink Once", "hifBlink_4_A")
+            Ability blink3 = new Ability("Blink Once", "HIF_Blink_4_A")
             {
                 Description = "Deal 17 damage to the Opposing enemy.\nApply 4 Shadow Hands to the Opposing enemy position.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedBlink"),
@@ -101,7 +105,7 @@ namespace Hell_Island_Fell.Fools
             blink3.AddIntentsToTarget(Targeting.Slot_Front, ["Field_ShadowHands"]);
 
             //invisible
-            Ability invisible0 = new Ability("Wave Invisible", "Invisible_1_A")
+            Ability invisible0 = new Ability("Wave Invisible", "HIF_Invisible_1_A")
             {
                 Description = "Apply 4 Shadow Hands split randomly between the Left, Right, and Opposing enemy positions.\nApply 2 Ruptured to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedInvisible"),
@@ -117,7 +121,7 @@ namespace Hell_Island_Fell.Fools
             invisible0.AddIntentsToTarget(Targeting.Slot_FrontAndSides, ["Field_ShadowHands"]);
             invisible0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
 
-            Ability invisible1 = new Ability("Vibrate Invisible", "Invisible_2_A")
+            Ability invisible1 = new Ability("Vibrate Invisible", "HIF_Invisible_2_A")
             {
                 Description = "Apply 6 Shadow Hands split randomly between the Left, Right, and Opposing enemy positions\nApply 2 Ruptured to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedInvisible"),
@@ -133,7 +137,7 @@ namespace Hell_Island_Fell.Fools
             invisible1.AddIntentsToTarget(Targeting.Slot_FrontAndSides, ["Field_ShadowHands"]);
             invisible1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
 
-            Ability invisible2 = new Ability("Outline Invisible", "Invisible_3_A")
+            Ability invisible2 = new Ability("Outline Invisible", "HIF_Invisible_3_A")
             {
                 Description = "Apply 8 Shadow Hands split randomly between the Left, Right, and Opposing enemy positions\nApply 2 Ruptured to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedInvisible"),
@@ -149,7 +153,7 @@ namespace Hell_Island_Fell.Fools
             invisible2.AddIntentsToTarget(Targeting.Slot_FrontAndSides, ["Field_ShadowHands"]);
             invisible2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
 
-            Ability invisible3 = new Ability("Touch Invisible", "Invisible_4_A")
+            Ability invisible3 = new Ability("Touch Invisible", "HIF_Invisible_4_A")
             {
                 Description = "Apply 10 Shadow Hands split randomly between the Left, Right, and Opposing enemy positions\nApply 2 Ruptured to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedInvisible"),
@@ -166,7 +170,7 @@ namespace Hell_Island_Fell.Fools
             invisible3.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Ruptured)]);
 
             //margins
-            Ability margins0 = new Ability("Radiation Margins", "Margins_1_A")
+            Ability margins0 = new Ability("Radiation Margins", "HIF_Margins_1_A")
             {
                 Description = "Apply 2 Ruptured to all enemies.\nHeal this party member 3 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedMargins"),
@@ -182,7 +186,7 @@ namespace Hell_Island_Fell.Fools
             margins0.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Status_Ruptured)]);
             margins0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability margins1 = new Ability("Background Margins", "Margins_2_A")
+            Ability margins1 = new Ability("Background Margins", "HIF_Margins_2_A")
             {
                 Description = "Apply 3 Ruptured to all enemies.\nHeal this party member 3 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedMargins"),
@@ -198,7 +202,7 @@ namespace Hell_Island_Fell.Fools
             margins1.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Status_Ruptured)]);
             margins1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability margins2 = new Ability("Microwave Margins", "Margins_3_A")
+            Ability margins2 = new Ability("Microwave Margins", "HIF_Margins_3_A")
             {
                 Description = "Apply 4 Ruptured to all enemies.\nHeal this party member 3 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedMargins"),
@@ -214,7 +218,7 @@ namespace Hell_Island_Fell.Fools
             margins2.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Status_Ruptured)]);
             margins2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability margins3 = new Ability("Cosmic Margins", "Margins_4_A")
+            Ability margins3 = new Ability("Cosmic Margins", "HIF_Margins_4_A")
             {
                 Description = "Apply 4 Ruptured to all enemies.\nHeal this party member 3 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("StareyedMargins"),
@@ -230,10 +234,10 @@ namespace Hell_Island_Fell.Fools
             margins3.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Status_Ruptured)]);
             margins3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            stareyed.AddLevelData(20, new Ability[] { blink0, invisible0, margins0 });
-            stareyed.AddLevelData(22, new Ability[] { blink1, invisible1, margins1 });
-            stareyed.AddLevelData(25, new Ability[] { blink2, invisible2, margins2 });
-            stareyed.AddLevelData(28, new Ability[] { blink3, invisible3, margins3 });
+            stareyed.AddLevelData(20, [blink0, invisible0, margins0]);
+            stareyed.AddLevelData(22, [blink1, invisible1, margins1]);
+            stareyed.AddLevelData(25, [blink2, invisible2, margins2]);
+            stareyed.AddLevelData(28, [blink3, invisible3, margins3]);
 
             stareyed.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Stareyed_Witness_ACH");
             stareyed.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Stareyed_Divine_ACH");

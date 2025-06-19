@@ -60,6 +60,11 @@ namespace Hell_Island_Fell.Items
             {
                 oilLinker
             };
+            
+            ancientWine.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
 
             ItemUtils.AddItemToShopStatsCategoryAndGamePool(ancientWine.Item, new ItemModdedUnlockInfo("AncientWine_SW", ResourceLoader.LoadSprite("UnlockHeavenGommaLocked", null, 32, null), "HIF_Gomma_Divine_ACH"));
         }

@@ -63,6 +63,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            cursedLeg.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(cursedLeg.Item, new ItemModdedUnlockInfo("CursedLeg_TW", ResourceLoader.LoadSprite("UnlockHeavenRodneyLocked", null, 32, null), "HIF_Rodney_Divine_ACH"));
         }
     }

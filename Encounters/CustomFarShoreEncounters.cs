@@ -230,6 +230,21 @@ namespace Hell_Island_Fell.Encounters
                         "Draugr_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                mudLungMedium.Add(new(
+                    [
+                        "MudLung_EN",
+                        "Draugr_EN",
+                        "Surimi_EN",
+                    ]));
+                mudLungMedium.Add(new(
+                    [
+                        "MudLung_EN",
+                        "Draugr_EN",
+                        "Snaurce_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MudLung_Medium_EnemyBundle"))._enemyBundles = mudLungMedium;
 
             List<RandomEnemyGroup> blueSpoggleMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Ruminating_Medium_EnemyBundle"))._enemyBundles)
@@ -320,6 +335,16 @@ namespace Hell_Island_Fell.Encounters
                         "Keklung_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                kekoMedium.Add(new(
+                    [
+                        "Keko_EN",
+                        "Keko_EN",
+                        "Snaurce_EN",
+                        "Keklung_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Keko_Medium_EnemyBundle"))._enemyBundles = kekoMedium;
 
             List<RandomEnemyGroup> munglingMedium = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MunglingMudLung_Medium_EnemyBundle"))._enemyBundles)
@@ -384,6 +409,21 @@ namespace Hell_Island_Fell.Encounters
                         "Keklung_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                munglingMedium.Add(new(
+                    [
+                        "MunglingMudLung_EN",
+                        "Surimi_EN",
+                        "Keklung_EN",
+                    ]));
+                munglingMedium.Add(new(
+                    [
+                        "MunglingMudLung_EN",
+                        "Snaurce_EN",
+                        "Keklung_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_MunglingMudLung_Medium_EnemyBundle"))._enemyBundles = munglingMedium;
 
             List<RandomEnemyGroup> goaHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_FlaMingGoa_Hard_EnemyBundle"))._enemyBundles)
@@ -443,6 +483,22 @@ namespace Hell_Island_Fell.Encounters
                         "Keklung_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                goaHard.Add(new(
+                    [
+                        "FlaMinGoa_EN",
+                        "Draugr_EN",
+                        "Surimi_EN",
+                    ]));
+                goaHard.Add(new(
+                    [
+                        "FlaMinGoa_EN",
+                        "Wringle_EN",
+                        "Surimi_EN",
+                        "Keklung_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_FlaMingGoa_Hard_EnemyBundle"))._enemyBundles = goaHard;
 
             List<RandomEnemyGroup> flarbHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Flarb_Hard_EnemyBundle"))._enemyBundles)
@@ -480,8 +536,14 @@ namespace Hell_Island_Fell.Encounters
                         "VanishingHands_EN",
                     ]));
             }
-            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
             {
+                flarbHard.Add(new(
+                    [
+                        "Flarb_EN",
+                        "Snaurce_EN",
+                        "Keklung_EN",
+                    ]));
             }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Flarb_Hard_EnemyBundle"))._enemyBundles = flarbHard;
 
@@ -558,6 +620,27 @@ namespace Hell_Island_Fell.Encounters
                         "Flakkid_EN",
                     ]));
             }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                voboolaHard.Add(new(
+                    [
+                        "Voboola_EN",
+                        "VanishingHands_EN",
+                        "Snaurce_EN",
+                    ]));
+                voboolaHard.Add(new(
+                    [
+                        "Voboola_EN",
+                        "VanishingHands_EN",
+                        "Surimi_EN",
+                    ]));
+                voboolaHard.Add(new(
+                    [
+                        "Voboola_EN",
+                        "Draugr_EN",
+                        "Surimi_EN",
+                    ]));
+            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Voboola_Hard_EnemyBundle"))._enemyBundles = voboolaHard;
 
             List<RandomEnemyGroup> kekastleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Kekastle_Hard_EnemyBundle"))._enemyBundles)
@@ -573,12 +656,6 @@ namespace Hell_Island_Fell.Encounters
                 "Draugr_EN",
             ]),
             };
-            if (Hell_Island_Fell.CrossMod.EnemyPack)
-            {
-            }
-            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
-            {
-            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Kekastle_Hard_EnemyBundle"))._enemyBundles = kekastleHard;
 
             List<RandomEnemyGroup> purpleJumbleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Flummoxing_Hard_EnemyBundle"))._enemyBundles)
@@ -602,12 +679,6 @@ namespace Hell_Island_Fell.Encounters
                 "Draugr_EN",
             ]),
             };
-            if (Hell_Island_Fell.CrossMod.EnemyPack)
-            {
-            }
-            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
-            {
-            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Flummoxing_Hard_EnemyBundle"))._enemyBundles = purpleJumbleHard;
 
             List<RandomEnemyGroup> blueJumbleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Hollowing_Hard_EnemyBundle"))._enemyBundles)
@@ -631,12 +702,6 @@ namespace Hell_Island_Fell.Encounters
                 "Draugr_EN",
             ]),
             };
-            if (Hell_Island_Fell.CrossMod.EnemyPack)
-            {
-            }
-            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
-            {
-            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_JumbleGuts_Hollowing_Hard_EnemyBundle"))._enemyBundles = blueJumbleHard;
 
             List<RandomEnemyGroup> purpleSpoggleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Resonant_Hard_EnemyBundle"))._enemyBundles)
@@ -658,12 +723,6 @@ namespace Hell_Island_Fell.Encounters
                 "Draugr_EN",
             ]),
             };
-            if (Hell_Island_Fell.CrossMod.EnemyPack)
-            {
-            }
-            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
-            {
-            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Resonant_Hard_EnemyBundle"))._enemyBundles = purpleSpoggleHard;
 
             List<RandomEnemyGroup> redSpoggleHard = new List<RandomEnemyGroup>(((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Writhing_Hard_EnemyBundle"))._enemyBundles)
@@ -685,12 +744,6 @@ namespace Hell_Island_Fell.Encounters
                 "Draugr_EN",
             ]),
             };
-            if (Hell_Island_Fell.CrossMod.EnemyPack)
-            {
-            }
-            if (Hell_Island_Fell.CrossMod.GlitchFreaks)
-            {
-            }
             ((RandomEnemyBundleSO)LoadedAssetsHandler.GetEnemyBundle("H_Zone01_Spoggle_Writhing_Hard_EnemyBundle"))._enemyBundles = redSpoggleHard;
         }
     }

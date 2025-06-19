@@ -37,7 +37,12 @@ namespace Hell_Island_Fell.Items
                 ]
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(appleCiderVinegar.Item);
+            appleCiderVinegar.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(appleCiderVinegar.Item, new ItemModdedUnlockInfo(appleCiderVinegar.Item_ID, ResourceLoader.LoadSprite("ShopAppleCiderVinegar")));
         }
     }
 }

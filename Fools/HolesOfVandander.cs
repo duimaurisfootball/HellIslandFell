@@ -22,6 +22,10 @@ namespace Hell_Island_Fell.Fools
                 DeathSound = LoadedAssetsHandler.GetEnemy("TaintedYolk_EN").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetEnemy("TaMaGoa_EN").damageSound,
                 UsesAllAbilities = true,
+                UnitTypes =
+                [
+                    "Sandwich_Gore",
+                ],
             };
             vandanderHoles.AddPassives([Passives.Enfeebled]);
 
@@ -31,7 +35,7 @@ namespace Hell_Island_Fell.Fools
             StatusEffect_Apply_Effect FrailApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
             FrailApply._Status = StatusField.Frail;
 
-            Ability vandalize = new Ability("Vandalize", "Vandalize_A")
+            Ability vandalize = new Ability("Vandalize", "HIF_Vandalize_A")
             {
                 Description = "Apply 2 Linked and 1 Frail to the Opposing enemy.\nHeal the Left ally 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("VandanderHolesVandalize"),
@@ -49,7 +53,7 @@ namespace Hell_Island_Fell.Fools
             vandalize.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Status_Frail)]);
             vandalize.AddIntentsToTarget(Targeting.Slot_AllyLeft, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            vandanderHoles.AddLevelData(9, new Ability[] { vandalize });
+            vandanderHoles.AddLevelData(9, [vandalize]);
             vandanderHoles.AddCharacter(true, true);
         }
     }

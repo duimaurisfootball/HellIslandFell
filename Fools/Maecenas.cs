@@ -20,6 +20,10 @@ namespace Hell_Island_Fell.Fools
                 DamageSound = LoadedAssetsHandler.GetCharacter("Agon_CH").damageSound,
                 DeathSound = LoadedAssetsHandler.GetCharacter("Agon_CH").deathSound,
                 DialogueSound = LoadedAssetsHandler.GetCharacter("Agon_CH").dxSound,
+                UnitTypes =
+                [
+                    "Sandwich_War",
+                ],
             };
             maecenas.GenerateMenuCharacter(ResourceLoader.LoadSprite("MaecenasMenu"), ResourceLoader.LoadSprite("MaecenasLocked"));
             maecenas.SetMenuCharacterAsFullDPS();
@@ -38,7 +42,7 @@ namespace Hell_Island_Fell.Fools
             KillDamage._returnKillAsSuccess = true;
 
             //rain
-            Ability rain0 = new Ability("Distant Rain", "Rain_1_A")
+            Ability rain0 = new Ability("Distant Rain", "HIF_Rain_1_A")
             {
                 Description = "If this party member is in the Thunderstorm, remove all of it and heal for an equivalent amount.\nOtherwise, apply 1 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasRain"),
@@ -56,7 +60,7 @@ namespace Hell_Island_Fell.Fools
             rain0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
             rain0.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            Ability rain1 = new Ability("Light Rain", "Rain_2_A")
+            Ability rain1 = new Ability("Light Rain", "HIF_Rain_2_A")
             {
                 Description = "If this party member is in the Thunderstorm, remove all of it and heal for an equivalent amount.\nOtherwise, apply 3 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasRain"),
@@ -74,7 +78,7 @@ namespace Hell_Island_Fell.Fools
             rain1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_1_4)]);
             rain1.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            Ability rain2 = new Ability("Cold Rain", "Rain_3_A")
+            Ability rain2 = new Ability("Cold Rain", "HIF_Rain_3_A")
             {
                 Description = "If this party member is in the Thunderstorm, remove all of it and heal for an equivalent amount.\nOtherwise, apply 4 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasRain"),
@@ -92,7 +96,7 @@ namespace Hell_Island_Fell.Fools
             rain2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_5_10)]);
             rain2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            Ability rain3 = new Ability("Torrential Rain", "Rain_4_A")
+            Ability rain3 = new Ability("Torrential Rain", "HIF_Rain_4_A")
             {
                 Description = "If this party member is in the Thunderstorm, remove all of it and heal for an equivalent amount.\nOtherwise, apply 5 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasRain"),
@@ -112,7 +116,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //lightningStrike
-            Ability lightningStrike0 = new Ability("Hot Lightning Strike", "LightningStrike_1_A")
+            Ability lightningStrike0 = new Ability("Hot Lightning Strike", "HIF_LightningStrike_1_A")
             {
                 Description = "40% chance to apply 1 Thunderstorm to this position.\nDeal 5 damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasLightningStrike"),
@@ -128,7 +132,7 @@ namespace Hell_Island_Fell.Fools
             lightningStrike0.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
             lightningStrike0.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_3_6)]);
 
-            Ability lightningStrike1 = new Ability("Snow Lightning Strike", "LightningStrike_2_A")
+            Ability lightningStrike1 = new Ability("Snow Lightning Strike", "HIF_LightningStrike_2_A")
             {
                 Description = "50% chance to apply 1 Thunderstorm to this position.\nDeal 7 damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasLightningStrike"),
@@ -144,7 +148,7 @@ namespace Hell_Island_Fell.Fools
             lightningStrike1.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
             lightningStrike1.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
-            Ability lightningStrike2 = new Ability("Ball Lightning Strike", "LightningStrike_3_A")
+            Ability lightningStrike2 = new Ability("Ball Lightning Strike", "HIF_LightningStrike_3_A")
             {
                 Description = "60% chance to apply 1 Thunderstorm to this position.\nDeal 9 damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasLightningStrike"),
@@ -160,7 +164,7 @@ namespace Hell_Island_Fell.Fools
             lightningStrike2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
             lightningStrike2.AddIntentsToTarget(Targeting.Slot_Front, [nameof(IntentType_GameIDs.Damage_7_10)]);
 
-            Ability lightningStrike3 = new Ability("Double Lightning Strike", "LightningStrike_4_A")
+            Ability lightningStrike3 = new Ability("Double Lightning Strike", "HIF_LightningStrike_4_A")
             {
                 Description = "70% chance to apply 1 Thunderstorm to this position.\nDeal 11 damage to the Opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasLightningStrike"),
@@ -178,7 +182,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //sand
-            Ability hail0 = new Ability("Soft Hail", "Hail_1_A")
+            Ability hail0 = new Ability("Soft Hail", "HIF_Hail_1_A")
             {
                 Description = "Deal 5 damage to the Left and Right enemies.\nIf this move kills, apply 3 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasHail"),
@@ -194,7 +198,7 @@ namespace Hell_Island_Fell.Fools
             hail0.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_3_6)]);
             hail0.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            Ability hail1 = new Ability("Falling Hail", "Hail_2_A")
+            Ability hail1 = new Ability("Falling Hail", "HIF_Hail_2_A")
             {
                 Description = "Deal 7 damage to the Left and Right enemies.\nIf this move kills, apply 3 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasHail"),
@@ -210,7 +214,7 @@ namespace Hell_Island_Fell.Fools
             hail1.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_7_10)]);
             hail1.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            Ability hail2 = new Ability("Cannon Hail", "Hail_3_A")
+            Ability hail2 = new Ability("Cannon Hail", "HIF_Hail_3_A")
             {
                 Description = "Deal 9 damage to the Left and Right enemies.\nIf this move kills, apply 3 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasHail"),
@@ -226,7 +230,7 @@ namespace Hell_Island_Fell.Fools
             hail2.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_7_10)]);
             hail2.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            Ability hail3 = new Ability("Giant Hail", "Hail_4_A")
+            Ability hail3 = new Ability("Giant Hail", "HIF_Hail_4_A")
             {
                 Description = "Deal 11 damage to the Left and Right enemies.\nIf this move kills, apply 3 Thunderstorm to this position.",
                 AbilitySprite = ResourceLoader.LoadSprite("MaecenasHail"),
@@ -242,10 +246,10 @@ namespace Hell_Island_Fell.Fools
             hail3.AddIntentsToTarget(Targeting.Slot_OpponentSides, [nameof(IntentType_GameIDs.Damage_11_15)]);
             hail3.AddIntentsToTarget(Targeting.Slot_SelfSlot, ["Field_Thunderstorm"]);
 
-            maecenas.AddLevelData(15, new Ability[] { rain0, lightningStrike0, hail0 });
-            maecenas.AddLevelData(17, new Ability[] { rain1, lightningStrike1, hail1 });
-            maecenas.AddLevelData(20, new Ability[] { rain2, lightningStrike2, hail2 });
-            maecenas.AddLevelData(24, new Ability[] { rain3, lightningStrike3, hail3 });
+            maecenas.AddLevelData(15, [rain0, lightningStrike0, hail0]);
+            maecenas.AddLevelData(17, [rain1, lightningStrike1, hail1]);
+            maecenas.AddLevelData(20, [rain2, lightningStrike2, hail2]);
+            maecenas.AddLevelData(24, [rain3, lightningStrike3, hail3]);
 
             maecenas.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Maecenas_Witness_ACH");
             maecenas.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Maecenas_Divine_ACH");

@@ -43,7 +43,7 @@ namespace Hell_Island_Fell.Fools
             ScalesShield._UseRandomBetweenPrevious = true;
 
             //forest
-            Ability forest0 = new Ability("Tiny Forest", "Forest_1_A")
+            Ability forest0 = new Ability("Tiny Forest", "HIF_Forest_1_A")
             {
                 Description = "Apply 5 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 1.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
@@ -59,7 +59,7 @@ namespace Hell_Island_Fell.Fools
             forest0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Field_Shield)]);
             forest0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability forest1 = new Ability("Black Forest", "Forest_2_A")
+            Ability forest1 = new Ability("Black Forest", "HIF_Forest_2_A")
             {
                 Description = "Apply 8 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 2.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
@@ -75,7 +75,7 @@ namespace Hell_Island_Fell.Fools
             forest1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Field_Shield)]);
             forest1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability forest2 = new Ability("Burning Forest", "Forest_3_A")
+            Ability forest2 = new Ability("Burning Forest", "HIF_Forest_3_A")
             {
                 Description = "Apply 10 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 2.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
@@ -91,7 +91,7 @@ namespace Hell_Island_Fell.Fools
             forest2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Field_Shield)]);
             forest2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability forest3 = new Ability("Phoenix Forest", "Forest_4_A")
+            Ability forest3 = new Ability("Phoenix Forest", "HIF_Forest_4_A")
             {
                 Description = "Apply 12 Shield to the positon(s) of the lowest health party member(s).\nIncrease this party member's Warts strength by 3.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaForest"),
@@ -108,7 +108,7 @@ namespace Hell_Island_Fell.Fools
             forest3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
             //scales
-            Ability scales0 = new Ability("Budding Scales", "Scales_1_A")
+            Ability scales0 = new Ability("Budding Scales", "HIF_Scales_1_A")
             {
                 Description = "Apply 0-8 Shield to the Left and Right positions.\nIncrease this party member's Warts strength by 1.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaScales"),
@@ -125,7 +125,7 @@ namespace Hell_Island_Fell.Fools
             scales0.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Field_Shield)]);
             scales0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability scales1 = new Ability("Propagating Scales", "Scales_2_A")
+            Ability scales1 = new Ability("Propagating Scales", "HIF_Scales_2_A")
             {
                 Description = "Apply 1-11 Shield to the Left and Right positions.\nIncrease this party member's Warts strength by 2.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaScales"),
@@ -142,7 +142,7 @@ namespace Hell_Island_Fell.Fools
             scales1.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Field_Shield)]);
             scales1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability scales2 = new Ability("Human Scales", "Scales_3_A")
+            Ability scales2 = new Ability("Human Scales", "HIF_Scales_3_A")
             {
                 Description = "Apply 1-17 Shield to the Left and Right positions.\nIncrease this party member's Warts strength by 2.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaScales"),
@@ -159,7 +159,7 @@ namespace Hell_Island_Fell.Fools
             scales2.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Field_Shield)]);
             scales2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
-            Ability scales3 = new Ability("Nacre Scales", "Scales_4_A")
+            Ability scales3 = new Ability("Nacre Scales", "HIF_Scales_4_A")
             {
                 Description = "Apply 1-21 Shield to the Left and Right positions.\nIncrease this party member's Warts strength by 3.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaScales"),
@@ -177,7 +177,7 @@ namespace Hell_Island_Fell.Fools
             scales3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
 
             //smoke
-            Ability smoke0 = new Ability("White Smoke", "Smoke_1_A")
+            Ability smoke0 = new Ability("White Smoke", "HIF_Smoke_1_A")
             {
                 Description = "Increase this party member's Warts strength by 2.\nHeal this party member 1 health.\n40% chance to refresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaSmoke"),
@@ -194,7 +194,7 @@ namespace Hell_Island_Fell.Fools
             smoke0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
             smoke0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability smoke1 = new Ability("Gray Smoke", "Smoke_2_A")
+            Ability smoke1 = new Ability("Gray Smoke", "HIF_Smoke_2_A")
             {
                 Description = "Increase this party member's Warts strength by 2.\nHeal this party member 1 health.\n50% chance to refresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaSmoke"),
@@ -211,7 +211,7 @@ namespace Hell_Island_Fell.Fools
             smoke1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
             smoke1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability smoke2 = new Ability("Brown Smoke", "Smoke_3_A")
+            Ability smoke2 = new Ability("Brown Smoke", "HIF_Smoke_3_A")
             {
                 Description = "Increase this party member's Warts strength by 3.\nHeal this party member 1 health.\n50% chance to refresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaSmoke"),
@@ -228,7 +228,7 @@ namespace Hell_Island_Fell.Fools
             smoke2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Misc)]);
             smoke2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability smoke3 = new Ability("Black Smoke", "Smoke_4_A")
+            Ability smoke3 = new Ability("Black Smoke", "HIF_Smoke_4_A")
             {
                 Description = "Increase this party member's Warts strength by 3.\nHeal this party member 1 health.\n60% chance to refresh this party member.",
                 AbilitySprite = ResourceLoader.LoadSprite("GommaSmoke"),
@@ -246,10 +246,10 @@ namespace Hell_Island_Fell.Fools
             smoke3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
 
-            gomma.AddLevelData(13, new Ability[] { forest0, scales0, smoke0 });
-            gomma.AddLevelData(15, new Ability[] { forest1, scales1, smoke1 });
-            gomma.AddLevelData(18, new Ability[] { forest2, scales2, smoke2 });
-            gomma.AddLevelData(21, new Ability[] { forest3, scales3, smoke3 });
+            gomma.AddLevelData(13, [forest0, scales0, smoke0]);
+            gomma.AddLevelData(15, [forest1, scales1, smoke1]);
+            gomma.AddLevelData(18, [forest2, scales2, smoke2]);
+            gomma.AddLevelData(21, [forest3, scales3, smoke3]);
 
             gomma.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Gomma_Witness_ACH");
             gomma.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Gomma_Divine_ACH");

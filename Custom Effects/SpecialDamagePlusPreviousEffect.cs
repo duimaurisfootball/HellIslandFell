@@ -22,6 +22,8 @@ namespace Hell_Island_Fell.Custom_Effects
 
         public string _damageType;
 
+        public bool _willApplyDamage;
+
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
             entryVariable += PreviousExitValue;
@@ -40,7 +42,10 @@ namespace Hell_Island_Fell.Custom_Effects
                     }
                     int amount = entryVariable;
                     DamageInfo damageInfo;
-                    amount = caster.WillApplyDamage(amount, targetSlotInfo.Unit);
+                    if (_willApplyDamage)
+                    {
+                        amount = caster.WillApplyDamage(amount, targetSlotInfo.Unit);
+                    }
                     damageInfo = _selfCast
                         ? targetSlotInfo.Unit.Damage(amount, caster, _DeathTypeID, targetSlotOffset, _addHealthMana, _direct, _ignoreShield, _damageType)
                         : targetSlotInfo.Unit.Damage(amount, null, _DeathTypeID, targetSlotOffset, _addHealthMana, _direct, _ignoreShield, _damageType);

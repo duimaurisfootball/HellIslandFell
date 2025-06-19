@@ -38,6 +38,12 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            magicAccelerator.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                    ItemType_GameIDs.Heart.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(magicAccelerator.Item, new ItemModdedUnlockInfo("MagicAccelerator_TW", ResourceLoader.LoadSprite("UnlockHeavenPinecLocked", null, 32, null), "HIF_Pinec_Divine_ACH"));
         }
     }

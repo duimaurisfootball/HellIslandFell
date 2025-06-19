@@ -35,6 +35,11 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
+            complexComplexion.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Face.ToString(),
+                ];
+
             ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(complexComplexion.Item, new ItemModdedUnlockInfo("ComplexComplexion_TW", ResourceLoader.LoadSprite("UnlockOsmanGommaLocked", null, 32, null), "HIF_Gomma_Witness_ACH"));
         }
     }

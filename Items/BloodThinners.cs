@@ -33,7 +33,12 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToShopStatsCategoryAndGamePool(bloodThinners.Item);
+            bloodThinners.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
+            ItemUtils.AddItemToShopStatsCategoryAndGamePool(bloodThinners.Item, new ItemModdedUnlockInfo(bloodThinners.Item_ID, ResourceLoader.LoadSprite("ShopBloodThinners")));
         }
     }
 }

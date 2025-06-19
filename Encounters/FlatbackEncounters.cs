@@ -105,11 +105,6 @@ namespace Hell_Island_Fell.Encounters
                 flatbackHard.CreateNewEnemyEncounterData(
                     [
                         "Flatback_EN",
-                        "Flarbleft_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
                         "MudLung_EN",
                         "Flarbleft_EN",
                     ], null);
@@ -134,11 +129,6 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Flatback_EN",
                         "Nephilim_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
-                        "Seraphim_EN",
                     ], null);
                 flatbackHard.CreateNewEnemyEncounterData(
                     [
@@ -175,55 +165,13 @@ namespace Hell_Island_Fell.Encounters
                 flatbackHard.CreateNewEnemyEncounterData(
                     [
                         "Flatback_EN",
-                        "JumbleGuts_Waning_EN",
-                        "Flakkid_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
                         "FlaMinGoa_EN",
                         "Flakkid_EN",
                     ], null);
                 flatbackHard.CreateNewEnemyEncounterData(
                     [
                         "Flatback_EN",
-                        "Flarblet_EN",
-                        "Flakkid_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
                         "Enno_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
-                        "JumbleGuts_Waning_EN",
-                        "Enno_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
-                        "JumbleGuts_Clotted_EN",
-                        "Enno_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
-                        "MudLung_EN",
-                        "Enno_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
-                        "Enno_EN",
-                        "Enno_EN",
-                    ], null);
-                flatbackHard.CreateNewEnemyEncounterData(
-                    [
-                        "Flatback_EN",
-                        "MudLung_EN",
-                        "DryBait_EN",
                     ], null);
                 flatbackHard.CreateNewEnemyEncounterData(
                     [
@@ -234,6 +182,19 @@ namespace Hell_Island_Fell.Encounters
                     [
                         "Flatback_EN",
                         "NotAn_EN",
+                    ], null);
+            }
+            if (Hell_Island_Fell.CrossMod.BoxOfBeasts)
+            {
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "Snaurce_EN",
+                    ], null);
+                flatbackHard.CreateNewEnemyEncounterData(
+                    [
+                        "Flatback_EN",
+                        "Surimi_EN",
                     ], null);
             }
             flatbackHard.AddEncounterToDataBases();

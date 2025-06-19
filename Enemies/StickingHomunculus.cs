@@ -25,6 +25,10 @@ namespace Hell_Island_Fell.Enemies
             };
             stickingHomunculus.PrepareEnemyPrefab("Assets/StickingHomunculusAssetBundle/StickingHomunculus.prefab", Hell_Island_Fell.assetBundle, Hell_Island_Fell.assetBundle.LoadAsset<GameObject>("Assets/StickingHomunculusAssetBundle/StickingHomunculusGibs.prefab").GetComponent<ParticleSystem>());
 
+            ChangeCasterHealthColorBetweenColorsEffect RedYellow = ScriptableObject.CreateInstance<ChangeCasterHealthColorBetweenColorsEffect>();
+            RedYellow._color1 = Pigments.Red;
+            RedYellow._color2 = Pigments.Yellow;
+
             DamageEffect IndirectDamage = ScriptableObject.CreateInstance<DamageEffect>();
             IndirectDamage._indirect = true;
 
@@ -40,13 +44,13 @@ namespace Hell_Island_Fell.Enemies
 
             Ability gruesomeExcrement = new Ability("Gruesome Excrement", "GruesomeExcrement_A")
             {
-                Description = "Deal a Painful amount of damage to this enemy.\nIf this enemy's health color is red, Heal all other enemies.\nIf this enemy's health color is yellow, Greatly Heal this enemy.",
+                Description = "Swap this enemy's health color between red and yellow.\nIf this enemy's health color is red, Heal all other enemies.\nIf this enemy's health color is yellow, Greatly Heal this enemy.",
                 Cost = [Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Puke,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 5, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(RedYellow),
                     Effects.GenerateEffect(RedCheck, 1),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 6, Targeting.Unit_OtherAllies, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<HealEffect>(), 11, Targeting.Slot_SelfSlot, Effects.CheckPreviousEffectCondition(false, 2)),
@@ -54,19 +58,19 @@ namespace Hell_Island_Fell.Enemies
                 Rarity = CustomAbilityRarity.Weight(9, true),
                 Priority = Priority.VerySlow,
             };
-            gruesomeExcrement.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
+            gruesomeExcrement.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
             gruesomeExcrement.AddIntentsToTarget(Targeting.Unit_OtherAllies, [nameof(IntentType_GameIDs.Heal_5_10)]);
             gruesomeExcrement.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Heal_11_20)]);
 
             Ability bitterMiasma = new Ability("Bitter Miasma", "BitterMiasma_A")
             {
-                Description = "Deal a Painful amount of damage to this enemy.\nIf this enemy's health color is red, apply 5 Shield to all enemy positions.\nIf this enemy's health color is yellow, deal a Little indirect damage to all party members.",
+                Description = "Swap this enemy's health color between red and yellow.\nIf this enemy's health color is red, apply 5 Shield to all enemy positions.\nIf this enemy's health color is yellow, deal a Little indirect damage to all party members.",
                 Cost = [Pigments.Red, Pigments.Red],
                 Visuals = Visuals.Melt,
                 AnimationTarget = Targeting.Slot_SelfSlot,
                 Effects =
                 [
-                    Effects.GenerateEffect(ScriptableObject.CreateInstance<DamageEffect>(), 3, Targeting.Slot_SelfSlot),
+                    Effects.GenerateEffect(RedYellow),
                     Effects.GenerateEffect(RedCheck, 1),
                     Effects.GenerateEffect(ShieldApply, 5, Targeting.Unit_AllAllySlots, ScriptableObject.CreateInstance<PreviousEffectCondition>()),
                     Effects.GenerateEffect(IndirectDamage, 2, Targeting.Unit_AllOpponents, Effects.CheckPreviousEffectCondition(false, 2)),
@@ -74,7 +78,7 @@ namespace Hell_Island_Fell.Enemies
                 Rarity = CustomAbilityRarity.Weight(7, true),
                 Priority = Priority.VerySlow,
             };
-            bitterMiasma.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Damage_3_6)]);
+            bitterMiasma.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Mana_Modify)]);
             bitterMiasma.AddIntentsToTarget(Targeting.Unit_AllAllySlots, [nameof(IntentType_GameIDs.Field_Shield)]);
             bitterMiasma.AddIntentsToTarget(Targeting.Unit_AllOpponents, [nameof(IntentType_GameIDs.Damage_1_2)]);
 

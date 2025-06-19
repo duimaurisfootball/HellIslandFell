@@ -38,7 +38,7 @@ namespace Hell_Island_Fell.Fools
             DivineProtectionApply._Status = StatusField.DivineProtection;
 
             //mud
-            Ability mud0 = new Ability("Spatters of Mud", "Mud_1_A")
+            Ability mud0 = new Ability("Spatters of Mud", "HIF_Mud_1_A")
             {
                 Description = "Apply 3 Divine Protection to the Right ally.\nSpawn a Mudball with 5-15 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganMud"),
@@ -56,7 +56,7 @@ namespace Hell_Island_Fell.Fools
             mud0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             mud0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Status_DivineProtection)]);
 
-            Ability mud1 = new Ability("Mud Puddle", "Mud_2_A")
+            Ability mud1 = new Ability("Mud Puddle", "HIF_Mud_2_A")
             {
                 Description = "Apply 3 Divine Protection to the Right ally.\nSpawn a Mudball with 6-18 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganMud"),
@@ -74,7 +74,7 @@ namespace Hell_Island_Fell.Fools
             mud1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             mud1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Status_DivineProtection)]);
 
-            Ability mud2 = new Ability("Smothered by Mud", "Mud_3_A")
+            Ability mud2 = new Ability("Smothered by Mud", "HIF_Mud_3_A")
             {
                 Description = "Apply 3 Divine Protection to the Right ally.\nSpawn a Mudball with 7-21 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganMud"),
@@ -92,7 +92,7 @@ namespace Hell_Island_Fell.Fools
             mud2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             mud2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Status_DivineProtection)]);
 
-            Ability mud3 = new Ability("Caked in Mud", "Mud_4_A")
+            Ability mud3 = new Ability("Caked in Mud", "HIF_Mud_4_A")
             {
                 Description = "Apply 3 Divine Protection to the Right ally.\nSpawn a Mudball with 8-24 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganMud"),
@@ -111,7 +111,7 @@ namespace Hell_Island_Fell.Fools
             mud3.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Status_DivineProtection)]);
 
             //glass
-            Ability glass0 = new Ability("Volcanic Glass", "Glass_1_A")
+            Ability glass0 = new Ability("Volcanic Glass", "HIF_Glass_1_A")
             {
                 Description = "Apply 2 Divine Protection to the Left and Right allies.\nHeal the Left and Right allies 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganGlass"),
@@ -127,7 +127,7 @@ namespace Hell_Island_Fell.Fools
             glass0.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_DivineProtection)]);
             glass0.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability glass1 = new Ability("Stained Glass", "Glass_2_A")
+            Ability glass1 = new Ability("Stained Glass", "HIF_Glass_2_A")
             {
                 Description = "Apply 2 Divine Protection to the Left and Right allies.\nHeal the Left and Right allies 4 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganGlass"),
@@ -143,7 +143,7 @@ namespace Hell_Island_Fell.Fools
             glass1.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_DivineProtection)]);
             glass1.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability glass2 = new Ability("Fibre Glass", "Glass_3_A")
+            Ability glass2 = new Ability("Fibre Glass", "HIF_Glass_3_A")
             {
                 Description = "Apply 2 Divine Protection to the Left and Right allies.\nHeal the Left and Right allies 6 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganGlass"),
@@ -159,7 +159,7 @@ namespace Hell_Island_Fell.Fools
             glass2.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Status_DivineProtection)]);
             glass2.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
-            Ability glass3 = new Ability("Trinity Glass", "Glass_4_A")
+            Ability glass3 = new Ability("Trinity Glass", "HIF_Glass_4_A")
             {
                 Description = "Apply 2 Divine Protection to the Left and Right allies.\nHeal the Left and Right allies 7 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganGlass"),
@@ -176,7 +176,7 @@ namespace Hell_Island_Fell.Fools
             glass3.AddIntentsToTarget(Targeting.Slot_AllySides, [nameof(IntentType_GameIDs.Heal_5_10)]);
 
             //pearls
-            Ability pearls0 = new Ability("Marrow Pearls", "Pearls_1_A")
+            Ability pearls0 = new Ability("Marrow Pearls", "HIF_Pearls_1_A")
             {
                 Description = "Spawn as many Mudballs with 7 health as possible.\nHeal all party members 1 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
@@ -196,7 +196,7 @@ namespace Hell_Island_Fell.Fools
             pearls0.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             pearls0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability pearls1 = new Ability("Living Pearls", "Pearls_2_A")
+            Ability pearls1 = new Ability("Living Pearls", "HIF_Pearls_2_A")
             {
                 Description = "Spawn as many Mudballs with 8 health as possible.\nHeal all party members 1 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
@@ -216,7 +216,7 @@ namespace Hell_Island_Fell.Fools
             pearls1.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             pearls1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability pearls2 = new Ability("Parasitic Pearls", "Pearls_3_A")
+            Ability pearls2 = new Ability("Parasitic Pearls", "HIF_Pearls_3_A")
             {
                 Description = "Spawn as many Mudballs with 9 health as possible.\nHeal all party members 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
@@ -236,7 +236,7 @@ namespace Hell_Island_Fell.Fools
             pearls2.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             pearls2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            Ability pearls3 = new Ability("Opulent Pearls", "Pearls_4_A")
+            Ability pearls3 = new Ability("Opulent Pearls", "HIF_Pearls_4_A")
             {
                 Description = "Spawn as many Mudballs with 10 health as possible.\nHeal all party members 2 health.",
                 AbilitySprite = ResourceLoader.LoadSprite("MorriganPearls"),
@@ -256,10 +256,10 @@ namespace Hell_Island_Fell.Fools
             pearls3.AddIntentsToTarget(Targeting.Slot_SelfSlot, [nameof(IntentType_GameIDs.Other_Spawn)]);
             pearls3.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Heal_1_4)]);
 
-            morrigan.AddLevelData(20, new Ability[] { mud0, glass0, pearls0 });
-            morrigan.AddLevelData(20, new Ability[] { mud1, glass1, pearls1 });
-            morrigan.AddLevelData(20, new Ability[] { mud2, glass2, pearls2 });
-            morrigan.AddLevelData(20, new Ability[] { mud3, glass3, pearls3 });
+            morrigan.AddLevelData(20, [mud0, glass0, pearls0]);
+            morrigan.AddLevelData(20, [mud1, glass1, pearls1]);
+            morrigan.AddLevelData(20, [mud2, glass2, pearls2]);
+            morrigan.AddLevelData(20, [mud3, glass3, pearls3]);
 
             morrigan.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Morrigan_Witness_ACH");
             morrigan.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Morrigan_Divine_ACH");

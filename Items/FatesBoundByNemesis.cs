@@ -23,6 +23,10 @@ namespace Hell_Island_Fell.Items
             ExtraLootOptionsEffect NextNemesis = ScriptableObject.CreateInstance<ExtraLootOptionsEffect>();
             NextNemesis._itemName = "HornAndHandle_EW";
 
+            LoadedDBsHandler.StatusFieldDB.TryGetStatusEffect("Disappearing_ID", out StatusEffect_SO Disappearing);
+            StatusEffect_Apply_Effect DisappearingApply = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
+            DisappearingApply._Status = Disappearing;
+
             Nemesis_Item fatesNemesis = new Nemesis_Item("FatesBoundByNemesisItem_ID", null)
             {
                 Item_ID = "FatesBoundByNemesis_NW",
@@ -38,9 +42,11 @@ namespace Hell_Island_Fell.Items
                 NormalEffects =
                 [
                     Effects.GenerateEffect(NemesisApply, 1, Targeting.Unit_AllOpponents),
+                    Effects.GenerateEffect(DisappearingApply, 10, Targeting.Slot_SelfSlot),
                 ],
                 MurderEffects =
                 [
+                    Effects.GenerateEffect(DisappearingApply, 10, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, Targeting.Slot_SelfSlot),
                     Effects.GenerateEffect(NextNemesis),
                 ],
@@ -50,6 +56,11 @@ namespace Hell_Island_Fell.Items
                     rocky,
                 ],
             };
+
+            fatesNemesis.item._ItemTypeIDs =
+                [
+                    ItemType_GameIDs.Magic.ToString(),
+                ];
 
             ItemUtils.JustAddItemSoItCanBeLoaded(fatesNemesis.item);
         }

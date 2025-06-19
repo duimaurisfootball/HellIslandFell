@@ -9,6 +9,8 @@ namespace Hell_Island_Fell.Custom_Passives
     {
         [Header("ExtraAttack Data")]
         public List<ExtraAbilityInfo> _altAbilities;
+
+        public List<ExtraAbilityInfo> _weights;
         public override bool IsPassiveImmediate => true;
 
         public override bool DoesPassiveTrigger => true;
@@ -17,7 +19,7 @@ namespace Hell_Island_Fell.Custom_Passives
         {
             if (args is List<string> list)
             {
-                list.Add(_altAbilities[ChooseAbility()].ability?.name);
+                list.Add(_weights[ChooseAbility()].ability?.name);
             }
         }
 
@@ -39,7 +41,7 @@ namespace Hell_Island_Fell.Custom_Passives
 
         public int ChooseAbility()
         {
-            return UnityEngine.Random.Range(0, _altAbilities.Count);
+            return UnityEngine.Random.Range(0, _weights.Count);
         }
     }
 }

@@ -33,7 +33,12 @@ namespace Hell_Island_Fell.Items
                 ],
             };
 
-            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(dinners.Item);
+            dinners.item._ItemTypeIDs =
+                [
+                    "FoodID",
+                ];
+
+            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(dinners.Item, new ItemModdedUnlockInfo(dinners.Item_ID, ResourceLoader.LoadSprite("TreasureFormidableDinners")));
         }
     }
 }

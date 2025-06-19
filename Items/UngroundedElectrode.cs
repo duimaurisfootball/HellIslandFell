@@ -58,7 +58,7 @@ namespace Hell_Island_Fell.Items
                 theRunner
             };
 
-            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(ungroundedElectrode.Item);
+            ItemUtils.AddItemToTreasureStatsCategoryAndGamePool(ungroundedElectrode.Item, new ItemModdedUnlockInfo(ungroundedElectrode.Item_ID, ResourceLoader.LoadSprite("TreasureUngroundedElectrode")));
         }
     }
 }

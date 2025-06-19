@@ -19,7 +19,7 @@ namespace Hell_Island_Fell.Fools
             CursedApply._Status = StatusField.Cursed;
 
             //evil poke
-            Ability poke = new Ability("Evil Poke", "EvilPoke_A")
+            Ability poke = new Ability("Evil Poke", "HIF_EvilPoke_A")
             {
                 Description = "Deal 1 damage to the opposing enemy.\nInflict Cursed to the opposing enemy.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyPoke"),
@@ -43,10 +43,14 @@ namespace Hell_Island_Fell.Fools
                 FrontSprite = ResourceLoader.LoadSprite("RodneyFront", new Vector2(0.5f, 0f), 32),
                 BackSprite = ResourceLoader.LoadSprite("RodneyBack", new Vector2(0.5f, 0f), 32),
                 OverworldSprite = ResourceLoader.LoadSprite("RodneyOverworld", new Vector2(0.5f, 0f), 32),
-                DamageSound = LoadedAssetsHandler.GetCharacter("Clive_CH").damageSound,
-                DeathSound = LoadedAssetsHandler.GetCharacter("Clive_CH").deathSound,
-                DialogueSound = LoadedAssetsHandler.GetCharacter("Clive_CH").dxSound,
-                BasicAbility = poke
+                DamageSound = "event:/RodneyDamage",
+                DeathSound = "event:/RodneyDeath",
+                DialogueSound = "event:/RodneyDx",
+                BasicAbility = poke,
+                UnitTypes =
+                [
+                    "Sandwich_NULL",
+                ],
             };
             rodney.GenerateMenuCharacter(ResourceLoader.LoadSprite("RodneyMenu"), ResourceLoader.LoadSprite("RodneyLocked"));
             rodney.AddPassives([Passives.GetCustomPassive("Sacrilege_PA")]);
@@ -78,12 +82,11 @@ namespace Hell_Island_Fell.Fools
             RotationRestore._chance = 100;
             RotationRestore._status = StatusField.Cursed;
 
-            StatusEffect_Apply_Effect CursedApplyAlt = ScriptableObject.CreateInstance<StatusEffect_Apply_Effect>();
+            StatusEffect_ApplyToOneWithout_Effect CursedApplyAlt = ScriptableObject.CreateInstance<StatusEffect_ApplyToOneWithout_Effect>();
             CursedApplyAlt._Status = StatusField.Cursed;
-            CursedApplyAlt._JustOneRandomTarget = true;
 
             //veneration
-            Ability veneration0 = new Ability("Distant Veneration", "Veneration_1_A")
+            Ability veneration0 = new Ability("Distant Veneration", "HIF_Veneration_1_A")
             {
                 Description = "Heal the Right ally 2 health.\nIf the Right ally is Cursed, refresh them and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyVeneration"),
@@ -101,7 +104,7 @@ namespace Hell_Island_Fell.Fools
             veneration0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             veneration0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability veneration1 = new Ability("Guiding Veneration", "Veneration_2_A")
+            Ability veneration1 = new Ability("Guiding Veneration", "HIF_Veneration_2_A")
             {
                 Description = "Heal the Right ally 3 health.\nIf the Right ally is Cursed, refresh them and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyVeneration"),
@@ -119,7 +122,7 @@ namespace Hell_Island_Fell.Fools
             veneration1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             veneration1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability veneration2 = new Ability("Pointing Veneration", "Veneration_3_A")
+            Ability veneration2 = new Ability("Pointing Veneration", "HIF_Veneration_3_A")
             {
                 Description = "Heal the Right ally 4 health.\nIf the Right ally is Cursed, refresh them and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyVeneration"),
@@ -137,7 +140,7 @@ namespace Hell_Island_Fell.Fools
             veneration2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_1_4)]);
             veneration2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability veneration3 = new Ability("Feeling Veneration", "Veneration_4_A")
+            Ability veneration3 = new Ability("Feeling Veneration", "HIF_Veneration_4_A")
             {
                 Description = "Heal the Right ally 6 health.\nIf the Right ally is Cursed, refresh them and restore their movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyVeneration"),
@@ -157,7 +160,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //tribulation
-            Ability tribulation0 = new Ability("Little Tribulation", "Tribulation_1_A")
+            Ability tribulation0 = new Ability("Little Tribulation", "HIF_Tribulation_1_A")
             {
                 Description = "Heal the Right ally 7 health.\nInflict Curse to the Right ally.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyTribulation"),
@@ -173,7 +176,7 @@ namespace Hell_Island_Fell.Fools
             tribulation0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
             tribulation0.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Status_Cursed)]);
 
-            Ability tribulation1 = new Ability("Ring Tribulation", "Tribulation_2_A")
+            Ability tribulation1 = new Ability("Ring Tribulation", "HIF_Tribulation_2_A")
             {
                 Description = "Heal the Right ally 10 health.\nInflict Curse to the Right ally.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyTribulation"),
@@ -189,7 +192,7 @@ namespace Hell_Island_Fell.Fools
             tribulation1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
             tribulation1.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Status_Cursed)]);
 
-            Ability tribulation2 = new Ability("Middle Tribulation", "Tribulation_3_A")
+            Ability tribulation2 = new Ability("Middle Tribulation", "HIF_Tribulation_3_A")
             {
                 Description = "Heal the Right ally 14 health.\nInflict Curse to the Right ally.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyTribulation"),
@@ -205,7 +208,7 @@ namespace Hell_Island_Fell.Fools
             tribulation2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Heal_5_10)]);
             tribulation2.AddIntentsToTarget(Targeting.Slot_AllyRight, [nameof(IntentType_GameIDs.Status_Cursed)]);
 
-            Ability tribulation3 = new Ability("Index Tribulation", "Tribulation_4_A")
+            Ability tribulation3 = new Ability("Index Tribulation", "HIF_Tribulation_4_A")
             {
                 Description = "Heal the Right ally 18 health.\nInflict Curse to the Right ally.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyTribulation"),
@@ -223,7 +226,7 @@ namespace Hell_Island_Fell.Fools
 
 
             //rotation
-            Ability rotation0 = new Ability("Sick Rotation", "Rotation_1_A")
+            Ability rotation0 = new Ability("Sick Rotation", "HIF_Rotation_1_A")
             {
                 Description = "Inflict Curse to a random ally.\n40% chance to refresh each Cursed party member's ability use.\nRestore each Cursed party member's movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyRotation"),
@@ -240,7 +243,7 @@ namespace Hell_Island_Fell.Fools
             rotation0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
             rotation0.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability rotation1 = new Ability("Blight Rotation", "Rotation_2_A")
+            Ability rotation1 = new Ability("Blight Rotation", "HIF_Rotation_2_A")
             {
                 Description = "Inflict Curse to a random ally.\n50% chance to refresh each Cursed party member's ability use.\nRestore each Cursed party member's movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyRotation"),
@@ -257,7 +260,7 @@ namespace Hell_Island_Fell.Fools
             rotation1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
             rotation1.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability rotation2 = new Ability("Dead Rotation", "Rotation_3_A")
+            Ability rotation2 = new Ability("Dead Rotation", "HIF_Rotation_3_A")
             {
                 Description = "Inflict Curse to a random ally.\n60% chance to refresh each Cursed party member's ability use.\nRestore each Cursed party member's movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyRotation"),
@@ -274,7 +277,7 @@ namespace Hell_Island_Fell.Fools
             rotation2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Status_Cursed)]);
             rotation2.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
-            Ability rotation3 = new Ability("Skeletal Rotation", "Rotation_4_A")
+            Ability rotation3 = new Ability("Skeletal Rotation", "HIF_Rotation_4_A")
             {
                 Description = "Inflict Curse to a random ally.\n70% chance to refresh each Cursed party member's ability use.\nRestore each Cursed party member's movement.",
                 AbilitySprite = ResourceLoader.LoadSprite("RodneyRotation"),
@@ -292,10 +295,10 @@ namespace Hell_Island_Fell.Fools
             rotation3.AddIntentsToTarget(Targeting.Unit_AllAllies, [nameof(IntentType_GameIDs.Other_Refresh)]);
 
 
-            rodney.AddLevelData(30, new Ability[] { veneration0, tribulation0, rotation0 });
-            rodney.AddLevelData(35, new Ability[] { veneration1, tribulation1, rotation1 });
-            rodney.AddLevelData(40, new Ability[] { veneration2, tribulation2, rotation2 });
-            rodney.AddLevelData(45, new Ability[] { veneration3, tribulation3, rotation3 });
+            rodney.AddLevelData(30, [rotation0, veneration0, tribulation0]);
+            rodney.AddLevelData(35, [rotation1, veneration1, tribulation1]);
+            rodney.AddLevelData(40, [rotation2, veneration2, tribulation2]);
+            rodney.AddLevelData(45, [rotation3, veneration3, tribulation3]);
 
             rodney.AddFinalBossAchievementData(BossType_GameIDs.OsmanSinnoks.ToString(), "HIF_Rodney_Witness_ACH");
             rodney.AddFinalBossAchievementData(BossType_GameIDs.Heaven.ToString(), "HIF_Rodney_Divine_ACH");
